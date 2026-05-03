@@ -1,1 +1,5 @@
-<Solution />
+<Solution>
+  <Project Path="capaDatos/capaDatos.vbproj" Id="5d0102cc-015d-4f2f-8228-5999f2f69b86" />
+  <Project Path="capaLogica/capaLogica.vbproj" Id="2b4b660c-dcf3-46b6-9021-bc68c019ce53" />
+  <Project Path="capaPresentacion/capaPresentacion.vbproj" Id="76623686-5ac7-498c-a7f4-6b07bf2bf67b" />
+</Solution>
