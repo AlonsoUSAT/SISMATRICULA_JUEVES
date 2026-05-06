@@ -148,4 +148,12 @@
         Me.Hide()
     End Sub
 
+    ' ══════════════════════════════════════════════
+    '  EVENTO DE CARGA DEL FORMULARIO
+    ' ══════════════════════════════════════════════
+    Private Sub InicioSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Activa los puntos negros automáticos del sistema operativo
+        txtContra.UseSystemPasswordChar = True
+    End Sub
+
 End Class

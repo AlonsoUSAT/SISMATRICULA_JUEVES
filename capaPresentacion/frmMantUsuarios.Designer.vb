@@ -47,12 +47,12 @@ Partial Class frmMantUsuarios
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnDarBaja = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.tablaUsuarios = New System.Windows.Forms.DataGridView()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.tablaUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,6 +60,7 @@ Partial Class frmMantUsuarios
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.Controls.Add(Me.btnBuscar)
         Me.Panel1.Controls.Add(Me.checkVigente)
         Me.Panel1.Controls.Add(Me.cboSexo)
@@ -90,12 +91,13 @@ Partial Class frmMantUsuarios
         '
         'btnBuscar
         '
+        Me.btnBuscar.BackColor = System.Drawing.Color.RosyBrown
         Me.btnBuscar.Location = New System.Drawing.Point(200, 42)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(62, 35)
         Me.btnBuscar.TabIndex = 4
         Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'checkVigente
         '
@@ -302,6 +304,7 @@ Partial Class frmMantUsuarios
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.DarkOrange
         Me.Panel2.Controls.Add(Me.btnLimpiar)
         Me.Panel2.Controls.Add(Me.btnDarBaja)
         Me.Panel2.Controls.Add(Me.btnEliminar)
@@ -312,41 +315,55 @@ Partial Class frmMantUsuarios
         Me.Panel2.Size = New System.Drawing.Size(310, 364)
         Me.Panel2.TabIndex = 1
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnLimpiar.Location = New System.Drawing.Point(53, 297)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(217, 57)
+        Me.btnLimpiar.TabIndex = 4
+        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
+        '
         'btnDarBaja
         '
+        Me.btnDarBaja.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnDarBaja.Location = New System.Drawing.Point(53, 233)
         Me.btnDarBaja.Name = "btnDarBaja"
         Me.btnDarBaja.Size = New System.Drawing.Size(217, 57)
         Me.btnDarBaja.TabIndex = 3
         Me.btnDarBaja.Text = "DAR DE BAJA"
-        Me.btnDarBaja.UseVisualStyleBackColor = True
+        Me.btnDarBaja.UseVisualStyleBackColor = False
         '
         'btnEliminar
         '
+        Me.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnEliminar.Location = New System.Drawing.Point(53, 170)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(217, 57)
         Me.btnEliminar.TabIndex = 2
         Me.btnEliminar.Text = "ELIMINAR"
-        Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnActualizar
         '
+        Me.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnActualizar.Location = New System.Drawing.Point(53, 89)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(217, 67)
         Me.btnActualizar.TabIndex = 1
         Me.btnActualizar.Text = "ACTUALIZAR"
-        Me.btnActualizar.UseVisualStyleBackColor = True
+        Me.btnActualizar.UseVisualStyleBackColor = False
         '
         'btnNuevo
         '
+        Me.btnNuevo.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnNuevo.Location = New System.Drawing.Point(53, 13)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(217, 61)
         Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "NUEVO"
-        Me.btnNuevo.UseVisualStyleBackColor = True
+        Me.btnNuevo.UseVisualStyleBackColor = False
         '
         'tablaUsuarios
         '
@@ -355,15 +372,6 @@ Partial Class frmMantUsuarios
         Me.tablaUsuarios.Name = "tablaUsuarios"
         Me.tablaUsuarios.Size = New System.Drawing.Size(865, 205)
         Me.tablaUsuarios.TabIndex = 2
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Location = New System.Drawing.Point(53, 297)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(217, 57)
-        Me.btnLimpiar.TabIndex = 4
-        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'frmMantUsuarios
         '
