@@ -93,10 +93,28 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMantAnoAcademico.Designer.vb">
+      <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantAnoAcademico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantPagoMatricula.Designer.vb">
+      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantPagoMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMantPersona.Designer.vb">
       <DependentUpon>frmMantPersona.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMantPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantPlanEstudio1.Designer.vb">
+      <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantPlanEstudio1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantTipoDocumento.Designer.vb">
@@ -141,8 +159,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmMantAnoAcademico.resx">
+      <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantPagoMatricula.resx">
+      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantPersona.resx">
       <DependentUpon>frmMantPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantPlanEstudio1.resx">
+      <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantTipoDocumento.resx">
       <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
