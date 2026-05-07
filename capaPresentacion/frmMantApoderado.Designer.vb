@@ -146,7 +146,7 @@ Partial Class frmMantApoderado
         'cboSexo
         '
         Me.cboSexo.FormattingEnabled = True
-        Me.cboSexo.Items.AddRange(New Object() {"Masculino", "Femenino"})
+        Me.cboSexo.Items.AddRange(New Object() {"MASCULINO", "FEMENINO"})
         Me.cboSexo.Location = New System.Drawing.Point(208, 223)
         Me.cboSexo.Name = "cboSexo"
         Me.cboSexo.Size = New System.Drawing.Size(199, 21)
@@ -207,16 +207,16 @@ Partial Class frmMantApoderado
         Me.Panel2.Controls.Add(Me.btnModificar)
         Me.Panel2.Controls.Add(Me.btnEliminar)
         Me.Panel2.Controls.Add(Me.btnNuevo)
-        Me.Panel2.Location = New System.Drawing.Point(475, 76)
+        Me.Panel2.Location = New System.Drawing.Point(422, 59)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(187, 248)
+        Me.Panel2.Size = New System.Drawing.Size(288, 296)
         Me.Panel2.TabIndex = 1
         '
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.Location = New System.Drawing.Point(50, 66)
+        Me.btnGuardar.Location = New System.Drawing.Point(96, 88)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(96, 28)
         Me.btnGuardar.TabIndex = 4
@@ -227,7 +227,7 @@ Partial Class frmMantApoderado
         '
         Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDarBaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDarBaja.Location = New System.Drawing.Point(50, 140)
+        Me.btnDarBaja.Location = New System.Drawing.Point(96, 162)
         Me.btnDarBaja.Name = "btnDarBaja"
         Me.btnDarBaja.Size = New System.Drawing.Size(96, 28)
         Me.btnDarBaja.TabIndex = 3
@@ -238,7 +238,7 @@ Partial Class frmMantApoderado
         '
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.Location = New System.Drawing.Point(50, 104)
+        Me.btnModificar.Location = New System.Drawing.Point(96, 126)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(96, 28)
         Me.btnModificar.TabIndex = 2
@@ -249,7 +249,7 @@ Partial Class frmMantApoderado
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.Location = New System.Drawing.Point(50, 178)
+        Me.btnEliminar.Location = New System.Drawing.Point(96, 200)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(96, 28)
         Me.btnEliminar.TabIndex = 1
@@ -260,7 +260,7 @@ Partial Class frmMantApoderado
         '
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(50, 30)
+        Me.btnNuevo.Location = New System.Drawing.Point(96, 52)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(96, 28)
         Me.btnNuevo.TabIndex = 0

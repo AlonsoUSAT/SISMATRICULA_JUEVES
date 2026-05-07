@@ -87,6 +87,12 @@
     <Compile Include="frmMantApoderado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMantEstudiante.Designer.vb">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMantPersona.Designer.vb">
       <DependentUpon>frmMantPersona.vb</DependentUpon>
     </Compile>
@@ -111,6 +117,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmMantApoderado.resx">
       <DependentUpon>frmMantApoderado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantEstudiante.resx">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantPersona.resx">
       <DependentUpon>frmMantPersona.vb</DependentUpon>
