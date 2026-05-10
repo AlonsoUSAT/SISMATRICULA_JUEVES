@@ -9,7 +9,7 @@ Public Class clsConectaBD
 
         cn = New SqlConnection
         'BDLocal - Autenticaciòn windows
-        cn.ConnectionString = "Data Source=localhost\SQLExpress;Initial Catalog=SistemaMatricula;Integrated Security=SSPI;Language=Spanish"
+        cn.ConnectionString = "Data Source=.;Initial Catalog=SistemaMatricula;Integrated Security=SSPI;Language=Spanish"
         'BDLocal - Autenticaciòn SQL Server
         'cn.ConnectionString = "Server=localhost;Database=SistemaMatricula;Integrated Security=True;"
         'BD en la nube somee.com
@@ -65,7 +65,7 @@ Public Class clsConectaBD
         Try
             'transaccion = False
             If cn.State <> Data.ConnectionState.Open Then ' SI EL ESTADO DE  LA CONEXION ES DIFERENTE DE ABIERTO ENTONCES ABRE LA CONEXION
-                cn.ConnectionString = "Data Source=localhost\SQLExpress;Initial Catalog=SistemaMatricula;Integrated Security=SSPI;Language=Spanish"
+                cn.ConnectionString = "Data Source=.;Initial Catalog=SistemaMatricula;Integrated Security=SSPI;Language=Spanish"
                 cn.Open()
             End If
         Catch Ex As Exception
