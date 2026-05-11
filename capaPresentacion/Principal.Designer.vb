@@ -28,13 +28,20 @@ Partial Class Principal
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MantenimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TipoDeDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnMantenimientoUsuario = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.RegistrarMatrículaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnularMatrículaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AsignarVacanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarMensualidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.EmisiónDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -55,18 +62,6 @@ Partial Class Principal
         Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
         '
-        'OperacionesToolStripMenuItem
-        '
-        Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
-        Me.OperacionesToolStripMenuItem.Text = "Operaciones"
-        '
-        'ReportesToolStripMenuItem
-        '
-        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.ReportesToolStripMenuItem.Text = "Reportes"
-        '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
@@ -78,6 +73,19 @@ Partial Class Principal
         Me.TipoDeDocumentoToolStripMenuItem.Name = "TipoDeDocumentoToolStripMenuItem"
         Me.TipoDeDocumentoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TipoDeDocumentoToolStripMenuItem.Text = "Tipo de documento"
+        '
+        'OperacionesToolStripMenuItem
+        '
+        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarMatrículaToolStripMenuItem, Me.AnularMatrículaToolStripMenuItem, Me.ToolStripMenuItem1, Me.AsignarVacanteToolStripMenuItem, Me.RegistrarMensualidadToolStripMenuItem, Me.ToolStripMenuItem2, Me.EmisiónDeToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
+        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
+        Me.OperacionesToolStripMenuItem.Text = "Operaciones"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'ToolStrip1
         '
@@ -108,6 +116,46 @@ Partial Class Principal
         Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton1.Text = "ToolStripButton1"
         '
+        'RegistrarMatrículaToolStripMenuItem
+        '
+        Me.RegistrarMatrículaToolStripMenuItem.Name = "RegistrarMatrículaToolStripMenuItem"
+        Me.RegistrarMatrículaToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.RegistrarMatrículaToolStripMenuItem.Text = "Registrar Matrícula"
+        '
+        'AnularMatrículaToolStripMenuItem
+        '
+        Me.AnularMatrículaToolStripMenuItem.Name = "AnularMatrículaToolStripMenuItem"
+        Me.AnularMatrículaToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.AnularMatrículaToolStripMenuItem.Text = "Anular Matrícula"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(260, 6)
+        '
+        'AsignarVacanteToolStripMenuItem
+        '
+        Me.AsignarVacanteToolStripMenuItem.Name = "AsignarVacanteToolStripMenuItem"
+        Me.AsignarVacanteToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.AsignarVacanteToolStripMenuItem.Text = "Asignar Vacante"
+        '
+        'RegistrarMensualidadToolStripMenuItem
+        '
+        Me.RegistrarMensualidadToolStripMenuItem.Name = "RegistrarMensualidadToolStripMenuItem"
+        Me.RegistrarMensualidadToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.RegistrarMensualidadToolStripMenuItem.Text = "Registrar Mensualidad"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(260, 6)
+        '
+        'EmisiónDeToolStripMenuItem
+        '
+        Me.EmisiónDeToolStripMenuItem.Name = "EmisiónDeToolStripMenuItem"
+        Me.EmisiónDeToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.EmisiónDeToolStripMenuItem.Text = "Emisión de Constancia de Matrícula"
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -137,4 +185,11 @@ Partial Class Principal
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents btnMantenimientoUsuario As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents RegistrarMatrículaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AnularMatrículaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
+    Friend WithEvents AsignarVacanteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarMensualidadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
+    Friend WithEvents EmisiónDeToolStripMenuItem As ToolStripMenuItem
 End Class
