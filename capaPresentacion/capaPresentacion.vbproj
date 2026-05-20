@@ -81,6 +81,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCargaAcademica.Designer.vb">
+      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargaAcademica.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCurso.Designer.vb">
       <DependentUpon>frmCurso.vb</DependentUpon>
     </Compile>
@@ -109,6 +115,12 @@
       <DependentUpon>frmMantPersona.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMantPersona.vb" />
+    <Compile Include="frmNuevaAsignación.Designer.vb">
+      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaAsignación.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -127,6 +139,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCargaAcademica.resx">
+      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCurso.resx">
       <DependentUpon>frmCurso.vb</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantPersona.resx">
       <DependentUpon>frmMantPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaAsignación.resx">
+      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
