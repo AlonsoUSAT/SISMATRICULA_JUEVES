@@ -125,6 +125,12 @@
     <Compile Include="frmMantTipoDocumento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMantDocente.Designer.vb">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantDocente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMantUsuarios.Designer.vb">
       <DependentUpon>frmMantUsuarios.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantTipoDocumento.resx">
       <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantDocente.resx">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantUsuarios.resx">
       <DependentUpon>frmMantUsuarios.vb</DependentUpon>

@@ -87,6 +87,7 @@
     <Compile Include="clsLogPlanEstudio.vb" />
     <Compile Include="clsTipoDocumento.vb" />
     <Compile Include="clsUsuario.vb" />
+    <Compile Include="clSeccion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

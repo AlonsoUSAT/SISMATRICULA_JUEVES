@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <MyApplicationData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <MySubMain>true</MySubMain>
+<<<<<<< HEAD
   <MainForm>frmMantAnoAcademico</MainForm>
+=======
+  <MainForm>frmMantNGS</MainForm>
+>>>>>>> 2dd1da1811781ada8a1c85cacaac15ad7fd39038
   <SingleInstance>false</SingleInstance>
   <ShutdownMode>0</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>
