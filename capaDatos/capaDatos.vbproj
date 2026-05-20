@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Class1.vb" />
     <Compile Include="clsConectaBD.vb" />
+    <Compile Include="clsCurso.vb" />
     <Compile Include="clsMantenimiento.vb" />
     <Compile Include="clsPersona.vb" />
     <Compile Include="clsSeccion.vb" />
