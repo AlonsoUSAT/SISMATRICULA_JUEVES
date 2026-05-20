@@ -1,7 +1,7 @@
 ﻿Imports capaLogica
 Imports System.Data
 
-Public Class frmMantUsuario
+Public Class frmMantDocente
     Private objLogica As New capaLogica.clsDocente()
     Private idDocente As Integer = 0
     Private idPersonaActual As Integer = 0

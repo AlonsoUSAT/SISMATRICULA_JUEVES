@@ -69,12 +69,12 @@
     <Compile Include="clsDatAnoAcademico.vb" />
     <Compile Include="clsDatPagoMatricula.vb" />
     <Compile Include="clsDatPlanEstudio.vb" />
+    <Compile Include="clsDocente.vb" />
     <Compile Include="clsMantenimiento.vb" />
     <Compile Include="clsPersona.vb" />
     <Compile Include="clsTipoDocumento.vb" />
     <Compile Include="clsUsuario.vb" />
     <Compile Include="clsSeccion.vb" />
-
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -69,7 +69,7 @@ Public Class clsDocente
                 "SELECT id_persona, " &
                 "nombre + ' ' + apePaterno + ' ' + apeMaterno AS nombreCompleto " &
                 "FROM PERSONA " &
-                "WHERE estado = 1 " &
+                "WHERE vigencia = 1 " &
                 "AND id_persona NOT IN (SELECT id_persona FROM DOCENTE WHERE estado = 1)"
             comando.CommandType = CommandType.Text
             comando.Parameters.Clear()
@@ -98,7 +98,7 @@ Public Class clsDocente
                 "SELECT id_persona, " &
                 "nombre + ' ' + apePaterno + ' ' + apeMaterno AS nombreCompleto " &
                 "FROM PERSONA " &
-                "WHERE estado = 1 " &
+                "WHERE vigencia = 1 " &
                 "AND (id_persona NOT IN (SELECT id_persona FROM DOCENTE WHERE estado = 1) " &
                 "     OR id_persona = @idPersonaActual)"
             comando.CommandType = CommandType.Text

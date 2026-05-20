@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76623686-5AC7-498C-A7F4-6B07BF2BF67B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>capaPresentacion.My.MyApplication</StartupObject>
+    <StartupObject>capaPresentacion.Principal</StartupObject>
     <RootNamespace>capaPresentacion</RootNamespace>
     <AssemblyName>capaPresentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -101,6 +101,12 @@
     <Compile Include="frmMantAnoAcademico.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMantDocente.Designer.vb">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantDocente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMantPagoMatricula.Designer.vb">
       <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
     </Compile>
@@ -123,12 +129,6 @@
       <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMantTipoDocumento.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantDocente.Designer.vb">
-      <DependentUpon>frmMantDocente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantDocente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantUsuarios.Designer.vb">
@@ -170,6 +170,9 @@
     <EmbeddedResource Include="frmMantAnoAcademico.resx">
       <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMantDocente.resx">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantPagoMatricula.resx">
       <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
     </EmbeddedResource>
@@ -181,9 +184,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantTipoDocumento.resx">
       <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantDocente.resx">
-      <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantUsuarios.resx">
       <DependentUpon>frmMantUsuarios.vb</DependentUpon>
