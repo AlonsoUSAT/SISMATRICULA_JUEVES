@@ -147,4 +147,71 @@ Public Class clPersona
             Throw New Exception(ex.Message)
         End Try
     End Sub
+
+    '---------------------------Docente---------------------------'
+    ' 1. Mostrar Docentes (devuelve la tabla para llenar tu DataGridView)
+    Public Function MostrarDocentes() As DataTable
+        Try
+            Return objCapaDatos.MostrarDocentes()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    ' 2. Insertar / Registrar Docente
+    Public Sub InsertarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, especialidad As String)
+        Try
+            ' Aquí podrías validar reglas de negocio (ej. que el documento tenga 8 dígitos)
+            objCapaDatos.RegistrarDocente(apeMaterno, apePaterno, nombre, telefono, correo, sexo, num_doc, especialidad)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+
+    ' 3. Editar Docente
+    Public Sub EditarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, especialidad As String)
+        Try
+            objCapaDatos.EditarDocente(apeMaterno, apePaterno, nombre, telefono, correo, sexo, num_doc, especialidad)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+
+    ' 4. Eliminar Docente (usa el número de documento como identificador)
+    Public Sub EliminarDocente(num_doc As String)
+        Try
+            ' Validaciones adicionales pueden ir aquí
+            objCapaDatos.EliminarDocente(num_doc)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+
+    ' 5. Dar de baja al Docente (estado = 0)
+    Public Sub DarBajaDocente(num_doc As String)
+        Try
+            objCapaDatos.DarBajaDocente(num_doc)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+
+    ' 6. Activar al Docente (estado = 1)
+    Public Sub ActivarDocente(num_doc As String)
+        Try
+            objCapaDatos.ActivarDocente(num_doc)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+
+    ' 7. Buscar Docente por DNI
+    Public Function BuscarDocentePorDNI(num_doc As String) As DataTable
+        Try
+            Return objCapaDatos.BuscarDocentePorDNI(num_doc)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
 End Class
