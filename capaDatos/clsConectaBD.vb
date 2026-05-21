@@ -11,7 +11,7 @@ Public Class clsConectaBD
         'BDLocal - Autenticaciòn windows
         'cn.ConnectionString = "data source=(local);Initial catalog=BDSistema;integrated security=SSPI;language=spanish"
         'BDLocal - Autenticaciòn SQL Server
-        cn.ConnectionString = "Server=(localdb)\MSSQLLocalDB;Database=SistemaMatricula;Integrated Security=True;"
+        cn.ConnectionString = "Server=localhost;Database=SistemaMatricula;Integrated Security=True;"
         'BD en la nube somee.com
         'cn.ConnectionString = "workstation id=BDPersonal2024.mssql.somee.com;packet size=4096;user id=cdelcastillo_SQLLogin_1;pwd=wptf98uw6j;data source=BDPersonal2024.mssql.somee.com;persist security info=False;initial catalog=BDPersonal2024;language=spanish"
 
