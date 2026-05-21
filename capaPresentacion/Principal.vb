@@ -15,4 +15,22 @@ Public Class Principal
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub
+
+    Private Sub AñoAcademicoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñoAcademicoToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantAnoAcademico()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantUsuarios()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub MantenimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MantenimientoToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmTransaccionTutorAula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
 End Class

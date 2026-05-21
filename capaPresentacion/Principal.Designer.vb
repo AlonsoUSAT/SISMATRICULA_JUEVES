@@ -30,12 +30,14 @@ Partial Class Principal
         Me.MantenimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TipoDeDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AñoAcademicoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnMantenimientoUsuario = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.DocenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,7 +53,7 @@ Partial Class Principal
         '
         'MantenimientosToolStripMenuItem
         '
-        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem, Me.TipoDeDocumentoToolStripMenuItem, Me.DocenteToolStripMenuItem})
+        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem, Me.TipoDeDocumentoToolStripMenuItem, Me.DocenteToolStripMenuItem, Me.AñoAcademicoToolStripMenuItem, Me.MantenimientoToolStripMenuItem})
         Me.MantenimientosToolStripMenuItem.Name = "MantenimientosToolStripMenuItem"
         Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
@@ -67,6 +69,18 @@ Partial Class Principal
         Me.TipoDeDocumentoToolStripMenuItem.Name = "TipoDeDocumentoToolStripMenuItem"
         Me.TipoDeDocumentoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TipoDeDocumentoToolStripMenuItem.Text = "Tipo de documento"
+        '
+        'DocenteToolStripMenuItem
+        '
+        Me.DocenteToolStripMenuItem.Name = "DocenteToolStripMenuItem"
+        Me.DocenteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DocenteToolStripMenuItem.Text = "Docente"
+        '
+        'AñoAcademicoToolStripMenuItem
+        '
+        Me.AñoAcademicoToolStripMenuItem.Name = "AñoAcademicoToolStripMenuItem"
+        Me.AñoAcademicoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AñoAcademicoToolStripMenuItem.Text = "Año Academico"
         '
         'OperacionesToolStripMenuItem
         '
@@ -109,11 +123,11 @@ Partial Class Principal
         Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton1.Text = "ToolStripButton1"
         '
-        'DocenteToolStripMenuItem
+        'MantenimientoToolStripMenuItem
         '
-        Me.DocenteToolStripMenuItem.Name = "DocenteToolStripMenuItem"
-        Me.DocenteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DocenteToolStripMenuItem.Text = "Docente"
+        Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
+        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MantenimientoToolStripMenuItem.Text = "Transaccion"
         '
         'Principal
         '
@@ -145,4 +159,6 @@ Partial Class Principal
     Friend WithEvents btnMantenimientoUsuario As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents DocenteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AñoAcademicoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MantenimientoToolStripMenuItem As ToolStripMenuItem
 End Class

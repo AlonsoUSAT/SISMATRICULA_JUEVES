@@ -496,8 +496,7 @@ Public Class frmMantDocente
     ' ══════════════════════════════════════════════
     Private Sub btnAgregarPersona_Click(sender As Object, e As EventArgs) Handles btnAgregarPersona.Click
         Try
-            Dim frmPersona As New frmMantPersona()
-            frmPersona.ShowDialog()
+
 
             ' Al cerrar, recargar el combo para reflejar la nueva persona registrada
             CargarComboPersonas(idPersonaActual)

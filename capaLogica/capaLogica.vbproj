@@ -81,14 +81,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="clCurso.vb" />
     <Compile Include="clPersona.vb" />
     <Compile Include="clsDocente.vb" />
+    <Compile Include="clSeccion.vb" />
     <Compile Include="clsLogAnoAcademico.vb" />
     <Compile Include="clsLogPagoMatricula.vb" />
     <Compile Include="clsLogPlanEstudio.vb" />
     <Compile Include="clsTipoDocumento.vb" />
+    <Compile Include="clsTutorAula.vb" />
     <Compile Include="clsUsuario.vb" />
-    <Compile Include="clSeccion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -11,9 +11,10 @@
     <AssemblyName>capaPresentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -95,6 +96,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCurso.Designer.vb">
+      <DependentUpon>frmCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurso.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMantAnoAcademico.Designer.vb">
       <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
     </Compile>
@@ -111,12 +118,6 @@
       <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMantPagoMatricula.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantPersona.Designer.vb">
-      <DependentUpon>frmMantPersona.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantPersona.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantPlanEstudio1.Designer.vb">
@@ -137,6 +138,12 @@
     <Compile Include="frmMantUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmTransaccionTutorAula.Designer.vb">
+      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransaccionTutorAula.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InicioSesion.Designer.vb">
       <DependentUpon>InicioSesion.vb</DependentUpon>
     </Compile>
@@ -150,11 +157,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,6 +169,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCurso.resx">
+      <DependentUpon>frmCurso.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantAnoAcademico.resx">
       <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
     </EmbeddedResource>
@@ -176,9 +181,6 @@
     <EmbeddedResource Include="frmMantPagoMatricula.resx">
       <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMantPersona.resx">
-      <DependentUpon>frmMantPersona.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMantPlanEstudio1.resx">
       <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantUsuarios.resx">
       <DependentUpon>frmMantUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransaccionTutorAula.resx">
+      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.vb</DependentUpon>
@@ -204,7 +209,6 @@
   <ItemGroup>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

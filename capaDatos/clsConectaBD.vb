@@ -13,7 +13,7 @@ Public Class clsConectaBD
         'BDLocal - Autenticaciòn SQL Server
         'cn.ConnectionString = "Server=localhost;Database=SistemaMatricula;Integrated Security=True;"
         'BD en la nube somee.com
-        'cn.ConnectionString = "workstation id=BDPersonal2024.mssql.somee.com;packet size=4096;user id=cdelcastillo_SQLLogin_1;pwd=wptf98uw6j;data source=BDPersonal2024.mssql.somee.com;persist security info=False;initial catalog=BDPersonal2024;language=spanish"
+        'cn.ConnectionString = "workstation id=SistemaMatricula.mssql.somee.com;packet size=4096;user id=rogolo_SQLLogin_1;pwd=r1bh1opubj;data source=SistemaMatricula.mssql.somee.com;persist security info=False;initial catalog=SistemaMatricula;TrustServerCertificate=True;language=spanish"
 
 
     End Sub
