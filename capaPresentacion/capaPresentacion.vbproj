@@ -6,12 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76623686-5AC7-498C-A7F4-6B07BF2BF67B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>capaPresentacion.Principal</StartupObject>
+    <StartupObject>capaPresentacion.My.MyApplication</StartupObject>
     <RootNamespace>capaPresentacion</RootNamespace>
     <AssemblyName>capaPresentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -49,25 +49,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -89,11 +74,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
+    <Compile Include="frmCargaAcademica.Designer.vb">
+      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmCargaAcademica.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCurso.Designer.vb">
@@ -102,10 +86,10 @@
     <Compile Include="frmCurso.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMantAnoAcademico.Designer.vb">
-      <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
+    <Compile Include="frmMantApoderado.Designer.vb">
+      <DependentUpon>frmMantApoderado.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMantAnoAcademico.vb">
+    <Compile Include="frmMantApoderado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantDocente.Designer.vb">
@@ -114,49 +98,30 @@
     <Compile Include="frmMantDocente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMantPagoMatricula.Designer.vb">
-      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
+    <Compile Include="frmMantEstudiante.Designer.vb">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMantPagoMatricula.vb">
+    <Compile Include="frmMantEstudiante.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMantPlanEstudio1.Designer.vb">
-      <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
+    <Compile Include="frmMantNGS.Designer.vb">
+      <DependentUpon>frmMantNGS.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMantPlanEstudio1.vb">
+    <Compile Include="frmMantNGS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMantTipoDocumento.Designer.vb">
-      <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
+    <Compile Include="frmNuevaAsignación.Designer.vb">
+      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMantTipoDocumento.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantUsuarios.Designer.vb">
-      <DependentUpon>frmMantUsuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantUsuarios.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTransaccionTutorAula.Designer.vb">
-      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTransaccionTutorAula.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InicioSesion.Designer.vb">
-      <DependentUpon>InicioSesion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="InicioSesion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.vb">
-      <DependentUpon>Principal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Principal.vb">
+    <Compile Include="frmNuevaAsignación.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,35 +134,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCargaAcademica.resx">
+      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCurso.resx">
       <DependentUpon>frmCurso.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMantAnoAcademico.resx">
-      <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
+    <EmbeddedResource Include="frmMantApoderado.resx">
+      <DependentUpon>frmMantApoderado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantDocente.resx">
       <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMantPagoMatricula.resx">
-      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
+    <EmbeddedResource Include="frmMantEstudiante.resx">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMantPlanEstudio1.resx">
-      <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
+    <EmbeddedResource Include="frmMantNGS.resx">
+      <DependentUpon>frmMantNGS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMantTipoDocumento.resx">
-      <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantUsuarios.resx">
-      <DependentUpon>frmMantUsuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTransaccionTutorAula.resx">
-      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InicioSesion.resx">
-      <DependentUpon>InicioSesion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.vb</DependentUpon>
+    <EmbeddedResource Include="frmNuevaAsignación.resx">
+      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -209,6 +165,7 @@
   <ItemGroup>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -216,17 +173,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\capaLogica\capaLogica.vbproj">
       <Project>{2B4B660C-DCF3-46B6-9021-BC68C019CE53}</Project>
       <Name>capaLogica</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="imagenes\logo_colegio.png" />
-    <Content Include="imagenes\nueva-cuenta %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
