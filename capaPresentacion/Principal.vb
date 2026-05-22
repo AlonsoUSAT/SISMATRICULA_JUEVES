@@ -33,4 +33,10 @@ Public Class Principal
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub
+
+    Private Sub ApoderadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApoderadoToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantApoderado()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
 End Class

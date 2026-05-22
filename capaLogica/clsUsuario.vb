@@ -1,4 +1,5 @@
 ﻿Imports capaDatos
+Imports BCrypt.Net
 
 Public Class clsUsuario
 

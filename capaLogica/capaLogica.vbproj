@@ -44,6 +44,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt-Net-Next, Version=4.2.0.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.2.0\lib\net472\BCrypt-Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -68,7 +71,14 @@
     <Compile Include="clCargaAcademica.vb" />
     <Compile Include="clCurso.vb" />
     <Compile Include="clPersona.vb" />
+    <Compile Include="clsDocente.vb" />
     <Compile Include="clSeccion.vb" />
+    <Compile Include="clsLogAnoAcademico.vb" />
+    <Compile Include="clsLogPagoMatricula.vb" />
+    <Compile Include="clsLogPlanEstudio.vb" />
+    <Compile Include="clsTipoDocumento.vb" />
+    <Compile Include="clsTutorAula.vb" />
+    <Compile Include="clsUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -103,6 +113,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\capaDatos\capaDatos.vbproj">
