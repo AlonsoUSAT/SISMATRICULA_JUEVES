@@ -39,4 +39,48 @@ Public Class Principal
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub
+
+    Private Sub EstudianteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EstudianteToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantEstudiante()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub NGSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NGSToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantNGS()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+
+
+    Private Sub TipoDeDocumentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoDeDocumentoToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantTipoDocumento()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub CursoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CursoToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmCurso()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub CargaAcademicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargaAcademicaToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmCargaAcademica()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub PagoMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagoMatriculaToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantPagoMatricula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub PlanEstudioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlanEstudioToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantPlanEstudio1()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
 End Class

@@ -60,7 +60,7 @@ Partial Class frmMantUsuarios
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
         Me.Panel1.Controls.Add(Me.btnBuscar)
         Me.Panel1.Controls.Add(Me.checkVigente)
         Me.Panel1.Controls.Add(Me.cboSexo)
@@ -91,7 +91,7 @@ Partial Class frmMantUsuarios
         '
         'btnBuscar
         '
-        Me.btnBuscar.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnBuscar.Location = New System.Drawing.Point(200, 42)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(62, 35)
@@ -304,7 +304,7 @@ Partial Class frmMantUsuarios
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkOrange
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel2.Controls.Add(Me.btnLimpiar)
         Me.Panel2.Controls.Add(Me.btnDarBaja)
         Me.Panel2.Controls.Add(Me.btnEliminar)
@@ -317,7 +317,7 @@ Partial Class frmMantUsuarios
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnLimpiar.Location = New System.Drawing.Point(53, 297)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(217, 57)
@@ -327,7 +327,7 @@ Partial Class frmMantUsuarios
         '
         'btnDarBaja
         '
-        Me.btnDarBaja.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDarBaja.Location = New System.Drawing.Point(53, 233)
         Me.btnDarBaja.Name = "btnDarBaja"
         Me.btnDarBaja.Size = New System.Drawing.Size(217, 57)
@@ -337,7 +337,7 @@ Partial Class frmMantUsuarios
         '
         'btnEliminar
         '
-        Me.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnEliminar.Location = New System.Drawing.Point(53, 170)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(217, 57)
@@ -347,7 +347,7 @@ Partial Class frmMantUsuarios
         '
         'btnActualizar
         '
-        Me.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnActualizar.Location = New System.Drawing.Point(53, 89)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(217, 67)
@@ -357,7 +357,7 @@ Partial Class frmMantUsuarios
         '
         'btnNuevo
         '
-        Me.btnNuevo.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnNuevo.Location = New System.Drawing.Point(53, 13)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(217, 61)
