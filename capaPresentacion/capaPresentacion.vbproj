@@ -11,9 +11,10 @@
     <AssemblyName>capaPresentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -95,6 +96,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TranMatricula.Designer.vb">
+      <DependentUpon>TranMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TranMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMantAnoAcademico.Designer.vb">
       <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
     </Compile>
@@ -161,6 +168,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="TranMatricula.resx">
+      <DependentUpon>TranMatricula.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantAnoAcademico.resx">
       <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
     </EmbeddedResource>

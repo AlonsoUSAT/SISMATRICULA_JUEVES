@@ -39,10 +39,10 @@ Partial Class Principal
         Me.PlanDeEstudioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PagoDeMatrículaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AsignarVacanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarMatrículaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AnularMatrículaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.AsignarVacanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarMensualidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.EmisiónDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,10 +56,11 @@ Partial Class Principal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MantenimientosToolStripMenuItem, Me.OperacionesToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(827, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1103, 30)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -67,129 +68,129 @@ Partial Class Principal
         '
         Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem, Me.TipoDeDocumentoToolStripMenuItem, Me.EstudianteToolStripMenuItem, Me.ApoderadoToolStripMenuItem, Me.NivelToolStripMenuItem, Me.GradoToolStripMenuItem, Me.SecciónToolStripMenuItem, Me.AñoAcadémicoToolStripMenuItem, Me.PlanDeEstudioToolStripMenuItem, Me.PagoDeMatrículaToolStripMenuItem})
         Me.MantenimientosToolStripMenuItem.Name = "MantenimientosToolStripMenuItem"
-        Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
+        Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(130, 26)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
         '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'TipoDeDocumentoToolStripMenuItem
         '
         Me.TipoDeDocumentoToolStripMenuItem.Name = "TipoDeDocumentoToolStripMenuItem"
-        Me.TipoDeDocumentoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TipoDeDocumentoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.TipoDeDocumentoToolStripMenuItem.Text = "Tipo de documento"
         '
         'EstudianteToolStripMenuItem
         '
         Me.EstudianteToolStripMenuItem.Name = "EstudianteToolStripMenuItem"
-        Me.EstudianteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EstudianteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.EstudianteToolStripMenuItem.Text = "Estudiante"
         '
         'ApoderadoToolStripMenuItem
         '
         Me.ApoderadoToolStripMenuItem.Name = "ApoderadoToolStripMenuItem"
-        Me.ApoderadoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ApoderadoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ApoderadoToolStripMenuItem.Text = "Apoderado"
         '
         'NivelToolStripMenuItem
         '
         Me.NivelToolStripMenuItem.Name = "NivelToolStripMenuItem"
-        Me.NivelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NivelToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.NivelToolStripMenuItem.Text = "Nivel"
         '
         'GradoToolStripMenuItem
         '
         Me.GradoToolStripMenuItem.Name = "GradoToolStripMenuItem"
-        Me.GradoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GradoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.GradoToolStripMenuItem.Text = "Grado"
         '
         'SecciónToolStripMenuItem
         '
         Me.SecciónToolStripMenuItem.Name = "SecciónToolStripMenuItem"
-        Me.SecciónToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SecciónToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.SecciónToolStripMenuItem.Text = "Sección"
         '
         'AñoAcadémicoToolStripMenuItem
         '
         Me.AñoAcadémicoToolStripMenuItem.Name = "AñoAcadémicoToolStripMenuItem"
-        Me.AñoAcadémicoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AñoAcadémicoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.AñoAcadémicoToolStripMenuItem.Text = "Año Académico"
         '
         'PlanDeEstudioToolStripMenuItem
         '
         Me.PlanDeEstudioToolStripMenuItem.Name = "PlanDeEstudioToolStripMenuItem"
-        Me.PlanDeEstudioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PlanDeEstudioToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PlanDeEstudioToolStripMenuItem.Text = "Plan de Estudio"
         '
         'PagoDeMatrículaToolStripMenuItem
         '
         Me.PagoDeMatrículaToolStripMenuItem.Name = "PagoDeMatrículaToolStripMenuItem"
-        Me.PagoDeMatrículaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PagoDeMatrículaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PagoDeMatrículaToolStripMenuItem.Text = "Pago de Matrícula"
         '
         'OperacionesToolStripMenuItem
         '
         Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AsignarVacanteToolStripMenuItem, Me.RegistrarMatrículaToolStripMenuItem, Me.AnularMatrículaToolStripMenuItem, Me.ToolStripMenuItem1, Me.RegistrarMensualidadToolStripMenuItem, Me.ToolStripMenuItem2, Me.EmisiónDeToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
+        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 26)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
+        '
+        'AsignarVacanteToolStripMenuItem
+        '
+        Me.AsignarVacanteToolStripMenuItem.Name = "AsignarVacanteToolStripMenuItem"
+        Me.AsignarVacanteToolStripMenuItem.Size = New System.Drawing.Size(328, 26)
+        Me.AsignarVacanteToolStripMenuItem.Text = "Asignar Vacante"
         '
         'RegistrarMatrículaToolStripMenuItem
         '
         Me.RegistrarMatrículaToolStripMenuItem.Name = "RegistrarMatrículaToolStripMenuItem"
-        Me.RegistrarMatrículaToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.RegistrarMatrículaToolStripMenuItem.Size = New System.Drawing.Size(328, 26)
         Me.RegistrarMatrículaToolStripMenuItem.Text = "Registrar Matrícula"
         '
         'AnularMatrículaToolStripMenuItem
         '
         Me.AnularMatrículaToolStripMenuItem.Name = "AnularMatrículaToolStripMenuItem"
-        Me.AnularMatrículaToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.AnularMatrículaToolStripMenuItem.Size = New System.Drawing.Size(328, 26)
         Me.AnularMatrículaToolStripMenuItem.Text = "Anular Matrícula"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(260, 6)
-        '
-        'AsignarVacanteToolStripMenuItem
-        '
-        Me.AsignarVacanteToolStripMenuItem.Name = "AsignarVacanteToolStripMenuItem"
-        Me.AsignarVacanteToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
-        Me.AsignarVacanteToolStripMenuItem.Text = "Asignar Vacante"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(325, 6)
         '
         'RegistrarMensualidadToolStripMenuItem
         '
         Me.RegistrarMensualidadToolStripMenuItem.Name = "RegistrarMensualidadToolStripMenuItem"
-        Me.RegistrarMensualidadToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.RegistrarMensualidadToolStripMenuItem.Size = New System.Drawing.Size(328, 26)
         Me.RegistrarMensualidadToolStripMenuItem.Text = "Registrar Mensualidad"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(260, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(325, 6)
         '
         'EmisiónDeToolStripMenuItem
         '
         Me.EmisiónDeToolStripMenuItem.Name = "EmisiónDeToolStripMenuItem"
-        Me.EmisiónDeToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.EmisiónDeToolStripMenuItem.Size = New System.Drawing.Size(328, 26)
         Me.EmisiónDeToolStripMenuItem.Text = "Emisión de Constancia de Matrícula"
         '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 26)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMantenimientoUsuario, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 30)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(827, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1103, 39)
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -214,12 +215,13 @@ Partial Class Principal
         '
         'Principal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(827, 535)
+        Me.ClientSize = New System.Drawing.Size(1103, 658)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Principal"
         Me.Text = "SISTEMAS DISTRIBUIDOS - APLICACIÓN 2026"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
