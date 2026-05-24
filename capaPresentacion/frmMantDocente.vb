@@ -169,4 +169,8 @@ Public Class frmMantDocente
     Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
 
     End Sub
+
+    Private Sub dgvDocente_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDocente.CellContentClick
+
+    End Sub
 End Class

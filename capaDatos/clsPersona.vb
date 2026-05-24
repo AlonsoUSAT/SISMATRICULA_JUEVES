@@ -255,7 +255,7 @@ Public Class clsPersona
             Dim query As String = "SELECT P.apePaterno + ' ' + P.apeMaterno as Apellidos, P.nombre as Nombres, " &
                                   "P.num_doc as Numero_Documento, P.telefono as Telefono, " &
                                   "D.especialidad as Especialidad, P.correo as Correo, " &
-                                  "P.sexo as Sexo, D.estado as Estado, P.vigencia as Vigencia " &
+                                  "P.sexo as Sexo, D.estado as Estado " &
                                   "FROM PERSONA P " &
                                   "INNER JOIN DOCENTE D ON P.id_persona = D.id_persona " &
                                   "WHERE P.tipo = 'DOCENTE'"
