@@ -3,133 +3,161 @@ Imports System.Data.SqlClient
 
 Public Class clsTipoDocumento
     Private objConexion As New clsConectaBD()
-    Private comando As New SqlCommand()
 
-
+    ' ══════════════════════════════════════════════
+    '  SIGUIENTE ID
+    ' ══════════════════════════════════════════════
     Public Function ObtenerSiguienteID() As Integer
         Dim siguienteID As Integer = 0
         Try
+            Dim comando As New SqlCommand()
             objConexion.conectar()
             comando.Connection = objConexion.miConexion
-            ' Calcula el próximo valor que asignará el IDENTITY de SQL Server
             comando.CommandText = "SELECT ISNULL(MAX(id_tipoDocumento), 0) + 1 FROM TIPO_DOCUMENTO"
             comando.CommandType = CommandType.Text
-            comando.Parameters.Clear()
             siguienteID = CInt(comando.ExecuteScalar())
         Catch ex As Exception
-            Throw New Exception("Error al obtener el siguiente ID: " & ex.Message)
+            Throw New Exception("Error al obtener el siguiente ID: " & ex.Message, ex)
         Finally
             objConexion.desconectar()
         End Try
         Return siguienteID
     End Function
 
+    ' ══════════════════════════════════════════════
+    '  MOSTRAR TODOS
+    ' ══════════════════════════════════════════════
     Public Function Mostrar() As DataTable
         Dim tabla As New DataTable()
         Try
-            objConexion.conectar() ' Usamos tu método para abrir la conexión
-            comando.Connection = objConexion.miConexion ' Obtenemos la propiedad que retorna el SqlConnection
-            comando.CommandText = "SELECT * FROM TIPO_DOCUMENTO"
+            Dim comando As New SqlCommand()
+            objConexion.conectar()
+            comando.Connection = objConexion.miConexion
+            comando.CommandText = "SELECT id_tipoDocumento, nombreTipoDocumento, estado FROM TIPO_DOCUMENTO"
             comando.CommandType = CommandType.Text
             Dim leer As SqlDataReader = comando.ExecuteReader()
             tabla.Load(leer)
         Catch ex As Exception
-            Throw New Exception("Error al mostrar registros: " & ex.Message)
+            Throw New Exception("Error al mostrar registros: " & ex.Message, ex)
         Finally
-            objConexion.desconectar() ' Usamos tu método para cerrar, asegurando que siempre pase por aquí
+            objConexion.desconectar()
         End Try
         Return tabla
     End Function
 
+    ' ══════════════════════════════════════════════
+    '  BUSCAR POR ID
+    ' ══════════════════════════════════════════════
+    Public Function BuscarPorID(id As Integer) As DataTable
+        Dim tabla As New DataTable()
+        Try
+            Dim comando As New SqlCommand()
+            objConexion.conectar()
+            comando.Connection = objConexion.miConexion
+            comando.CommandText = "SELECT id_tipoDocumento, nombreTipoDocumento, estado " &
+                                  "FROM TIPO_DOCUMENTO WHERE id_tipoDocumento = @id"
+            comando.CommandType = CommandType.Text
+            comando.Parameters.AddWithValue("@id", id)
+            Dim leer As SqlDataReader = comando.ExecuteReader()
+            tabla.Load(leer)
+        Catch ex As Exception
+            Throw New Exception("Error al buscar registro: " & ex.Message, ex)
+        Finally
+            objConexion.desconectar()
+        End Try
+        Return tabla
+    End Function
 
+    ' ══════════════════════════════════════════════
+    '  INSERTAR
+    ' ══════════════════════════════════════════════
     Public Sub Insertar(tipo_doc As String, vig As Boolean)
         Try
+            Dim comando As New SqlCommand()
             objConexion.conectar()
             comando.Connection = objConexion.miConexion
-            comando.CommandText = "INSERT INTO TIPO_DOCUMENTO (nombreTipoDocumento, estado) VALUES (@tipo_Doc, @vig)"
+            comando.CommandText = "INSERT INTO TIPO_DOCUMENTO (nombreTipoDocumento, estado) " &
+                                  "VALUES (@tipo_doc, @vig)"
             comando.CommandType = CommandType.Text
-            comando.Parameters.Clear()
             comando.Parameters.AddWithValue("@tipo_doc", tipo_doc)
             comando.Parameters.AddWithValue("@vig", vig)
             comando.ExecuteNonQuery()
         Catch ex As Exception
-            Throw New Exception("Error al insertar capa datos: " & ex.Message)
+            Throw New Exception("Error al insertar: " & ex.Message, ex)
         Finally
             objConexion.desconectar()
         End Try
     End Sub
 
-
+    ' ══════════════════════════════════════════════
+    '  EDITAR
+    ' ══════════════════════════════════════════════
     Public Sub Editar(id As Integer, tipo_doc As String, vig As Boolean)
         Try
+            Dim comando As New SqlCommand()
             objConexion.conectar()
             comando.Connection = objConexion.miConexion
-            comando.CommandText = "UPDATE TIPO_DOCUMENTO set nombreTipoDocumento=@tipo_doc, estado=@vig where id_tipoDocumento=@id"
+            comando.CommandText = "UPDATE TIPO_DOCUMENTO SET nombreTipoDocumento=@tipo_doc, " &
+                                  "estado=@vig WHERE id_tipoDocumento=@id"
             comando.CommandType = CommandType.Text
-            comando.Parameters.Clear()
             comando.Parameters.AddWithValue("@id", id)
             comando.Parameters.AddWithValue("@tipo_doc", tipo_doc)
             comando.Parameters.AddWithValue("@vig", vig)
             comando.ExecuteNonQuery()
         Catch ex As Exception
-            Throw New Exception("Error al editar campos: " & ex.Message)
+            Throw New Exception("Error al editar: " & ex.Message, ex)
         Finally
             objConexion.desconectar()
         End Try
     End Sub
 
-
-    Public Sub DarBaja(id As Integer, vig As Boolean)
+    ' ══════════════════════════════════════════════
+    '  DAR DE BAJA (estado → 0)
+    ' ══════════════════════════════════════════════
+    Public Sub DarBaja(id As Integer)
         Try
+            Dim comando As New SqlCommand()
             objConexion.conectar()
             comando.Connection = objConexion.miConexion
-            comando.CommandText = "UPDATE TIPO_DOCUMENTO set estado=@vig where id_tipoDocumento=@id"
+            comando.CommandText = "UPDATE TIPO_DOCUMENTO SET estado=0 WHERE id_tipoDocumento=@id"
             comando.CommandType = CommandType.Text
-            comando.Parameters.Clear()
             comando.Parameters.AddWithValue("@id", id)
-            comando.Parameters.AddWithValue("@vig", vig)
             comando.ExecuteNonQuery()
         Catch ex As Exception
-            Throw New Exception("Error al dar de baja: " & ex.Message)
+            Throw New Exception("Error al dar de baja: " & ex.Message, ex)
         Finally
             objConexion.desconectar()
         End Try
     End Sub
 
-
+    ' ══════════════════════════════════════════════
+    '  ELIMINAR (verifica dependencias primero)
+    ' ══════════════════════════════════════════════
     Public Sub Eliminar(id As Integer)
         Try
+            Dim comando As New SqlCommand()
             objConexion.conectar()
             comando.Connection = objConexion.miConexion
             comando.CommandType = CommandType.Text
-            comando.Parameters.Clear()
             comando.Parameters.AddWithValue("@id", id)
 
-            ' 1. Primero verificamos si hay personas usando este tipo de documento
+            ' Verificar si hay personas usando este tipo
             comando.CommandText = "SELECT COUNT(*) FROM PERSONA WHERE id_tipoDocumento = @id"
             Dim relacionados As Integer = CInt(comando.ExecuteScalar())
 
-            ' 2. Lógica de decisión
             If relacionados > 0 Then
-                ' Si hay al menos 1, lanzamos un mensaje amigable en lugar de un error de sistema
-                Throw New Exception("No se puede eliminar: existen " & relacionados & " personas registradas con este tipo de documento.")
-            Else
-                ' Si no hay nadie relacionado, procedemos al borrado
-                comando.CommandText = "DELETE FROM TIPO_DOCUMENTO WHERE id_tipoDocumento = @id"
-                comando.ExecuteNonQuery()
+                Throw New Exception("No se puede eliminar: existen " & relacionados &
+                                    " persona(s) registradas con este tipo de documento.")
             End If
 
+            comando.CommandText = "DELETE FROM TIPO_DOCUMENTO WHERE id_tipoDocumento = @id"
+            comando.ExecuteNonQuery()
+
         Catch ex As Exception
-            ' Aquí capturamos tanto el error de validación como cualquier error de SQL
-            Throw New Exception(ex.Message)
+            Throw New Exception(ex.Message, ex)
         Finally
             objConexion.desconectar()
         End Try
     End Sub
 
-
-
-
-
 End Class
-

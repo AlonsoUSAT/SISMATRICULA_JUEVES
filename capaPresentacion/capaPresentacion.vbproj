@@ -107,12 +107,6 @@
     <Compile Include="frmMantApoderado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMantDocente.Designer.vb">
-      <DependentUpon>frmMantDocente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantDocente.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmMantEstudiante.Designer.vb">
       <DependentUpon>frmMantEstudiante.vb</DependentUpon>
     </Compile>
@@ -205,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantApoderado.resx">
       <DependentUpon>frmMantApoderado.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantDocente.resx">
-      <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantEstudiante.resx">
       <DependentUpon>frmMantEstudiante.vb</DependentUpon>

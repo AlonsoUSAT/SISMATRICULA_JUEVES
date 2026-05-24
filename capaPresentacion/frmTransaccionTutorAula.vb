@@ -20,6 +20,29 @@ Public Class frmTransaccionTutorAula
     Private Sub CargarGrid()
         Try
             tblAsignacion.DataSource = objTutor.MostrarTutores()
+            tblAsignacion.AutoGenerateColumns = True
+
+            ' Ocultar columnas técnicas que el usuario no necesita ver
+            If tblAsignacion.Columns.Contains("id_docente") Then
+                tblAsignacion.Columns("id_docente").Visible = False
+            End If
+            If tblAsignacion.Columns.Contains("id_seccion") Then
+                tblAsignacion.Columns("id_seccion").Visible = False
+            End If
+
+            ' Renombrar encabezados para que se lean bien
+            If tblAsignacion.Columns.Contains("id_tutor") Then
+                tblAsignacion.Columns("id_tutor").HeaderText = "Código"
+            End If
+            If tblAsignacion.Columns.Contains("NombreDocente") Then
+                tblAsignacion.Columns("NombreDocente").HeaderText = "Docente"
+            End If
+            If tblAsignacion.Columns.Contains("NombreSeccion") Then
+                tblAsignacion.Columns("NombreSeccion").HeaderText = "Sección"
+            End If
+            If tblAsignacion.Columns.Contains("estado") Then
+                tblAsignacion.Columns("estado").HeaderText = "Activo"
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -57,7 +80,7 @@ Public Class frmTransaccionTutorAula
     ' ══════════════════════════════════════════════
     Private Sub LimpiarCampos()
         txtCodigo.Text = ""
-        txtCodigo.ReadOnly = True
+        txtCodigo.ReadOnly = False
 
         cboDocente.DataSource = Nothing
         cboDocente.Items.Clear()
@@ -71,6 +94,7 @@ Public Class frmTransaccionTutorAula
         ' Solo Nuevo y Limpiar habilitados al inicio
         btnNuevo.Enabled = True
         btnActualizar.Enabled = False
+        btnActualizar.Text = "Actualizar"
         btnEliminar.Enabled = False
         btnDarBaja.Enabled = False
         btnAgregarDocente.Enabled = False
@@ -86,7 +110,7 @@ Public Class frmTransaccionTutorAula
     End Sub
 
     Private Sub HabilitarModoNuevo()
-        btnActualizar.Enabled = False
+        btnActualizar.Enabled = True    ' ← Debe estar habilitado para poder insertar
         btnEliminar.Enabled = False
         btnDarBaja.Enabled = False
         btnAgregarDocente.Enabled = True
@@ -102,9 +126,14 @@ Public Class frmTransaccionTutorAula
             txtCodigo.ReadOnly = True
             txtCodigo.Text = objTutor.ObtenerSiguienteID().ToString()
             CargarComboDocentes()
+
+
             CargarComboSecciones()
             checkEstado.Checked = True
             HabilitarModoNuevo()
+            btnActualizar.Text = "Guardar"
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -298,7 +327,9 @@ Public Class frmTransaccionTutorAula
     '  BOTÓN "+" SECCIÓN → abre frmMantSeccion
     ' ══════════════════════════════════════════════
     Private Sub btnAgregarSeccion_Click(sender As Object, e As EventArgs) Handles btnAgregarSeccion.Click
-
+        Dim frm As New frmMantNGS()
+        frm.ShowDialog()
+        CargarComboSecciones()   ' ← Agrega esta línea
     End Sub
 
 End Class
