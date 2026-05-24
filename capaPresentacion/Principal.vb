@@ -10,14 +10,7 @@ Public Class Principal
         hijoUsuarios.Show()
     End Sub
 
-<<<<<<< HEAD
-    Private Sub RegistrarMatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarMatrículaToolStripMenuItem.Click
 
-        Dim frmMatricula As New TranMatricula()
-
-
-        frmMatricula.ShowDialog()
-=======
     Private Sub DocenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DocenteToolStripMenuItem.Click
         Dim hijoUsuarios As New frmMantDocente()
         hijoUsuarios.MdiParent = Me
@@ -90,6 +83,6 @@ Public Class Principal
         Dim hijoUsuarios As New frmMantPlanEstudio1()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
->>>>>>> origin/rama_tocto
+
     End Sub
 End Class
