@@ -9,7 +9,7 @@ Public Class clsConectaBD
 
         cn = New SqlConnection
         'BDLocal - Autenticaciòn windows
-        cn.ConnectionString = "Data Source=.;Initial Catalog=SistemaMatricula;Integrated Security=SSPI;Language=Spanish"
+        cn.ConnectionString = "workstation id=SistemaMatricula1.mssql.somee.com;packet size=4096;user id=fhernandezl_SQLLogin_2;pwd=6kulrjiaia;data source=SistemaMatricula1.mssql.somee.com;persist security info=False;initial catalog=SistemaMatricula1;TrustServerCertificate=True;language=spanish"
         'BDLocal - Autenticaciòn SQL Server
         'cn.ConnectionString = "Server=localhost;Database=SistemaMatricula;Integrated Security=True;"
         'BD en la nube somee.com
@@ -65,7 +65,7 @@ Public Class clsConectaBD
         Try
             'transaccion = False
             If cn.State <> Data.ConnectionState.Open Then ' SI EL ESTADO DE  LA CONEXION ES DIFERENTE DE ABIERTO ENTONCES ABRE LA CONEXION
-                cn.ConnectionString = "Data Source=.;Initial Catalog=SistemaMatricula;Integrated Security=SSPI;Language=Spanish"
+                cn.ConnectionString = "workstation id=SistemaMatricula1.mssql.somee.com;packet size=4096;user id=fhernandezl_SQLLogin_2;pwd=6kulrjiaia;data source=SistemaMatricula1.mssql.somee.com;persist security info=False;initial catalog=SistemaMatricula1;TrustServerCertificate=True;language=spanish"
                 cn.Open()
             End If
         Catch Ex As Exception
