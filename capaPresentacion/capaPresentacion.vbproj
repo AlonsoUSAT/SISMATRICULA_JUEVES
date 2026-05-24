@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(WORKSPACE_VERSION)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76623686-5AC7-498C-A7F4-6B07BF2BF67B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>capaPresentacion.My.MyApplication</StartupObject>
+    <StartupObject>capaPresentacion.InicioSesion</StartupObject>
     <RootNamespace>capaPresentacion</RootNamespace>
     <AssemblyName>capaPresentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -49,25 +49,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    <Reference Include="BCrypt-Net-Next, Version=4.2.0.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.2.0\lib\net48\BCrypt-Net-Next.dll</HintPath>
     </Reference>
-    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -89,11 +77,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmCargaAcademica.Designer.vb">
+      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargaAcademica.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmCurso.Designer.vb">
+      <DependentUpon>frmCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurso.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TranMatricula.Designer.vb">
@@ -108,16 +101,34 @@
     <Compile Include="frmMantAnoAcademico.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMantApoderado.Designer.vb">
+      <DependentUpon>frmMantApoderado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantApoderado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantDocente.Designer.vb">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantDocente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantEstudiante.Designer.vb">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantNGS.Designer.vb">
+      <DependentUpon>frmMantNGS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantNGS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMantPagoMatricula.Designer.vb">
       <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMantPagoMatricula.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantPersona.Designer.vb">
-      <DependentUpon>frmMantPersona.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantPersona.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantPlanEstudio1.Designer.vb">
@@ -138,16 +149,22 @@
     <Compile Include="frmMantUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmNuevaAsignación.Designer.vb">
+      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaAsignación.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransaccionTutorAula.Designer.vb">
+      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransaccionTutorAula.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InicioSesion.Designer.vb">
       <DependentUpon>InicioSesion.vb</DependentUpon>
     </Compile>
     <Compile Include="InicioSesion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.vb">
-      <DependentUpon>Principal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -166,19 +183,40 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TranMatricula.resx">
       <DependentUpon>TranMatricula.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCargaAcademica.resx">
+      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurso.resx">
+      <DependentUpon>frmCurso.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantAnoAcademico.resx">
       <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMantApoderado.resx">
+      <DependentUpon>frmMantApoderado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantDocente.resx">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantEstudiante.resx">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantNGS.resx">
+      <DependentUpon>frmMantNGS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantPagoMatricula.resx">
       <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantPersona.resx">
-      <DependentUpon>frmMantPersona.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantPlanEstudio1.resx">
       <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
@@ -189,16 +227,23 @@
     <EmbeddedResource Include="frmMantUsuarios.resx">
       <DependentUpon>frmMantUsuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaAsignación.resx">
+      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransaccionTutorAula.resx">
+      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

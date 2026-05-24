@@ -204,10 +204,30 @@ Public Class TranMatricula
             Dim exito As Boolean = objLogicaMatricula.ProcesarMatricula(idEstudiante, idSeccion, monto, codOperativo, refBancaria, textoObservacion)
 
             If exito Then
-                MessageBox.Show("¡Matrícula procesada con éxito! Se ha generado el cronograma de pagos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                GenerarProyeccionCronograma()
+                ' 1. Creamos el mensaje con la pregunta interactiva
+                Dim mensaje As String = "¡Matrícula procesada con éxito! Se ha generado el cronograma de pagos." & vbCrLf & vbCrLf &
+                                        "¿Desea imprimir la Constancia de Matrícula ahora?"
 
+                ' 2. Mostramos el MessageBox con botones Sí y No, y el icono de pregunta
+                Dim respuesta As DialogResult = MessageBox.Show(mensaje, "Proceso Exitoso", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                ' 3. Pintamos la tabla gris en pantalla y limpiamos la observación
+                GenerarProyeccionCronograma()
                 txtObservacion.Clear()
+
+                ' 4. Evaluamos qué botón presionó la secretaria
+                If respuesta = DialogResult.Yes Then
+                    ' --- ESPACIO RESERVADO PARA EL REPORTE PDF ---
+                    ' Cuando crees tu formulario de reportes (ej: frmReporte), lo llamaremos desde aquí.
+                    MessageBox.Show("Abriendo vista previa de la Constancia de Matrícula...", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    ' Ejemplo de cómo se verá a futuro:
+                    ' Dim frmImprimir As New frmReporteConstancia()
+                    ' frmImprimir.ShowDialog()
+                Else
+                    ' Si presionó NO, simplemente no hace nada más y el formulario se queda listo para otra matrícula
+                    MessageBox.Show("Impresión pospuesta. Puede emitir la constancia desde el menú de mantenimientos más tarde.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
             End If
 
         Catch ex As Exception
@@ -310,6 +330,18 @@ Public Class TranMatricula
     End Sub
 
     Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
+
+    End Sub
+
+    Private Sub btnAgregarEstudiante_Click(sender As Object, e As EventArgs) Handles btnAgregarEstudiante.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
 
     End Sub
 End Class

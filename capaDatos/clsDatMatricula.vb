@@ -152,7 +152,9 @@ Public Class clsDatMatricula
         Return vacantesDisponibles
     End Function
 
-
+    ' ══════════════════════════════════════════════
+    '  PROCESAR MATRÍCULA (Guarda Pago, Matrícula, Constancia y Cronograma)
+    ' ══════════════════════════════════════════════
     Public Function ProcesarMatricula(id_estudiante As Integer, id_seccion As Integer, monto As Decimal, codOperativo As String, refBancaria As String, observacion As String) As Boolean
         Dim exito As Boolean = False
         Dim transaccion As SqlTransaction = Nothing
@@ -164,7 +166,9 @@ Public Class clsDatMatricula
             transaccion = objConexion.miConexion.BeginTransaction()
             comando.Transaction = transaccion
 
-
+            ' ---------------------------------------------------------
+            ' 1. INSERTAR EL PAGO
+            ' ---------------------------------------------------------
             comando.CommandText = "INSERT INTO PAGO_MATRICULA (fechaPago, codigoOperativo, monto, numeroReferencia) " &
                                   "VALUES (@fechaPago, @codigoOperativo, @monto, @numeroReferencia); " &
                                   "SELECT SCOPE_IDENTITY();"
@@ -178,23 +182,35 @@ Public Class clsDatMatricula
 
             Dim idPagoGenerado As Integer = Convert.ToInt32(comando.ExecuteScalar())
 
-
+            ' ---------------------------------------------------------
+            ' 2. INSERTAR LA MATRÍCULA
+            ' ---------------------------------------------------------
             comando.CommandText = "INSERT INTO MATRICULA (fecha, observacionMatricula, estadoPagoMatricula, estadoMatricula, id_seccion, id_pagoMatricula, id_estudiante) " &
                                   "VALUES (@fechaMat, @observacion, 1, 1, @id_seccion, @id_pagoMatricula, @id_estudiante); " &
                                   "SELECT SCOPE_IDENTITY();"
 
             comando.Parameters.Clear()
             comando.Parameters.AddWithValue("@fechaMat", DateTime.Now.Date)
-
             comando.Parameters.AddWithValue("@observacion", observacion)
             comando.Parameters.AddWithValue("@id_seccion", id_seccion)
             comando.Parameters.AddWithValue("@id_pagoMatricula", idPagoGenerado)
             comando.Parameters.AddWithValue("@id_estudiante", id_estudiante)
 
-
             Dim idMatriculaGenerada As Integer = Convert.ToInt32(comando.ExecuteScalar())
 
+            ' ---------------------------------------------------------
+            ' NUEVO -> 2.5 ASOCIAR LA CONSTANCIA DE MATRÍCULA
+            ' ---------------------------------------------------------
+            ' Insertamos en tu tabla usando el ID que acabamos de generar arriba
+            comando.CommandText = "INSERT INTO CONSTANCIA_MATRICULA (id_matricula) VALUES (@id_matricula_constancia);"
+            comando.Parameters.Clear()
+            comando.Parameters.AddWithValue("@id_matricula_constancia", idMatriculaGenerada)
 
+            comando.ExecuteNonQuery()
+
+            ' ---------------------------------------------------------
+            ' 3. GENERAR EL CRONOGRAMA DE PAGOS (10 Cuotas)
+            ' ---------------------------------------------------------
             comando.CommandText = "INSERT INTO CRONOGRAMA_PAGO (fechaVencimiento, fechaPagoRealizado, deuda, estado, id_matricula, concepto) " &
                                   "VALUES (@fechaVencimiento, NULL, @deuda, 0, @id_matricula, @concepto)"
 
@@ -207,10 +223,10 @@ Public Class clsDatMatricula
                 comando.Parameters.AddWithValue("@id_matricula", idMatriculaGenerada)
                 comando.Parameters.AddWithValue("@concepto", "Pensión " & (i - 2).ToString("D2"))
 
-
                 comando.ExecuteNonQuery()
             Next
 
+            ' Confirmamos la transacción (Si todo llegó aquí vivo, se guarda en las 4 tablas)
             transaccion.Commit()
             exito = True
 
@@ -225,4 +241,5 @@ Public Class clsDatMatricula
 
         Return exito
     End Function
+
 End Class

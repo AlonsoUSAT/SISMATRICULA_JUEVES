@@ -85,13 +85,41 @@ Public Class frmMantPlanEstudio1
         LimpiarCampos()
     End Sub
 
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Try
+            If txtCodigo.Text = "" Then
+                MsgBox("Ingrese un ID para buscar.", MsgBoxStyle.Exclamation, "Atención")
+                Return
+            End If
+            Dim resultado As DataTable = objLogica.Buscar(CInt(txtCodigo.Text))
+            If resultado.Rows.Count > 0 Then
+                dgvAnos.DataSource = resultado
+                Dim fila As DataGridViewRow = dgvAnos.Rows(0)
+                txtCodigo.ReadOnly = False
+                txtCodigo.Text = fila.Cells("id_planEstudio").Value.ToString()
+                txtCodigo.ReadOnly = True
+                dtpFechaInicio.Value = New DateTime(Convert.ToInt32(fila.Cells("año").Value), 1, 1)
+                chkEstado.Checked = Convert.ToBoolean(fila.Cells("vigencia").Value)
+            Else
+                MsgBox("No se encontró ningún Plan de Estudio con ese ID.", MsgBoxStyle.Information, "Sin resultados")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Atención")
+        End Try
+    End Sub
+
     Private Sub dgvAnosAcademicos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAnos.CellClick
         If e.RowIndex >= 0 Then
             Dim fila As DataGridViewRow = dgvAnos.Rows(e.RowIndex)
             ' Asignamos los datos a los controles heredados
+            txtCodigo.ReadOnly = False
             txtCodigo.Text = fila.Cells("id_planEstudio").Value.ToString()
-            dtpFechaInicio.Value = Convert.ToDateTime(fila.Cells("año").Value)
-            chkEstado.Checked = Convert.ToBoolean(fila.Cells("estado").Value)
+            txtCodigo.ReadOnly = True
+            dtpFechaInicio.Value = New DateTime(Convert.ToInt32(fila.Cells("año").Value), 1, 1)
+            chkEstado.Checked = Convert.ToBoolean(fila.Cells("vigencia").Value)
         End If
     End Sub
+
+
+
 End Class

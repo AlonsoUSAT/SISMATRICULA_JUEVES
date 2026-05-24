@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TranMatricula
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class TranMatricula
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.txtFechaPago = New System.Windows.Forms.TextBox()
@@ -60,9 +59,11 @@ Partial Class TranMatricula
         Me.ColDeuda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnProcesarMatricula = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.txtObservacion = New System.Windows.Forms.TextBox()
+        Me.btnProcesarMatricula = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -71,19 +72,20 @@ Partial Class TranMatricula
         CType(Me.dgvCronograma, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.AccessibleName = "dfs"
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.ForeColor = System.Drawing.Color.Black
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(12, 82)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(628, 643)
+        Me.Panel1.Size = New System.Drawing.Size(699, 643)
         Me.Panel1.TabIndex = 0
         '
         'GroupBox3
@@ -96,39 +98,40 @@ Partial Class TranMatricula
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Location = New System.Drawing.Point(13, 476)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.GroupBox3.Location = New System.Drawing.Point(13, 422)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(603, 159)
+        Me.GroupBox3.Size = New System.Drawing.Size(672, 159)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Registrar matricula"
         '
         'txtFechaPago
         '
-        Me.txtFechaPago.Location = New System.Drawing.Point(193, 21)
+        Me.txtFechaPago.Location = New System.Drawing.Point(219, 21)
         Me.txtFechaPago.Name = "txtFechaPago"
-        Me.txtFechaPago.Size = New System.Drawing.Size(220, 22)
+        Me.txtFechaPago.Size = New System.Drawing.Size(220, 26)
         Me.txtFechaPago.TabIndex = 8
         '
         'txtRefBancaria
         '
-        Me.txtRefBancaria.Location = New System.Drawing.Point(193, 120)
+        Me.txtRefBancaria.Location = New System.Drawing.Point(219, 120)
         Me.txtRefBancaria.Name = "txtRefBancaria"
-        Me.txtRefBancaria.Size = New System.Drawing.Size(220, 22)
+        Me.txtRefBancaria.Size = New System.Drawing.Size(220, 26)
         Me.txtRefBancaria.TabIndex = 7
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(193, 86)
+        Me.txtMonto.Location = New System.Drawing.Point(219, 86)
         Me.txtMonto.Name = "txtMonto"
-        Me.txtMonto.Size = New System.Drawing.Size(220, 22)
+        Me.txtMonto.Size = New System.Drawing.Size(220, 26)
         Me.txtMonto.TabIndex = 6
         '
         'txtCodOperativo
         '
-        Me.txtCodOperativo.Location = New System.Drawing.Point(193, 54)
+        Me.txtCodOperativo.Location = New System.Drawing.Point(219, 53)
         Me.txtCodOperativo.Name = "txtCodOperativo"
-        Me.txtCodOperativo.Size = New System.Drawing.Size(220, 22)
+        Me.txtCodOperativo.Size = New System.Drawing.Size(220, 26)
         Me.txtCodOperativo.TabIndex = 5
         '
         'Label12
@@ -136,7 +139,7 @@ Partial Class TranMatricula
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(19, 123)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(91, 16)
+        Me.Label12.Size = New System.Drawing.Size(116, 20)
         Me.Label12.TabIndex = 3
         Me.Label12.Text = "Ref. Bancaria:"
         '
@@ -145,7 +148,7 @@ Partial Class TranMatricula
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(19, 92)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(47, 16)
+        Me.Label11.Size = New System.Drawing.Size(60, 20)
         Me.Label11.TabIndex = 2
         Me.Label11.Text = "Monto:"
         '
@@ -154,7 +157,7 @@ Partial Class TranMatricula
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(14, 57)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(161, 16)
+        Me.Label10.Size = New System.Drawing.Size(204, 20)
         Me.Label10.TabIndex = 1
         Me.Label10.Text = "Cod. Operativo (Voucher):"
         '
@@ -163,7 +166,7 @@ Partial Class TranMatricula
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(14, 27)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(48, 16)
+        Me.Label9.Size = New System.Drawing.Size(60, 20)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Fecha:"
         '
@@ -177,18 +180,19 @@ Partial Class TranMatricula
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 245)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 182)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(603, 213)
+        Me.GroupBox2.Size = New System.Drawing.Size(672, 213)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = " Asignación y control de vacante"
         '
         'txtVacante
         '
-        Me.txtVacante.Location = New System.Drawing.Point(152, 174)
+        Me.txtVacante.Location = New System.Drawing.Point(194, 174)
         Me.txtVacante.Name = "txtVacante"
-        Me.txtVacante.Size = New System.Drawing.Size(160, 22)
+        Me.txtVacante.Size = New System.Drawing.Size(219, 26)
         Me.txtVacante.TabIndex = 7
         '
         'Label8
@@ -196,7 +200,7 @@ Partial Class TranMatricula
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(14, 177)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(132, 16)
+        Me.Label8.Size = New System.Drawing.Size(164, 20)
         Me.Label8.TabIndex = 6
         Me.Label8.Text = "Estado de Vacantes:"
         '
@@ -206,7 +210,7 @@ Partial Class TranMatricula
         Me.cboSeccion.FormattingEnabled = True
         Me.cboSeccion.Location = New System.Drawing.Point(79, 122)
         Me.cboSeccion.Name = "cboSeccion"
-        Me.cboSeccion.Size = New System.Drawing.Size(161, 24)
+        Me.cboSeccion.Size = New System.Drawing.Size(161, 28)
         Me.cboSeccion.TabIndex = 5
         '
         'cboGrado
@@ -215,7 +219,7 @@ Partial Class TranMatricula
         Me.cboGrado.FormattingEnabled = True
         Me.cboGrado.Location = New System.Drawing.Point(79, 72)
         Me.cboGrado.Name = "cboGrado"
-        Me.cboGrado.Size = New System.Drawing.Size(161, 24)
+        Me.cboGrado.Size = New System.Drawing.Size(161, 28)
         Me.cboGrado.TabIndex = 4
         '
         'cboNivel
@@ -224,7 +228,7 @@ Partial Class TranMatricula
         Me.cboNivel.FormattingEnabled = True
         Me.cboNivel.Location = New System.Drawing.Point(79, 27)
         Me.cboNivel.Name = "cboNivel"
-        Me.cboNivel.Size = New System.Drawing.Size(161, 24)
+        Me.cboNivel.Size = New System.Drawing.Size(161, 28)
         Me.cboNivel.TabIndex = 3
         '
         'Label7
@@ -232,7 +236,7 @@ Partial Class TranMatricula
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(14, 125)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(59, 16)
+        Me.Label7.Size = New System.Drawing.Size(74, 20)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Sección:"
         '
@@ -241,7 +245,7 @@ Partial Class TranMatricula
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(14, 80)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 16)
+        Me.Label6.Size = New System.Drawing.Size(60, 20)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Grado:"
         '
@@ -250,13 +254,13 @@ Partial Class TranMatricula
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(14, 30)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 16)
+        Me.Label5.Size = New System.Drawing.Size(51, 20)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Nivel:"
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.GroupBox1.Controls.Add(Me.btnAgregarEstudiante)
         Me.GroupBox1.Controls.Add(Me.txtApoderado)
         Me.GroupBox1.Controls.Add(Me.txtEstudiante)
@@ -267,68 +271,74 @@ Partial Class TranMatricula
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cboTipoDocumento)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(603, 146)
+        Me.GroupBox1.Size = New System.Drawing.Size(672, 146)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del estudiante"
         '
         'btnAgregarEstudiante
         '
-        Me.btnAgregarEstudiante.Location = New System.Drawing.Point(491, 21)
+        Me.btnAgregarEstudiante.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnAgregarEstudiante.Location = New System.Drawing.Point(470, 19)
         Me.btnAgregarEstudiante.Name = "btnAgregarEstudiante"
-        Me.btnAgregarEstudiante.Size = New System.Drawing.Size(99, 47)
+        Me.btnAgregarEstudiante.Size = New System.Drawing.Size(163, 47)
         Me.btnAgregarEstudiante.TabIndex = 9
         Me.btnAgregarEstudiante.Text = "Agregar estudiante"
-        Me.btnAgregarEstudiante.UseVisualStyleBackColor = True
+        Me.btnAgregarEstudiante.UseVisualStyleBackColor = False
         '
         'txtApoderado
         '
-        Me.txtApoderado.Location = New System.Drawing.Point(96, 108)
+        Me.txtApoderado.Location = New System.Drawing.Point(108, 108)
         Me.txtApoderado.Name = "txtApoderado"
-        Me.txtApoderado.Size = New System.Drawing.Size(368, 22)
+        Me.txtApoderado.Size = New System.Drawing.Size(482, 26)
         Me.txtApoderado.TabIndex = 8
         '
         'txtEstudiante
         '
-        Me.txtEstudiante.Location = New System.Drawing.Point(96, 70)
+        Me.txtEstudiante.Location = New System.Drawing.Point(108, 70)
         Me.txtEstudiante.Name = "txtEstudiante"
-        Me.txtEstudiante.Size = New System.Drawing.Size(368, 22)
+        Me.txtEstudiante.Size = New System.Drawing.Size(482, 26)
         Me.txtEstudiante.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label4.Location = New System.Drawing.Point(14, 111)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 16)
+        Me.Label4.Size = New System.Drawing.Size(89, 20)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Apoderado"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label3.Location = New System.Drawing.Point(14, 70)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 16)
+        Me.Label3.Size = New System.Drawing.Size(88, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Estudiante"
         '
         'BtnBuscarEstudiante
         '
+        Me.BtnBuscarEstudiante.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.BtnBuscarEstudiante.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.BtnBuscarEstudiante.Location = New System.Drawing.Point(373, 21)
         Me.BtnBuscarEstudiante.Name = "BtnBuscarEstudiante"
         Me.BtnBuscarEstudiante.Size = New System.Drawing.Size(91, 39)
         Me.BtnBuscarEstudiante.TabIndex = 4
         Me.BtnBuscarEstudiante.Text = "Buscar"
-        Me.BtnBuscarEstudiante.UseVisualStyleBackColor = True
+        Me.BtnBuscarEstudiante.UseVisualStyleBackColor = False
         '
         'TxtDNI
         '
         Me.TxtDNI.Location = New System.Drawing.Point(229, 32)
         Me.TxtDNI.Name = "TxtDNI"
-        Me.TxtDNI.Size = New System.Drawing.Size(138, 22)
+        Me.TxtDNI.Size = New System.Drawing.Size(138, 26)
         Me.TxtDNI.TabIndex = 3
         '
         'Label2
@@ -336,7 +346,7 @@ Partial Class TranMatricula
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(190, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 16)
+        Me.Label2.Size = New System.Drawing.Size(41, 20)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nro:"
         '
@@ -346,21 +356,24 @@ Partial Class TranMatricula
         Me.cboTipoDocumento.FormattingEnabled = True
         Me.cboTipoDocumento.Location = New System.Drawing.Point(63, 29)
         Me.cboTipoDocumento.Name = "cboTipoDocumento"
-        Me.cboTipoDocumento.Size = New System.Drawing.Size(121, 24)
+        Me.cboTipoDocumento.Size = New System.Drawing.Size(121, 28)
         Me.cboTipoDocumento.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 32)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label1.Location = New System.Drawing.Point(13, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(38, 16)
+        Me.Label1.Size = New System.Drawing.Size(46, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tipo:"
         '
         'GroupBox4
         '
+        Me.GroupBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.GroupBox4.Controls.Add(Me.dgvCronograma)
+        Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox4.Location = New System.Drawing.Point(12, 13)
         Me.GroupBox4.Name = "GroupBox4"
@@ -374,14 +387,6 @@ Partial Class TranMatricula
         Me.dgvCronograma.AllowUserToAddRows = False
         Me.dgvCronograma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCronograma.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColConcepto, Me.ColVencimiento, Me.ColDeuda, Me.ColEstado})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCronograma.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCronograma.Location = New System.Drawing.Point(6, 32)
         Me.dgvCronograma.Name = "dgvCronograma"
         Me.dgvCronograma.ReadOnly = True
@@ -429,27 +434,19 @@ Partial Class TranMatricula
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Maroon
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel2.Controls.Add(Me.GroupBox5)
         Me.Panel2.Controls.Add(Me.btnProcesarMatricula)
         Me.Panel2.Controls.Add(Me.GroupBox4)
-        Me.Panel2.Location = New System.Drawing.Point(646, 12)
+        Me.Panel2.Location = New System.Drawing.Point(735, 69)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(595, 643)
         Me.Panel2.TabIndex = 2
         '
-        'btnProcesarMatricula
-        '
-        Me.btnProcesarMatricula.Location = New System.Drawing.Point(227, 574)
-        Me.btnProcesarMatricula.Name = "btnProcesarMatricula"
-        Me.btnProcesarMatricula.Size = New System.Drawing.Size(146, 44)
-        Me.btnProcesarMatricula.TabIndex = 2
-        Me.btnProcesarMatricula.Text = "Procesar matricula"
-        Me.btnProcesarMatricula.UseVisualStyleBackColor = True
-        '
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.txtObservacion)
+        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.GroupBox5.ForeColor = System.Drawing.Color.White
         Me.GroupBox5.Location = New System.Drawing.Point(12, 422)
         Me.GroupBox5.Name = "GroupBox5"
@@ -466,11 +463,45 @@ Partial Class TranMatricula
         Me.txtObservacion.Size = New System.Drawing.Size(560, 96)
         Me.txtObservacion.TabIndex = 0
         '
+        'btnProcesarMatricula
+        '
+        Me.btnProcesarMatricula.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnProcesarMatricula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.btnProcesarMatricula.Location = New System.Drawing.Point(198, 570)
+        Me.btnProcesarMatricula.Name = "btnProcesarMatricula"
+        Me.btnProcesarMatricula.Size = New System.Drawing.Size(213, 44)
+        Me.btnProcesarMatricula.TabIndex = 2
+        Me.btnProcesarMatricula.Text = "Procesar matricula"
+        Me.btnProcesarMatricula.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Label13)
+        Me.Panel3.Location = New System.Drawing.Point(12, 7)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1329, 68)
+        Me.Panel3.TabIndex = 35
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Snow
+        Me.Label13.Location = New System.Drawing.Point(29, 17)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(261, 31)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "Registrar Matricula"
+        '
         'TranMatricula
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1243, 659)
+        Me.ClientSize = New System.Drawing.Size(1342, 744)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "TranMatricula"
@@ -487,6 +518,8 @@ Partial Class TranMatricula
         Me.Panel2.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -531,4 +564,6 @@ Partial Class TranMatricula
     Friend WithEvents btnProcesarMatricula As Button
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents txtObservacion As TextBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label13 As Label
 End Class

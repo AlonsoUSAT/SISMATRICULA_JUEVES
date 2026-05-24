@@ -1,6 +1,9 @@
 ﻿Imports System.Net
 Imports System.Data
+
 Public Class clsLogMatricula
+
+ 
 
     Public Function BuscarEstudiantePorDNI(dni As String) As DataTable
         Dim objDatMatricula As New capaDatos.clsDatMatricula()
