@@ -85,4 +85,10 @@ Public Class Principal
         hijoUsuarios.Show()
 
     End Sub
+
+    Private Sub ProcesarMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProcesarMatriculaToolStripMenuItem.Click
+        Dim hijoUsuarios As New TranMatricula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
 End Class

@@ -46,6 +46,21 @@ Public Class clsLogMatricula
         Return objDatMatricula.ProcesarMatricula(id_estudiante, id_seccion, monto, codOperativo, refBancaria, observacion)
     End Function
 
+    Public Function ValidarMatriculaActual(idEstudiante As Integer) As Boolean
+        Dim objDatMatricula As New capaDatos.clsDatMatricula()
+        Return objDatMatricula.ValidarMatriculaActual(idEstudiante)
+    End Function
+
+
+    Public Function ObtenerUltimoGradoEstudiante(idEstudiante As Integer) As DataTable
+        Dim objDatMatricula As New capaDatos.clsDatMatricula()
+        Return objDatMatricula.ObtenerUltimoGradoEstudiante(idEstudiante)
+    End Function
+
+    Public Function ValidarVoucherDuplicado(codOperativo As String) As Boolean
+        Dim objDatMatricula As New capaDatos.clsDatMatricula()
+        Return objDatMatricula.ValidarVoucherDuplicado(codOperativo)
+    End Function
 
 
 End Class

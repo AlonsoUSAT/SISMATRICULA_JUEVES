@@ -107,7 +107,7 @@ Public Class clsDatMatricula
         Try
             objConexion.conectar()
             comando.Connection = objConexion.miConexion
-            comando.CommandText = "SELECT id_seccion, nombre FROM SECCION WHERE id_grado = @id_grado AND estado = 1"
+            comando.CommandText = "SELECT id_seccion, nombre FROM SECCION WHERE id_grado = @id_grado AND vigencia = 1"
             comando.CommandType = CommandType.Text
             comando.Parameters.Clear()
             comando.Parameters.AddWithValue("@id_grado", id_grado)
@@ -152,9 +152,7 @@ Public Class clsDatMatricula
         Return vacantesDisponibles
     End Function
 
-    ' ══════════════════════════════════════════════
-    '  PROCESAR MATRÍCULA (Guarda Pago, Matrícula, Constancia y Cronograma)
-    ' ══════════════════════════════════════════════
+
     Public Function ProcesarMatricula(id_estudiante As Integer, id_seccion As Integer, monto As Decimal, codOperativo As String, refBancaria As String, observacion As String) As Boolean
         Dim exito As Boolean = False
         Dim transaccion As SqlTransaction = Nothing
@@ -163,12 +161,11 @@ Public Class clsDatMatricula
             objConexion.conectar()
             comando.Connection = objConexion.miConexion
 
+
             transaccion = objConexion.miConexion.BeginTransaction()
             comando.Transaction = transaccion
 
-            ' ---------------------------------------------------------
-            ' 1. INSERTAR EL PAGO
-            ' ---------------------------------------------------------
+
             comando.CommandText = "INSERT INTO PAGO_MATRICULA (fechaPago, codigoOperativo, monto, numeroReferencia) " &
                                   "VALUES (@fechaPago, @codigoOperativo, @monto, @numeroReferencia); " &
                                   "SELECT SCOPE_IDENTITY();"
@@ -182,9 +179,7 @@ Public Class clsDatMatricula
 
             Dim idPagoGenerado As Integer = Convert.ToInt32(comando.ExecuteScalar())
 
-            ' ---------------------------------------------------------
-            ' 2. INSERTAR LA MATRÍCULA
-            ' ---------------------------------------------------------
+
             comando.CommandText = "INSERT INTO MATRICULA (fecha, observacionMatricula, estadoPagoMatricula, estadoMatricula, id_seccion, id_pagoMatricula, id_estudiante) " &
                                   "VALUES (@fechaMat, @observacion, 1, 1, @id_seccion, @id_pagoMatricula, @id_estudiante); " &
                                   "SELECT SCOPE_IDENTITY();"
@@ -198,19 +193,27 @@ Public Class clsDatMatricula
 
             Dim idMatriculaGenerada As Integer = Convert.ToInt32(comando.ExecuteScalar())
 
-            ' ---------------------------------------------------------
-            ' NUEVO -> 2.5 ASOCIAR LA CONSTANCIA DE MATRÍCULA
-            ' ---------------------------------------------------------
-            ' Insertamos en tu tabla usando el ID que acabamos de generar arriba
+
             comando.CommandText = "INSERT INTO CONSTANCIA_MATRICULA (id_matricula) VALUES (@id_matricula_constancia);"
             comando.Parameters.Clear()
             comando.Parameters.AddWithValue("@id_matricula_constancia", idMatriculaGenerada)
+            comando.ExecuteNonQuery()
+
+
+            comando.CommandText = "INSERT INTO VACANTE (fechaCreacion, nroVacante, descripcion, id_estudiante, id_seccion) " &
+                                  "VALUES (@fechaVac, @nroVac, @descVac, @id_estVac, @id_secVac)"
+
+            comando.Parameters.Clear()
+            comando.Parameters.AddWithValue("@fechaVac", DateTime.Now.Date)
+
+            comando.Parameters.AddWithValue("@nroVac", idMatriculaGenerada.ToString())
+            comando.Parameters.AddWithValue("@descVac", "Regular")
+            comando.Parameters.AddWithValue("@id_estVac", id_estudiante)
+            comando.Parameters.AddWithValue("@id_secVac", id_seccion)
 
             comando.ExecuteNonQuery()
 
-            ' ---------------------------------------------------------
-            ' 3. GENERAR EL CRONOGRAMA DE PAGOS (10 Cuotas)
-            ' ---------------------------------------------------------
+
             comando.CommandText = "INSERT INTO CRONOGRAMA_PAGO (fechaVencimiento, fechaPagoRealizado, deuda, estado, id_matricula, concepto) " &
                                   "VALUES (@fechaVencimiento, NULL, @deuda, 0, @id_matricula, @concepto)"
 
@@ -226,11 +229,12 @@ Public Class clsDatMatricula
                 comando.ExecuteNonQuery()
             Next
 
-            ' Confirmamos la transacción (Si todo llegó aquí vivo, se guarda en las 4 tablas)
+
             transaccion.Commit()
             exito = True
 
         Catch ex As Exception
+
             If transaccion IsNot Nothing Then
                 transaccion.Rollback()
             End If
@@ -240,6 +244,91 @@ Public Class clsDatMatricula
         End Try
 
         Return exito
+    End Function
+
+
+
+    Public Function ValidarMatriculaActual(idEstudiante As Integer) As Boolean
+        Dim yaEstaMatriculado As Boolean = False
+        Try
+            objConexion.conectar()
+            comando.Connection = objConexion.miConexion
+
+
+            comando.CommandText = "SELECT COUNT(*) FROM MATRICULA WHERE id_estudiante = @idEstudiante AND YEAR(fecha) = YEAR(GETDATE())"
+            comando.CommandType = CommandType.Text
+            comando.Parameters.Clear()
+            comando.Parameters.AddWithValue("@idEstudiante", idEstudiante)
+
+            Dim cantidad As Integer = Convert.ToInt32(comando.ExecuteScalar())
+
+            If cantidad > 0 Then
+                yaEstaMatriculado = True
+            End If
+        Catch ex As Exception
+            Throw New Exception("Error al validar matrícula actual: " & ex.Message)
+        Finally
+            objConexion.desconectar()
+        End Try
+        Return yaEstaMatriculado
+    End Function
+
+
+
+    Public Function ObtenerUltimoGradoEstudiante(idEstudiante As Integer) As DataTable
+        Dim dt As New DataTable()
+        Try
+            objConexion.conectar()
+            comando.Connection = objConexion.miConexion
+
+
+            comando.CommandText = "SELECT TOP 1 N.id_nivel, N.nombre AS NombreNivel, G.id_grado, G.nombre AS NombreGrado " &
+                                  "FROM MATRICULA M " &
+                                  "INNER JOIN SECCION S ON M.id_seccion = S.id_seccion " &
+                                  "INNER JOIN GRADO G ON S.id_grado = G.id_grado " &
+                                  "INNER JOIN NIVEL N ON G.id_nivel = N.id_nivel " &
+                                  "WHERE M.id_estudiante = @idEstudiante " &
+                                  "ORDER BY M.fecha DESC"
+
+            comando.CommandType = CommandType.Text
+            comando.Parameters.Clear()
+            comando.Parameters.AddWithValue("@idEstudiante", idEstudiante)
+
+            Dim leer As SqlDataReader = comando.ExecuteReader()
+            dt.Load(leer)
+        Catch ex As Exception
+            Throw New Exception("Error al obtener el historial académico: " & ex.Message)
+        Finally
+            objConexion.desconectar()
+        End Try
+        Return dt
+    End Function
+
+
+    Public Function ValidarVoucherDuplicado(codOperativo As String) As Boolean
+        Dim yaExiste As Boolean = False
+        Try
+            objConexion.conectar()
+            comando.Connection = objConexion.miConexion
+
+
+            comando.CommandText = "SELECT COUNT(*) FROM PAGO_MATRICULA WHERE codigoOperativo = @codOperativo"
+            comando.CommandType = CommandType.Text
+            comando.Parameters.Clear()
+            comando.Parameters.AddWithValue("@codOperativo", codOperativo)
+
+            Dim cantidad As Integer = Convert.ToInt32(comando.ExecuteScalar())
+
+
+            If cantidad > 0 Then
+                yaExiste = True
+            End If
+        Catch ex As Exception
+            Throw New Exception("Error al validar el voucher: " & ex.Message)
+        Finally
+            objConexion.desconectar()
+        End Try
+        Return yaExiste
     End Function
 
 End Class

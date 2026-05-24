@@ -16,6 +16,21 @@ Public Class TranMatricula
 
         txtVacante.ReadOnly = True
 
+        txtEstudiante.ReadOnly = True
+        txtApoderado.ReadOnly = True
+
+
+        txtMonto.ReadOnly = True
+        txtMonto.BackColor = SystemColors.Control
+
+
+        txtObservacion.ReadOnly = True
+        txtObservacion.BackColor = SystemColors.Control
+
+
+        txtEstudiante.BackColor = SystemColors.Control
+        txtApoderado.BackColor = SystemColors.Control
+
         txtCodOperativo.MaxLength = 8
         txtRefBancaria.MaxLength = 12
         TxtDNI.MaxLength = 8
@@ -46,6 +61,11 @@ Public Class TranMatricula
             cboNivel.SelectedIndex = -1
 
 
+
+            cboNivel.Enabled = False
+            cboGrado.Enabled = False
+            cboSeccion.Enabled = False
+
             cargandoCombos = False
 
         Catch ex As Exception
@@ -57,10 +77,13 @@ Public Class TranMatricula
     Private Sub cboNivel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboNivel.SelectedIndexChanged
 
         If cargandoCombos OrElse cboNivel.SelectedIndex = -1 Then Return
-        If TypeOf cboNivel.SelectedValue IsNot Integer Then Return
+
+
+        Dim idNivel As Integer
+        If Integer.TryParse(cboNivel.SelectedValue.ToString(), idNivel) = False Then Return
 
         Try
-            Dim idNivel As Integer = Convert.ToInt32(cboNivel.SelectedValue)
+
 
             Dim dtGrados As DataTable = objLogicaMatricula.ListarGradosPorNivel(idNivel)
             cboGrado.DataSource = dtGrados
@@ -72,6 +95,18 @@ Public Class TranMatricula
             cboSeccion.DataSource = Nothing
             cboSeccion.Enabled = False
 
+
+            Dim nombreNivel As String = cboNivel.Text.ToUpper()
+
+            If nombreNivel.Contains("PRIMARIA") Then
+                txtMonto.Text = "300.00"
+            ElseIf nombreNivel.Contains("SECUNDARIA") Then
+                txtMonto.Text = "400.00"
+            Else
+                txtMonto.Text = "0.00"
+            End If
+
+
         Catch ex As Exception
             MessageBox.Show("Error al cargar los grados: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -80,10 +115,13 @@ Public Class TranMatricula
     Private Sub cboGrado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGrado.SelectedIndexChanged
 
         If cargandoCombos OrElse cboGrado.SelectedIndex = -1 Then Return
-        If TypeOf cboGrado.SelectedValue IsNot Integer Then Return
+
+
+        Dim idGrado As Integer
+        If Integer.TryParse(cboGrado.SelectedValue.ToString(), idGrado) = False Then Return
 
         Try
-            Dim idGrado As Integer = Convert.ToInt32(cboGrado.SelectedValue)
+
 
             Dim dtSecciones As DataTable = objLogicaMatricula.ListarSeccionesPorGrado(idGrado)
             cboSeccion.DataSource = dtSecciones
@@ -99,35 +137,57 @@ Public Class TranMatricula
     End Sub
 
 
-
-
     Private Sub BtnBuscarEstudiante_Click_1(sender As Object, e As EventArgs) Handles BtnBuscarEstudiante.Click
         Dim dniABuscar As String = TxtDNI.Text.Trim()
+
 
         If dniABuscar.Length = 8 Then
             Try
                 Dim dtEstudiante As DataTable = objLogicaMatricula.BuscarEstudiantePorDNI(dniABuscar)
 
-                If dtEstudiante.Rows.Count > 0 Then
-                    _idEstudianteSeleccionado = Convert.ToInt32(dtEstudiante.Rows(0)("id_estudiante"))
-                    txtEstudiante.Text = dtEstudiante.Rows(0)("NombreEstudiante").ToString()
-                    txtApoderado.Text = dtEstudiante.Rows(0)("NombreApoderado").ToString()
-
-                    txtEstudiante.ReadOnly = True
-                    txtApoderado.ReadOnly = True
-                Else
-                    MessageBox.Show("No se encontró ningún estudiante con ese DNI.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    _idEstudianteSeleccionado = 0
-                    txtEstudiante.Clear()
-                    txtApoderado.Clear()
-                End If
 
                 If dtEstudiante.Rows.Count > 0 Then
+                    txtObservacion.ReadOnly = False
+                    txtObservacion.BackColor = Color.White
+
                     _idEstudianteSeleccionado = Convert.ToInt32(dtEstudiante.Rows(0)("id_estudiante"))
+
+
+                    If objLogicaMatricula.ValidarMatriculaActual(_idEstudianteSeleccionado) Then
+                        MessageBox.Show("ALERTA: Este estudiante ya se encuentra matriculado para el año académico actual." & vbCrLf & vbCrLf &
+                                        "No se puede realizar una doble matrícula.", "Matrícula Duplicada", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+
+
+                        _idEstudianteSeleccionado = 0
+                        txtEstudiante.Clear()
+                        txtApoderado.Clear()
+                        cboNivel.SelectedIndex = -1
+
+
+                        Return
+                    End If
+
                     txtEstudiante.Text = dtEstudiante.Rows(0)("NombreEstudiante").ToString()
                     txtApoderado.Text = dtEstudiante.Rows(0)("NombreApoderado").ToString()
                     txtEstudiante.ReadOnly = True
                     txtApoderado.ReadOnly = True
+
+
+                    cboNivel.Enabled = True
+
+
+                    Dim dtHistorial As DataTable = objLogicaMatricula.ObtenerUltimoGradoEstudiante(_idEstudianteSeleccionado)
+
+                    If dtHistorial.Rows.Count > 0 Then
+                        Dim ultimoIdNivel As Integer = Convert.ToInt32(dtHistorial.Rows(0)("id_nivel"))
+
+                        cboNivel.SelectedValue = ultimoIdNivel
+                    Else
+
+                        cboNivel.SelectedIndex = -1
+                    End If
+
+
                 Else
 
                     MessageBox.Show("Este DNI no pertenece a ningún estudiante matriculado o activo." & vbCrLf & vbCrLf &
@@ -137,6 +197,15 @@ Public Class TranMatricula
                     _idEstudianteSeleccionado = 0
                     txtEstudiante.Clear()
                     txtApoderado.Clear()
+
+
+                    cargandoCombos = True
+
+                    cboNivel.SelectedIndex = -1
+                    cboNivel.Enabled = False
+
+
+
                 End If
 
             Catch ex As Exception
@@ -146,7 +215,6 @@ Public Class TranMatricula
             MessageBox.Show("El DNI debe tener 8 dígitos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
-
 
     Private Sub btnProcesarMatricula_Click(sender As Object, e As EventArgs) Handles btnProcesarMatricula.Click
 
@@ -177,12 +245,24 @@ Public Class TranMatricula
 
 
         Dim montoIngresado As Decimal = 0
-
-        If Decimal.TryParse(txtMonto.Text, montoIngresado) = False OrElse montoIngresado < 350 Then
-            MessageBox.Show("El monto ingresado no es válido. La matrícula mínima es de S/ 350.00", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtMonto.Focus()
+        If Decimal.TryParse(txtMonto.Text, montoIngresado) = False OrElse montoIngresado <= 0 Then
+            MessageBox.Show("Debe seleccionar un Nivel válido para generar el monto de la matrícula.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
+
+
+        Dim codOperativoAVerificar As String = txtCodOperativo.Text.Trim()
+
+        If objLogicaMatricula.ValidarVoucherDuplicado(codOperativoAVerificar) Then
+            MessageBox.Show("ALERTA DE SEGURIDAD: Este Código Operativo ya ha sido registrado en otra matrícula." & vbCrLf & vbCrLf &
+                            "Por favor, verifique el comprobante físico. No se puede procesar un pago duplicado.",
+                            "Voucher Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+
+            txtCodOperativo.Focus()
+            txtCodOperativo.SelectAll()
+            Return
+        End If
+
 
 
         Try
@@ -191,9 +271,17 @@ Public Class TranMatricula
             Dim monto As Decimal = montoIngresado
             Dim codOperativo As String = txtCodOperativo.Text.Trim()
             Dim refBancaria As String = txtRefBancaria.Text.Trim()
-
-
             Dim textoObservacion As String = txtObservacion.Text.Trim()
+
+
+            Dim nombreNivel As String = cboNivel.Text.ToUpper()
+            Dim montoPension As Decimal = 0
+
+            If nombreNivel.Contains("PRIMARIA") Then
+                montoPension = 350.0
+            ElseIf nombreNivel.Contains("SECUNDARIA") Then
+                montoPension = 450.0
+            End If
 
 
             If textoObservacion = "" Then
@@ -204,30 +292,35 @@ Public Class TranMatricula
             Dim exito As Boolean = objLogicaMatricula.ProcesarMatricula(idEstudiante, idSeccion, monto, codOperativo, refBancaria, textoObservacion)
 
             If exito Then
-                ' 1. Creamos el mensaje con la pregunta interactiva
+
                 Dim mensaje As String = "¡Matrícula procesada con éxito! Se ha generado el cronograma de pagos." & vbCrLf & vbCrLf &
                                         "¿Desea imprimir la Constancia de Matrícula ahora?"
 
-                ' 2. Mostramos el MessageBox con botones Sí y No, y el icono de pregunta
+
                 Dim respuesta As DialogResult = MessageBox.Show(mensaje, "Proceso Exitoso", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                ' 3. Pintamos la tabla gris en pantalla y limpiamos la observación
+
                 GenerarProyeccionCronograma()
                 txtObservacion.Clear()
 
-                ' 4. Evaluamos qué botón presionó la secretaria
-                If respuesta = DialogResult.Yes Then
-                    ' --- ESPACIO RESERVADO PARA EL REPORTE PDF ---
-                    ' Cuando crees tu formulario de reportes (ej: frmReporte), lo llamaremos desde aquí.
-                    MessageBox.Show("Abriendo vista previa de la Constancia de Matrícula...", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' Ejemplo de cómo se verá a futuro:
-                    ' Dim frmImprimir As New frmReporteConstancia()
-                    ' frmImprimir.ShowDialog()
+                Dim idSeccionActual As Integer = Convert.ToInt32(cboSeccion.SelectedValue)
+                Dim vacantesRestantes As Integer = objLogicaMatricula.ObtenerVacantesDisponibles(idSeccionActual)
+                txtVacante.Text = vacantesRestantes.ToString() & " vacantes disponibles"
+
+                If vacantesRestantes <= 0 Then
+                    txtVacante.BackColor = Color.LightCoral
+                    txtVacante.Text = "Sección Llena (0 vacantes)"
                 Else
-                    ' Si presionó NO, simplemente no hace nada más y el formulario se queda listo para otra matrícula
-                    MessageBox.Show("Impresión pospuesta. Puede emitir la constancia desde el menú de mantenimientos más tarde.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    txtVacante.BackColor = Color.LightGreen
                 End If
+
+
+
+                If respuesta = DialogResult.Yes Then
+                    MessageBox.Show("Abriendo vista previa de la Constancia de Matrícula...", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+
             End If
 
         Catch ex As Exception
@@ -235,32 +328,37 @@ Public Class TranMatricula
         End Try
     End Sub
 
+
+
     Private Sub GenerarProyeccionCronograma()
 
         dgvCronograma.Columns.Clear()
         dgvCronograma.Rows.Clear()
-
-
         dgvCronograma.DefaultCellStyle.ForeColor = Color.Black
-
 
         dgvCronograma.Columns.Add("Concepto", "Concepto")
         dgvCronograma.Columns.Add("Vencimiento", "Vencimiento")
         dgvCronograma.Columns.Add("Monto", "Monto (S/)")
         dgvCronograma.Columns.Add("Estado", "Estado")
-
-
         dgvCronograma.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 
 
-        Dim montoCuota As Decimal = 350.0
+        Dim nombreNivel As String = cboNivel.Text.ToUpper()
+        Dim pensionCalculada As Decimal = 0
+
+        If nombreNivel.Contains("PRIMARIA") Then
+            pensionCalculada = 350.0
+        ElseIf nombreNivel.Contains("SECUNDARIA") Then
+            pensionCalculada = 450.0
+        End If
+
 
         For i As Integer = 3 To 12
             Dim conceptoPrension As String = "Pensión " & (i - 2).ToString("D2")
             Dim fechaVencimiento As New DateTime(DateTime.Now.Year, i, 10)
 
 
-            dgvCronograma.Rows.Add(conceptoPrension, fechaVencimiento.ToString("dd/MM/yyyy"), montoCuota.ToString("C2"), "Pendiente")
+            dgvCronograma.Rows.Add(conceptoPrension, fechaVencimiento.ToString("dd/MM/yyyy"), pensionCalculada.ToString("C2"), "Pendiente")
         Next
     End Sub
 
@@ -283,10 +381,12 @@ Public Class TranMatricula
             Return
         End If
 
-        If TypeOf cboSeccion.SelectedValue IsNot Integer Then Return
+
+        Dim idSeccion As Integer
+        If Integer.TryParse(cboSeccion.SelectedValue.ToString(), idSeccion) = False Then Return
 
         Try
-            Dim idSeccion As Integer = Convert.ToInt32(cboSeccion.SelectedValue)
+
 
 
             Dim vacantes As Integer = objLogicaMatricula.ObtenerVacantesDisponibles(idSeccion)
@@ -335,13 +435,66 @@ Public Class TranMatricula
 
     Private Sub btnAgregarEstudiante_Click(sender As Object, e As EventArgs) Handles btnAgregarEstudiante.Click
 
+        Dim hijoUsuarios As New frmMantEstudiante()
+
+
+        hijoUsuarios.ShowDialog()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+
+        LimpiarFormularioMatricula()
+
+
+        MessageBox.Show("Formulario listo para una nueva operación.", "Limpieza Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
 
+    Private Sub LimpiarFormularioMatricula()
+
+        _idEstudianteSeleccionado = 0
+
+
+        TxtDNI.Clear()
+        txtEstudiante.Clear()
+        txtApoderado.Clear()
+
+        txtObservacion.Clear()
+        txtObservacion.ReadOnly = True
+        txtObservacion.BackColor = SystemColors.Control
+
+
+        cargandoCombos = True
+
+        cboNivel.SelectedIndex = -1
+
+        cboGrado.DataSource = Nothing
+        cboGrado.Enabled = False
+
+        cboSeccion.DataSource = Nothing
+        cboSeccion.Enabled = False
+
+        cargandoCombos = False
+
+
+        txtVacante.Clear()
+        txtVacante.BackColor = Color.White
+
+
+        txtCodOperativo.Clear()
+        txtRefBancaria.Clear()
+        txtMonto.Clear()
+        txtObservacion.Clear()
+        txtMonto.BackColor = Color.White
+
+
+        dgvCronograma.Columns.Clear()
+        dgvCronograma.Rows.Clear()
+
+
+        TxtDNI.Focus()
     End Sub
+
 End Class

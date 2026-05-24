@@ -64,6 +64,7 @@ Partial Class TranMatricula
         Me.btnProcesarMatricula = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -435,6 +436,7 @@ Partial Class TranMatricula
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnLimpiar)
         Me.Panel2.Controls.Add(Me.GroupBox5)
         Me.Panel2.Controls.Add(Me.btnProcesarMatricula)
         Me.Panel2.Controls.Add(Me.GroupBox4)
@@ -467,7 +469,7 @@ Partial Class TranMatricula
         '
         Me.btnProcesarMatricula.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnProcesarMatricula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnProcesarMatricula.Location = New System.Drawing.Point(198, 570)
+        Me.btnProcesarMatricula.Location = New System.Drawing.Point(66, 572)
         Me.btnProcesarMatricula.Name = "btnProcesarMatricula"
         Me.btnProcesarMatricula.Size = New System.Drawing.Size(213, 44)
         Me.btnProcesarMatricula.TabIndex = 2
@@ -495,6 +497,17 @@ Partial Class TranMatricula
         Me.Label13.Size = New System.Drawing.Size(261, 31)
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Registrar Matricula"
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(314, 571)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(123, 45)
+        Me.btnLimpiar.TabIndex = 4
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
         '
         'TranMatricula
         '
@@ -566,4 +579,5 @@ Partial Class TranMatricula
     Friend WithEvents txtObservacion As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label13 As Label
+    Friend WithEvents btnLimpiar As Button
 End Class
