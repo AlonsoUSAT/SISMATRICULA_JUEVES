@@ -1,145 +1,255 @@
 ﻿Imports capaLogica
+Imports System.Data
 
 Public Class frmMantTipoDocumento
 
     Private objLogica As New capaLogica.clsTipoDocumento()
-    Private idTipo As String = Nothing
+    Private idTipo As Integer = 0
     Private editar As Boolean = False
+    Private listoParaGuardar As Boolean = False
 
-
-    Private Sub MostrarSiguienteID()
-        txtID.ReadOnly = True                          ' No editable
-        txtID.BackColor = Color.LightGray              ' Pista visual de que es automático
-        txtID.Text = objLogica.ObtenerSiguienteID().ToString()
-    End Sub
-
-    ' Al cargar el formulario, mostramos los datos en el DataGridView
+    ' ══════════════════════════════════════════════
+    '  CARGA DEL FORMULARIO
+    ' ══════════════════════════════════════════════
     Private Sub frmMantTipoDocumento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarDocumentos()
-        MostrarSiguienteID()
+        RestablecerEstadoInicial()
     End Sub
 
+    ' ══════════════════════════════════════════════
+    '  MOSTRAR TABLA
+    ' ══════════════════════════════════════════════
     Private Sub MostrarDocumentos()
-        tablaTipoDocumento.DataSource = objLogica.MostrarDocumentos()
-    End Sub
-
-    ' Botón Guardar: Sirve para insertar un nuevo registro
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
-            Dim tipoDoc As String = txtTipoDocumento.Text
-            Dim vigencia As Boolean = checkVigencia.Checked
-
-            objLogica.InsertarDocumento(tipoDoc, vigencia)
-            MessageBox.Show("Documento guardado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            MostrarDocumentos()
-            LimpiarFormulario()
+            tablaTipoDocumento.DataSource = objLogica.MostrarDocumentos()
+            If tablaTipoDocumento.Columns.Contains("id_tipoDocumento") Then
+                tablaTipoDocumento.Columns("id_tipoDocumento").Visible = False
+            End If
+            If tablaTipoDocumento.Columns.Contains("nombreTipoDocumento") Then
+                tablaTipoDocumento.Columns("nombreTipoDocumento").HeaderText = "Tipo de Documento"
+            End If
+            If tablaTipoDocumento.Columns.Contains("estado") Then
+                tablaTipoDocumento.Columns("estado").HeaderText = "Activo"
+            End If
         Catch ex As Exception
-            MessageBox.Show("Error al guardar: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    ' Botón Actualizar: Pasa los datos de la tabla a los cuadros de texto para editar
-    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-        If tablaTipoDocumento.SelectedRows.Count > 0 Then
-            editar = True
-            ' Suponiendo que tus columnas se llaman id_tipoDocumento y nombreTipoDocumento en el DataTable
-            idTipo = tablaTipoDocumento.CurrentRow.Cells("id_tipoDocumento").Value.ToString()
-            txtID.Text = idTipo
-            txtTipoDocumento.Text = tablaTipoDocumento.CurrentRow.Cells("nombreTipoDocumento").Value.ToString()
-            checkVigencia.Checked = Convert.ToBoolean(tablaTipoDocumento.CurrentRow.Cells("estado").Value)
-        Else
-            MessageBox.Show("Seleccione una fila para editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
-    End Sub
-
-    ' Para completar la edición (puedes usar un botón de confirmar o reutilizar el de guardar)
-    ' Aquí te agrego la lógica para procesar la edición una vez cargados los datos:
-    Private Sub btnConfirmarEdicion_Click(sender As Object, e As EventArgs) ' Podrías crear este botón o unirlo al de Guardar
-        If editar Then
-            Try
-                objLogica.EditarDocumento(Convert.ToInt32(idTipo), txtTipoDocumento.Text, checkVigencia.Checked)
-                MessageBox.Show("Actualizado correctamente")
-                editar = False
-                MostrarDocumentos()
-                LimpiarFormulario()
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
-        End If
-    End Sub
-
-    ' Botón Eliminar: Llama a la lógica con validación que hicimos antes
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        If tablaTipoDocumento.SelectedRows.Count > 0 Then
-            Dim result As DialogResult = MessageBox.Show("¿Desea eliminar este tipo de documento?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-            If result = DialogResult.Yes Then
-                Try
-                    Dim id As Integer = Convert.ToInt32(tablaTipoDocumento.CurrentRow.Cells("id_tipoDocumento").Value)
-                    objLogica.EliminarDocumento(id)
-                    MessageBox.Show("Eliminado con éxito")
-                    MostrarDocumentos()
-                    LimpiarFormulario()
-                Catch ex As Exception
-                    ' Aquí se mostrará el mensaje de "No se puede eliminar porque existen personas..."
-                    MessageBox.Show(ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                End Try
-            End If
-        Else
-            MessageBox.Show("Seleccione una fila")
-        End If
-    End Sub
-
-    ' Botón Dar de Baja: Solo cambia la vigencia a False
-    Private Sub btnDarBaja_Click(sender As Object, e As EventArgs) Handles btnDarBaja.Click
-        If tablaTipoDocumento.SelectedRows.Count > 0 Then
-            Try
-                Dim id As Integer = Convert.ToInt32(tablaTipoDocumento.CurrentRow.Cells("id_tipoDocumento").Value)
-                objLogica.DarBajaDocumento(id, False) ' False para desactivar
-                MessageBox.Show("El documento ha sido dado de baja (Inactivo)")
-                MostrarDocumentos()
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
-        Else
-            MessageBox.Show("Seleccione una fila")
-        End If
-    End Sub
-
-    ' Botón Buscar: Filtra o busca por ID
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        ' Aquí podrías implementar una lógica de filtrado en el DataGridView
-        If txtID.Text <> "" Then
-            ' Lógica simple de búsqueda por ID si fuera necesario
-        End If
-    End Sub
-
-
-    Private Sub tablaTipoDocumento_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles tablaTipoDocumento.CellClick
-        ' Validamos que el índice de la fila no sea el encabezado (-1)
-        If e.RowIndex >= 0 Then
-            editar = True
-
-            ' Extraemos los datos de la fila actual
-            idTipo = tablaTipoDocumento.CurrentRow.Cells("id_tipoDocumento").Value.ToString()
-            txtID.Text = idTipo
-            txtTipoDocumento.Text = tablaTipoDocumento.CurrentRow.Cells("nombreTipoDocumento").Value.ToString()
-
-            ' IMPORTANTE: Usamos "estado" porque es el nombre real en tu SQL Server
-            checkVigencia.Checked = Convert.ToBoolean(tablaTipoDocumento.CurrentRow.Cells("estado").Value)
-        End If
-    End Sub
-
-    Private Sub LimpiarFormulario()
-        MostrarSiguienteID()
+    ' ══════════════════════════════════════════════
+    '  ESTADO INICIAL: campos bloqueados, botón = "Nuevo"
+    ' ══════════════════════════════════════════════
+    Private Sub RestablecerEstadoInicial()
+        txtID.Text = ""
+        txtID.ReadOnly = False
+        txtID.BackColor = Color.White
         txtTipoDocumento.Clear()
-        checkVigencia.Checked = False
-        idTipo = Nothing
+        txtTipoDocumento.Enabled = False
+        checkVigencia.Checked = True
+        checkVigencia.Enabled = False
+        idTipo = 0
         editar = False
+        listoParaGuardar = False
+        btnGuardar.Text = "Nuevo"
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    ' ══════════════════════════════════════════════
+    '  HABILITAR FORMULARIO PARA ESCRIBIR
+    ' ══════════════════════════════════════════════
+    Private Sub HabilitarFormulario()
+        txtTipoDocumento.Enabled = True
+        checkVigencia.Enabled = True
+        listoParaGuardar = True
+        btnGuardar.Text = "Guardar"
 
+        ' Si es modo nuevo, mostrar el siguiente ID automático y bloquearlo
+        If Not editar Then
+            Try
+                txtID.Text = objLogica.ObtenerSiguienteID().ToString()
+                txtID.ReadOnly = True
+                txtID.BackColor = Color.LightGray
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        Else
+            ' En modo edición el ID viene del registro, también bloqueado
+            txtID.ReadOnly = True
+            txtID.BackColor = Color.LightGray
+        End If
     End Sub
+
+    ' ══════════════════════════════════════════════
+    '  BOTÓN NUEVO / GUARDAR (dual)
+    ' ══════════════════════════════════════════════
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+        ' ── Modo "Nuevo": preparar formulario ──
+        If Not listoParaGuardar Then
+            editar = False
+            HabilitarFormulario()
+            txtTipoDocumento.Focus()
+            Return
+        End If
+
+        ' ── Modo "Guardar": insertar o actualizar ──
+        Try
+            Dim tipoDoc As String = txtTipoDocumento.Text.Trim()
+            Dim vigencia As Boolean = checkVigencia.Checked
+
+            If editar Then
+                Dim confirm As DialogResult = MessageBox.Show(
+                    "¿Desea actualizar este registro?", "Confirmar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If confirm = DialogResult.No Then Return
+
+                objLogica.EditarDocumento(idTipo, tipoDoc, vigencia)
+                MessageBox.Show("Actualizado correctamente.", "Éxito",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                Dim confirm As DialogResult = MessageBox.Show(
+                    "¿Desea guardar el nuevo registro?", "Confirmar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If confirm = DialogResult.No Then Return
+
+                objLogica.InsertarDocumento(tipoDoc, vigencia)
+                MessageBox.Show("Guardado con éxito.", "Éxito",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+            MostrarDocumentos()
+            RestablecerEstadoInicial()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    ' ══════════════════════════════════════════════
+    '  BOTÓN BUSCAR
+    ' ══════════════════════════════════════════════
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Try
+            Dim idBuscar As Integer
+            If Not Integer.TryParse(txtID.Text.Trim(), idBuscar) OrElse idBuscar <= 0 Then
+                MessageBox.Show("Ingrese un código numérico válido para buscar.",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
+            Dim dt As DataTable = objLogica.BuscarPorID(idBuscar)
+            Dim fila As DataRow = dt.Rows(0)
+
+            idTipo = CInt(fila("id_tipoDocumento"))
+            txtID.Text = idTipo.ToString()
+            txtTipoDocumento.Text = fila("nombreTipoDocumento").ToString()
+
+            Dim estadoVal = fila("estado")
+            checkVigencia.Checked = If(IsDBNull(estadoVal), False, Convert.ToBoolean(estadoVal))
+
+            editar = True
+            HabilitarFormulario()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+    ' ══════════════════════════════════════════════
+    '  CLICK EN FILA DE LA TABLA → cargar para editar
+    ' ══════════════════════════════════════════════
+    Private Sub tablaTipoDocumento_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles tablaTipoDocumento.CellClick
+        If e.RowIndex >= 0 Then
+            Try
+                idTipo = CInt(tablaTipoDocumento.CurrentRow.Cells("id_tipoDocumento").Value)
+                txtID.Text = idTipo.ToString()
+                txtTipoDocumento.Text = tablaTipoDocumento.CurrentRow.Cells("nombreTipoDocumento").Value.ToString()
+
+                Dim estadoVal = tablaTipoDocumento.CurrentRow.Cells("estado").Value
+                checkVigencia.Checked = If(IsDBNull(estadoVal), False, Convert.ToBoolean(estadoVal))
+
+                editar = True
+                HabilitarFormulario()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+    End Sub
+
+    ' ══════════════════════════════════════════════
+    '  BOTÓN ELIMINAR
+    ' ══════════════════════════════════════════════
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        If idTipo <= 0 Then
+            MessageBox.Show("Seleccione un registro de la tabla para eliminar.",
+                            "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim result As DialogResult = MessageBox.Show(
+            "¿Desea eliminar este tipo de documento?", "Confirmar eliminación",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If result = DialogResult.No Then Return
+
+        Try
+            objLogica.EliminarDocumento(idTipo)
+            MessageBox.Show("Eliminado con éxito.", "Éxito",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MostrarDocumentos()
+            RestablecerEstadoInicial()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+    ' ══════════════════════════════════════════════
+    '  BOTÓN DAR DE BAJA
+    ' ══════════════════════════════════════════════
+    Private Sub btnDarBaja_Click(sender As Object, e As EventArgs) Handles btnDarBaja.Click
+        If idTipo <= 0 Then
+            MessageBox.Show("Seleccione un registro de la tabla para dar de baja.",
+                            "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim confirm As DialogResult = MessageBox.Show(
+            "¿Desea dar de baja este registro? El estado cambiará a inactivo.",
+            "Confirmar baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If confirm = DialogResult.No Then Return
+
+        Try
+            objLogica.DarBajaDocumento(idTipo)
+            MessageBox.Show("Registro dado de baja correctamente.", "Éxito",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MostrarDocumentos()
+            RestablecerEstadoInicial()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    ' ══════════════════════════════════════════════
+    '  BOTÓN ACTUALIZAR (carga fila seleccionada)
+    ' ══════════════════════════════════════════════
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+        If tablaTipoDocumento.SelectedRows.Count = 0 Then
+            MessageBox.Show("Seleccione una fila de la tabla para editar.",
+                            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Try
+            idTipo = CInt(tablaTipoDocumento.CurrentRow.Cells("id_tipoDocumento").Value)
+            txtID.Text = idTipo.ToString()
+            txtTipoDocumento.Text = tablaTipoDocumento.CurrentRow.Cells("nombreTipoDocumento").Value.ToString()
+
+            Dim estadoVal = tablaTipoDocumento.CurrentRow.Cells("estado").Value
+            checkVigencia.Checked = If(IsDBNull(estadoVal), False, Convert.ToBoolean(estadoVal))
+
+            editar = True
+            HabilitarFormulario()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
 End Class
