@@ -25,7 +25,7 @@ Public Class clPersona
     ' 1. Mostrar Personas (Generalmente devuelve una tabla para llenar tu DataGridView)
 
 
-    ' 2. Insertar Persona (Asumo parámetros básicos, ajústalos si tu formulario envía más o menos datos)
+    ' 2. Insertar Persona 
     Public Sub InsertarPersona(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String)
         Try
             ' Descomenta la siguiente línea cuando crees el método en clsPersona (Capa Datos)
@@ -38,7 +38,7 @@ Public Class clPersona
     ' 3. Editar Persona (Requiere el ID para saber a quién actualizar)
     Public Sub EditarPersona(id_persona As Integer, apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String)
         Try
-            ' Descomenta la siguiente línea cuando crees el método en clsPersona (Capa Datos)
+
             ' objCapaDatos.EditarPersona(id_persona, apeMaterno, apePaterno, nombre, telefono, correo, sexo, num_doc)
         Catch ex As Exception
             Throw New Exception(ex.Message)
@@ -48,7 +48,7 @@ Public Class clPersona
     ' 4. Eliminar Persona (Solo requiere el ID)
     Public Sub EliminarPersona(id_persona As Integer)
         Try
-            ' Descomenta la siguiente línea cuando crees el método en clsPersona (Capa Datos)
+
             ' objCapaDatos.EliminarPersona(id_persona)
         Catch ex As Exception
             Throw New Exception(ex.Message)
@@ -81,7 +81,7 @@ Public Class clPersona
 
     Public Sub EliminarPersona(num_doc As String)
         Try
-            ' Validaciones adicionales pueden ir aquí
+            ' Validaciones adicionales 
             objCapaDatos.EliminarPersona(num_doc)
         Catch ex As Exception
             Throw New Exception(ex.Message)
@@ -149,7 +149,7 @@ Public Class clPersona
     End Sub
 
     '---------------------------Docente---------------------------'
-    ' 1. Mostrar Docentes (devuelve la tabla para llenar tu DataGridView)
+    ' 1. Mostrar Docentes (devuelve la tabla para llenar el DataGridView)
     Public Function MostrarDocentes() As DataTable
         Try
             Return objCapaDatos.MostrarDocentes()
