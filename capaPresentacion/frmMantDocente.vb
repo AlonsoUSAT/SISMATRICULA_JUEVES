@@ -4,6 +4,8 @@ Public Class frmMantDocente
 
     Private Sub frmMantDocente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarListado()
+        txtNumDoc.MaxLength = 8
+        txtTelefono.MaxLength = 9
     End Sub
 
     Private Sub CargarListado()
@@ -173,4 +175,23 @@ Public Class frmMantDocente
     Private Sub dgvDocente_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDocente.CellContentClick
 
     End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
+    End Sub
+
+    Private Sub txtNumDoc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumDoc.KeyPress
+        ' Permitir solo números (dígitos) y la tecla de retroceso (Backspace)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True ' Cancela la tecla presionada
+        End If
+    End Sub
+
+    Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
+        ' Permitir solo números (dígitos) y la tecla de retroceso (Backspace)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True ' Cancela la tecla presionada
+        End If
+    End Sub
+
 End Class

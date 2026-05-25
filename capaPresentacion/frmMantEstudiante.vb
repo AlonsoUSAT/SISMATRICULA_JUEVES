@@ -31,6 +31,9 @@ Public Class frmMantEstudiante
 
     Private Sub frmMantEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarListado()
+        txtNumDoc.MaxLength = 8
+        txtDniApo.MaxLength = 8  ' También limitamos el buscador del apoderado
+        txtTelefono.MaxLength = 9
     End Sub
 
     Private Sub CargarListado()
@@ -250,4 +253,30 @@ Public Class frmMantEstudiante
             MessageBox.Show("Error al asignar: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
+    End Sub
+
+    Private Sub txtNumDoc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumDoc.KeyPress
+        ' Permitir solo números y la tecla de borrar (Backspace)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtDniApo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDniApo.KeyPress
+        ' Permitir solo números y la tecla de borrar (Backspace) para el DNI del apoderado
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
+        ' Permitir solo números y la tecla de borrar (Backspace)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
 End Class

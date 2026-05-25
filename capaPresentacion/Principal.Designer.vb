@@ -35,15 +35,14 @@ Partial Class Principal
         Me.ApoderadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EstudianteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NGSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AsginacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CursoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CargaAcademicaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PagoMatriculaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlanEstudioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProcesarMatriculaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ProcesarMatriculaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargaAcadémicaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,7 +58,7 @@ Partial Class Principal
         '
         'MantenimientosToolStripMenuItem
         '
-        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem, Me.TipoDeDocumentoToolStripMenuItem, Me.DocenteToolStripMenuItem, Me.AñoAcademicoToolStripMenuItem, Me.MantenimientoToolStripMenuItem, Me.ApoderadoToolStripMenuItem, Me.EstudianteToolStripMenuItem, Me.NGSToolStripMenuItem, Me.AsginacionToolStripMenuItem, Me.CursoToolStripMenuItem, Me.CargaAcademicaToolStripMenuItem, Me.PagoMatriculaToolStripMenuItem, Me.PlanEstudioToolStripMenuItem})
+        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem, Me.TipoDeDocumentoToolStripMenuItem, Me.DocenteToolStripMenuItem, Me.AñoAcademicoToolStripMenuItem, Me.MantenimientoToolStripMenuItem, Me.ApoderadoToolStripMenuItem, Me.EstudianteToolStripMenuItem, Me.NGSToolStripMenuItem, Me.CursoToolStripMenuItem, Me.PagoMatriculaToolStripMenuItem, Me.PlanEstudioToolStripMenuItem})
         Me.MantenimientosToolStripMenuItem.Name = "MantenimientosToolStripMenuItem"
         Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
@@ -112,23 +111,11 @@ Partial Class Principal
         Me.NGSToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.NGSToolStripMenuItem.Text = "NGS"
         '
-        'AsginacionToolStripMenuItem
-        '
-        Me.AsginacionToolStripMenuItem.Name = "AsginacionToolStripMenuItem"
-        Me.AsginacionToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AsginacionToolStripMenuItem.Text = "Asginacion"
-        '
         'CursoToolStripMenuItem
         '
         Me.CursoToolStripMenuItem.Name = "CursoToolStripMenuItem"
         Me.CursoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.CursoToolStripMenuItem.Text = "Curso"
-        '
-        'CargaAcademicaToolStripMenuItem
-        '
-        Me.CargaAcademicaToolStripMenuItem.Name = "CargaAcademicaToolStripMenuItem"
-        Me.CargaAcademicaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.CargaAcademicaToolStripMenuItem.Text = "Carga Academica"
         '
         'PagoMatriculaToolStripMenuItem
         '
@@ -144,10 +131,16 @@ Partial Class Principal
         '
         'OperacionesToolStripMenuItem
         '
-        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProcesarMatriculaToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProcesarMatriculaToolStripMenuItem, Me.CargaAcadémicaToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
         Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
+        '
+        'ProcesarMatriculaToolStripMenuItem
+        '
+        Me.ProcesarMatriculaToolStripMenuItem.Name = "ProcesarMatriculaToolStripMenuItem"
+        Me.ProcesarMatriculaToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
+        Me.ProcesarMatriculaToolStripMenuItem.Text = "Procesar matricula"
         '
         'ReportesToolStripMenuItem
         '
@@ -164,11 +157,11 @@ Partial Class Principal
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ProcesarMatriculaToolStripMenuItem
+        'CargaAcadémicaToolStripMenuItem
         '
-        Me.ProcesarMatriculaToolStripMenuItem.Name = "ProcesarMatriculaToolStripMenuItem"
-        Me.ProcesarMatriculaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ProcesarMatriculaToolStripMenuItem.Text = "Procesar matricula"
+        Me.CargaAcadémicaToolStripMenuItem.Name = "CargaAcadémicaToolStripMenuItem"
+        Me.CargaAcadémicaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CargaAcadémicaToolStripMenuItem.Text = "Carga académica"
         '
         'Principal
         '
@@ -178,7 +171,7 @@ Partial Class Principal
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Principal"
         Me.Text = "SISTEMAS DISTRIBUIDOS - APLICACIÓN 2026"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -202,10 +195,9 @@ Partial Class Principal
     Friend WithEvents ApoderadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EstudianteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NGSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AsginacionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CursoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CargaAcademicaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PagoMatriculaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PlanEstudioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProcesarMatriculaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CargaAcadémicaToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -44,9 +44,10 @@ Partial Class frmNuevaAsignacion
         '
         Me.lblTitulo.AutoSize = True
         Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(8, 11)
+        Me.lblTitulo.Location = New System.Drawing.Point(11, 14)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(213, 16)
+        Me.lblTitulo.Size = New System.Drawing.Size(253, 20)
         Me.lblTitulo.TabIndex = 34
         Me.lblTitulo.Text = "Nueva asignación académica"
         '
@@ -56,26 +57,29 @@ Partial Class frmNuevaAsignacion
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(23, 38)
+        Me.Label1.Location = New System.Drawing.Point(31, 47)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 15)
+        Me.Label1.Size = New System.Drawing.Size(68, 18)
         Me.Label1.TabIndex = 35
         Me.Label1.Text = "Docente:"
         '
         'cboDocente
         '
         Me.cboDocente.FormattingEnabled = True
-        Me.cboDocente.Location = New System.Drawing.Point(26, 59)
+        Me.cboDocente.Location = New System.Drawing.Point(35, 73)
+        Me.cboDocente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboDocente.Name = "cboDocente"
-        Me.cboDocente.Size = New System.Drawing.Size(313, 21)
+        Me.cboDocente.Size = New System.Drawing.Size(416, 24)
         Me.cboDocente.TabIndex = 36
         '
         'cboCurso
         '
         Me.cboCurso.FormattingEnabled = True
-        Me.cboCurso.Location = New System.Drawing.Point(26, 118)
+        Me.cboCurso.Location = New System.Drawing.Point(35, 145)
+        Me.cboCurso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboCurso.Name = "cboCurso"
-        Me.cboCurso.Size = New System.Drawing.Size(313, 21)
+        Me.cboCurso.Size = New System.Drawing.Size(416, 24)
         Me.cboCurso.TabIndex = 38
         '
         'Label2
@@ -84,18 +88,20 @@ Partial Class frmNuevaAsignacion
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(23, 97)
+        Me.Label2.Location = New System.Drawing.Point(31, 119)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 15)
+        Me.Label2.Size = New System.Drawing.Size(53, 18)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "Curso:"
         '
         'cboSeccion
         '
         Me.cboSeccion.FormattingEnabled = True
-        Me.cboSeccion.Location = New System.Drawing.Point(26, 178)
+        Me.cboSeccion.Location = New System.Drawing.Point(35, 219)
+        Me.cboSeccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboSeccion.Name = "cboSeccion"
-        Me.cboSeccion.Size = New System.Drawing.Size(313, 21)
+        Me.cboSeccion.Size = New System.Drawing.Size(416, 24)
         Me.cboSeccion.TabIndex = 40
         '
         'Label3
@@ -104,18 +110,20 @@ Partial Class frmNuevaAsignacion
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(23, 157)
+        Me.Label3.Location = New System.Drawing.Point(31, 193)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 15)
+        Me.Label3.Size = New System.Drawing.Size(66, 18)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Sección:"
         '
         'cboHorario
         '
         Me.cboHorario.FormattingEnabled = True
-        Me.cboHorario.Location = New System.Drawing.Point(26, 237)
+        Me.cboHorario.Location = New System.Drawing.Point(35, 292)
+        Me.cboHorario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboHorario.Name = "cboHorario"
-        Me.cboHorario.Size = New System.Drawing.Size(313, 21)
+        Me.cboHorario.Size = New System.Drawing.Size(416, 24)
         Me.cboHorario.TabIndex = 42
         '
         'Label4
@@ -124,9 +132,10 @@ Partial Class frmNuevaAsignacion
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(23, 216)
+        Me.Label4.Location = New System.Drawing.Point(31, 266)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 15)
+        Me.Label4.Size = New System.Drawing.Size(62, 18)
         Me.Label4.TabIndex = 41
         Me.Label4.Text = "Horario:"
         '
@@ -136,9 +145,10 @@ Partial Class frmNuevaAsignacion
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(23, 272)
+        Me.Label5.Location = New System.Drawing.Point(31, 335)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 15)
+        Me.Label5.Size = New System.Drawing.Size(59, 18)
         Me.Label5.TabIndex = 43
         Me.Label5.Text = "Estado:"
         '
@@ -146,27 +156,30 @@ Partial Class frmNuevaAsignacion
         '
         Me.chkEstado.AutoSize = True
         Me.chkEstado.ForeColor = System.Drawing.Color.Transparent
-        Me.chkEstado.Location = New System.Drawing.Point(66, 242)
+        Me.chkEstado.Location = New System.Drawing.Point(88, 298)
+        Me.chkEstado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkEstado.Name = "chkEstado"
-        Me.chkEstado.Size = New System.Drawing.Size(56, 17)
+        Me.chkEstado.Size = New System.Drawing.Size(66, 20)
         Me.chkEstado.TabIndex = 44
         Me.chkEstado.Text = "Activo"
         Me.chkEstado.UseVisualStyleBackColor = True
         '
         'btnGuardarAsignacion
         '
-        Me.btnGuardarAsignacion.Location = New System.Drawing.Point(15, 309)
+        Me.btnGuardarAsignacion.Location = New System.Drawing.Point(20, 380)
+        Me.btnGuardarAsignacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardarAsignacion.Name = "btnGuardarAsignacion"
-        Me.btnGuardarAsignacion.Size = New System.Drawing.Size(146, 28)
+        Me.btnGuardarAsignacion.Size = New System.Drawing.Size(195, 34)
         Me.btnGuardarAsignacion.TabIndex = 45
         Me.btnGuardarAsignacion.Text = "Guardar asignación"
         Me.btnGuardarAsignacion.UseVisualStyleBackColor = True
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(167, 309)
+        Me.btnCancelar.Location = New System.Drawing.Point(223, 380)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(161, 28)
+        Me.btnCancelar.Size = New System.Drawing.Size(215, 34)
         Me.btnCancelar.TabIndex = 46
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -178,26 +191,28 @@ Partial Class frmNuevaAsignacion
         Me.Panel1.Controls.Add(Me.btnCancelar)
         Me.Panel1.Controls.Add(Me.chkEstado)
         Me.Panel1.Controls.Add(Me.btnGuardarAsignacion)
-        Me.Panel1.Location = New System.Drawing.Point(11, 30)
+        Me.Panel1.Location = New System.Drawing.Point(15, 37)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(344, 357)
+        Me.Panel1.Size = New System.Drawing.Size(459, 439)
         Me.Panel1.TabIndex = 47
         '
         'lblMensajeCruce
         '
         Me.lblMensajeCruce.AutoSize = True
         Me.lblMensajeCruce.ForeColor = System.Drawing.Color.White
-        Me.lblMensajeCruce.Location = New System.Drawing.Point(12, 279)
+        Me.lblMensajeCruce.Location = New System.Drawing.Point(16, 343)
+        Me.lblMensajeCruce.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMensajeCruce.Name = "lblMensajeCruce"
-        Me.lblMensajeCruce.Size = New System.Drawing.Size(0, 13)
+        Me.lblMensajeCruce.Size = New System.Drawing.Size(0, 16)
         Me.lblMensajeCruce.TabIndex = 47
         '
         'frmNuevaAsignacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(367, 399)
+        Me.ClientSize = New System.Drawing.Size(489, 491)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.cboHorario)
         Me.Controls.Add(Me.Label4)
@@ -209,6 +224,7 @@ Partial Class frmNuevaAsignacion
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmNuevaAsignacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmNuevaAsignación"

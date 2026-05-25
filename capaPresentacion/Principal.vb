@@ -67,7 +67,7 @@ Public Class Principal
         hijoUsuarios.Show()
     End Sub
 
-    Private Sub CargaAcademicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargaAcademicaToolStripMenuItem.Click
+    Private Sub CargaAcademicaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim hijoUsuarios As New frmCargaAcademica()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
@@ -88,6 +88,12 @@ Public Class Principal
 
     Private Sub ProcesarMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProcesarMatriculaToolStripMenuItem.Click
         Dim hijoUsuarios As New TranMatricula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub CargaAcadémicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargaAcadémicaToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmCargaAcademica()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub

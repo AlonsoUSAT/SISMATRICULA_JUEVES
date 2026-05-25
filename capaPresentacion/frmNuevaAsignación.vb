@@ -2,23 +2,32 @@
 
 Public Class frmNuevaAsignacion
     Dim objLogica As New clCargaAcademica()
-    Dim idCargaEditar As Integer = 0  ' 0 = nuevo, >0 = editar
+    Dim idCargaEditar As Integer = 0
 
-    ' Constructor: recibe 0 para nuevo, o el ID para editar
-    Public Sub New(idCarga As Integer)
+    Dim v_docente As String = ""
+    Dim v_curso As String = ""
+    Dim v_seccion As String = ""
+    Dim v_horario As String = ""
+    Dim v_estado As Boolean = True
+
+    Public Sub New(idCarga As Integer, Optional docente As String = "", Optional curso As String = "", Optional seccion As String = "", Optional horario As String = "", Optional estado As Boolean = True)
         InitializeComponent()
         idCargaEditar = idCarga
-        frmNuevaAsignacion_Load(Nothing, Nothing)  ' <- agregar esta línea
+        v_docente = docente
+        v_curso = curso
+        v_seccion = seccion
+        v_horario = horario
+        v_estado = estado
     End Sub
 
-    Private Sub frmNuevaAsignacion_Load(sender As Object, e As EventArgs)
+    Private Sub frmNuevaAsignacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarCombos()
-
         If idCargaEditar > 0 Then
             lblTitulo.Text = "EDITAR ASIGNACIÓN ACADÉMICA"
             CargarDatosParaEditar()
         Else
             lblTitulo.Text = "NUEVA ASIGNACIÓN ACADÉMICA"
+            chkEstado.Checked = True
         End If
     End Sub
 
@@ -58,8 +67,11 @@ Public Class frmNuevaAsignacion
     End Sub
 
     Private Sub CargarDatosParaEditar()
-        ' Si necesitas precargar datos al editar, aquí iría la consulta por id_carga
-        ' Por ahora el DGV ya los tiene visibles; puedes ampliar esto luego
+        cboDocente.SelectedIndex = cboDocente.FindStringExact(v_docente)
+        cboCurso.SelectedIndex = cboCurso.FindStringExact(v_curso)
+        cboSeccion.SelectedIndex = cboSeccion.FindStringExact(v_seccion)
+        cboHorario.SelectedIndex = cboHorario.FindStringExact(v_horario)
+        chkEstado.Checked = v_estado
     End Sub
 
     Private Sub VerificarCruce()
@@ -126,7 +138,4 @@ Public Class frmNuevaAsignacion
         Me.Close()
     End Sub
 
-    Private Sub frmNuevaAsignacion_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

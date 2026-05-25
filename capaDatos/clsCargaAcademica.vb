@@ -31,7 +31,7 @@ Public Class clsCargaAcademica
         Return tabla
     End Function
 
-    Public Function MostrarCargaFiltrada(idDocente As Integer, idSeccion As Integer, idCurso As Integer) As DataTable
+    Public Function MostrarCargaFiltrada(idDocente As Integer, idSeccion As Integer, idHorario As Integer) As DataTable
         Dim tabla As New DataTable()
         Try
             objConexion.conectar()
@@ -51,11 +51,13 @@ Public Class clsCargaAcademica
                 "INNER JOIN HORARIO H ON CA.id_horario = H.id_horario " &
                 "WHERE (@idDocente = 0 OR CA.id_docente = @idDocente) " &
                 "AND (@idSeccion = 0 OR CA.id_seccion = @idSeccion) " &
-                "AND (@idCurso = 0 OR CA.id_curso = @idCurso)"
+                "AND (@idHorario = 0 OR CA.id_horario = @idHorario)" ' ¡Aquí cambiamos curso por horario!
+
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@idDocente", idDocente)
             cmd.Parameters.AddWithValue("@idSeccion", idSeccion)
-            cmd.Parameters.AddWithValue("@idCurso", idCurso)
+            cmd.Parameters.AddWithValue("@idHorario", idHorario) ' ¡Y aquí el parámetro!
+
             Dim adapter As New SqlDataAdapter(cmd)
             adapter.Fill(tabla)
         Catch ex As Exception
@@ -107,7 +109,7 @@ Public Class clsCargaAcademica
                 "SELECT S.id_seccion, G.nombre + ' - ' + S.nombre AS nombre " &
                 "FROM SECCION S " &
                 "INNER JOIN GRADO G ON S.id_grado = G.id_grado " &
-                "WHERE S.estado = 1"
+                "WHERE S.vigencia = 1"
             Dim adapter As New SqlDataAdapter(query, objConexion.miConexion)
             adapter.Fill(tabla)
         Catch ex As Exception
