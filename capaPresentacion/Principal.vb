@@ -55,7 +55,7 @@ Public Class Principal
 
 
 
-    Private Sub TipoDeDocumentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoDeDocumentoToolStripMenuItem.Click
+    Private Sub TipoDeDocumentoToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim hijoUsuarios As New frmMantTipoDocumento()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
@@ -74,13 +74,13 @@ Public Class Principal
     End Sub
 
     Private Sub PagoMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagoMatriculaToolStripMenuItem.Click
-        Dim hijoUsuarios As New frmMantPagoMatricula()
-        hijoUsuarios.MdiParent = Me
-        hijoUsuarios.Show()
+        Dim hijoPagos As New frmMantPagoMatricula()
+        hijoPagos.MdiParent = Me
+        hijoPagos.Show()
     End Sub
 
     Private Sub PlanEstudioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlanEstudioToolStripMenuItem.Click
-        Dim hijoUsuarios As New frmMantPlanEstudio1()
+        Dim hijoUsuarios As New frmMantPlanEstudio()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
 
@@ -93,6 +93,28 @@ Public Class Principal
     End Sub
 
     Private Sub CargaAcadémicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargaAcadémicaToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmCargaAcademica()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles DirectAgregarAlumno.Click
+        Dim hijoUsuarios As New frmMantEstudiante()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles DirectProcesarMatricula.Click
+        Dim hijoUsuarios As New TranMatricula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles DirectCargaAcademica.Click
         Dim hijoUsuarios As New frmCargaAcademica()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()

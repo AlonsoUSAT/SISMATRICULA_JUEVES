@@ -1,9 +1,10 @@
 ﻿Imports capaLogica
 
 Public Class frmMantPagoMatricula
-    Dim objLogica As New clsLogPagoMatricula()
+    Dim objLogica As clsLogPagoMatricula
 
     Private Sub frmMantPagoMatricula_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        objLogica = New clsLogPagoMatricula()
         ListarGrilla()
     End Sub
 
@@ -98,5 +99,13 @@ Public Class frmMantPagoMatricula
             txtNumeroReferencia.Text = fila.Cells("numeroReferencia").Value.ToString()
             chkEstado.Checked = Convert.ToBoolean(fila.Cells("estado").Value)
         End If
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles txtNumeroReferencia.TextChanged
+
     End Sub
 End Class

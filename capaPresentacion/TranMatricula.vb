@@ -62,7 +62,7 @@ Public Class TranMatricula
 
 
 
-            cboNivel.Enabled = False
+            'cboNivel.Enabled = False
             cboGrado.Enabled = False
             cboSeccion.Enabled = False
 

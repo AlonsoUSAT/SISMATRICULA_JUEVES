@@ -95,6 +95,18 @@
     <Compile Include="frmMantDocente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMantPagoMatricula.Designer.vb">
+      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantPagoMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantPlanEstudio.Designer.vb">
+      <DependentUpon>frmMantPlanEstudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantPlanEstudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,18 +140,6 @@
       <DependentUpon>frmMantNGS.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMantNGS.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantPagoMatricula.Designer.vb">
-      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantPagoMatricula.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantPlanEstudio1.Designer.vb">
-      <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantPlanEstudio1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantTipoDocumento.Designer.vb">
@@ -194,6 +194,12 @@
     <EmbeddedResource Include="frmMantDocente.resx">
       <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMantPagoMatricula.resx">
+      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantPlanEstudio.resx">
+      <DependentUpon>frmMantPlanEstudio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TranMatricula.resx">
       <DependentUpon>TranMatricula.vb</DependentUpon>
     </EmbeddedResource>
@@ -214,12 +220,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantNGS.resx">
       <DependentUpon>frmMantNGS.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantPagoMatricula.resx">
-      <DependentUpon>frmMantPagoMatricula.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantPlanEstudio1.resx">
-      <DependentUpon>frmMantPlanEstudio1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantTipoDocumento.resx">
       <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
@@ -269,6 +269,28 @@
   <ItemGroup>
     <Content Include="imagenes\logo_colegio.png" />
     <Content Include="imagenes\nueva-cuenta %281%29.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\academico-anio.png" />
+    <None Include="Resources\plan-de-estudios.png" />
+    <None Include="Resources\matricula-pago.png" />
+    <None Include="Resources\libro-abierto.png" />
+    <None Include="Resources\escuela.png" />
+    <None Include="Resources\estudiante %282%29.png" />
+    <None Include="Resources\apoderado.png" />
+    <None Include="Resources\profesor-en-la-pizarra.png" />
+    <None Include="Resources\usuario.png" />
+    <None Include="Resources\carga-academica.png" />
+    <None Include="Resources\procesar-matricula.png" />
+    <None Include="Resources\estudiante %281%29.png" />
+    <None Include="Resources\fondo-amancio.jpg" />
+    <None Include="Resources\fondo-tuman.jpg" />
+    <None Include="Resources\mas.png" />
+    <None Include="Resources\guardar-usuario.png" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\borrador.png" />
+    <None Include="Resources\eliminar-amigo.png" />
+    <None Include="Resources\borrar-usuario.png" />
+    <None Include="Resources\actualizar.png" />
     <None Include="Resources\LOGO.jpg" />
     <None Include="Resources\agregar-usuario.png" />
   </ItemGroup>
