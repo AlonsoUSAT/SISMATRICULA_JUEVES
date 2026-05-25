@@ -46,7 +46,6 @@ Partial Class frmMantEstudiante
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtMaterno = New System.Windows.Forms.TextBox()
-        Me.txtNumDoc = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -67,6 +66,7 @@ Partial Class frmMantEstudiante
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnAsignar = New System.Windows.Forms.Button()
         Me.dgvEstudiantes = New System.Windows.Forms.DataGridView()
+        Me.txtNumDoc = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -339,16 +339,6 @@ Partial Class frmMantEstudiante
         Me.txtMaterno.Size = New System.Drawing.Size(264, 31)
         Me.txtMaterno.TabIndex = 40
         '
-        'txtNumDoc
-        '
-        Me.txtNumDoc.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.txtNumDoc.ForeColor = System.Drawing.Color.Black
-        Me.txtNumDoc.Location = New System.Drawing.Point(201, 162)
-        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtNumDoc.Name = "txtNumDoc"
-        Me.txtNumDoc.Size = New System.Drawing.Size(264, 31)
-        Me.txtNumDoc.TabIndex = 47
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -445,6 +435,7 @@ Partial Class frmMantEstudiante
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtNumDoc)
         Me.GroupBox1.Controls.Add(Me.txtCorreo)
         Me.GroupBox1.Controls.Add(Me.cboTipoEstudiante)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -458,7 +449,6 @@ Partial Class frmMantEstudiante
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.txtMaterno)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.txtNumDoc)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
@@ -619,6 +609,13 @@ Partial Class frmMantEstudiante
         Me.dgvEstudiantes.Size = New System.Drawing.Size(783, 259)
         Me.dgvEstudiantes.TabIndex = 50
         '
+        'txtNumDoc
+        '
+        Me.txtNumDoc.Location = New System.Drawing.Point(201, 166)
+        Me.txtNumDoc.Name = "txtNumDoc"
+        Me.txtNumDoc.Size = New System.Drawing.Size(264, 30)
+        Me.txtNumDoc.TabIndex = 52
+        '
         'frmMantEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -668,7 +665,6 @@ Partial Class frmMantEstudiante
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents txtMaterno As TextBox
-    Friend WithEvents txtNumDoc As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
@@ -689,4 +685,5 @@ Partial Class frmMantEstudiante
     Friend WithEvents Label17 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtNumDoc As TextBox
 End Class

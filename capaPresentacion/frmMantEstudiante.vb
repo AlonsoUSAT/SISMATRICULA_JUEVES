@@ -34,6 +34,9 @@ Public Class frmMantEstudiante
         txtNumDoc.MaxLength = 8
         txtDniApo.MaxLength = 8  ' También limitamos el buscador del apoderado
         txtTelefono.MaxLength = 9
+
+        txtNumDoc.Enabled = True
+        txtNumDoc.ReadOnly = False
     End Sub
 
     Private Sub CargarListado()
@@ -47,6 +50,9 @@ Public Class frmMantEstudiante
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         LimpiarFormulario() ' Este método ya hace txtNombres.Focus()
+        txtNumDoc.Enabled = True
+        txtNumDoc.ReadOnly = False
+        txtNumDoc.Focus() '
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -258,7 +264,7 @@ Public Class frmMantEstudiante
 
     End Sub
 
-    Private Sub txtNumDoc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumDoc.KeyPress
+    Private Sub txtNumDoc_KeyPress(sender As Object, e As KeyPressEventArgs)
         ' Permitir solo números y la tecla de borrar (Backspace)
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
             e.Handled = True
@@ -279,4 +285,11 @@ Public Class frmMantEstudiante
         End If
     End Sub
 
+    Private Sub txtNumDoc_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtMaterno_TextChanged(sender As Object, e As EventArgs) Handles txtMaterno.TextChanged
+
+    End Sub
 End Class

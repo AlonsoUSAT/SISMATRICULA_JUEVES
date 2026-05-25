@@ -125,4 +125,8 @@ Public Class Principal
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub
+
+    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
 End Class
