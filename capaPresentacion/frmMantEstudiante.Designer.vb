@@ -79,7 +79,7 @@ Partial Class frmMantEstudiante
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, -2)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1573, 68)
         Me.Panel1.TabIndex = 34
@@ -123,7 +123,7 @@ Partial Class frmMantEstudiante
         'txtDniApo
         '
         Me.txtDniApo.Location = New System.Drawing.Point(276, 158)
-        Me.txtDniApo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDniApo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDniApo.Name = "txtDniApo"
         Me.txtDniApo.Size = New System.Drawing.Size(188, 22)
         Me.txtDniApo.TabIndex = 55
@@ -132,7 +132,7 @@ Partial Class frmMantEstudiante
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnBuscar.Location = New System.Drawing.Point(492, 155)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(124, 28)
         Me.btnBuscar.TabIndex = 56
@@ -141,7 +141,7 @@ Partial Class frmMantEstudiante
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.Controls.Add(Me.txtNombresApo)
         Me.Panel4.Controls.Add(Me.txtApePatApo)
         Me.Panel4.Controls.Add(Me.Label12)
@@ -153,7 +153,7 @@ Partial Class frmMantEstudiante
         Me.Panel4.Controls.Add(Me.Label16)
         Me.Panel4.Controls.Add(Me.txtTelApo)
         Me.Panel4.Location = New System.Drawing.Point(15, 191)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(707, 258)
         Me.Panel4.TabIndex = 57
@@ -162,7 +162,7 @@ Partial Class frmMantEstudiante
         '
         Me.txtNombresApo.Enabled = False
         Me.txtNombresApo.Location = New System.Drawing.Point(284, 26)
-        Me.txtNombresApo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombresApo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombresApo.Name = "txtNombresApo"
         Me.txtNombresApo.Size = New System.Drawing.Size(264, 22)
         Me.txtNombresApo.TabIndex = 55
@@ -171,7 +171,7 @@ Partial Class frmMantEstudiante
         '
         Me.txtApePatApo.Enabled = False
         Me.txtApePatApo.Location = New System.Drawing.Point(284, 69)
-        Me.txtApePatApo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtApePatApo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtApePatApo.Name = "txtApePatApo"
         Me.txtApePatApo.Size = New System.Drawing.Size(264, 22)
         Me.txtApePatApo.TabIndex = 50
@@ -192,7 +192,7 @@ Partial Class frmMantEstudiante
         '
         Me.txtCorreoApo.Enabled = False
         Me.txtCorreoApo.Location = New System.Drawing.Point(284, 210)
-        Me.txtCorreoApo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCorreoApo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCorreoApo.Name = "txtCorreoApo"
         Me.txtCorreoApo.Size = New System.Drawing.Size(264, 22)
         Me.txtCorreoApo.TabIndex = 59
@@ -237,7 +237,7 @@ Partial Class frmMantEstudiante
         '
         Me.txtApeMatApo.Enabled = False
         Me.txtApeMatApo.Location = New System.Drawing.Point(284, 113)
-        Me.txtApeMatApo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtApeMatApo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtApeMatApo.Name = "txtApeMatApo"
         Me.txtApeMatApo.Size = New System.Drawing.Size(264, 22)
         Me.txtApeMatApo.TabIndex = 54
@@ -258,7 +258,7 @@ Partial Class frmMantEstudiante
         '
         Me.txtTelApo.Enabled = False
         Me.txtTelApo.Location = New System.Drawing.Point(284, 159)
-        Me.txtTelApo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelApo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelApo.Name = "txtTelApo"
         Me.txtTelApo.Size = New System.Drawing.Size(264, 22)
         Me.txtTelApo.TabIndex = 57
@@ -278,7 +278,7 @@ Partial Class frmMantEstudiante
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(213, 298)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(264, 22)
         Me.txtTelefono.TabIndex = 43
@@ -288,7 +288,7 @@ Partial Class frmMantEstudiante
         Me.cboSexo.FormattingEnabled = True
         Me.cboSexo.Items.AddRange(New Object() {"MASCULINO", "FEMENINO"})
         Me.cboSexo.Location = New System.Drawing.Point(213, 203)
-        Me.cboSexo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboSexo.Margin = New System.Windows.Forms.Padding(4)
         Me.cboSexo.Name = "cboSexo"
         Me.cboSexo.Size = New System.Drawing.Size(264, 24)
         Me.cboSexo.TabIndex = 45
@@ -320,7 +320,7 @@ Partial Class frmMantEstudiante
         'txtMaterno
         '
         Me.txtMaterno.Location = New System.Drawing.Point(213, 110)
-        Me.txtMaterno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMaterno.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMaterno.Name = "txtMaterno"
         Me.txtMaterno.Size = New System.Drawing.Size(264, 22)
         Me.txtMaterno.TabIndex = 40
@@ -328,7 +328,7 @@ Partial Class frmMantEstudiante
         'txtNumDoc
         '
         Me.txtNumDoc.Location = New System.Drawing.Point(213, 156)
-        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNumDoc.Name = "txtNumDoc"
         Me.txtNumDoc.Size = New System.Drawing.Size(264, 22)
         Me.txtNumDoc.TabIndex = 47
@@ -372,7 +372,7 @@ Partial Class frmMantEstudiante
         'txtCorreo
         '
         Me.txtCorreo.Location = New System.Drawing.Point(213, 350)
-        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(264, 22)
         Me.txtCorreo.TabIndex = 49
@@ -392,7 +392,7 @@ Partial Class frmMantEstudiante
         'txtPaterno
         '
         Me.txtPaterno.Location = New System.Drawing.Point(213, 65)
-        Me.txtPaterno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPaterno.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPaterno.Name = "txtPaterno"
         Me.txtPaterno.Size = New System.Drawing.Size(264, 22)
         Me.txtPaterno.TabIndex = 36
@@ -400,14 +400,14 @@ Partial Class frmMantEstudiante
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(213, 22)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(264, 22)
         Me.txtNombre.TabIndex = 41
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Controls.Add(Me.cboTipoEstudiante)
         Me.Panel3.Controls.Add(Me.Label17)
         Me.Panel3.Controls.Add(Me.txtNombre)
@@ -426,7 +426,7 @@ Partial Class frmMantEstudiante
         Me.Panel3.Controls.Add(Me.txtTelefono)
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Location = New System.Drawing.Point(16, 81)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(800, 414)
         Me.Panel3.TabIndex = 52
@@ -436,7 +436,7 @@ Partial Class frmMantEstudiante
         Me.cboTipoEstudiante.FormattingEnabled = True
         Me.cboTipoEstudiante.Items.AddRange(New Object() {"REGULAR", "BECADO"})
         Me.cboTipoEstudiante.Location = New System.Drawing.Point(213, 251)
-        Me.cboTipoEstudiante.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboTipoEstudiante.Margin = New System.Windows.Forms.Padding(4)
         Me.cboTipoEstudiante.Name = "cboTipoEstudiante"
         Me.cboTipoEstudiante.Size = New System.Drawing.Size(264, 24)
         Me.cboTipoEstudiante.TabIndex = 51
@@ -462,7 +462,7 @@ Partial Class frmMantEstudiante
         Me.Panel2.Controls.Add(Me.btnEliminar)
         Me.Panel2.Controls.Add(Me.btnNuevo)
         Me.Panel2.Location = New System.Drawing.Point(505, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(288, 414)
         Me.Panel2.TabIndex = 35
@@ -472,7 +472,7 @@ Partial Class frmMantEstudiante
         Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.Location = New System.Drawing.Point(81, 135)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(128, 34)
         Me.btnGuardar.TabIndex = 4
@@ -484,7 +484,7 @@ Partial Class frmMantEstudiante
         Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDarBaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDarBaja.Location = New System.Drawing.Point(81, 226)
-        Me.btnDarBaja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnDarBaja.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDarBaja.Name = "btnDarBaja"
         Me.btnDarBaja.Size = New System.Drawing.Size(128, 34)
         Me.btnDarBaja.TabIndex = 3
@@ -496,7 +496,7 @@ Partial Class frmMantEstudiante
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificar.Location = New System.Drawing.Point(81, 182)
-        Me.btnModificar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(128, 34)
         Me.btnModificar.TabIndex = 2
@@ -508,7 +508,7 @@ Partial Class frmMantEstudiante
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.Location = New System.Drawing.Point(81, 273)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(128, 34)
         Me.btnEliminar.TabIndex = 1
@@ -518,11 +518,14 @@ Partial Class frmMantEstudiante
         'btnNuevo
         '
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(81, 91)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ForeColor = System.Drawing.Color.Black
+
+        Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNuevo.Location = New System.Drawing.Point(81, 80)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(128, 34)
+        Me.btnNuevo.Size = New System.Drawing.Size(128, 45)
         Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
@@ -531,7 +534,7 @@ Partial Class frmMantEstudiante
         '
         Me.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEstudiantes.Location = New System.Drawing.Point(16, 538)
-        Me.dgvEstudiantes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvEstudiantes.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvEstudiantes.Name = "dgvEstudiantes"
         Me.dgvEstudiantes.RowHeadersWidth = 51
         Me.dgvEstudiantes.Size = New System.Drawing.Size(800, 224)
@@ -552,7 +555,7 @@ Partial Class frmMantEstudiante
         '
         Me.btnAsignar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnAsignar.Location = New System.Drawing.Point(15, 457)
-        Me.btnAsignar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAsignar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAsignar.Name = "btnAsignar"
         Me.btnAsignar.Size = New System.Drawing.Size(708, 47)
         Me.btnAsignar.TabIndex = 58
@@ -569,7 +572,7 @@ Partial Class frmMantEstudiante
         Me.Panel5.Controls.Add(Me.Label11)
         Me.Panel5.Controls.Add(Me.txtDniApo)
         Me.Panel5.Location = New System.Drawing.Point(827, 81)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(736, 681)
         Me.Panel5.TabIndex = 59
@@ -584,7 +587,7 @@ Partial Class frmMantEstudiante
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel5)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMantEstudiante"
         Me.Text = "frmMantEstudiante"
         Me.Panel1.ResumeLayout(False)

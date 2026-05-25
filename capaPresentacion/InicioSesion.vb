@@ -1,159 +1,50 @@
-﻿Public Class InicioSesion
+﻿Imports capaLogica ' Asegúrate de que este sea el nombre de tu capa lógica
 
-    Private objLogica As New capaLogica.clsUsuario()
-    Private _intentos As Integer = 0
-    Private Const MAX_INTENTOS As Integer = 3
+Public Class InicioSesion
+    ' Instanciamos tu nueva clase maestra de usuarios
+    Dim objLogica As New clsUsuario()
 
-    ' Guardamos temporalmente la pregunta y hash de respuesta tras validar credenciales
-    Private _pregunta As String = ""
-    Private _respuestaHash As String = ""
-
-    ' ══════════════════════════════════════════════
-    '  BOTÓN INGRESAR
-    ' ══════════════════════════════════════════════
-    Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        ' Validación básica de campos vacíos
-        If String.IsNullOrWhiteSpace(txtNombreUsuario.Text) OrElse
-           String.IsNullOrWhiteSpace(txtContra.Text) Then
-            MessageBox.Show("Debe ingresar el nombre de usuario y la contraseña.",
-                            "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return
-        End If
-
+    ' BOTÓN INGRESAR
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Try
-            Dim resultado As Integer =
-                objLogica.AutenticarUsuario(txtNombreUsuario.Text.Trim(),
-                                            txtContra.Text,
-                                            _pregunta, _respuestaHash)
+            ' Variables vacías que tu función AutenticarUsuario necesita llenar (ByRef)
+            Dim preguntaSecreta As String = ""
+            Dim respuestaHash As String = ""
 
+            ' Llamamos a la función enviando el usuario y la clave NORMAL (BCrypt se encarga del resto)
+            Dim resultado As Integer = objLogica.AutenticarUsuario(txtUsuario.Text, txtContraseña.Text, preguntaSecreta, respuestaHash)
+
+            ' Evaluamos la respuesta de la capa lógica
             Select Case resultado
-                Case 0  ' Usuario no existe o está inactivo
-                    RegistrarIntento("El usuario no existe o se encuentra inactivo.")
+                Case 2 ' ============= ACCESO CONCEDIDO =============
+                    MsgBox("¡Bienvenido al Sistema del I.E.P Amancio Varona!", MsgBoxStyle.Information, "Acceso Concedido")
 
-                Case 1  ' Clave incorrecta
-                    RegistrarIntento("Contraseña incorrecta.")
+                    ' Abrimos el Menú Principal
+                    Dim frmMain As New Principal()
+                    frmMain.Show()
 
-                Case 2  ' Credenciales correctas → abrir modal de pregunta secreta
-                    MostrarModalPregunta()
+                    Me.Hide() ' Oculta la ventana de login
+
+                Case 1 ' ============= CLAVE INCORRECTA =============
+                    MsgBox("La contraseña ingresada es incorrecta.", MsgBoxStyle.Exclamation, "Error de Acceso")
+                    txtContraseña.Clear()
+                    txtContraseña.Focus()
+
+                Case 0 ' ========= NO EXISTE O ESTÁ INACTIVO =========
+                    MsgBox("El usuario no existe o se encuentra inactivo en el sistema.", MsgBoxStyle.Critical, "Acceso Denegado")
+                    txtUsuario.Focus()
+
             End Select
 
         Catch ex As Exception
-            MessageBox.Show("Error al iniciar sesión: " & ex.Message,
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBox("Error al intentar iniciar sesión: " & ex.Message, MsgBoxStyle.Critical, "Atención")
         End Try
     End Sub
 
-    ' ══════════════════════════════════════════════
-    '  REGISTRAR INTENTO FALLIDO
-    ' ══════════════════════════════════════════════
-    Private Sub RegistrarIntento(motivo As String)
-        _intentos += 1
-        Dim restantes As Integer = MAX_INTENTOS - _intentos
-
-        If _intentos >= MAX_INTENTOS Then
-            MessageBox.Show(motivo & Environment.NewLine & Environment.NewLine &
-                            "Ha agotado todos sus intentos. El sistema se cerrará.",
-                            "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Application.Exit()
-        Else
-            MessageBox.Show(motivo & Environment.NewLine & Environment.NewLine &
-                            "Intentos restantes: " & restantes,
-                            "Credenciales incorrectas",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtContra.Clear()
-            txtContra.Focus()
-        End If
-    End Sub
-
-    ' ══════════════════════════════════════════════
-    '  MOSTRAR MODAL DE PREGUNTA SECRETA
-    ' ══════════════════════════════════════════════
-    Private Sub MostrarModalPregunta()
-        ' Si el usuario no tiene pregunta configurada, ingresa directo
-        If String.IsNullOrWhiteSpace(_pregunta) OrElse
-           String.IsNullOrWhiteSpace(_respuestaHash) Then
-            AbrirPrincipal()
-            Return
-        End If
-
-        ' Crear el formulario modal en tiempo de ejecución
-        Dim frmPregunta As New Form()
-        frmPregunta.Text = "Verificación de seguridad"
-        frmPregunta.Size = New Size(420, 220)
-        frmPregunta.StartPosition = FormStartPosition.CenterParent
-        frmPregunta.FormBorderStyle = FormBorderStyle.FixedDialog
-        frmPregunta.MaximizeBox = False
-        frmPregunta.MinimizeBox = False
-
-        ' Etiqueta de instrucción
-        Dim lblTitulo As New Label()
-        lblTitulo.Text = "Responda su pregunta de seguridad:"
-        lblTitulo.Font = New Font("Segoe UI", 9, FontStyle.Bold)
-        lblTitulo.Location = New Point(15, 15)
-        lblTitulo.AutoSize = True
-
-        ' Etiqueta con la pregunta
-        Dim lblPregunta As New Label()
-        lblPregunta.Text = _pregunta
-        lblPregunta.Location = New Point(15, 40)
-        lblPregunta.Size = New Size(380, 40)
-        lblPregunta.Font = New Font("Segoe UI", 9)
-
-        ' TextBox para la respuesta
-        Dim txtRespuesta As New TextBox()
-        txtRespuesta.Location = New Point(15, 88)
-        txtRespuesta.Size = New Size(380, 25)
-
-        ' Botón confirmar
-        Dim btnConfirmar As New Button()
-        btnConfirmar.Text = "Confirmar"
-        btnConfirmar.Location = New Point(200, 130)
-        btnConfirmar.Size = New Size(90, 30)
-        btnConfirmar.DialogResult = DialogResult.OK
-
-        ' Botón cancelar
-        Dim btnCancelar As New Button()
-        btnCancelar.Text = "Cancelar"
-        btnCancelar.Location = New Point(305, 130)
-        btnCancelar.Size = New Size(90, 30)
-        btnCancelar.DialogResult = DialogResult.Cancel
-
-        frmPregunta.Controls.AddRange({lblTitulo, lblPregunta, txtRespuesta,
-                                        btnConfirmar, btnCancelar})
-        frmPregunta.AcceptButton = btnConfirmar
-        frmPregunta.CancelButton = btnCancelar
-
-        ' Mostrar el modal
-        Dim resultado As DialogResult = frmPregunta.ShowDialog(Me)
-
-        If resultado = DialogResult.OK Then
-            If objLogica.VerificarRespuesta(txtRespuesta.Text, _respuestaHash) Then
-                AbrirPrincipal()
-            Else
-                RegistrarIntento("La respuesta de seguridad es incorrecta.")
-            End If
-        End If
-
-        frmPregunta.Dispose()
-    End Sub
-
-    ' ══════════════════════════════════════════════
-    '  ABRIR FORMULARIO PRINCIPAL (MDI)
-    ' ══════════════════════════════════════════════
-    Private Sub AbrirPrincipal()
-        MessageBox.Show("¡Bienvenido, " & txtNombreUsuario.Text.Trim() & "!",
-                        "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Dim frmPrincipal As New Principal()
-        frmPrincipal.Show()
-        Me.Hide()
-    End Sub
-
-    ' ══════════════════════════════════════════════
-    '  EVENTO DE CARGA DEL FORMULARIO
-    ' ══════════════════════════════════════════════
-    Private Sub InicioSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Activa los puntos negros automáticos del sistema operativo
-        txtContra.UseSystemPasswordChar = True
+    ' BOTÓN CERRAR
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        ' Cierra toda la aplicación de forma segura
+        Application.Exit()
     End Sub
 
 End Class
