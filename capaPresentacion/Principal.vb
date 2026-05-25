@@ -29,7 +29,7 @@ Public Class Principal
         hijoUsuarios.Show()
     End Sub
 
-    Private Sub MantenimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MantenimientoToolStripMenuItem.Click
+    Private Sub MantenimientoToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim hijoUsuarios As New frmTransaccionTutorAula()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
@@ -116,6 +116,12 @@ Public Class Principal
 
     Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles DirectCargaAcademica.Click
         Dim hijoUsuarios As New frmCargaAcademica()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub AsignaciónTutorAulaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsignaciónTutorAulaToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmTransaccionTutorAula()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub
