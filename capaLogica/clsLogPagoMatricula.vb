@@ -20,4 +20,9 @@ Public Class clsLogPagoMatricula
     Public Function DarDeBaja(id As Integer) As Boolean
         Return objDatos.DarDeBajaPago(id)
     End Function
+
+    Public Function MostrarAnosAcademicos() As DataTable
+        Return objDatos.ListarAnosAcademicos()
+    End Function
+
 End Class

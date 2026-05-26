@@ -89,6 +89,7 @@
     <Compile Include="clsDatMatricula.vb" />
     <Compile Include="clsDatPagoMatricula.vb" />
     <Compile Include="clsDatPlanEstudio.vb" />
+    <Compile Include="ClsDatReportes.vb" />
     <Compile Include="clsDatUsuario.vb" />
     <Compile Include="clsMantenimiento.vb" />
     <Compile Include="clsPersona.vb" />

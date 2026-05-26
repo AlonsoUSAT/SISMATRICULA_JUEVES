@@ -129,4 +129,16 @@ Public Class Principal
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
         Application.Exit()
     End Sub
+
+    Private Sub AlonsoConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlonsoConsultarToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmConsultarHistorico()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub AlonsoConsultarCargaAcadémicaPorGradoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlonsoConsultarCargaAcadémicaPorGradoToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmConsultarCargaActual()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
 End Class

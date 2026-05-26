@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76623686-5AC7-498C-A7F4-6B07BF2BF67B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>capaPresentacion.InicioSesion</StartupObject>
+    <StartupObject>capaPresentacion.Principal</StartupObject>
     <RootNamespace>capaPresentacion</RootNamespace>
     <AssemblyName>capaPresentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -77,6 +77,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConsultarCargaActual.Designer.vb">
+      <DependentUpon>frmConsultarCargaActual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarCargaActual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarHistorico.Designer.vb">
+      <DependentUpon>frmConsultarHistorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarHistorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCargaAcademica.Designer.vb">
       <DependentUpon>frmCargaAcademica.vb</DependentUpon>
     </Compile>
@@ -191,6 +203,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmConsultarCargaActual.resx">
+      <DependentUpon>frmConsultarCargaActual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarHistorico.resx">
+      <DependentUpon>frmConsultarHistorico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantDocente.resx">
       <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>

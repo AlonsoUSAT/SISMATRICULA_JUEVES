@@ -77,6 +77,7 @@
     <Compile Include="clsLogMatricula.vb" />
     <Compile Include="clsLogPagoMatricula.vb" />
     <Compile Include="clsLogPlanEstudio.vb" />
+    <Compile Include="clsLogReportes.vb" />
     <Compile Include="clsLogUsuario.vb" />
     <Compile Include="clsTipoDocumento.vb" />
     <Compile Include="clsTutorAula.vb" />
