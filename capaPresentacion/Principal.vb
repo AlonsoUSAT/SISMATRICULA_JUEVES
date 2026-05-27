@@ -127,4 +127,16 @@ Public Class Principal
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub
+
+    Private Sub ConsultarDocenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarDocenteToolStripMenuItem.Click
+        Dim hijoConsultaDocente As New frmConsultaDocente()
+        hijoConsultaDocente.MdiParent = Me
+        hijoConsultaDocente.Show()
+    End Sub
+
+    Private Sub ConsultarEstudiantesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarEstudiantesToolStripMenuItem.Click
+        Dim hijoConsultaEstudiante As New frmConsultaEstudiantes()
+        hijoConsultaEstudiante.MdiParent = Me
+        hijoConsultaEstudiante.Show()
+    End Sub
 End Class

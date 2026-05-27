@@ -116,7 +116,7 @@ Partial Class frmNuevaAsignacion
         Me.dtpHoraFin.ShowUpDown = True
         Me.dtpHoraFin.Size = New System.Drawing.Size(121, 20)
         Me.dtpHoraFin.TabIndex = 9
-        Me.dtpHoraFin.Value = New Date(2026, 5, 26, 16, 38, 35, 0)
+        Me.dtpHoraFin.Value = New Date(2026, 5, 26, 0, 0, 0, 0)
         '
         'dtpHoraInicio
         '
@@ -127,7 +127,7 @@ Partial Class frmNuevaAsignacion
         Me.dtpHoraInicio.ShowUpDown = True
         Me.dtpHoraInicio.Size = New System.Drawing.Size(124, 20)
         Me.dtpHoraInicio.TabIndex = 8
-        Me.dtpHoraInicio.Value = New Date(2026, 5, 26, 16, 38, 35, 0)
+        Me.dtpHoraInicio.Value = New Date(2026, 5, 26, 0, 0, 0, 0)
         '
         'lblMensajeCruce
         '

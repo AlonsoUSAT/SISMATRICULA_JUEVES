@@ -73,6 +73,8 @@
     <Compile Include="clCurso.vb" />
     <Compile Include="clEspecialidad.vb" />
     <Compile Include="clPersona.vb" />
+    <Compile Include="clsConsultaDocente.vb" />
+    <Compile Include="clsConsultaEstudiante.vb" />
     <Compile Include="clSeccion.vb" />
     <Compile Include="clsLogAnoAcademico.vb" />
     <Compile Include="clsLogMatricula.vb" />

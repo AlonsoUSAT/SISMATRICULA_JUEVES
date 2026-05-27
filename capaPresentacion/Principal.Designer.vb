@@ -49,6 +49,8 @@ Partial Class Principal
         Me.DirectAgregarAlumno = New System.Windows.Forms.ToolStripButton()
         Me.DirectProcesarMatricula = New System.Windows.Forms.ToolStripButton()
         Me.DirectCargaAcademica = New System.Windows.Forms.ToolStripButton()
+        Me.ConsultarDocenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarEstudiantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -89,75 +91,75 @@ Partial Class Principal
         '
         Me.UsuarioToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.usuario
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'DocenteToolStripMenuItem
         '
         Me.DocenteToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.profesor_en_la_pizarra
         Me.DocenteToolStripMenuItem.Name = "DocenteToolStripMenuItem"
-        Me.DocenteToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.DocenteToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.DocenteToolStripMenuItem.Text = "Docente"
         '
         'AñoAcademicoToolStripMenuItem
         '
         Me.AñoAcademicoToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.academico_anio
         Me.AñoAcademicoToolStripMenuItem.Name = "AñoAcademicoToolStripMenuItem"
-        Me.AñoAcademicoToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.AñoAcademicoToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.AñoAcademicoToolStripMenuItem.Text = "Año Academico"
         '
         'ApoderadoToolStripMenuItem
         '
         Me.ApoderadoToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.apoderado
         Me.ApoderadoToolStripMenuItem.Name = "ApoderadoToolStripMenuItem"
-        Me.ApoderadoToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.ApoderadoToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.ApoderadoToolStripMenuItem.Text = "Apoderado"
         '
         'EstudianteToolStripMenuItem
         '
         Me.EstudianteToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.estudiante__2_
         Me.EstudianteToolStripMenuItem.Name = "EstudianteToolStripMenuItem"
-        Me.EstudianteToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.EstudianteToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.EstudianteToolStripMenuItem.Text = "Estudiante"
         '
         'NGSToolStripMenuItem
         '
         Me.NGSToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.escuela
         Me.NGSToolStripMenuItem.Name = "NGSToolStripMenuItem"
-        Me.NGSToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.NGSToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.NGSToolStripMenuItem.Text = "Nivel, grado, sección"
         '
         'CursoToolStripMenuItem
         '
         Me.CursoToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.libro_abierto
         Me.CursoToolStripMenuItem.Name = "CursoToolStripMenuItem"
-        Me.CursoToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.CursoToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.CursoToolStripMenuItem.Text = "Curso"
         '
         'PagoMatriculaToolStripMenuItem
         '
         Me.PagoMatriculaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.matricula_pago
         Me.PagoMatriculaToolStripMenuItem.Name = "PagoMatriculaToolStripMenuItem"
-        Me.PagoMatriculaToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.PagoMatriculaToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.PagoMatriculaToolStripMenuItem.Text = "Pago Matricula"
         '
         'PlanEstudioToolStripMenuItem
         '
         Me.PlanEstudioToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.plan_de_estudios
         Me.PlanEstudioToolStripMenuItem.Name = "PlanEstudioToolStripMenuItem"
-        Me.PlanEstudioToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.PlanEstudioToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.PlanEstudioToolStripMenuItem.Text = "Plan Estudio"
         '
         'EspecialidadToolStripMenuItem
         '
         Me.EspecialidadToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.especialidad
         Me.EspecialidadToolStripMenuItem.Name = "EspecialidadToolStripMenuItem"
-        Me.EspecialidadToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.EspecialidadToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.EspecialidadToolStripMenuItem.Text = "Especialidad"
         '
         'OperacionesToolStripMenuItem
         '
-        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProcesarMatriculaToolStripMenuItem, Me.CargaAcadémicaToolStripMenuItem, Me.AsignaciónTutorAulaToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProcesarMatriculaToolStripMenuItem, Me.CargaAcadémicaToolStripMenuItem, Me.AsignaciónTutorAulaToolStripMenuItem, Me.ConsultarDocenteToolStripMenuItem, Me.ConsultarEstudiantesToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
         Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
@@ -166,21 +168,21 @@ Partial Class Principal
         '
         Me.ProcesarMatriculaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.procesar_matricula
         Me.ProcesarMatriculaToolStripMenuItem.Name = "ProcesarMatriculaToolStripMenuItem"
-        Me.ProcesarMatriculaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.ProcesarMatriculaToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
         Me.ProcesarMatriculaToolStripMenuItem.Text = "Procesar matricula"
         '
         'CargaAcadémicaToolStripMenuItem
         '
         Me.CargaAcadémicaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.carga_academica
         Me.CargaAcadémicaToolStripMenuItem.Name = "CargaAcadémicaToolStripMenuItem"
-        Me.CargaAcadémicaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.CargaAcadémicaToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
         Me.CargaAcadémicaToolStripMenuItem.Text = "Carga académica"
         '
         'AsignaciónTutorAulaToolStripMenuItem
         '
         Me.AsignaciónTutorAulaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.profesor_en_la_pizarra
         Me.AsignaciónTutorAulaToolStripMenuItem.Name = "AsignaciónTutorAulaToolStripMenuItem"
-        Me.AsignaciónTutorAulaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.AsignaciónTutorAulaToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
         Me.AsignaciónTutorAulaToolStripMenuItem.Text = "Asignación tutor aula"
         '
         'ReportesToolStripMenuItem
@@ -225,6 +227,18 @@ Partial Class Principal
         Me.DirectCargaAcademica.Name = "DirectCargaAcademica"
         Me.DirectCargaAcademica.Size = New System.Drawing.Size(36, 36)
         Me.DirectCargaAcademica.Text = "Asignar tutor aula"
+        '
+        'ConsultarDocenteToolStripMenuItem
+        '
+        Me.ConsultarDocenteToolStripMenuItem.Name = "ConsultarDocenteToolStripMenuItem"
+        Me.ConsultarDocenteToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
+        Me.ConsultarDocenteToolStripMenuItem.Text = "Consultar Docente"
+        '
+        'ConsultarEstudiantesToolStripMenuItem
+        '
+        Me.ConsultarEstudiantesToolStripMenuItem.Name = "ConsultarEstudiantesToolStripMenuItem"
+        Me.ConsultarEstudiantesToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
+        Me.ConsultarEstudiantesToolStripMenuItem.Text = "Consultar Estudiantes"
         '
         'Principal
         '
@@ -275,4 +289,6 @@ Partial Class Principal
     Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EspecialidadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarDocenteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarEstudiantesToolStripMenuItem As ToolStripMenuItem
 End Class

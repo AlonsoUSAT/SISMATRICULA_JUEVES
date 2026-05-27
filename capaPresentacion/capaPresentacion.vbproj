@@ -77,6 +77,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConsultaDocente.Designer.vb">
+      <DependentUpon>frmConsultaDocente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaDocente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaEstudiantes.Designer.vb">
+      <DependentUpon>frmConsultaEstudiantes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaEstudiantes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransaccionTutorAula.Designer.vb">
+      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransaccionTutorAula.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCargaAcademica.Designer.vb">
       <DependentUpon>frmCargaAcademica.vb</DependentUpon>
     </Compile>
@@ -173,12 +191,6 @@
     <Compile Include="frmMantUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTransaccionTutorAula.Designer.vb">
-      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTransaccionTutorAula.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="InicioSesion.Designer.vb">
       <DependentUpon>InicioSesion.vb</DependentUpon>
     </Compile>
@@ -199,6 +211,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmConsultaDocente.resx">
+      <DependentUpon>frmConsultaDocente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaEstudiantes.resx">
+      <DependentUpon>frmConsultaEstudiantes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransaccionTutorAula.resx">
+      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCargaAcademica.resx">
       <DependentUpon>frmCargaAcademica.vb</DependentUpon>
     </EmbeddedResource>
@@ -243,9 +264,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantUsuarios.resx">
       <DependentUpon>frmMantUsuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTransaccionTutorAula.resx">
-      <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.vb</DependentUpon>
