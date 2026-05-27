@@ -9,6 +9,13 @@ Public Class frmNuevaAsignacion
         idCargaEditar = idCarga
     End Sub
 
+    Private Sub frmNuevaAsignacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarDiasSemana()
+        CargarEspecialidades()
+        CargarNiveles()
+        CargarCursos()
+    End Sub
+
     '--- CARGA INICIAL ---
     Private Sub CargarDiasSemana()
         cboDia.Items.Clear()
@@ -24,6 +31,8 @@ Public Class frmNuevaAsignacion
     Private Sub CargarEspecialidades()
         Try
             Dim dt As DataTable = objLogica.MostrarEspecialidades()
+            cboEspecialidad.DataSource = Nothing
+            cboEspecialidad.Items.Clear()
             cboEspecialidad.DisplayMember = "nombre"
             cboEspecialidad.ValueMember = "id_especialidad"
             cboEspecialidad.DataSource = dt
@@ -31,7 +40,7 @@ Public Class frmNuevaAsignacion
             cboDocente.Enabled = False
             cboDocente.DataSource = Nothing
         Catch ex As Exception
-            MessageBox.Show("Error al cargar especialidades: " & ex.Message)
+            MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
 
@@ -215,13 +224,5 @@ Public Class frmNuevaAsignacion
     '--- CANCELAR ---
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnGuardarAsignacion.Click
-
     End Sub
 End Class

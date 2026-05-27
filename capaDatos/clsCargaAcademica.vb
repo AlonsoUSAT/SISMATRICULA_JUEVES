@@ -80,7 +80,7 @@ Public Class clsCargaAcademica
         Try
             objConexion.conectar()
             Dim query As String =
-                "SELECT id_especialidad, nombre FROM ESPECIALIDAD WHERE estado = 1"
+            "SELECT id_especialidad, nombre FROM ESPECIALIDAD WHERE estado = 1"
             Dim adapter As New SqlDataAdapter(query, objConexion.miConexion)
             adapter.Fill(tabla)
         Catch ex As Exception
