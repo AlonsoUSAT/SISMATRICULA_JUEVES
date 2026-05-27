@@ -121,4 +121,10 @@ Public Class Principal
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
         Application.Exit()
     End Sub
+
+    Private Sub EspecialidadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EspecialidadToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantEspecialidad()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
 End Class

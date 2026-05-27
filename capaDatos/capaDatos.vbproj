@@ -90,6 +90,7 @@
     <Compile Include="clsDatPagoMatricula.vb" />
     <Compile Include="clsDatPlanEstudio.vb" />
     <Compile Include="clsDatUsuario.vb" />
+    <Compile Include="clsEspecialidad.vb" />
     <Compile Include="clsMantenimiento.vb" />
     <Compile Include="clsPersona.vb" />
     <Compile Include="clsSeccion.vb" />

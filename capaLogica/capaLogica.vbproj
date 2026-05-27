@@ -71,6 +71,7 @@
     <Compile Include="Class1.vb" />
     <Compile Include="clCargaAcademica.vb" />
     <Compile Include="clCurso.vb" />
+    <Compile Include="clEspecialidad.vb" />
     <Compile Include="clPersona.vb" />
     <Compile Include="clSeccion.vb" />
     <Compile Include="clsLogAnoAcademico.vb" />

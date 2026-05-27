@@ -39,6 +39,7 @@ Partial Class Principal
         Me.CursoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PagoMatriculaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlanEstudioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EspecialidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcesarMatriculaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargaAcadémicaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,7 +59,8 @@ Partial Class Principal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.MantenimientosToolStripMenuItem, Me.OperacionesToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(942, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(706, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -66,127 +68,134 @@ Partial Class Principal
         '
         Me.LoginToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarSesiónToolStripMenuItem})
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.LoginToolStripMenuItem.Text = "Login"
         '
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.cerrar_sesion
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
         'MantenimientosToolStripMenuItem
         '
-        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem, Me.DocenteToolStripMenuItem, Me.AñoAcademicoToolStripMenuItem, Me.ApoderadoToolStripMenuItem, Me.EstudianteToolStripMenuItem, Me.NGSToolStripMenuItem, Me.CursoToolStripMenuItem, Me.PagoMatriculaToolStripMenuItem, Me.PlanEstudioToolStripMenuItem})
+        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem, Me.DocenteToolStripMenuItem, Me.AñoAcademicoToolStripMenuItem, Me.ApoderadoToolStripMenuItem, Me.EstudianteToolStripMenuItem, Me.NGSToolStripMenuItem, Me.CursoToolStripMenuItem, Me.PagoMatriculaToolStripMenuItem, Me.PlanEstudioToolStripMenuItem, Me.EspecialidadToolStripMenuItem})
         Me.MantenimientosToolStripMenuItem.Name = "MantenimientosToolStripMenuItem"
-        Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
+        Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
         '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.usuario
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'DocenteToolStripMenuItem
         '
         Me.DocenteToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.profesor_en_la_pizarra
         Me.DocenteToolStripMenuItem.Name = "DocenteToolStripMenuItem"
-        Me.DocenteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.DocenteToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.DocenteToolStripMenuItem.Text = "Docente"
         '
         'AñoAcademicoToolStripMenuItem
         '
         Me.AñoAcademicoToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.academico_anio
         Me.AñoAcademicoToolStripMenuItem.Name = "AñoAcademicoToolStripMenuItem"
-        Me.AñoAcademicoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.AñoAcademicoToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.AñoAcademicoToolStripMenuItem.Text = "Año Academico"
         '
         'ApoderadoToolStripMenuItem
         '
         Me.ApoderadoToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.apoderado
         Me.ApoderadoToolStripMenuItem.Name = "ApoderadoToolStripMenuItem"
-        Me.ApoderadoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.ApoderadoToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.ApoderadoToolStripMenuItem.Text = "Apoderado"
         '
         'EstudianteToolStripMenuItem
         '
         Me.EstudianteToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.estudiante__2_
         Me.EstudianteToolStripMenuItem.Name = "EstudianteToolStripMenuItem"
-        Me.EstudianteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.EstudianteToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.EstudianteToolStripMenuItem.Text = "Estudiante"
         '
         'NGSToolStripMenuItem
         '
         Me.NGSToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.escuela
         Me.NGSToolStripMenuItem.Name = "NGSToolStripMenuItem"
-        Me.NGSToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.NGSToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.NGSToolStripMenuItem.Text = "Nivel, grado, sección"
         '
         'CursoToolStripMenuItem
         '
         Me.CursoToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.libro_abierto
         Me.CursoToolStripMenuItem.Name = "CursoToolStripMenuItem"
-        Me.CursoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.CursoToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.CursoToolStripMenuItem.Text = "Curso"
         '
         'PagoMatriculaToolStripMenuItem
         '
         Me.PagoMatriculaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.matricula_pago
         Me.PagoMatriculaToolStripMenuItem.Name = "PagoMatriculaToolStripMenuItem"
-        Me.PagoMatriculaToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.PagoMatriculaToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.PagoMatriculaToolStripMenuItem.Text = "Pago Matricula"
         '
         'PlanEstudioToolStripMenuItem
         '
         Me.PlanEstudioToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.plan_de_estudios
         Me.PlanEstudioToolStripMenuItem.Name = "PlanEstudioToolStripMenuItem"
-        Me.PlanEstudioToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.PlanEstudioToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
         Me.PlanEstudioToolStripMenuItem.Text = "Plan Estudio"
+        '
+        'EspecialidadToolStripMenuItem
+        '
+        Me.EspecialidadToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.especialidad
+        Me.EspecialidadToolStripMenuItem.Name = "EspecialidadToolStripMenuItem"
+        Me.EspecialidadToolStripMenuItem.Size = New System.Drawing.Size(188, 26)
+        Me.EspecialidadToolStripMenuItem.Text = "Especialidad"
         '
         'OperacionesToolStripMenuItem
         '
         Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProcesarMatriculaToolStripMenuItem, Me.CargaAcadémicaToolStripMenuItem, Me.AsignaciónTutorAulaToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
+        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
         '
         'ProcesarMatriculaToolStripMenuItem
         '
         Me.ProcesarMatriculaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.procesar_matricula
         Me.ProcesarMatriculaToolStripMenuItem.Name = "ProcesarMatriculaToolStripMenuItem"
-        Me.ProcesarMatriculaToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.ProcesarMatriculaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.ProcesarMatriculaToolStripMenuItem.Text = "Procesar matricula"
         '
         'CargaAcadémicaToolStripMenuItem
         '
         Me.CargaAcadémicaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.carga_academica
         Me.CargaAcadémicaToolStripMenuItem.Name = "CargaAcadémicaToolStripMenuItem"
-        Me.CargaAcadémicaToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.CargaAcadémicaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.CargaAcadémicaToolStripMenuItem.Text = "Carga académica"
         '
         'AsignaciónTutorAulaToolStripMenuItem
         '
         Me.AsignaciónTutorAulaToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.profesor_en_la_pizarra
         Me.AsignaciónTutorAulaToolStripMenuItem.Name = "AsignaciónTutorAulaToolStripMenuItem"
-        Me.AsignaciónTutorAulaToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.AsignaciónTutorAulaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.AsignaciónTutorAulaToolStripMenuItem.Text = "Asignación tutor aula"
         '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DirectAgregarAlumno, Me.DirectProcesarMatricula, Me.DirectCargaAcademica})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 28)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(942, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(706, 39)
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -219,19 +228,18 @@ Partial Class Principal
         '
         'Principal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.capaPresentacion.My.Resources.Resources.fondo_tuman
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(942, 710)
+        Me.ClientSize = New System.Drawing.Size(706, 577)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.IsMdiContainer = True
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Principal"
         Me.Text = "SISTEMAS DISTRIBUIDOS - APLICACIÓN 2026"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -266,4 +274,5 @@ Partial Class Principal
     Friend WithEvents AsignaciónTutorAulaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EspecialidadToolStripMenuItem As ToolStripMenuItem
 End Class
