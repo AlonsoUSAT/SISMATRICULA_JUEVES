@@ -44,10 +44,10 @@ Partial Class frmCurso
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvCursos = New System.Windows.Forms.DataGridView()
+        Me.btnFiltrar = New System.Windows.Forms.Button()
         Me.txtBuscarNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.btnFiltrar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -127,10 +127,9 @@ Partial Class frmCurso
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(3, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(2, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1505, 68)
+        Me.Panel1.Size = New System.Drawing.Size(1129, 55)
         Me.Panel1.TabIndex = 34
         '
         'Label1
@@ -138,10 +137,9 @@ Partial Class frmCurso
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(16, 14)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(443, 31)
+        Me.Label1.Size = New System.Drawing.Size(359, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Gestiòn de estructura académica"
         '
@@ -151,10 +149,9 @@ Partial Class frmCurso
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(58, 259)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(44, 210)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(228, 25)
+        Me.Label9.Size = New System.Drawing.Size(194, 20)
         Me.Label9.TabIndex = 44
         Me.Label9.Text = "Área académica/categorías:"
         '
@@ -164,10 +161,9 @@ Partial Class frmCurso
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(58, 306)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(44, 249)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 25)
+        Me.Label5.Size = New System.Drawing.Size(57, 20)
         Me.Label5.TabIndex = 42
         Me.Label5.Text = "Estado:"
         '
@@ -177,20 +173,18 @@ Partial Class frmCurso
         Me.cboArea.ForeColor = System.Drawing.Color.Black
         Me.cboArea.FormattingEnabled = True
         Me.cboArea.Items.AddRange(New Object() {"MASCULINO", "FEMENINO"})
-        Me.cboArea.Location = New System.Drawing.Point(301, 258)
-        Me.cboArea.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboArea.Location = New System.Drawing.Point(226, 210)
         Me.cboArea.Name = "cboArea"
-        Me.cboArea.Size = New System.Drawing.Size(316, 33)
+        Me.cboArea.Size = New System.Drawing.Size(238, 27)
         Me.cboArea.TabIndex = 45
         '
         'txtNombreCurso
         '
         Me.txtNombreCurso.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtNombreCurso.ForeColor = System.Drawing.Color.Black
-        Me.txtNombreCurso.Location = New System.Drawing.Point(301, 77)
-        Me.txtNombreCurso.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombreCurso.Location = New System.Drawing.Point(226, 63)
         Me.txtNombreCurso.Name = "txtNombreCurso"
-        Me.txtNombreCurso.Size = New System.Drawing.Size(316, 31)
+        Me.txtNombreCurso.Size = New System.Drawing.Size(238, 27)
         Me.txtNombreCurso.TabIndex = 41
         '
         'Label2
@@ -199,10 +193,9 @@ Partial Class frmCurso
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(58, 120)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(44, 98)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 25)
+        Me.Label2.Size = New System.Drawing.Size(90, 20)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "Descripción:"
         '
@@ -210,11 +203,10 @@ Partial Class frmCurso
         '
         Me.txtDescripcion.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtDescripcion.ForeColor = System.Drawing.Color.Black
-        Me.txtDescripcion.Location = New System.Drawing.Point(301, 120)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescripcion.Location = New System.Drawing.Point(226, 98)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(316, 125)
+        Me.txtDescripcion.Size = New System.Drawing.Size(238, 102)
         Me.txtDescripcion.TabIndex = 36
         '
         'Label4
@@ -223,10 +215,9 @@ Partial Class frmCurso
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(58, 77)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(44, 63)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(159, 25)
+        Me.Label4.Size = New System.Drawing.Size(131, 20)
         Me.Label4.TabIndex = 39
         Me.Label4.Text = "Nombre del curso:"
         '
@@ -245,11 +236,9 @@ Partial Class frmCurso
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 85)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 69)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(670, 469)
+        Me.GroupBox1.Size = New System.Drawing.Size(502, 381)
         Me.GroupBox1.TabIndex = 51
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del curso"
@@ -259,10 +248,9 @@ Partial Class frmCurso
         Me.chkVigente.AutoSize = True
         Me.chkVigente.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.chkVigente.ForeColor = System.Drawing.Color.Black
-        Me.chkVigente.Location = New System.Drawing.Point(301, 307)
-        Me.chkVigente.Margin = New System.Windows.Forms.Padding(4)
+        Me.chkVigente.Location = New System.Drawing.Point(226, 249)
         Me.chkVigente.Name = "chkVigente"
-        Me.chkVigente.Size = New System.Drawing.Size(94, 29)
+        Me.chkVigente.Size = New System.Drawing.Size(79, 24)
         Me.chkVigente.TabIndex = 50
         Me.chkVigente.Text = "Vigente"
         Me.chkVigente.UseVisualStyleBackColor = True
@@ -272,10 +260,9 @@ Partial Class frmCurso
         Me.txtID.Enabled = False
         Me.txtID.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtID.ForeColor = System.Drawing.Color.Black
-        Me.txtID.Location = New System.Drawing.Point(301, 358)
-        Me.txtID.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtID.Location = New System.Drawing.Point(226, 291)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(316, 31)
+        Me.txtID.Size = New System.Drawing.Size(238, 27)
         Me.txtID.TabIndex = 49
         '
         'Label6
@@ -285,10 +272,9 @@ Partial Class frmCurso
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(58, 359)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(44, 292)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(34, 25)
+        Me.Label6.Size = New System.Drawing.Size(27, 20)
         Me.Label6.TabIndex = 48
         Me.Label6.Text = "ID:"
         '
@@ -301,11 +287,9 @@ Partial Class frmCurso
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Firebrick
-        Me.GroupBox2.Location = New System.Drawing.Point(700, 85)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Location = New System.Drawing.Point(525, 69)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(784, 469)
+        Me.GroupBox2.Size = New System.Drawing.Size(588, 381)
         Me.GroupBox2.TabIndex = 52
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Listado de cursos existentes"
@@ -313,21 +297,33 @@ Partial Class frmCurso
         'dgvCursos
         '
         Me.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCursos.Location = New System.Drawing.Point(28, 114)
-        Me.dgvCursos.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvCursos.Location = New System.Drawing.Point(21, 93)
         Me.dgvCursos.Name = "dgvCursos"
         Me.dgvCursos.RowHeadersWidth = 51
-        Me.dgvCursos.Size = New System.Drawing.Size(733, 332)
+        Me.dgvCursos.Size = New System.Drawing.Size(550, 270)
         Me.dgvCursos.TabIndex = 44
+        '
+        'btnFiltrar
+        '
+        Me.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnFiltrar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnFiltrar.ForeColor = System.Drawing.Color.Black
+        Me.btnFiltrar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
+        Me.btnFiltrar.Location = New System.Drawing.Point(410, 31)
+        Me.btnFiltrar.Name = "btnFiltrar"
+        Me.btnFiltrar.Size = New System.Drawing.Size(160, 48)
+        Me.btnFiltrar.TabIndex = 43
+        Me.btnFiltrar.Text = "BUSCAR"
+        Me.btnFiltrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnFiltrar.UseVisualStyleBackColor = False
         '
         'txtBuscarNombre
         '
         Me.txtBuscarNombre.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtBuscarNombre.ForeColor = System.Drawing.Color.Black
-        Me.txtBuscarNombre.Location = New System.Drawing.Point(186, 53)
-        Me.txtBuscarNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtBuscarNombre.Location = New System.Drawing.Point(140, 43)
         Me.txtBuscarNombre.Name = "txtBuscarNombre"
-        Me.txtBuscarNombre.Size = New System.Drawing.Size(353, 31)
+        Me.txtBuscarNombre.Size = New System.Drawing.Size(266, 27)
         Me.txtBuscarNombre.TabIndex = 42
         '
         'Label3
@@ -336,47 +332,31 @@ Partial Class frmCurso
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(13, 53)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(10, 43)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(168, 25)
+        Me.Label3.Size = New System.Drawing.Size(138, 20)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "Buscar por nombre:"
         '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(-5, 60)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(-4, 49)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1513, 538)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1135, 437)
         Me.FlowLayoutPanel1.TabIndex = 53
-        '
-        'btnFiltrar
-        '
-        Me.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnFiltrar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnFiltrar.ForeColor = System.Drawing.Color.Black
-        Me.btnFiltrar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
-        Me.btnFiltrar.Location = New System.Drawing.Point(547, 38)
-        Me.btnFiltrar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.Size = New System.Drawing.Size(214, 59)
-        Me.btnFiltrar.TabIndex = 43
-        Me.btnFiltrar.Text = "BUSCAR"
-        Me.btnFiltrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnFiltrar.UseVisualStyleBackColor = False
         '
         'frmCurso
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1509, 593)
+        Me.ClientSize = New System.Drawing.Size(1132, 482)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmCurso"
         Me.Text = "Mantenimiento Curso"
         Me.Panel2.ResumeLayout(False)

@@ -67,12 +67,6 @@ Public Class Principal
         hijoUsuarios.Show()
     End Sub
 
-    Private Sub CargaAcademicaToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Dim hijoUsuarios As New frmCargaAcademica()
-        hijoUsuarios.MdiParent = Me
-        hijoUsuarios.Show()
-    End Sub
-
     Private Sub PagoMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagoMatriculaToolStripMenuItem.Click
         Dim hijoPagos As New frmMantPagoMatricula()
         hijoPagos.MdiParent = Me
@@ -93,9 +87,8 @@ Public Class Principal
     End Sub
 
     Private Sub CargaAcadémicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargaAcadémicaToolStripMenuItem.Click
-        Dim hijoUsuarios As New frmCargaAcademica()
-        hijoUsuarios.MdiParent = Me
-        hijoUsuarios.Show()
+        Dim selector As New frmSelectorAnio()
+        selector.ShowDialog(Me)
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -115,9 +108,8 @@ Public Class Principal
     End Sub
 
     Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles DirectCargaAcademica.Click
-        Dim hijoUsuarios As New frmCargaAcademica()
-        hijoUsuarios.MdiParent = Me
-        hijoUsuarios.Show()
+        Dim selector As New frmSelectorAnio()
+        selector.ShowDialog(Me)
     End Sub
 
     Private Sub AsignaciónTutorAulaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsignaciónTutorAulaToolStripMenuItem.Click

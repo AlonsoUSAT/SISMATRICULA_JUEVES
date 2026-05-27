@@ -22,176 +22,280 @@ Partial Class frmCargaAcademica
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCargaAcademica))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtAnio = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cboFiltroDocente = New System.Windows.Forms.ComboBox()
-        Me.cboFiltroSeccion = New System.Windows.Forms.ComboBox()
-        Me.cboFiltroHorario = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.dgvCargaAcademica = New System.Windows.Forms.DataGridView()
+        Me.cboFiltroNivel = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cboFiltroGrado = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cboFiltroSeccion = New System.Windows.Forms.ComboBox()
+        Me.cboFiltroEspecialidad = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cboFiltroDocente = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.btnNuevaAsignacion = New System.Windows.Forms.Button()
+        Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.dgvCargaAcademica = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEditar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEliminar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvCargaAcademica, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.txtAnio)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1288, 68)
-        Me.Panel1.TabIndex = 35
+        Me.Panel1.Size = New System.Drawing.Size(1029, 47)
+        Me.Panel1.TabIndex = 0
+        '
+        'txtAnio
+        '
+        Me.txtAnio.Location = New System.Drawing.Point(61, 15)
+        Me.txtAnio.Name = "txtAnio"
+        Me.txtAnio.Size = New System.Drawing.Size(100, 20)
+        Me.txtAnio.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(16, 14)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(11, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(384, 31)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Gestión de carga académica"
+        Me.Label1.Size = New System.Drawing.Size(46, 20)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Año:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label2.Location = New System.Drawing.Point(29, 91)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(26, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(82, 25)
-        Me.Label2.TabIndex = 36
-        Me.Label2.Text = "Docente:"
+        Me.Label2.Size = New System.Drawing.Size(31, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Nivel"
         '
-        'cboFiltroDocente
+        'cboFiltroNivel
         '
-        Me.cboFiltroDocente.FormattingEnabled = True
-        Me.cboFiltroDocente.Location = New System.Drawing.Point(140, 94)
-        Me.cboFiltroDocente.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboFiltroDocente.Name = "cboFiltroDocente"
-        Me.cboFiltroDocente.Size = New System.Drawing.Size(311, 24)
-        Me.cboFiltroDocente.TabIndex = 37
-        '
-        'cboFiltroSeccion
-        '
-        Me.cboFiltroSeccion.FormattingEnabled = True
-        Me.cboFiltroSeccion.Location = New System.Drawing.Point(543, 20)
-        Me.cboFiltroSeccion.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboFiltroSeccion.Name = "cboFiltroSeccion"
-        Me.cboFiltroSeccion.Size = New System.Drawing.Size(311, 24)
-        Me.cboFiltroSeccion.TabIndex = 39
-        '
-        'cboFiltroHorario
-        '
-        Me.cboFiltroHorario.FormattingEnabled = True
-        Me.cboFiltroHorario.Location = New System.Drawing.Point(946, 19)
-        Me.cboFiltroHorario.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboFiltroHorario.Name = "cboFiltroHorario"
-        Me.cboFiltroHorario.Size = New System.Drawing.Size(311, 24)
-        Me.cboFiltroHorario.TabIndex = 41
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label4.Location = New System.Drawing.Point(862, 20)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 25)
-        Me.Label4.TabIndex = 40
-        Me.Label4.Text = "Horario:"
-        '
-        'dgvCargaAcademica
-        '
-        Me.dgvCargaAcademica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCargaAcademica.Location = New System.Drawing.Point(43, 89)
-        Me.dgvCargaAcademica.Name = "dgvCargaAcademica"
-        Me.dgvCargaAcademica.RowHeadersWidth = 51
-        Me.dgvCargaAcademica.RowTemplate.Height = 24
-        Me.dgvCargaAcademica.Size = New System.Drawing.Size(1163, 369)
-        Me.dgvCargaAcademica.TabIndex = 43
+        Me.cboFiltroNivel.FormattingEnabled = True
+        Me.cboFiltroNivel.Location = New System.Drawing.Point(38, 82)
+        Me.cboFiltroNivel.Name = "cboFiltroNivel"
+        Me.cboFiltroNivel.Size = New System.Drawing.Size(121, 21)
+        Me.cboFiltroNivel.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label3.Location = New System.Drawing.Point(459, 20)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(209, 66)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 25)
-        Me.Label3.TabIndex = 38
-        Me.Label3.Text = "Sección:"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Grado:"
         '
-        'Panel2
+        'cboFiltroGrado
         '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.cboFiltroSeccion)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.cboFiltroHorario)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(0, 75)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1288, 578)
-        Me.Panel2.TabIndex = 44
+        Me.cboFiltroGrado.FormattingEnabled = True
+        Me.cboFiltroGrado.Location = New System.Drawing.Point(221, 82)
+        Me.cboFiltroGrado.Name = "cboFiltroGrado"
+        Me.cboFiltroGrado.Size = New System.Drawing.Size(121, 21)
+        Me.cboFiltroGrado.TabIndex = 4
         '
-        'Panel3
+        'Label4
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.dgvCargaAcademica)
-        Me.Panel3.Controls.Add(Me.btnNuevaAsignacion)
-        Me.Panel3.Location = New System.Drawing.Point(22, 63)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1253, 492)
-        Me.Panel3.TabIndex = 43
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(387, 66)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(49, 13)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Sección:"
+        '
+        'cboFiltroSeccion
+        '
+        Me.cboFiltroSeccion.FormattingEnabled = True
+        Me.cboFiltroSeccion.Location = New System.Drawing.Point(399, 82)
+        Me.cboFiltroSeccion.Name = "cboFiltroSeccion"
+        Me.cboFiltroSeccion.Size = New System.Drawing.Size(121, 21)
+        Me.cboFiltroSeccion.TabIndex = 6
+        '
+        'cboFiltroEspecialidad
+        '
+        Me.cboFiltroEspecialidad.FormattingEnabled = True
+        Me.cboFiltroEspecialidad.Location = New System.Drawing.Point(585, 82)
+        Me.cboFiltroEspecialidad.Name = "cboFiltroEspecialidad"
+        Me.cboFiltroEspecialidad.Size = New System.Drawing.Size(155, 21)
+        Me.cboFiltroEspecialidad.TabIndex = 8
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(573, 66)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(70, 13)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Especialidad:"
+        '
+        'cboFiltroDocente
+        '
+        Me.cboFiltroDocente.FormattingEnabled = True
+        Me.cboFiltroDocente.Location = New System.Drawing.Point(795, 82)
+        Me.cboFiltroDocente.Name = "cboFiltroDocente"
+        Me.cboFiltroDocente.Size = New System.Drawing.Size(221, 21)
+        Me.cboFiltroDocente.TabIndex = 10
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(779, 66)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(51, 13)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "Docente:"
         '
         'btnNuevaAsignacion
         '
-        Me.btnNuevaAsignacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnNuevaAsignacion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnNuevaAsignacion.Image = Global.capaPresentacion.My.Resources.Resources.carga_academica
-        Me.btnNuevaAsignacion.Location = New System.Drawing.Point(481, 23)
-        Me.btnNuevaAsignacion.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnNuevaAsignacion.Location = New System.Drawing.Point(857, 119)
         Me.btnNuevaAsignacion.Name = "btnNuevaAsignacion"
-        Me.btnNuevaAsignacion.Size = New System.Drawing.Size(351, 44)
-        Me.btnNuevaAsignacion.TabIndex = 42
-        Me.btnNuevaAsignacion.Text = "NUEVA ASIGNACIÓN"
-        Me.btnNuevaAsignacion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnNuevaAsignacion.UseVisualStyleBackColor = False
+        Me.btnNuevaAsignacion.Size = New System.Drawing.Size(159, 30)
+        Me.btnNuevaAsignacion.TabIndex = 11
+        Me.btnNuevaAsignacion.Text = "Nueva asignación"
+        Me.btnNuevaAsignacion.UseVisualStyleBackColor = True
+        '
+        'btnActualizar
+        '
+        Me.btnActualizar.Location = New System.Drawing.Point(692, 119)
+        Me.btnActualizar.Name = "btnActualizar"
+        Me.btnActualizar.Size = New System.Drawing.Size(159, 30)
+        Me.btnActualizar.TabIndex = 12
+        Me.btnActualizar.Text = "Actualizar"
+        Me.btnActualizar.UseVisualStyleBackColor = True
+        '
+        'dgvCargaAcademica
+        '
+        Me.dgvCargaAcademica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCargaAcademica.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.colEditar, Me.colEliminar})
+        Me.dgvCargaAcademica.Location = New System.Drawing.Point(26, 155)
+        Me.dgvCargaAcademica.Name = "dgvCargaAcademica"
+        Me.dgvCargaAcademica.Size = New System.Drawing.Size(990, 283)
+        Me.dgvCargaAcademica.TabIndex = 13
+        '
+        'Column1
+        '
+        Me.Column1.Frozen = True
+        Me.Column1.HeaderText = "Docente"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.Frozen = True
+        Me.Column2.HeaderText = "Especialidad"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.Frozen = True
+        Me.Column3.HeaderText = "Curso"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.Frozen = True
+        Me.Column4.HeaderText = "Grado"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.Frozen = True
+        Me.Column5.HeaderText = "Sección"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 50
+        '
+        'Column6
+        '
+        Me.Column6.Frozen = True
+        Me.Column6.HeaderText = "Día"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.Frozen = True
+        Me.Column7.HeaderText = "Hora de inicio"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 80
+        '
+        'Column8
+        '
+        Me.Column8.Frozen = True
+        Me.Column8.HeaderText = "Hora de fin"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 80
+        '
+        'Column9
+        '
+        Me.Column9.Frozen = True
+        Me.Column9.HeaderText = "Estado"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Width = 88
+        '
+        'colEditar
+        '
+        Me.colEditar.HeaderText = "Editar"
+        Me.colEditar.Name = "colEditar"
+        Me.colEditar.Width = 75
+        '
+        'colEliminar
+        '
+        Me.colEliminar.HeaderText = "Eliminar"
+        Me.colEliminar.Name = "colEliminar"
+        Me.colEliminar.Width = 75
         '
         'frmCargaAcademica
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1287, 648)
+        Me.ClientSize = New System.Drawing.Size(1028, 450)
+        Me.Controls.Add(Me.dgvCargaAcademica)
+        Me.Controls.Add(Me.btnActualizar)
+        Me.Controls.Add(Me.btnNuevaAsignacion)
         Me.Controls.Add(Me.cboFiltroDocente)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.cboFiltroEspecialidad)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cboFiltroSeccion)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.cboFiltroGrado)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.cboFiltroNivel)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel2)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmCargaAcademica"
-        Me.Text = "Gestion de Carga Academica"
+        Me.Text = "Gestión de carga académica"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvCargaAcademica, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -199,14 +303,29 @@ Partial Class frmCargaAcademica
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtAnio As TextBox
     Friend WithEvents Label2 As Label
-	Friend WithEvents cboFiltroDocente As ComboBox
-	Friend WithEvents cboFiltroSeccion As ComboBox
-    Friend WithEvents cboFiltroHorario As ComboBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents btnNuevaAsignacion As Button
-    Friend WithEvents dgvCargaAcademica As DataGridView
+    Friend WithEvents cboFiltroNivel As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents cboFiltroGrado As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents cboFiltroSeccion As ComboBox
+    Friend WithEvents cboFiltroEspecialidad As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents cboFiltroDocente As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents btnNuevaAsignacion As Button
+    Friend WithEvents btnActualizar As Button
+    Friend WithEvents dgvCargaAcademica As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents colEditar As DataGridViewTextBoxColumn
+    Friend WithEvents colEliminar As DataGridViewTextBoxColumn
 End Class

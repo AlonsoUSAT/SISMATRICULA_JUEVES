@@ -107,6 +107,19 @@
     <Compile Include="frmMantPlanEstudio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmNuevaAsignacion.Designer.vb">
+      <DependentUpon>frmNuevaAsignacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaAsignacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectorAnio.Designer.vb">
+      <DependentUpon>frmSelectorAnio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectorAnio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloSesion.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -154,12 +167,6 @@
     <Compile Include="frmMantUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevaAsignación.Designer.vb">
-      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmNuevaAsignación.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmTransaccionTutorAula.Designer.vb">
       <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
     </Compile>
@@ -173,11 +180,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -191,6 +193,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCargaAcademica.resx">
+      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantDocente.resx">
       <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>
@@ -200,11 +205,14 @@
     <EmbeddedResource Include="frmMantPlanEstudio.resx">
       <DependentUpon>frmMantPlanEstudio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaAsignacion.resx">
+      <DependentUpon>frmNuevaAsignacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectorAnio.resx">
+      <DependentUpon>frmSelectorAnio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TranMatricula.resx">
       <DependentUpon>TranMatricula.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCargaAcademica.resx">
-      <DependentUpon>frmCargaAcademica.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCurso.resx">
       <DependentUpon>frmCurso.vb</DependentUpon>
@@ -227,9 +235,6 @@
     <EmbeddedResource Include="frmMantUsuarios.resx">
       <DependentUpon>frmMantUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevaAsignación.resx">
-      <DependentUpon>frmNuevaAsignación.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmTransaccionTutorAula.resx">
       <DependentUpon>frmTransaccionTutorAula.vb</DependentUpon>
     </EmbeddedResource>
@@ -250,7 +255,6 @@
   <ItemGroup>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

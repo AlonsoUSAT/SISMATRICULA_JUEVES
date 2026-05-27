@@ -2,111 +2,208 @@
 
 Public Class frmCargaAcademica
     Dim objLogica As New clCargaAcademica()
-    Dim cargandoFiltros As Boolean = True
+    Dim cargando As Boolean = False
 
     Private Sub frmCargaAcademica_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarFiltros()
-        cargandoFiltros = False
+        ' Mostrar año activo en el TextBox
+        txtAnio.Text = ModuloSesion.nombreAnoActivo
+        txtAnio.ReadOnly = True
+
+        cargando = True
+        CargarNiveles()
+        CargarEspecialidades()
+        cargando = False
+
         CargarListado()
     End Sub
 
-    Private Sub CargarFiltros()
+    '--- NIVELES ---
+    Private Sub CargarNiveles()
         Try
-            ' --- ComboBox Docente ---
-            Dim dtDocentes As DataTable = objLogica.MostrarDocentes()
-            Dim filaTodasDocente As DataRow = dtDocentes.NewRow()
-            filaTodasDocente("id_docente") = 0
-            filaTodasDocente("nombre_completo") = "Docente..."
-            dtDocentes.Rows.InsertAt(filaTodasDocente, 0)
-            cboFiltroDocente.DisplayMember = "nombre_completo"
-            cboFiltroDocente.ValueMember = "id_docente"
-            cboFiltroDocente.DataSource = dtDocentes
-            cboFiltroDocente.SelectedIndex = 0
+            Dim dt As DataTable = objLogica.MostrarNiveles()
+            Dim fila As DataRow = dt.NewRow()
+            fila("id_nivel") = 0
+            fila("nombre") = "Todos..."
+            dt.Rows.InsertAt(fila, 0)
+            cboFiltroNivel.DisplayMember = "nombre"
+            cboFiltroNivel.ValueMember = "id_nivel"
+            cboFiltroNivel.DataSource = dt
+            cboFiltroNivel.SelectedIndex = 0
 
-            ' --- ComboBox Sección ---
-            Dim dtSecciones As DataTable = objLogica.MostrarSecciones()
-            Dim filaTodasSeccion As DataRow = dtSecciones.NewRow()
-            filaTodasSeccion("id_seccion") = 0
-            filaTodasSeccion("nombre") = "Sección..."
-            dtSecciones.Rows.InsertAt(filaTodasSeccion, 0)
+            cboFiltroGrado.Enabled = False
+            cboFiltroGrado.DataSource = Nothing
+            cboFiltroSeccion.Enabled = False
+            cboFiltroSeccion.DataSource = Nothing
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar niveles: " & ex.Message)
+        End Try
+    End Sub
+
+    '--- ESPECIALIDADES ---
+    Private Sub CargarEspecialidades()
+        Try
+            Dim dt As DataTable = objLogica.MostrarEspecialidades()
+            Dim fila As DataRow = dt.NewRow()
+            fila("id_especialidad") = 0
+            fila("nombre") = "Todas..."
+            dt.Rows.InsertAt(fila, 0)
+            cboFiltroEspecialidad.DisplayMember = "nombre"
+            cboFiltroEspecialidad.ValueMember = "id_especialidad"
+            cboFiltroEspecialidad.DataSource = dt
+            cboFiltroEspecialidad.SelectedIndex = 0
+
+            cboFiltroDocente.Enabled = False
+            cboFiltroDocente.DataSource = Nothing
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar especialidades: " & ex.Message)
+        End Try
+    End Sub
+
+    '--- CASCADA NIVEL > GRADO ---
+    Private Sub cboFiltroNivel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltroNivel.SelectedIndexChanged
+        If cargando Then Return
+
+        cboFiltroGrado.DataSource = Nothing
+        cboFiltroGrado.Enabled = False
+        cboFiltroSeccion.DataSource = Nothing
+        cboFiltroSeccion.Enabled = False
+
+        Dim idNivel As Integer = Convert.ToInt32(cboFiltroNivel.SelectedValue)
+        If idNivel = 0 Then
+            AplicarFiltros()
+            Return
+        End If
+
+        Try
+            Dim dt As DataTable = objLogica.MostrarGradosPorNivel(idNivel)
+            Dim fila As DataRow = dt.NewRow()
+            fila("id_grado") = 0
+            fila("nombre") = "Todos..."
+            dt.Rows.InsertAt(fila, 0)
+            cboFiltroGrado.DisplayMember = "nombre"
+            cboFiltroGrado.ValueMember = "id_grado"
+            cboFiltroGrado.DataSource = dt
+            cboFiltroGrado.SelectedIndex = 0
+            cboFiltroGrado.Enabled = True
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar grados: " & ex.Message)
+        End Try
+
+        AplicarFiltros()
+    End Sub
+
+    '--- CASCADA GRADO > SECCIÓN ---
+    Private Sub cboFiltroGrado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltroGrado.SelectedIndexChanged
+        If cargando Then Return
+
+        cboFiltroSeccion.DataSource = Nothing
+        cboFiltroSeccion.Enabled = False
+
+        Dim idGrado As Integer = Convert.ToInt32(cboFiltroGrado.SelectedValue)
+        If idGrado = 0 Then
+            AplicarFiltros()
+            Return
+        End If
+
+        Try
+            Dim dt As DataTable = objLogica.MostrarSeccionesPorGrado(idGrado)
+            Dim fila As DataRow = dt.NewRow()
+            fila("id_seccion") = 0
+            fila("nombre") = "Todas..."
+            dt.Rows.InsertAt(fila, 0)
             cboFiltroSeccion.DisplayMember = "nombre"
             cboFiltroSeccion.ValueMember = "id_seccion"
-            cboFiltroSeccion.DataSource = dtSecciones
+            cboFiltroSeccion.DataSource = dt
             cboFiltroSeccion.SelectedIndex = 0
-
-            ' --- ComboBox Horario ---
-            Dim dtHorarios As DataTable = objLogica.MostrarHorarios()
-            Dim filaTodosHorario As DataRow = dtHorarios.NewRow()
-            filaTodosHorario("id_horario") = 0
-            filaTodosHorario("descripcion") = "Horario..."
-            dtHorarios.Rows.InsertAt(filaTodosHorario, 0)
-            cboFiltroHorario.DisplayMember = "descripcion"
-            cboFiltroHorario.ValueMember = "id_horario"
-            cboFiltroHorario.DataSource = dtHorarios
-            cboFiltroHorario.SelectedIndex = 0
-
+            cboFiltroSeccion.Enabled = True
         Catch ex As Exception
-            MessageBox.Show("Error al cargar filtros: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al cargar secciones: " & ex.Message)
         End Try
+
+        AplicarFiltros()
     End Sub
 
-    ' --- MÉTODO NUEVO: Agrega los botones por código ---
-    Private Sub AgregarColumnasBotones()
-        ' Verificamos si la columna NO existe para crearla
-        If Not dgvCargaAcademica.Columns.Contains("colEditar") Then
-            Dim btnEditar As New DataGridViewButtonColumn()
-            btnEditar.Name = "colEditar"
-            btnEditar.HeaderText = "Editar"
-            btnEditar.Text = "✎ Editar"
-            btnEditar.UseColumnTextForButtonValue = True
-            dgvCargaAcademica.Columns.Add(btnEditar)
+    '--- CASCADA ESPECIALIDAD > DOCENTE ---
+    Private Sub cboFiltroEspecialidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltroEspecialidad.SelectedIndexChanged
+        If cargando Then Return
+
+        cboFiltroDocente.DataSource = Nothing
+        cboFiltroDocente.Enabled = False
+
+        Dim idEsp As Integer = Convert.ToInt32(cboFiltroEspecialidad.SelectedValue)
+        If idEsp = 0 Then
+            AplicarFiltros()
+            Return
         End If
 
-        If Not dgvCargaAcademica.Columns.Contains("colEliminar") Then
-            Dim btnEliminar As New DataGridViewButtonColumn()
-            btnEliminar.Name = "colEliminar"
-            btnEliminar.HeaderText = "Eliminar"
-            btnEliminar.Text = "🗑 Eliminar"
-            btnEliminar.UseColumnTextForButtonValue = True
-            dgvCargaAcademica.Columns.Add(btnEliminar)
-        End If
-    End Sub
-
-    Public Sub CargarListado()
         Try
-            ' Quitamos el AutoGenerateColumns = False para que las genere solas
-            dgvCargaAcademica.DataSource = objLogica.MostrarCargaAcademica()
-            AgregarColumnasBotones() ' Agregamos los botones al final
+            Dim dt As DataTable = objLogica.MostrarDocentesPorEspecialidad(idEsp)
+            Dim fila As DataRow = dt.NewRow()
+            fila("id_docente") = 0
+            fila("nombre_completo") = "Todos..."
+            dt.Rows.InsertAt(fila, 0)
+            cboFiltroDocente.DisplayMember = "nombre_completo"
+            cboFiltroDocente.ValueMember = "id_docente"
+            cboFiltroDocente.DataSource = dt
+            cboFiltroDocente.SelectedIndex = 0
+            cboFiltroDocente.Enabled = True
         Catch ex As Exception
-            MessageBox.Show("Error al cargar listado: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al cargar docentes: " & ex.Message)
         End Try
-    End Sub
 
-    Private Sub AplicarFiltros()
-        If cargandoFiltros Then Return
-
-        Try
-            Dim idDocente As Integer = If(cboFiltroDocente.SelectedValue IsNot Nothing, Convert.ToInt32(cboFiltroDocente.SelectedValue), 0)
-            Dim idSeccion As Integer = If(cboFiltroSeccion.SelectedValue IsNot Nothing, Convert.ToInt32(cboFiltroSeccion.SelectedValue), 0)
-            Dim idHorario As Integer = If(cboFiltroHorario.SelectedValue IsNot Nothing, Convert.ToInt32(cboFiltroHorario.SelectedValue), 0)
-
-            dgvCargaAcademica.DataSource = objLogica.MostrarCargaFiltrada(idDocente, idSeccion, idHorario)
-            AgregarColumnasBotones() ' Agregamos los botones después de filtrar también
-        Catch ex As Exception
-            MessageBox.Show("Error al filtrar: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub cboFiltroDocente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltroDocente.SelectedIndexChanged
         AplicarFiltros()
     End Sub
 
     Private Sub cboFiltroSeccion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltroSeccion.SelectedIndexChanged
+        If cargando Then Return
         AplicarFiltros()
     End Sub
 
-    Private Sub cboFiltroHorario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltroHorario.SelectedIndexChanged
+    Private Sub cboFiltroDocente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltroDocente.SelectedIndexChanged
+        If cargando Then Return
         AplicarFiltros()
+    End Sub
+
+    '--- LISTADO Y FILTROS ---
+    Public Sub CargarListado()
+        Try
+            dgvCargaAcademica.DataSource = objLogica.MostrarCargaAcademica(
+                ModuloSesion.idAnoAcademicoActivo)
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar listado: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub AplicarFiltros()
+        Try
+            Dim idSeccion As Integer = 0
+            Dim idEsp As Integer = 0
+            Dim idDoc As Integer = 0
+
+            If cboFiltroSeccion.Enabled AndAlso cboFiltroSeccion.SelectedValue IsNot Nothing Then
+                idSeccion = Convert.ToInt32(cboFiltroSeccion.SelectedValue)
+            End If
+            If cboFiltroEspecialidad.SelectedValue IsNot Nothing Then
+                idEsp = Convert.ToInt32(cboFiltroEspecialidad.SelectedValue)
+            End If
+            If cboFiltroDocente.Enabled AndAlso cboFiltroDocente.SelectedValue IsNot Nothing Then
+                idDoc = Convert.ToInt32(cboFiltroDocente.SelectedValue)
+            End If
+
+            dgvCargaAcademica.DataSource = objLogica.MostrarCargaFiltrada(
+                ModuloSesion.idAnoAcademicoActivo, idSeccion, idEsp, idDoc)
+        Catch ex As Exception
+            MessageBox.Show("Error al filtrar: " & ex.Message)
+        End Try
+    End Sub
+
+    '--- BOTONES ---
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+        cargando = True
+        CargarNiveles()
+        CargarEspecialidades()
+        cargando = False
+        CargarListado()
     End Sub
 
     Private Sub btnNuevaAsignacion_Click(sender As Object, e As EventArgs) Handles btnNuevaAsignacion.Click
@@ -115,34 +212,34 @@ Public Class frmCargaAcademica
         CargarListado()
     End Sub
 
+    '--- CLICK EN EL DGV (EDITAR / ELIMINAR) ---
     Private Sub dgvCargaAcademica_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCargaAcademica.CellClick
         If e.RowIndex < 0 Then Return
 
-        ' Al usar columnas autogeneradas, obtenemos los nombres de los ALIAS de tu SQL (ID, Docente, Curso, etc)
-        If dgvCargaAcademica.Columns(e.ColumnIndex).Name = "colEditar" Then
-            Dim row As DataGridViewRow = dgvCargaAcademica.Rows(e.RowIndex)
-            Dim idCarga As Integer = Convert.ToInt32(row.Cells("ID").Value)
-            Dim docente As String = row.Cells("Docente").Value.ToString()
-            Dim curso As String = row.Cells("Curso").Value.ToString()
-            Dim seccion As String = row.Cells("Seccion").Value.ToString()
-            Dim horario As String = row.Cells("Horario").Value.ToString()
-            Dim estado As Boolean = Convert.ToBoolean(row.Cells("Estado").Value)
+        ' Verificar que la celda ID tenga valor
+        If dgvCargaAcademica.Rows(e.RowIndex).Cells("ID").Value Is Nothing Then Return
+        Dim idCarga As Integer = Convert.ToInt32(dgvCargaAcademica.Rows(e.RowIndex).Cells("ID").Value)
 
-            Dim modal As New frmNuevaAsignacion(idCarga, docente, curso, seccion, horario, estado)
+        ' Columna EDITAR
+        If e.ColumnIndex = dgvCargaAcademica.Columns("Editar").Index Then
+            Dim modal As New frmNuevaAsignacion(idCarga)
             modal.ShowDialog(Me)
             CargarListado()
         End If
 
-        If dgvCargaAcademica.Columns(e.ColumnIndex).Name = "colEliminar" Then
-            Dim idCarga As Integer = Convert.ToInt32(dgvCargaAcademica.Rows(e.RowIndex).Cells("ID").Value)
-            Dim respuesta As DialogResult = MessageBox.Show("¿Eliminar esta asignación?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If respuesta = DialogResult.Yes Then
+        ' Columna ELIMINAR
+        If e.ColumnIndex = dgvCargaAcademica.Columns("Eliminar").Index Then
+            Dim resp As DialogResult = MessageBox.Show(
+                "¿Eliminar esta asignación?", "Confirmar",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If resp = DialogResult.Yes Then
                 Try
                     objLogica.EliminarCarga(idCarga)
-                    MessageBox.Show("Asignación eliminada.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Asignación eliminada.", "Éxito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information)
                     CargarListado()
                 Catch ex As Exception
-                    MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Error: " & ex.Message)
                 End Try
             End If
         End If

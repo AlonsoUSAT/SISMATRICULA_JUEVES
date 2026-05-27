@@ -4,25 +4,57 @@ Imports capaDatos
 Public Class clCargaAcademica
     Dim objCapaDatos As New clsCargaAcademica()
 
-    Public Function MostrarCargaAcademica() As DataTable
+    Public Function MostrarAniosAcademicos() As DataTable
         Try
-            Return objCapaDatos.MostrarCargaAcademica()
+            Return objCapaDatos.MostrarAniosAcademicos()
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Function
 
-    Public Function MostrarCargaFiltrada(idDocente As Integer, idSeccion As Integer, idCurso As Integer) As DataTable
+    Public Function MostrarNiveles() As DataTable
         Try
-            Return objCapaDatos.MostrarCargaFiltrada(idDocente, idSeccion, idCurso)
+            Return objCapaDatos.MostrarNiveles()
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Function
 
-    Public Function MostrarDocentes() As DataTable
+    Public Function MostrarGradosPorNivel(id_nivel As Integer) As DataTable
         Try
-            Return objCapaDatos.MostrarDocentes()
+            Return objCapaDatos.MostrarGradosPorNivel(id_nivel)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    Public Function MostrarSeccionesPorGrado(id_grado As Integer) As DataTable
+        Try
+            Return objCapaDatos.MostrarSeccionesPorGrado(id_grado)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    Public Function MostrarEspecialidades() As DataTable
+        Try
+            Return objCapaDatos.MostrarEspecialidades()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    Public Function MostrarDocentesPorEspecialidad(id_especialidad As Integer) As DataTable
+        Try
+            Return objCapaDatos.MostrarDocentesPorEspecialidad(id_especialidad)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    Public Function MostrarTodosDocentes() As DataTable
+        Try
+            Return objCapaDatos.MostrarTodosDocentes()
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
@@ -36,33 +68,38 @@ Public Class clCargaAcademica
         End Try
     End Function
 
-    Public Function MostrarSecciones() As DataTable
+    Public Function MostrarCargaAcademica(id_anoAcademico As Integer) As DataTable
         Try
-            Return objCapaDatos.MostrarSecciones()
+            Return objCapaDatos.MostrarCargaAcademica(id_anoAcademico)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Function
 
-    Public Function MostrarHorarios() As DataTable
+    Public Function MostrarCargaFiltrada(id_anoAcademico As Integer, id_seccion As Integer,
+                                          id_especialidad As Integer, id_docente As Integer) As DataTable
         Try
-            Return objCapaDatos.MostrarHorarios()
+            Return objCapaDatos.MostrarCargaFiltrada(id_anoAcademico, id_seccion, id_especialidad, id_docente)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Function
 
-    Public Sub InsertarCarga(id_docente As Integer, id_curso As Integer, id_seccion As Integer, id_horario As Integer)
+    Public Sub InsertarCarga(id_docente As Integer, id_curso As Integer,
+                              id_seccion As Integer, id_anoAcademico As Integer,
+                              diaSemana As String, horaInicio As String, horaFin As String)
         Try
-            objCapaDatos.RegistrarCarga(id_docente, id_curso, id_seccion, id_horario)
+            objCapaDatos.RegistrarCarga(id_docente, id_curso, id_seccion, id_anoAcademico, diaSemana, horaInicio, horaFin)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Sub
 
-    Public Sub EditarCarga(id_carga As Integer, id_docente As Integer, id_curso As Integer, id_seccion As Integer, id_horario As Integer, estado As Boolean)
+    Public Sub EditarCarga(id_carga As Integer, id_docente As Integer, id_curso As Integer,
+                            id_seccion As Integer, diaSemana As String,
+                            horaInicio As String, horaFin As String, estado As Boolean)
         Try
-            objCapaDatos.EditarCarga(id_carga, id_docente, id_curso, id_seccion, id_horario, estado)
+            objCapaDatos.EditarCarga(id_carga, id_docente, id_curso, id_seccion, diaSemana, horaInicio, horaFin, estado)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
@@ -76,12 +113,13 @@ Public Class clCargaAcademica
         End Try
     End Sub
 
-    Public Function VerificarCruceHorario(id_docente As Integer, id_horario As Integer, id_carga_excluir As Integer) As Boolean
+    Public Function VerificarCruce(id_docente As Integer, diaSemana As String,
+                                    horaInicio As String, horaFin As String,
+                                    id_carga_excluir As Integer) As Boolean
         Try
-            Return objCapaDatos.VerificarCruceHorario(id_docente, id_horario, id_carga_excluir)
+            Return objCapaDatos.VerificarCruce(id_docente, diaSemana, horaInicio, horaFin, id_carga_excluir)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Function
-
 End Class
