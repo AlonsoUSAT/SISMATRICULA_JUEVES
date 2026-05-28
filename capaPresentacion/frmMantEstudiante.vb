@@ -34,7 +34,7 @@ Public Class frmMantEstudiante
         txtNumDoc.MaxLength = 8
         txtDniApo.MaxLength = 8  ' También limitamos el buscador del apoderado
         txtTelefono.MaxLength = 9
-
+        dgvEstudiantes.AllowUserToAddRows = False
         txtNumDoc.Enabled = True
         txtNumDoc.ReadOnly = False
     End Sub

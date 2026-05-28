@@ -1,4 +1,5 @@
-﻿Imports capaLogica ' Ajusta si tu namespace es distinto
+﻿' --- CAPA PRESENTACIÓN (frmMantNGS) ---
+Imports capaLogica
 
 Public Class frmMantNGS
     Dim objLogica As New clSeccion()
@@ -6,11 +7,46 @@ Public Class frmMantNGS
     Dim idSeccionSeleccionada As Integer = 0
 
     Private Sub frmMantNGS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarNiveles()
+        CargarAnosAcademicos() ' Primero cargamos los años
+        CargarTutores()
+        dgvGrados.AllowUserToAddRows = False
+        dgvSecciones.AllowUserToAddRows = False
     End Sub
 
-    Private Sub CargarNiveles()
-        cboNivel.DataSource = objLogica.ListarNiveles()
+    Private Sub CargarTutores()
+        cboTutor.DataSource = objLogica.ListarTutores()
+        cboTutor.DisplayMember = "NombreCompleto"
+        cboTutor.ValueMember = "id_docente" ' <-- Debe ser id_docente
+        cboTutor.SelectedIndex = -1
+    End Sub
+
+    ' NUEVO: Carga los años en cboAno
+    Private Sub CargarAnosAcademicos()
+        cboAno.DataSource = objLogica.ListarAnosAcademicos()
+        cboAno.DisplayMember = "Anio"
+        cboAno.ValueMember = "id_anoAcademico"
+        cboAno.SelectedIndex = -1
+    End Sub
+
+    ' NUEVO: Evento al cambiar el año seleccionado
+    Private Sub cboAno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboAno.SelectedIndexChanged
+        If cboAno.SelectedIndex <> -1 AndAlso TypeOf cboAno.SelectedValue Is Integer Then
+            Dim idAno As Integer = Convert.ToInt32(cboAno.SelectedValue)
+
+            ' Cargamos los niveles asociados a este año académico
+            CargarNiveles(idAno)
+
+            ' Limpiamos en cascada los datos inferiores
+            dgvGrados.DataSource = Nothing
+            dgvSecciones.DataSource = Nothing
+            LimpiarCampos()
+            idGradoSeleccionado = 0
+        End If
+    End Sub
+
+    ' MODIFICADO: Recibe el id del año para llenar los niveles correctos
+    Private Sub CargarNiveles(id_anoAcademico As Integer)
+        cboNivel.DataSource = objLogica.ListarNiveles(id_anoAcademico)
         cboNivel.DisplayMember = "nombre"
         cboNivel.ValueMember = "id_nivel"
         cboNivel.SelectedIndex = -1
@@ -40,27 +76,30 @@ Public Class frmMantNGS
         If idGradoSeleccionado > 0 Then
             dgvSecciones.DataSource = objLogica.ListarSecciones(idGradoSeleccionado)
             dgvSecciones.Columns("id_seccion").Visible = False
-            ' Ahora la columna "vigencia" será visible automáticamente por el SELECT
+            dgvSecciones.Columns("id_docente_tutor").Visible = False
             dgvSecciones.Columns("vigencia").HeaderText = "Vigencia"
         End If
     End Sub
 
     Private Sub dgvSecciones_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSecciones.CellClick
-        ' 1. Validamos que el clic no sea en las cabeceras NI en la fila nueva (la del asterisco)
         If e.RowIndex >= 0 AndAlso e.RowIndex <> dgvSecciones.NewRowIndex Then
             Dim fila As DataGridViewRow = dgvSecciones.Rows(e.RowIndex)
 
-            ' 2. Verificamos que el ID no sea nulo antes de capturarlo
             If Not IsDBNull(fila.Cells("id_seccion").Value) Then
                 idSeccionSeleccionada = Convert.ToInt32(fila.Cells("id_seccion").Value)
 
-                txtNombre.Text = fila.Cells("nombre").Value.ToString()
-                txtAforo.Text = fila.Cells("aforo").Value.ToString()
-                txtTutor.Text = fila.Cells("tutor").Value.ToString()
+                txtNombre.Text = fila.Cells("Nombre").Value.ToString()
+                txtAforo.Text = fila.Cells("Aforo").Value.ToString()
+
+                If Not IsDBNull(fila.Cells("id_docente_tutor").Value) Then
+                    cboTutor.SelectedValue = Convert.ToInt32(fila.Cells("id_docente_tutor").Value)
+                Else
+                    cboTutor.SelectedIndex = -1
+                End If
 
                 txtNombre.Enabled = True
                 txtAforo.Enabled = True
-                txtTutor.Enabled = True
+                cboTutor.Enabled = True
             End If
         End If
     End Sub
@@ -70,9 +109,13 @@ Public Class frmMantNGS
             MessageBox.Show("Seleccione un grado primero del listado de grados.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
+        If cboTutor.SelectedIndex = -1 Then
+            MessageBox.Show("Seleccione un tutor.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
 
         Try
-            objLogica.InsertarSeccion(idGradoSeleccionado, txtNombre.Text.Trim(), Convert.ToInt32(txtAforo.Text.Trim()), txtTutor.Text.Trim())
+            objLogica.InsertarSeccion(idGradoSeleccionado, txtNombre.Text.Trim(), Convert.ToInt32(txtAforo.Text.Trim()), Convert.ToInt32(cboTutor.SelectedValue))
             CargarSecciones()
             LimpiarCampos()
         Catch ex As Exception
@@ -83,18 +126,15 @@ Public Class frmMantNGS
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If idSeccionSeleccionada > 0 Then
             Try
-                ' Forzamos a que el DataGridView registre si acabas de hacer clic en el checkbox
                 dgvSecciones.EndEdit()
 
-                ' Leemos si el check está marcado (1) o desmarcado (0)
                 Dim fila As DataGridViewRow = dgvSecciones.CurrentRow
                 Dim valorVigencia As Integer = 0
                 If Not IsDBNull(fila.Cells("Vigencia").Value) AndAlso Convert.ToBoolean(fila.Cells("Vigencia").Value) = True Then
                     valorVigencia = 1
                 End If
 
-                ' Mandamos todo, incluyendo la vigencia
-                objLogica.ModificarSeccion(idSeccionSeleccionada, txtNombre.Text.Trim(), Convert.ToInt32(txtAforo.Text.Trim()), txtTutor.Text.Trim(), valorVigencia)
+                objLogica.ModificarSeccion(idSeccionSeleccionada, txtNombre.Text.Trim(), Convert.ToInt32(txtAforo.Text.Trim()), Convert.ToInt32(cboTutor.SelectedValue), valorVigencia)
 
                 MessageBox.Show("Sección modificada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -108,16 +148,12 @@ Public Class frmMantNGS
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         If idSeccionSeleccionada > 0 Then
-            ' Agregamos una pregunta de confirmación antes de eliminar (Buena práctica)
             Dim rpta As DialogResult = MessageBox.Show("¿Está seguro de eliminar definitivamente esta sección?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If rpta = DialogResult.Yes Then
                 Try
                     objLogica.EliminarSeccion(idSeccionSeleccionada)
-
-                    ' Tu alerta de éxito
                     MessageBox.Show("La sección ha sido eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
                     CargarSecciones()
                     LimpiarCampos()
                 Catch ex As Exception
@@ -151,11 +187,7 @@ Public Class frmMantNGS
     Private Sub LimpiarCampos()
         txtNombre.Clear()
         txtAforo.Clear()
-        txtTutor.Clear()
+        cboTutor.SelectedIndex = -1
         idSeccionSeleccionada = 0
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
     End Sub
 End Class

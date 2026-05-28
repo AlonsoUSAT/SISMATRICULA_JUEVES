@@ -334,7 +334,8 @@ Partial Class frmTransaccionTutorAula
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmTransaccionTutorAula"
-        Me.Text = "Asignar Tutor a Seccion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

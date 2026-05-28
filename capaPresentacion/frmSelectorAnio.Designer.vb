@@ -101,7 +101,8 @@ Partial Class frmSelectorAnio
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmSelectorAnio"
-        Me.Text = "frmSelectorAnio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

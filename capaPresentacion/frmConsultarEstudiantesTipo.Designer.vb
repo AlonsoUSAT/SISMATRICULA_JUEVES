@@ -124,6 +124,7 @@ Partial Class frmConsultarEstudiantesTipo
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "frmConsultarEstudiantesTipo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema Matricula I.E.P Amancio Varona"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

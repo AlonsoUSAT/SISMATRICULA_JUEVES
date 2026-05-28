@@ -6,7 +6,7 @@ Public Class frmMantAnoAcademico
     ' EVENTO: Cuando carga el formulario
     Private Sub frmMantAnoAcademico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Me.GetType() IsNot GetType(frmMantAnoAcademico) Then Return
-
+        dgvAnos.AllowUserToAddRows = False
         ListarGrilla()
     End Sub
 

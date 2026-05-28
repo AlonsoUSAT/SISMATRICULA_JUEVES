@@ -66,10 +66,9 @@ Partial Class frmMantUsuarios
         Me.checkVigente.AutoSize = True
         Me.checkVigente.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.checkVigente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.checkVigente.Location = New System.Drawing.Point(522, 275)
-        Me.checkVigente.Margin = New System.Windows.Forms.Padding(4)
+        Me.checkVigente.Location = New System.Drawing.Point(392, 223)
         Me.checkVigente.Name = "checkVigente"
-        Me.checkVigente.Size = New System.Drawing.Size(94, 29)
+        Me.checkVigente.Size = New System.Drawing.Size(79, 24)
         Me.checkVigente.TabIndex = 24
         Me.checkVigente.Text = "Vigente"
         Me.checkVigente.UseVisualStyleBackColor = True
@@ -80,90 +79,81 @@ Partial Class frmMantUsuarios
         Me.cboSexo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.cboSexo.FormattingEnabled = True
         Me.cboSexo.Items.AddRange(New Object() {"Masculino", "Femenino"})
-        Me.cboSexo.Location = New System.Drawing.Point(174, 326)
-        Me.cboSexo.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboSexo.Location = New System.Drawing.Point(130, 265)
         Me.cboSexo.Name = "cboSexo"
-        Me.cboSexo.Size = New System.Drawing.Size(275, 28)
+        Me.cboSexo.Size = New System.Drawing.Size(207, 25)
         Me.cboSexo.TabIndex = 23
         '
         'txtRespuesta
         '
         Me.txtRespuesta.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRespuesta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtRespuesta.Location = New System.Drawing.Point(647, 216)
-        Me.txtRespuesta.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtRespuesta.Location = New System.Drawing.Point(485, 176)
         Me.txtRespuesta.Name = "txtRespuesta"
-        Me.txtRespuesta.Size = New System.Drawing.Size(223, 27)
+        Me.txtRespuesta.Size = New System.Drawing.Size(168, 23)
         Me.txtRespuesta.TabIndex = 22
         '
         'txtPregunta
         '
         Me.txtPregunta.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPregunta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtPregunta.Location = New System.Drawing.Point(647, 161)
-        Me.txtPregunta.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPregunta.Location = New System.Drawing.Point(485, 131)
         Me.txtPregunta.Name = "txtPregunta"
-        Me.txtPregunta.Size = New System.Drawing.Size(223, 27)
+        Me.txtPregunta.Size = New System.Drawing.Size(168, 23)
         Me.txtPregunta.TabIndex = 21
         '
         'txtNombreUsuario
         '
         Me.txtNombreUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombreUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(647, 52)
-        Me.txtNombreUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(485, 42)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(223, 27)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(168, 23)
         Me.txtNombreUsuario.TabIndex = 20
         '
         'txtContra
         '
         Me.txtContra.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtContra.Location = New System.Drawing.Point(647, 104)
-        Me.txtContra.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtContra.Location = New System.Drawing.Point(485, 84)
         Me.txtContra.Name = "txtContra"
-        Me.txtContra.Size = New System.Drawing.Size(223, 27)
+        Me.txtContra.Size = New System.Drawing.Size(168, 23)
         Me.txtContra.TabIndex = 19
         '
         'txtCorreo
         '
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtCorreo.Location = New System.Drawing.Point(174, 270)
-        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCorreo.Location = New System.Drawing.Point(130, 219)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(275, 27)
+        Me.txtCorreo.Size = New System.Drawing.Size(207, 23)
         Me.txtCorreo.TabIndex = 18
         '
         'txtApellidoMaterno
         '
         Me.txtApellidoMaterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApellidoMaterno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtApellidoMaterno.Location = New System.Drawing.Point(174, 210)
-        Me.txtApellidoMaterno.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtApellidoMaterno.Location = New System.Drawing.Point(130, 171)
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
-        Me.txtApellidoMaterno.Size = New System.Drawing.Size(275, 27)
+        Me.txtApellidoMaterno.Size = New System.Drawing.Size(207, 23)
         Me.txtApellidoMaterno.TabIndex = 17
         '
         'txtApellidoPaterno
         '
         Me.txtApellidoPaterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApellidoPaterno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtApellidoPaterno.Location = New System.Drawing.Point(174, 151)
-        Me.txtApellidoPaterno.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtApellidoPaterno.Location = New System.Drawing.Point(130, 123)
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
-        Me.txtApellidoPaterno.Size = New System.Drawing.Size(275, 27)
+        Me.txtApellidoPaterno.Size = New System.Drawing.Size(207, 23)
         Me.txtApellidoPaterno.TabIndex = 16
         '
         'txtNombres
         '
         Me.txtNombres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombres.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtNombres.Location = New System.Drawing.Point(174, 94)
-        Me.txtNombres.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombres.Location = New System.Drawing.Point(130, 76)
         Me.txtNombres.Name = "txtNombres"
-        Me.txtNombres.Size = New System.Drawing.Size(275, 27)
+        Me.txtNombres.Size = New System.Drawing.Size(207, 23)
         Me.txtNombres.TabIndex = 15
         '
         'Label9
@@ -172,10 +162,9 @@ Partial Class frmMantUsuarios
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(515, 216)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(386, 176)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 25)
+        Me.Label9.Size = New System.Drawing.Size(79, 20)
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Respuesta:"
         '
@@ -183,10 +172,9 @@ Partial Class frmMantUsuarios
         '
         Me.txtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodigo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtCodigo.Location = New System.Drawing.Point(174, 42)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCodigo.Location = New System.Drawing.Point(130, 34)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(119, 27)
+        Me.txtCodigo.Size = New System.Drawing.Size(90, 23)
         Me.txtCodigo.TabIndex = 13
         '
         'Label11
@@ -195,10 +183,9 @@ Partial Class frmMantUsuarios
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(515, 161)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(386, 131)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(87, 25)
+        Me.Label11.Size = New System.Drawing.Size(71, 20)
         Me.Label11.TabIndex = 12
         Me.Label11.Text = "Pregunta:"
         '
@@ -208,10 +195,9 @@ Partial Class frmMantUsuarios
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(515, 55)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(386, 45)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 25)
+        Me.Label10.Size = New System.Drawing.Size(62, 20)
         Me.Label10.TabIndex = 11
         Me.Label10.Text = "Usuario:"
         '
@@ -221,10 +207,9 @@ Partial Class frmMantUsuarios
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label8.Location = New System.Drawing.Point(515, 107)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(386, 87)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(58, 25)
+        Me.Label8.Size = New System.Drawing.Size(48, 20)
         Me.Label8.TabIndex = 9
         Me.Label8.Text = "Clave:"
         '
@@ -234,10 +219,9 @@ Partial Class frmMantUsuarios
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label7.Location = New System.Drawing.Point(20, 334)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(15, 271)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(54, 25)
+        Me.Label7.Size = New System.Drawing.Size(44, 20)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "Sexo:"
         '
@@ -247,10 +231,9 @@ Partial Class frmMantUsuarios
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(20, 275)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(15, 223)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(70, 25)
+        Me.Label6.Size = New System.Drawing.Size(57, 20)
         Me.Label6.TabIndex = 7
         Me.Label6.Text = "Correo:"
         '
@@ -260,10 +243,9 @@ Partial Class frmMantUsuarios
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(20, 210)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(15, 171)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(154, 25)
+        Me.Label5.Size = New System.Drawing.Size(129, 20)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Apellido materno:"
         '
@@ -273,10 +255,9 @@ Partial Class frmMantUsuarios
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(20, 152)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(15, 124)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(149, 25)
+        Me.Label4.Size = New System.Drawing.Size(125, 20)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Apellido paterno:"
         '
@@ -286,10 +267,9 @@ Partial Class frmMantUsuarios
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(20, 95)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(15, 77)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 25)
+        Me.Label3.Size = New System.Drawing.Size(73, 20)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nombres:"
         '
@@ -299,10 +279,9 @@ Partial Class frmMantUsuarios
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(20, 46)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(15, 37)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 25)
+        Me.Label2.Size = New System.Drawing.Size(61, 20)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Codigo:"
         '
@@ -317,10 +296,9 @@ Partial Class frmMantUsuarios
         Me.Label1.ForeColor = System.Drawing.Color.Transparent
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopRight
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(4, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(325, 29)
+        Me.Label1.Size = New System.Drawing.Size(260, 24)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Mantenimiento de Usuario:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -328,11 +306,10 @@ Partial Class frmMantUsuarios
         'tablaUsuarios
         '
         Me.tablaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tablaUsuarios.Location = New System.Drawing.Point(13, 470)
-        Me.tablaUsuarios.Margin = New System.Windows.Forms.Padding(4)
+        Me.tablaUsuarios.Location = New System.Drawing.Point(10, 382)
         Me.tablaUsuarios.Name = "tablaUsuarios"
         Me.tablaUsuarios.RowHeadersWidth = 51
-        Me.tablaUsuarios.Size = New System.Drawing.Size(1156, 257)
+        Me.tablaUsuarios.Size = New System.Drawing.Size(867, 209)
         Me.tablaUsuarios.TabIndex = 2
         '
         'FlowLayoutPanel1
@@ -341,8 +318,9 @@ Partial Class frmMantUsuarios
         Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1185, 53)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(889, 43)
         Me.FlowLayoutPanel1.TabIndex = 3
         '
         'GroupBox1
@@ -371,9 +349,11 @@ Partial Class frmMantUsuarios
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 59)
+        Me.GroupBox1.Location = New System.Drawing.Point(18, 48)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(893, 404)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(670, 328)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Usuario"
@@ -384,10 +364,9 @@ Partial Class frmMantUsuarios
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
-        Me.btnBuscar.Location = New System.Drawing.Point(301, 28)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBuscar.Location = New System.Drawing.Point(226, 23)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(148, 43)
+        Me.btnBuscar.Size = New System.Drawing.Size(111, 35)
         Me.btnBuscar.TabIndex = 4
         Me.btnBuscar.Text = "BUSCAR"
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -395,15 +374,16 @@ Partial Class frmMantUsuarios
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.btnLimpiar)
         Me.Panel1.Controls.Add(Me.btnDarBaja)
         Me.Panel1.Controls.Add(Me.btnEliminar)
         Me.Panel1.Controls.Add(Me.btnActualizar)
         Me.Panel1.Controls.Add(Me.btnNuevo)
-        Me.Panel1.Location = New System.Drawing.Point(923, 59)
+        Me.Panel1.Location = New System.Drawing.Point(692, 48)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(253, 404)
+        Me.Panel1.Size = New System.Drawing.Size(190, 328)
         Me.Panel1.TabIndex = 5
         '
         'btnLimpiar
@@ -411,10 +391,9 @@ Partial Class frmMantUsuarios
         Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
-        Me.btnLimpiar.Location = New System.Drawing.Point(23, 327)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnLimpiar.Location = New System.Drawing.Point(17, 266)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(214, 59)
+        Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 4
         Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
         Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -425,10 +404,9 @@ Partial Class frmMantUsuarios
         Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDarBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDarBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
-        Me.btnDarBaja.Location = New System.Drawing.Point(23, 158)
-        Me.btnDarBaja.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnDarBaja.Location = New System.Drawing.Point(17, 128)
         Me.btnDarBaja.Name = "btnDarBaja"
-        Me.btnDarBaja.Size = New System.Drawing.Size(214, 59)
+        Me.btnDarBaja.Size = New System.Drawing.Size(160, 48)
         Me.btnDarBaja.TabIndex = 3
         Me.btnDarBaja.Text = "DAR DE BAJA"
         Me.btnDarBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -439,10 +417,9 @@ Partial Class frmMantUsuarios
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
-        Me.btnEliminar.Location = New System.Drawing.Point(23, 241)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEliminar.Location = New System.Drawing.Point(17, 196)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(214, 59)
+        Me.btnEliminar.Size = New System.Drawing.Size(160, 48)
         Me.btnEliminar.TabIndex = 2
         Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -453,10 +430,9 @@ Partial Class frmMantUsuarios
         Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnActualizar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnActualizar.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
-        Me.btnActualizar.Location = New System.Drawing.Point(23, 82)
-        Me.btnActualizar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnActualizar.Location = New System.Drawing.Point(17, 67)
         Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(214, 59)
+        Me.btnActualizar.Size = New System.Drawing.Size(160, 48)
         Me.btnActualizar.TabIndex = 1
         Me.btnActualizar.Text = "ACTUALIZAR"
         Me.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -467,10 +443,10 @@ Partial Class frmMantUsuarios
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnNuevo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
-        Me.btnNuevo.Location = New System.Drawing.Point(23, 9)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 2)
+        Me.btnNuevo.Location = New System.Drawing.Point(17, 7)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(214, 59)
+        Me.btnNuevo.Size = New System.Drawing.Size(160, 48)
         Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "NUEVO"
         Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -479,18 +455,18 @@ Partial Class frmMantUsuarios
         '
         'frmMantUsuarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1185, 740)
+        Me.ClientSize = New System.Drawing.Size(889, 601)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.tablaUsuarios)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMantUsuarios"
-        Me.Text = "Manteniemiento Usuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         CType(Me.tablaUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()

@@ -226,7 +226,8 @@ Partial Class frmMantEspecialidad
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.Name = "frmMantEspecialidad"
-        Me.Text = "frmMantEspecialidad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

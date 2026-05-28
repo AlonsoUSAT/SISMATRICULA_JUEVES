@@ -22,6 +22,7 @@ Public Class frmConsultarEstudiantesTipo
         Catch ex As Exception
             MsgBox("Error al inicializar filtros: " & ex.Message)
         End Try
+        dgvEstudiantesTipo.AllowUserToAddRows = False
     End Sub
 
     ' Método centralizado que actualiza la grilla en tiempo real

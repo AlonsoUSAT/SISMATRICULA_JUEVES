@@ -26,12 +26,15 @@ Partial Class frmConsultaEspecialidad
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.pnlBajas = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.lblBaja = New System.Windows.Forms.Label()
         Me.lblBajas = New System.Windows.Forms.Label()
         Me.pnlVigentes = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.lblVigente = New System.Windows.Forms.Label()
         Me.lblVigentes = New System.Windows.Forms.Label()
         Me.pnlTotal = New System.Windows.Forms.Panel()
+        Me.lbl = New System.Windows.Forms.Label()
         Me.lblTotall = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblContador = New System.Windows.Forms.Label()
@@ -46,13 +49,10 @@ Partial Class frmConsultaEspecialidad
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgvDocentes = New System.Windows.Forms.DataGridView()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lbl = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.pnlBajas.SuspendLayout()
@@ -106,6 +106,15 @@ Partial Class frmConsultaEspecialidad
         Me.pnlBajas.Size = New System.Drawing.Size(213, 70)
         Me.pnlBajas.TabIndex = 2
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(35, 47)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Dadas de baja"
+        '
         'lblBaja
         '
         Me.lblBaja.AutoSize = True
@@ -140,6 +149,15 @@ Partial Class frmConsultaEspecialidad
         Me.pnlVigentes.Size = New System.Drawing.Size(213, 70)
         Me.pnlVigentes.TabIndex = 1
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(31, 46)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Vigentes"
+        '
         'lblVigente
         '
         Me.lblVigente.AutoSize = True
@@ -171,6 +189,15 @@ Partial Class frmConsultaEspecialidad
         Me.pnlTotal.Name = "pnlTotal"
         Me.pnlTotal.Size = New System.Drawing.Size(213, 70)
         Me.pnlTotal.TabIndex = 0
+        '
+        'lbl
+        '
+        Me.lbl.AutoSize = True
+        Me.lbl.Location = New System.Drawing.Point(30, 46)
+        Me.lbl.Name = "lbl"
+        Me.lbl.Size = New System.Drawing.Size(31, 13)
+        Me.lbl.TabIndex = 2
+        Me.lbl.Text = "Total"
         '
         'lblTotall
         '
@@ -311,17 +338,6 @@ Partial Class frmConsultaEspecialidad
         Me.dgvDocentes.Size = New System.Drawing.Size(389, 150)
         Me.dgvDocentes.TabIndex = 2
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Snow
-        Me.Label8.Location = New System.Drawing.Point(17, 20)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(135, 16)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "ESPECIALIDADES"
-        '
         'Column1
         '
         Me.Column1.DataPropertyName = "Docente"
@@ -347,32 +363,16 @@ Partial Class frmConsultaEspecialidad
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
-        'lbl
+        'Label8
         '
-        Me.lbl.AutoSize = True
-        Me.lbl.Location = New System.Drawing.Point(30, 46)
-        Me.lbl.Name = "lbl"
-        Me.lbl.Size = New System.Drawing.Size(31, 13)
-        Me.lbl.TabIndex = 2
-        Me.lbl.Text = "Total"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(31, 46)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 13)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Vigentes"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(35, 47)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 13)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Dadas de baja"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Snow
+        Me.Label8.Location = New System.Drawing.Point(17, 20)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(135, 16)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "ESPECIALIDADES"
         '
         'frmConsultaEspecialidad
         '
@@ -385,7 +385,8 @@ Partial Class frmConsultaEspecialidad
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmConsultaEspecialidad"
-        Me.Text = "Especialidad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

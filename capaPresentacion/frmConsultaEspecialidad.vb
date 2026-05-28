@@ -8,6 +8,8 @@ Public Class frmConsultaEspecialidad
         CargarFiltro()
         CargarResumen()
         CargarListado()
+        dgvDocentes.AllowUserToAddRows = False
+        dgvEspecialidades.AllowUserToAddRows = False
     End Sub
 
     Private Sub EstilizarTarjetas()

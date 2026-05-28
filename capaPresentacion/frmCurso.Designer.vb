@@ -39,6 +39,11 @@ Partial Class frmCurso
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnSafe = New System.Windows.Forms.Button()
+        Me.btnBaja = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
         Me.chkVigente = New System.Windows.Forms.CheckBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -48,11 +53,6 @@ Partial Class frmCurso
         Me.txtBuscarNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.btnSafe = New System.Windows.Forms.Button()
-        Me.btnBaja = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnNew = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -253,6 +253,72 @@ Partial Class frmCurso
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del curso"
         '
+        'btnSafe
+        '
+        Me.btnSafe.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnSafe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSafe.Image = Global.capaPresentacion.My.Resources.Resources.guardar_usuario
+        Me.btnSafe.Location = New System.Drawing.Point(174, 344)
+        Me.btnSafe.Name = "btnSafe"
+        Me.btnSafe.Size = New System.Drawing.Size(131, 38)
+        Me.btnSafe.TabIndex = 55
+        Me.btnSafe.Text = "GUARDAR"
+        Me.btnSafe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnSafe.UseVisualStyleBackColor = False
+        '
+        'btnBaja
+        '
+        Me.btnBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
+        Me.btnBaja.Location = New System.Drawing.Point(76, 399)
+        Me.btnBaja.Name = "btnBaja"
+        Me.btnBaja.Size = New System.Drawing.Size(144, 37)
+        Me.btnBaja.TabIndex = 54
+        Me.btnBaja.Text = "DAR DE BAJA"
+        Me.btnBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnBaja.UseVisualStyleBackColor = False
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
+        Me.btnUpdate.Location = New System.Drawing.Point(323, 344)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(141, 38)
+        Me.btnUpdate.TabIndex = 53
+        Me.btnUpdate.Text = "ACTUALIZAR"
+        Me.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnUpdate.UseVisualStyleBackColor = False
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
+        Me.btnDelete.Location = New System.Drawing.Point(259, 399)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(141, 37)
+        Me.btnDelete.TabIndex = 52
+        Me.btnDelete.Text = "ELIMINAR"
+        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
+        'btnNew
+        '
+        Me.btnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNew.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
+        Me.btnNew.Location = New System.Drawing.Point(31, 344)
+        Me.btnNew.Name = "btnNew"
+        Me.btnNew.Size = New System.Drawing.Size(131, 38)
+        Me.btnNew.TabIndex = 51
+        Me.btnNew.Text = "NUEVO"
+        Me.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnNew.UseVisualStyleBackColor = False
+        '
         'chkVigente
         '
         Me.chkVigente.AutoSize = True
@@ -357,72 +423,6 @@ Partial Class frmCurso
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1135, 486)
         Me.FlowLayoutPanel1.TabIndex = 53
         '
-        'btnSafe
-        '
-        Me.btnSafe.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnSafe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSafe.Image = Global.capaPresentacion.My.Resources.Resources.guardar_usuario
-        Me.btnSafe.Location = New System.Drawing.Point(174, 344)
-        Me.btnSafe.Name = "btnSafe"
-        Me.btnSafe.Size = New System.Drawing.Size(131, 38)
-        Me.btnSafe.TabIndex = 55
-        Me.btnSafe.Text = "GUARDAR"
-        Me.btnSafe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnSafe.UseVisualStyleBackColor = False
-        '
-        'btnBaja
-        '
-        Me.btnBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
-        Me.btnBaja.Location = New System.Drawing.Point(76, 399)
-        Me.btnBaja.Name = "btnBaja"
-        Me.btnBaja.Size = New System.Drawing.Size(144, 37)
-        Me.btnBaja.TabIndex = 54
-        Me.btnBaja.Text = "DAR DE BAJA"
-        Me.btnBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnBaja.UseVisualStyleBackColor = False
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdate.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
-        Me.btnUpdate.Location = New System.Drawing.Point(323, 344)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(141, 38)
-        Me.btnUpdate.TabIndex = 53
-        Me.btnUpdate.Text = "ACTUALIZAR"
-        Me.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnUpdate.UseVisualStyleBackColor = False
-        '
-        'btnDelete
-        '
-        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
-        Me.btnDelete.Location = New System.Drawing.Point(259, 399)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(141, 37)
-        Me.btnDelete.TabIndex = 52
-        Me.btnDelete.Text = "ELIMINAR"
-        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnDelete.UseVisualStyleBackColor = False
-        '
-        'btnNew
-        '
-        Me.btnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNew.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
-        Me.btnNew.Location = New System.Drawing.Point(31, 344)
-        Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(131, 38)
-        Me.btnNew.TabIndex = 51
-        Me.btnNew.Text = "NUEVO"
-        Me.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnNew.UseVisualStyleBackColor = False
-        '
         'frmCurso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -434,7 +434,8 @@ Partial Class frmCurso
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCurso"
-        Me.Text = "Mantenimiento Curso"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

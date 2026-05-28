@@ -217,7 +217,8 @@ Partial Class frmConsultaDocente
         Me.Controls.Add(Me.tblBusqueda)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmConsultaDocente"
-        Me.Text = "frmConsultaDocente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.tblBusqueda, System.ComponentModel.ISupportInitialize).EndInit()

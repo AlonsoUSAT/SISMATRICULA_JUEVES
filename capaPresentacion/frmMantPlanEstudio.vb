@@ -7,6 +7,7 @@ Public Class frmMantPlanEstudio
     ' EVENTO: Cuando carga el formulario
     Private Sub frmMantPlanEstudio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListarGrilla()
+        dgvAnos.AllowUserToAddRows = False
     End Sub
 
     ' MÉTODO AUXILIAR: Llenar la grilla

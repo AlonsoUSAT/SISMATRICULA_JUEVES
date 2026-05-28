@@ -30,6 +30,7 @@ Partial Class frmConsultaEstudiantes
         Me.lblCantidad = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tblBusqueda = New System.Windows.Forms.DataGridView()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cboSeccion = New System.Windows.Forms.ComboBox()
         Me.cboGrado = New System.Windows.Forms.ComboBox()
@@ -39,7 +40,6 @@ Partial Class frmConsultaEstudiantes
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.tblBusqueda, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,6 +135,19 @@ Partial Class frmConsultaEstudiantes
         Me.tblBusqueda.Size = New System.Drawing.Size(602, 426)
         Me.tblBusqueda.TabIndex = 2
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
+        Me.btnBuscar.Location = New System.Drawing.Point(23, 434)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(160, 48)
+        Me.btnBuscar.TabIndex = 57
+        Me.btnBuscar.Text = "CONSULTAR"
+        Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -226,19 +239,6 @@ Partial Class frmConsultaEstudiantes
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "DNI del estudiante"
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
-        Me.btnBuscar.Location = New System.Drawing.Point(23, 434)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(160, 48)
-        Me.btnBuscar.TabIndex = 57
-        Me.btnBuscar.Text = "CONSULTAR"
-        Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnBuscar.UseVisualStyleBackColor = False
-        '
         'frmConsultaEstudiantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -247,6 +247,7 @@ Partial Class frmConsultaEstudiantes
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmConsultaEstudiantes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consultar Estudiantes por nivel, grado y sección"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

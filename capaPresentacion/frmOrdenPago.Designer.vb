@@ -49,16 +49,16 @@ Partial Class frmOrdenPago
         Me.Panel3.Controls.Add(Me.Panel1)
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Location = New System.Drawing.Point(1, 1)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(800, 68)
+        Me.Panel3.Size = New System.Drawing.Size(600, 55)
         Me.Panel3.TabIndex = 36
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(0, 64)
+        Me.Panel1.Location = New System.Drawing.Point(0, 52)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 395)
+        Me.Panel1.Size = New System.Drawing.Size(600, 321)
         Me.Panel1.TabIndex = 37
         '
         'Label13
@@ -66,10 +66,9 @@ Partial Class frmOrdenPago
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Snow
-        Me.Label13.Location = New System.Drawing.Point(12, 19)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Location = New System.Drawing.Point(9, 15)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(256, 31)
+        Me.Label13.Size = New System.Drawing.Size(201, 25)
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "ORDEN DE PAGO"
         '
@@ -77,9 +76,10 @@ Partial Class frmOrdenPago
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label1.Location = New System.Drawing.Point(68, 106)
+        Me.Label1.Location = New System.Drawing.Point(51, 86)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(188, 25)
+        Me.Label1.Size = New System.Drawing.Size(156, 20)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Código de pago (CIP):"
         '
@@ -87,49 +87,55 @@ Partial Class frmOrdenPago
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label3.Location = New System.Drawing.Point(70, 150)
+        Me.Label3.Location = New System.Drawing.Point(52, 122)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 25)
+        Me.Label3.Size = New System.Drawing.Size(94, 20)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Vencimiento:"
         '
         'txtCIP
         '
-        Me.txtCIP.Location = New System.Drawing.Point(273, 110)
+        Me.txtCIP.Location = New System.Drawing.Point(205, 89)
+        Me.txtCIP.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCIP.Name = "txtCIP"
-        Me.txtCIP.Size = New System.Drawing.Size(229, 22)
+        Me.txtCIP.Size = New System.Drawing.Size(173, 20)
         Me.txtCIP.TabIndex = 40
         '
         'txtVencimiento
         '
-        Me.txtVencimiento.Location = New System.Drawing.Point(273, 154)
+        Me.txtVencimiento.Location = New System.Drawing.Point(205, 125)
+        Me.txtVencimiento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtVencimiento.Name = "txtVencimiento"
-        Me.txtVencimiento.Size = New System.Drawing.Size(229, 22)
+        Me.txtVencimiento.Size = New System.Drawing.Size(173, 20)
         Me.txtVencimiento.TabIndex = 41
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label2.Location = New System.Drawing.Point(70, 280)
+        Me.Label2.Location = New System.Drawing.Point(52, 228)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 25)
+        Me.Label2.Size = New System.Drawing.Size(98, 20)
         Me.Label2.TabIndex = 42
         Me.Label2.Text = "Total a Pagar:"
         '
         'txtTotalPagar
         '
-        Me.txtTotalPagar.Location = New System.Drawing.Point(273, 280)
+        Me.txtTotalPagar.Location = New System.Drawing.Point(205, 228)
+        Me.txtTotalPagar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTotalPagar.Name = "txtTotalPagar"
-        Me.txtTotalPagar.Size = New System.Drawing.Size(229, 22)
+        Me.txtTotalPagar.Size = New System.Drawing.Size(173, 20)
         Me.txtTotalPagar.TabIndex = 43
         '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(14, 333)
+        Me.Label4.Location = New System.Drawing.Point(10, 271)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(576, 62)
+        Me.Label4.Size = New System.Drawing.Size(432, 50)
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "Por favor, cancele este monto en su banca móvil o agente autorizado."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -138,9 +144,10 @@ Partial Class frmOrdenPago
         '
         Me.btnCopiarCip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnCopiarCip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.btnCopiarCip.Location = New System.Drawing.Point(21, 398)
+        Me.btnCopiarCip.Location = New System.Drawing.Point(16, 323)
+        Me.btnCopiarCip.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCopiarCip.Name = "btnCopiarCip"
-        Me.btnCopiarCip.Size = New System.Drawing.Size(165, 59)
+        Me.btnCopiarCip.Size = New System.Drawing.Size(124, 48)
         Me.btnCopiarCip.TabIndex = 45
         Me.btnCopiarCip.Text = "COPIAR CIP"
         Me.btnCopiarCip.UseVisualStyleBackColor = False
@@ -149,9 +156,10 @@ Partial Class frmOrdenPago
         '
         Me.btnImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.btnImprimir.Location = New System.Drawing.Point(203, 401)
+        Me.btnImprimir.Location = New System.Drawing.Point(152, 326)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(165, 59)
+        Me.btnImprimir.Size = New System.Drawing.Size(124, 48)
         Me.btnImprimir.TabIndex = 46
         Me.btnImprimir.Text = "IMPRIMIR"
         Me.btnImprimir.UseVisualStyleBackColor = False
@@ -160,9 +168,10 @@ Partial Class frmOrdenPago
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label5.Location = New System.Drawing.Point(70, 193)
+        Me.Label5.Location = New System.Drawing.Point(52, 157)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 25)
+        Me.Label5.Size = New System.Drawing.Size(56, 20)
         Me.Label5.TabIndex = 47
         Me.Label5.Text = "Monto:"
         '
@@ -170,33 +179,37 @@ Partial Class frmOrdenPago
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label6.Location = New System.Drawing.Point(68, 237)
+        Me.Label6.Location = New System.Drawing.Point(51, 193)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 25)
+        Me.Label6.Size = New System.Drawing.Size(82, 20)
         Me.Label6.TabIndex = 48
         Me.Label6.Text = "Descuento:"
         '
         'txtDescuento
         '
-        Me.txtDescuento.Location = New System.Drawing.Point(273, 241)
+        Me.txtDescuento.Location = New System.Drawing.Point(205, 196)
+        Me.txtDescuento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDescuento.Name = "txtDescuento"
-        Me.txtDescuento.Size = New System.Drawing.Size(229, 22)
+        Me.txtDescuento.Size = New System.Drawing.Size(173, 20)
         Me.txtDescuento.TabIndex = 49
         '
         'txtMontoBase
         '
-        Me.txtMontoBase.Location = New System.Drawing.Point(273, 197)
+        Me.txtMontoBase.Location = New System.Drawing.Point(205, 160)
+        Me.txtMontoBase.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtMontoBase.Name = "txtMontoBase"
-        Me.txtMontoBase.Size = New System.Drawing.Size(229, 22)
+        Me.txtMontoBase.Size = New System.Drawing.Size(173, 20)
         Me.txtMontoBase.TabIndex = 50
         '
         'btnSimularPago
         '
         Me.btnSimularPago.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnSimularPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.btnSimularPago.Location = New System.Drawing.Point(121, 484)
+        Me.btnSimularPago.Location = New System.Drawing.Point(91, 393)
+        Me.btnSimularPago.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSimularPago.Name = "btnSimularPago"
-        Me.btnSimularPago.Size = New System.Drawing.Size(299, 59)
+        Me.btnSimularPago.Size = New System.Drawing.Size(224, 48)
         Me.btnSimularPago.TabIndex = 51
         Me.btnSimularPago.Text = "SIMULAR PAGO EN BANCO"
         Me.btnSimularPago.UseVisualStyleBackColor = False
@@ -205,19 +218,20 @@ Partial Class frmOrdenPago
         '
         Me.btnDescargar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDescargar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.btnDescargar.Location = New System.Drawing.Point(395, 398)
+        Me.btnDescargar.Location = New System.Drawing.Point(296, 323)
+        Me.btnDescargar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnDescargar.Name = "btnDescargar"
-        Me.btnDescargar.Size = New System.Drawing.Size(165, 59)
+        Me.btnDescargar.Size = New System.Drawing.Size(124, 48)
         Me.btnDescargar.TabIndex = 52
         Me.btnDescargar.Text = "DESCARGAR"
         Me.btnDescargar.UseVisualStyleBackColor = False
         '
         'frmOrdenPago
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(600, 577)
+        Me.ClientSize = New System.Drawing.Size(450, 469)
         Me.Controls.Add(Me.btnDescargar)
         Me.Controls.Add(Me.btnSimularPago)
         Me.Controls.Add(Me.txtMontoBase)
@@ -234,8 +248,10 @@ Partial Class frmOrdenPago
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel3)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmOrdenPago"
-        Me.Text = "frmOrdenPago"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)

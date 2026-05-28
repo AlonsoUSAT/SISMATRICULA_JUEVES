@@ -21,7 +21,7 @@ Public Class frmConsultaMatriculas
         txtTotal.ReadOnly = True
         txtBecados.ReadOnly = True
         txtNoBecados.ReadOnly = True
-
+        dgvMatriculas.AllowUserToAddRows = False
         CargarNiveles()
         ConfigurarGrid()
         LimpiarResumen()
@@ -160,5 +160,9 @@ Public Class frmConsultaMatriculas
 
 
         LimpiarResumen()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

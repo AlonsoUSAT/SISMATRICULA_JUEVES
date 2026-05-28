@@ -14,6 +14,7 @@ Public Class frmConsultaEstudiantes
         LimpiarTabla()
         CargarNiveles()
         CargarAnosMatricula() ' Solo se carga Nivel al inicio; Grado y Sección esperan al usuario
+        tblBusqueda.AllowUserToAddRows = False
     End Sub
 
     ' ══════════════════════════════════════════════
@@ -260,4 +261,7 @@ Public Class frmConsultaEstudiantes
         End Try
     End Sub
 
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
 End Class

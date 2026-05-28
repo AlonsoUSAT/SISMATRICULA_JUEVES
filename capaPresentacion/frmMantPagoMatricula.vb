@@ -6,6 +6,7 @@ Public Class frmMantPagoMatricula
     Private Sub frmMantPagoMatricula_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objLogica = New clsLogPagoMatricula()
         ListarGrilla()
+        dgvAnos.AllowUserToAddRows = False
     End Sub
 
     Private Sub ListarGrilla()

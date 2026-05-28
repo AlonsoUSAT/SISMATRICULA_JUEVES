@@ -33,7 +33,6 @@ Partial Class frmMantNGS
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.txtTutor = New System.Windows.Forms.TextBox()
         Me.txtAforo = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -44,8 +43,9 @@ Partial Class frmMantNGS
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.cboAno = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cboTutor = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvGrados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -72,7 +72,7 @@ Partial Class frmMantNGS
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(437, 25)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Mantenimiento de grado, nivel y sección"
+        Me.Label2.Text = "Mantenimiento de nivel, grado y sección"
         '
         'Label7
         '
@@ -159,7 +159,7 @@ Partial Class frmMantNGS
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.txtTutor)
+        Me.Panel3.Controls.Add(Me.cboTutor)
         Me.Panel3.Controls.Add(Me.txtAforo)
         Me.Panel3.Controls.Add(Me.txtNombre)
         Me.Panel3.Controls.Add(Me.Label6)
@@ -169,13 +169,6 @@ Partial Class frmMantNGS
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(434, 100)
         Me.Panel3.TabIndex = 55
-        '
-        'txtTutor
-        '
-        Me.txtTutor.Location = New System.Drawing.Point(151, 66)
-        Me.txtTutor.Name = "txtTutor"
-        Me.txtTutor.Size = New System.Drawing.Size(171, 20)
-        Me.txtTutor.TabIndex = 59
         '
         'txtAforo
         '
@@ -276,10 +269,18 @@ Partial Class frmMantNGS
         Me.Panel4.Controls.Add(Me.cboNivel)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Location = New System.Drawing.Point(-3, 56)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(944, 338)
         Me.Panel4.TabIndex = 57
+        '
+        'cboAno
+        '
+        Me.cboAno.FormattingEnabled = True
+        Me.cboAno.Location = New System.Drawing.Point(144, 40)
+        Me.cboAno.Name = "cboAno"
+        Me.cboAno.Size = New System.Drawing.Size(131, 21)
+        Me.cboAno.TabIndex = 57
         '
         'Label8
         '
@@ -292,13 +293,13 @@ Partial Class frmMantNGS
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "Año:"
         '
-        'cboAno
+        'cboTutor
         '
-        Me.cboAno.FormattingEnabled = True
-        Me.cboAno.Location = New System.Drawing.Point(144, 40)
-        Me.cboAno.Name = "cboAno"
-        Me.cboAno.Size = New System.Drawing.Size(131, 21)
-        Me.cboAno.TabIndex = 57
+        Me.cboTutor.FormattingEnabled = True
+        Me.cboTutor.Location = New System.Drawing.Point(151, 65)
+        Me.cboTutor.Name = "cboTutor"
+        Me.cboTutor.Size = New System.Drawing.Size(171, 21)
+        Me.cboTutor.TabIndex = 59
         '
         'frmMantNGS
         '
@@ -311,7 +312,8 @@ Partial Class frmMantNGS
         Me.Controls.Add(Me.Panel4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMantNGS"
-        Me.Text = "Mantenimiento Grado, Nivel y Seccion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvGrados, System.ComponentModel.ISupportInitialize).EndInit()
@@ -343,11 +345,11 @@ Partial Class frmMantNGS
     Friend WithEvents btnDarBaja As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents txtTutor As TextBox
     Friend WithEvents txtAforo As TextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents cboAno As ComboBox
+    Friend WithEvents cboTutor As ComboBox
 End Class

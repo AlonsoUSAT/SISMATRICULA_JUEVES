@@ -8,7 +8,7 @@ Public Class frmCargaAcademica
         ' Mostrar año activo en el TextBox
         txtAnio.Text = ModuloSesion.nombreAnoActivo
         txtAnio.ReadOnly = True
-
+        dgvCargaAcademica.AllowUserToAddRows = False
         cargando = True
         CargarNiveles()
         CargarEspecialidades()
@@ -253,4 +253,7 @@ Public Class frmCargaAcademica
         End If
     End Sub
 
+    Private Sub dgvCargaAcademica_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCargaAcademica.CellContentClick
+
+    End Sub
 End Class

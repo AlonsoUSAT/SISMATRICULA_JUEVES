@@ -8,6 +8,7 @@ Public Class frmMantApoderado
         CargarListado()
         txtNumDoc.MaxLength = 8
         txtTelefono.MaxLength = 9
+        dgvApoderados.AllowUserToAddRows = False
     End Sub
     Private Sub CargarListado()
         Try
@@ -192,5 +193,9 @@ Public Class frmMantApoderado
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
             e.Handled = True ' Cancela la tecla presionada
         End If
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
     End Sub
 End Class

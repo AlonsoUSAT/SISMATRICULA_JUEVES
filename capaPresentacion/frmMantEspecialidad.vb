@@ -8,6 +8,7 @@ Public Class frmMantEspecialidad
 
     Private Sub frmMantEspecialidad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarListado()
+        dgvEspecialidades.AllowUserToAddRows = False
     End Sub
 
     Private Sub CargarListado()
@@ -135,5 +136,9 @@ Public Class frmMantEspecialidad
         txtID.Text = idSeleccionado.ToString()
         txtNombre.Text = fila.Cells("Nombre").Value.ToString()
         chkEstado.Checked = fila.Cells("Estado").Value.ToString() = "Vigente"
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

@@ -376,6 +376,7 @@ Partial Class frmNuevaAsignacion
         Me.ClientSize = New System.Drawing.Size(480, 447)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmNuevaAsignacion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Nueva asignación académica"
         Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)

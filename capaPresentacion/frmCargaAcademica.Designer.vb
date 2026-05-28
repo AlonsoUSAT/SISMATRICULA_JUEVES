@@ -50,6 +50,7 @@ Partial Class frmCargaAcademica
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colEditar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colEliminar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvCargaAcademica, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,6 +58,7 @@ Partial Class frmCargaAcademica
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.txtAnio)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -66,7 +68,7 @@ Partial Class frmCargaAcademica
         '
         'txtAnio
         '
-        Me.txtAnio.Location = New System.Drawing.Point(61, 15)
+        Me.txtAnio.Location = New System.Drawing.Point(918, 12)
         Me.txtAnio.Name = "txtAnio"
         Me.txtAnio.Size = New System.Drawing.Size(171, 20)
         Me.txtAnio.TabIndex = 2
@@ -76,7 +78,7 @@ Partial Class frmCargaAcademica
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(11, 13)
+        Me.Label1.Location = New System.Drawing.Point(866, 10)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 20)
         Me.Label1.TabIndex = 1
@@ -291,6 +293,17 @@ Partial Class frmCargaAcademica
         Me.colEliminar.Name = "colEliminar"
         Me.colEliminar.Width = 75
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Snow
+        Me.Label8.Location = New System.Drawing.Point(21, 7)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(195, 25)
+        Me.Label8.TabIndex = 4
+        Me.Label8.Text = "Carga academica"
+        '
         'frmCargaAcademica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -311,7 +324,7 @@ Partial Class frmCargaAcademica
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmCargaAcademica"
-        Me.Text = "Gestión de carga académica"
+        Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvCargaAcademica, System.ComponentModel.ISupportInitialize).EndInit()
@@ -348,4 +361,5 @@ Partial Class frmCargaAcademica
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents colEditar As DataGridViewTextBoxColumn
     Friend WithEvents colEliminar As DataGridViewTextBoxColumn
+    Friend WithEvents Label8 As Label
 End Class

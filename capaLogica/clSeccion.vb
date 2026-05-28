@@ -1,11 +1,18 @@
-﻿Imports System.Data
-Imports capaDatos ' Ajusta si tu namespace es distinto
+﻿' --- CAPA LÓGICA (clSeccion) ---
+Imports System.Data
+Imports capaDatos
 
 Public Class clSeccion
     Dim objDatos As New clsSeccion()
 
-    Public Function ListarNiveles() As DataTable
-        Return objDatos.ListarNiveles()
+    ' NUEVO
+    Public Function ListarAnosAcademicos() As DataTable
+        Return objDatos.ListarAnosAcademicos()
+    End Function
+
+    ' MODIFICADO
+    Public Function ListarNiveles(id_anoAcademico As Integer) As DataTable
+        Return objDatos.ListarNiveles(id_anoAcademico)
     End Function
 
     Public Function ListarGrados(id_nivel As Integer) As DataTable
@@ -16,17 +23,22 @@ Public Class clSeccion
         Return objDatos.ListarSecciones(id_grado)
     End Function
 
-    Public Sub InsertarSeccion(id_grado As Integer, nombre As String, aforo As Integer, tutor As String)
-        objDatos.InsertarSeccion(id_grado, nombre, aforo, tutor)
+    Public Function ListarTutores() As DataTable
+        Return objDatos.ListarTutores()
+    End Function
+
+    Public Sub InsertarSeccion(id_grado As Integer, nombre As String, aforo As Integer, id_docente_tutor As Integer)
+        objDatos.InsertarSeccion(id_grado, nombre, aforo, id_docente_tutor)
     End Sub
 
-    Public Sub ModificarSeccion(id_seccion As Integer, nombre As String, aforo As Integer, tutor As String, vigencia As Integer)
-        objDatos.ModificarSeccion(id_seccion, nombre, aforo, tutor, vigencia)
+    Public Sub ModificarSeccion(id_seccion As Integer, nombre As String, aforo As Integer, id_docente_tutor As Integer, vigencia As Integer)
+        objDatos.ModificarSeccion(id_seccion, nombre, aforo, id_docente_tutor, vigencia)
     End Sub
 
     Public Sub EliminarSeccion(id_seccion As Integer)
         objDatos.EliminarSeccion(id_seccion)
     End Sub
+
     Public Sub DarBajaSeccion(id_seccion As Integer)
         Try
             objDatos.DarBajaSeccion(id_seccion)
@@ -34,5 +46,4 @@ Public Class clSeccion
             Throw New Exception(ex.Message)
         End Try
     End Sub
-
 End Class

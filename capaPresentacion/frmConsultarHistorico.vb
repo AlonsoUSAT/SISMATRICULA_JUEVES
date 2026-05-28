@@ -17,6 +17,7 @@ Public Class frmConsultarHistorico
         Catch ex As Exception
             MsgBox("Error inicial: " & ex.Message)
         End Try
+        dgvHistorico.AllowUserToAddRows = False
     End Sub
 
     Private Sub cboAnioAcademico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboAnioAcademico.SelectedIndexChanged
