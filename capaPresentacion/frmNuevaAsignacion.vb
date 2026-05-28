@@ -7,9 +7,6 @@ Public Class frmNuevaAsignacion
     Public Sub New(idCarga As Integer)
         InitializeComponent()
         idCargaEditar = idCarga
-    End Sub
-
-    Private Sub frmNuevaAsignacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarDiasSemana()
         CargarEspecialidades()
         CargarNiveles()

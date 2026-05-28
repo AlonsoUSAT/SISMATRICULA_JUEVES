@@ -83,6 +83,12 @@
     <Compile Include="frmConsultaDocente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmConsultaEspecialidad.Designer.vb">
+      <DependentUpon>frmConsultaEspecialidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaEspecialidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmConsultaEstudiantes.Designer.vb">
       <DependentUpon>frmConsultaEstudiantes.vb</DependentUpon>
     </Compile>
@@ -213,6 +219,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmConsultaDocente.resx">
       <DependentUpon>frmConsultaDocente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaEspecialidad.resx">
+      <DependentUpon>frmConsultaEspecialidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaEstudiantes.resx">
       <DependentUpon>frmConsultaEstudiantes.vb</DependentUpon>

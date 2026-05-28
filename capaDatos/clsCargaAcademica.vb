@@ -61,7 +61,8 @@ Public Class clsCargaAcademica
         Try
             objConexion.conectar()
             Dim query As String =
-                "SELECT id_seccion, nombre FROM SECCION WHERE id_grado = @idGrado AND estado = 1"
+            "SELECT id_seccion, nombre FROM SECCION " &
+            "WHERE id_grado = @idGrado AND vigencia = 1"
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@idGrado", id_grado)
             Dim adapter As New SqlDataAdapter(cmd)
@@ -154,24 +155,26 @@ Public Class clsCargaAcademica
         Try
             objConexion.conectar()
             Dim query As String =
-                "SELECT CA.id_carga AS ID, " &
-                "P.apePaterno + ' ' + P.nombre AS Docente, " &
-                "E.nombre AS Especialidad, " &
-                "C.nombreCurso AS Curso, " &
-                "G.nombre AS Grado, " &
-                "S.nombre AS Seccion, " &
-                "CA.diaSemana AS Dia, " &
-                "CONVERT(VARCHAR, CA.horaInicio, 108) AS Hora_Inicio, " &
-                "CONVERT(VARCHAR, CA.horaFin, 108) AS Hora_Fin, " &
-                "CA.estado AS Estado " &
-                "FROM CARGA_ACADEMICA CA " &
-                "INNER JOIN DOCENTE D ON CA.id_docente = D.id_docente " &
-                "INNER JOIN PERSONA P ON D.id_persona = P.id_persona " &
-                "INNER JOIN ESPECIALIDAD E ON D.id_especialidad = E.id_especialidad " &
-                "INNER JOIN CURSO C ON CA.id_curso = C.id_curso " &
-                "INNER JOIN SECCION S ON CA.id_seccion = S.id_seccion " &
-                "INNER JOIN GRADO G ON S.id_grado = G.id_grado " &
-                "WHERE CA.id_anoAcademico = @idAno"
+            "SELECT CA.id_carga AS ID, " &
+            "P.apePaterno + ' ' + P.nombre AS Docente, " &
+            "E.nombre AS Especialidad, " &
+            "C.nombreCurso AS Curso, " &
+            "N.nombre AS Nivel, " &
+            "G.nombre AS Grado, " &
+            "S.nombre AS Seccion, " &
+            "CA.diaSemana AS Dia, " &
+            "CONVERT(VARCHAR, CA.horaInicio, 108) AS Hora_Inicio, " &
+            "CONVERT(VARCHAR, CA.horaFin, 108) AS Hora_Fin, " &
+            "CASE WHEN CA.estado = 1 THEN 'Activo' ELSE 'Inactivo' END AS Estado " &
+            "FROM CARGA_ACADEMICA CA " &
+            "INNER JOIN DOCENTE D ON CA.id_docente = D.id_docente " &
+            "INNER JOIN PERSONA P ON D.id_persona = P.id_persona " &
+            "INNER JOIN ESPECIALIDAD E ON D.id_especialidad = E.id_especialidad " &
+            "INNER JOIN CURSO C ON CA.id_curso = C.id_curso " &
+            "INNER JOIN SECCION S ON CA.id_seccion = S.id_seccion " &
+            "INNER JOIN GRADO G ON S.id_grado = G.id_grado " &
+            "INNER JOIN NIVEL N ON G.id_nivel = N.id_nivel " &
+            "WHERE CA.id_anoAcademico = @idAno"
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@idAno", id_anoAcademico)
             Dim adapter As New SqlDataAdapter(cmd)
@@ -184,35 +187,46 @@ Public Class clsCargaAcademica
         Return tabla
     End Function
 
-    Public Function MostrarCargaFiltrada(id_anoAcademico As Integer, id_seccion As Integer,
-                                          id_especialidad As Integer, id_docente As Integer) As DataTable
+    Public Function MostrarCargaFiltrada(id_anoAcademico As Integer, id_nivel As Integer,
+                                      id_grado As Integer, id_seccion As Integer,
+                                      id_especialidad As Integer, id_docente As Integer) As DataTable
         Dim tabla As New DataTable()
         Try
             objConexion.conectar()
             Dim query As String =
-                "SELECT CA.id_carga AS ID, " &
-                "P.apePaterno + ' ' + P.nombre AS Docente, " &
-                "E.nombre AS Especialidad, " &
-                "C.nombreCurso AS Curso, " &
-                "G.nombre AS Grado, " &
-                "S.nombre AS Seccion, " &
-                "CA.diaSemana AS Dia, " &
-                "CONVERT(VARCHAR, CA.horaInicio, 108) AS Hora_Inicio, " &
-                "CONVERT(VARCHAR, CA.horaFin, 108) AS Hora_Fin, " &
-                "CA.estado AS Estado " &
-                "FROM CARGA_ACADEMICA CA " &
-                "INNER JOIN DOCENTE D ON CA.id_docente = D.id_docente " &
-                "INNER JOIN PERSONA P ON D.id_persona = P.id_persona " &
-                "INNER JOIN ESPECIALIDAD E ON D.id_especialidad = E.id_especialidad " &
-                "INNER JOIN CURSO C ON CA.id_curso = C.id_curso " &
-                "INNER JOIN SECCION S ON CA.id_seccion = S.id_seccion " &
-                "INNER JOIN GRADO G ON S.id_grado = G.id_grado " &
-                "WHERE CA.id_anoAcademico = @idAno " &
-                "AND (@idSeccion = 0 OR CA.id_seccion = @idSeccion) " &
-                "AND (@idEsp = 0 OR D.id_especialidad = @idEsp) " &
-                "AND (@idDoc = 0 OR CA.id_docente = @idDoc)"
+            "SELECT CA.id_carga AS ID, " &
+            "P.apePaterno + ' ' + P.nombre AS Docente, " &
+            "E.nombre AS Especialidad, " &
+            "C.nombreCurso AS Curso, " &
+            "N.nombre AS Nivel, " &
+            "G.nombre AS Grado, " &
+            "S.nombre AS Seccion, " &
+            "CA.diaSemana AS Dia, " &
+            "CONVERT(VARCHAR, CA.horaInicio, 108) AS Hora_Inicio, " &
+            "CONVERT(VARCHAR, CA.horaFin, 108) AS Hora_Fin, " &
+            "CASE WHEN CA.estado = 1 THEN 'Activo' ELSE 'Inactivo' END AS Estado " &
+            "FROM CARGA_ACADEMICA CA " &
+            "INNER JOIN DOCENTE D ON CA.id_docente = D.id_docente " &
+            "INNER JOIN PERSONA P ON D.id_persona = P.id_persona " &
+            "INNER JOIN ESPECIALIDAD E ON D.id_especialidad = E.id_especialidad " &
+            "INNER JOIN CURSO C ON CA.id_curso = C.id_curso " &
+            "INNER JOIN SECCION S ON CA.id_seccion = S.id_seccion " &
+            "INNER JOIN GRADO G ON S.id_grado = G.id_grado " &
+            "INNER JOIN NIVEL N ON G.id_nivel = N.id_nivel " &
+            "WHERE CA.id_anoAcademico = @idAno " &
+            "AND (@idNivel = 0 OR G.id_nivel = @idNivel) " &
+            "AND (@idSeccion = 0 OR CA.id_seccion = @idSeccion) " &
+            "AND (@idEsp = 0 OR D.id_especialidad = @idEsp) " &
+            "AND (@idDoc = 0 OR CA.id_docente = @idDoc)" &
+            "AND (@idNivel = 0 OR G.id_nivel = @idNivel) " &
+            "AND (@idGrado = 0 OR G.id_grado = @idGrado) " &
+            "AND (@idSeccion = 0 OR CA.id_seccion = @idSeccion) " &
+            "AND (@idEsp = 0 OR D.id_especialidad = @idEsp) " &
+            "AND (@idDoc = 0 OR CA.id_docente = @idDoc)"
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@idAno", id_anoAcademico)
+            cmd.Parameters.AddWithValue("@idNivel", id_nivel)
+            cmd.Parameters.AddWithValue("@idGrado", id_grado)
             cmd.Parameters.AddWithValue("@idSeccion", id_seccion)
             cmd.Parameters.AddWithValue("@idEsp", id_especialidad)
             cmd.Parameters.AddWithValue("@idDoc", id_docente)

@@ -8,7 +8,6 @@ Public Class frmMantEspecialidad
 
     Private Sub frmMantEspecialidad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarListado()
-        CargarFiltro()
     End Sub
 
     Private Sub CargarListado()
@@ -19,17 +18,6 @@ Public Class frmMantEspecialidad
         End Try
     End Sub
 
-    Private Sub CargarFiltro()
-        Try
-            cboFiltro.Items.Clear()
-            cboFiltro.Items.Add("Todas")
-            cboFiltro.Items.Add("Solo vigentes")
-            cboFiltro.Items.Add("Solo dadas de baja")
-            cboFiltro.SelectedIndex = 0
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        End Try
-    End Sub
 
     Private Sub LimpiarFormulario()
         txtNombre.Clear()
@@ -138,21 +126,6 @@ Public Class frmMantEspecialidad
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End If
-    End Sub
-
-    Private Sub cboFiltro_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFiltro.SelectedIndexChanged
-        Try
-            Select Case cboFiltro.SelectedIndex
-                Case 0 ' Todas
-                    dgvEspecialidades.DataSource = objLogica.MostrarEspecialidades()
-                Case 1 ' Solo vigentes
-                    dgvEspecialidades.DataSource = objLogica.MostrarFiltradas("vigente")
-                Case 2 ' Solo dadas de baja
-                    dgvEspecialidades.DataSource = objLogica.MostrarFiltradas("baja")
-            End Select
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        End Try
     End Sub
 
     Private Sub dgvEspecialidades_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEspecialidades.CellClick

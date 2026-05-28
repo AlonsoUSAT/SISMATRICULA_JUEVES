@@ -25,20 +25,18 @@ Partial Class frmMantEspecialidad
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.chkEstado = New System.Windows.Forms.CheckBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.chkEstado = New System.Windows.Forms.CheckBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnNuevoGuardar = New System.Windows.Forms.Button()
         Me.btnDarBaja = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cboFiltro = New System.Windows.Forms.ComboBox()
         Me.dgvEspecialidades = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -81,42 +79,15 @@ Partial Class frmMantEspecialidad
         Me.Panel2.Size = New System.Drawing.Size(291, 201)
         Me.Panel2.TabIndex = 55
         '
-        'Label2
+        'chkEstado
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(6, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(218, 16)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "DATOS DE LA ESPECIALIDAD"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(47, 13)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Nombre:"
-        '
-        'txtNombre
-        '
-        Me.txtNombre.Location = New System.Drawing.Point(33, 56)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(235, 20)
-        Me.txtNombre.TabIndex = 2
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 92)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Nombre:"
+        Me.chkEstado.AutoSize = True
+        Me.chkEstado.Location = New System.Drawing.Point(33, 112)
+        Me.chkEstado.Name = "chkEstado"
+        Me.chkEstado.Size = New System.Drawing.Size(62, 17)
+        Me.chkEstado.TabIndex = 7
+        Me.chkEstado.Text = "Vigente"
+        Me.chkEstado.UseVisualStyleBackColor = True
         '
         'txtID
         '
@@ -135,15 +106,42 @@ Partial Class frmMantEspecialidad
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "ID:"
         '
-        'chkEstado
+        'Label4
         '
-        Me.chkEstado.AutoSize = True
-        Me.chkEstado.Location = New System.Drawing.Point(33, 112)
-        Me.chkEstado.Name = "chkEstado"
-        Me.chkEstado.Size = New System.Drawing.Size(62, 17)
-        Me.chkEstado.TabIndex = 7
-        Me.chkEstado.Text = "Vigente"
-        Me.chkEstado.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(21, 92)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(47, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Nombre:"
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(33, 56)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(235, 20)
+        Me.txtNombre.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(21, 39)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(47, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Nombre:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(6, 13)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(218, 16)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "DATOS DE LA ESPECIALIDAD"
         '
         'btnEliminar
         '
@@ -210,31 +208,13 @@ Partial Class frmMantEspecialidad
         Me.Panel3.Size = New System.Drawing.Size(319, 361)
         Me.Panel3.TabIndex = 64
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(337, 70)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(99, 13)
-        Me.Label6.TabIndex = 65
-        Me.Label6.Text = "Buscar por nombre:"
-        '
-        'cboFiltro
-        '
-        Me.cboFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboFiltro.FormattingEnabled = True
-        Me.cboFiltro.Location = New System.Drawing.Point(349, 87)
-        Me.cboFiltro.Name = "cboFiltro"
-        Me.cboFiltro.Size = New System.Drawing.Size(411, 21)
-        Me.cboFiltro.TabIndex = 66
-        '
         'dgvEspecialidades
         '
         Me.dgvEspecialidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEspecialidades.Location = New System.Drawing.Point(349, 128)
+        Me.dgvEspecialidades.Location = New System.Drawing.Point(349, 61)
         Me.dgvEspecialidades.Name = "dgvEspecialidades"
         Me.dgvEspecialidades.ReadOnly = True
-        Me.dgvEspecialidades.Size = New System.Drawing.Size(411, 294)
+        Me.dgvEspecialidades.Size = New System.Drawing.Size(411, 361)
         Me.dgvEspecialidades.TabIndex = 68
         '
         'frmMantEspecialidad
@@ -243,8 +223,6 @@ Partial Class frmMantEspecialidad
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(777, 443)
         Me.Controls.Add(Me.dgvEspecialidades)
-        Me.Controls.Add(Me.cboFiltro)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.Name = "frmMantEspecialidad"
@@ -256,7 +234,6 @@ Partial Class frmMantEspecialidad
         Me.Panel3.ResumeLayout(False)
         CType(Me.dgvEspecialidades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -275,7 +252,5 @@ Partial Class frmMantEspecialidad
     Friend WithEvents btnDarBaja As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents cboFiltro As ComboBox
     Friend WithEvents dgvEspecialidades As DataGridView
 End Class

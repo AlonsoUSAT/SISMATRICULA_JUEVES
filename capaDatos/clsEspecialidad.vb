@@ -3,6 +3,21 @@
 Public Class clsEspecialidad
     Dim objConexion As New clsConectaBD()
 
+    Public Function ContarPorEstado(estado As Integer) As Integer
+        Try
+            objConexion.conectar()
+            Dim query As String =
+            "SELECT COUNT(*) FROM ESPECIALIDAD WHERE estado = @estado"
+            Dim cmd As New SqlCommand(query, objConexion.miConexion)
+            cmd.Parameters.AddWithValue("@estado", estado)
+            Return Convert.ToInt32(cmd.ExecuteScalar())
+        Catch ex As Exception
+            Throw New Exception("Error al contar: " & ex.Message)
+        Finally
+            objConexion.desconectar()
+        End Try
+    End Function
+
     Public Function MostrarEspecialidades() As DataTable
         Dim tabla As New DataTable()
         Try

@@ -76,10 +76,11 @@ Public Class clCargaAcademica
         End Try
     End Function
 
-    Public Function MostrarCargaFiltrada(id_anoAcademico As Integer, id_seccion As Integer,
-                                          id_especialidad As Integer, id_docente As Integer) As DataTable
+    Public Function MostrarCargaFiltrada(id_anoAcademico As Integer, id_nivel As Integer,
+                                      id_grado As Integer, id_seccion As Integer,
+                                      id_especialidad As Integer, id_docente As Integer) As DataTable
         Try
-            Return objCapaDatos.MostrarCargaFiltrada(id_anoAcademico, id_seccion, id_especialidad, id_docente)
+            Return objCapaDatos.MostrarCargaFiltrada(id_anoAcademico, id_nivel, id_grado, id_seccion, id_especialidad, id_docente)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

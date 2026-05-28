@@ -3,7 +3,13 @@ Imports capaDatos
 
 Public Class clEspecialidad
     Dim objCapaDatos As New clsEspecialidad()
-
+    Public Function ContarPorEstado(estado As Integer) As Integer
+        Try
+            Return objCapaDatos.ContarPorEstado(estado)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
     Public Function MostrarEspecialidades() As DataTable
         Try
             Return objCapaDatos.MostrarEspecialidades()

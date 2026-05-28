@@ -15,17 +15,21 @@ Public Class frmSelectorAnio
 
             For Each fila As DataRow In dt.Rows
                 Dim activo As Boolean = Convert.ToBoolean(fila("estado"))
-                Dim anio As String = Convert.ToDateTime(fila("fechaInicio")).Year.ToString()
+                Dim fechaInicio As DateTime = Convert.ToDateTime(fila("fechaInicio"))
+                Dim fechaFin As DateTime = Convert.ToDateTime(fila("fechaFin"))
+                Dim nombreAnio As String = fechaInicio.Year.ToString() &
+                    " (" & fechaInicio.ToString("dd/MM/yyyy") &
+                    " - " & fechaFin.ToString("dd/MM/yyyy") & ")"
+
                 Dim item As New AnoItem(
                     Convert.ToInt32(fila("id_anoAcademico")),
-                    anio,
+                    nombreAnio,
                     activo
                 )
                 cboAnios.Items.Add(item)
 
-                ' Seleccionar automáticamente el activo
                 If activo Then
-                    lblAnoActivo.Text = "Año activo: " & anio
+                    lblAnoActivo.Text = "Año activo: " & nombreAnio
                     cboAnios.SelectedItem = item
                 End If
             Next

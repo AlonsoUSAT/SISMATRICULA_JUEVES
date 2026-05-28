@@ -65,7 +65,7 @@ Partial Class frmSelectorAnio
         '
         Me.lblAnoActivo.AutoSize = True
         Me.lblAnoActivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAnoActivo.Location = New System.Drawing.Point(138, 128)
+        Me.lblAnoActivo.Location = New System.Drawing.Point(52, 128)
         Me.lblAnoActivo.Name = "lblAnoActivo"
         Me.lblAnoActivo.Size = New System.Drawing.Size(68, 15)
         Me.lblAnoActivo.TabIndex = 2
@@ -85,9 +85,9 @@ Partial Class frmSelectorAnio
         Me.cboAnios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboAnios.FormattingEnabled = True
         Me.cboAnios.IntegralHeight = False
-        Me.cboAnios.Location = New System.Drawing.Point(93, 185)
+        Me.cboAnios.Location = New System.Drawing.Point(49, 185)
         Me.cboAnios.Name = "cboAnios"
-        Me.cboAnios.Size = New System.Drawing.Size(155, 21)
+        Me.cboAnios.Size = New System.Drawing.Size(250, 21)
         Me.cboAnios.TabIndex = 4
         '
         'frmSelectorAnio

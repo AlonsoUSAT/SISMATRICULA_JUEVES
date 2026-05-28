@@ -41,6 +41,7 @@ Partial Class frmCargaAcademica
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -60,14 +61,14 @@ Partial Class frmCargaAcademica
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1029, 47)
+        Me.Panel1.Size = New System.Drawing.Size(1102, 47)
         Me.Panel1.TabIndex = 0
         '
         'txtAnio
         '
         Me.txtAnio.Location = New System.Drawing.Point(61, 15)
         Me.txtAnio.Name = "txtAnio"
-        Me.txtAnio.Size = New System.Drawing.Size(100, 20)
+        Me.txtAnio.Size = New System.Drawing.Size(171, 20)
         Me.txtAnio.TabIndex = 2
         '
         'Label1
@@ -84,7 +85,7 @@ Partial Class frmCargaAcademica
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(26, 66)
+        Me.Label2.Location = New System.Drawing.Point(63, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 13)
         Me.Label2.TabIndex = 1
@@ -93,7 +94,7 @@ Partial Class frmCargaAcademica
         'cboFiltroNivel
         '
         Me.cboFiltroNivel.FormattingEnabled = True
-        Me.cboFiltroNivel.Location = New System.Drawing.Point(38, 82)
+        Me.cboFiltroNivel.Location = New System.Drawing.Point(75, 82)
         Me.cboFiltroNivel.Name = "cboFiltroNivel"
         Me.cboFiltroNivel.Size = New System.Drawing.Size(121, 21)
         Me.cboFiltroNivel.TabIndex = 2
@@ -101,7 +102,7 @@ Partial Class frmCargaAcademica
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(209, 66)
+        Me.Label3.Location = New System.Drawing.Point(246, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 3
@@ -110,7 +111,7 @@ Partial Class frmCargaAcademica
         'cboFiltroGrado
         '
         Me.cboFiltroGrado.FormattingEnabled = True
-        Me.cboFiltroGrado.Location = New System.Drawing.Point(221, 82)
+        Me.cboFiltroGrado.Location = New System.Drawing.Point(258, 82)
         Me.cboFiltroGrado.Name = "cboFiltroGrado"
         Me.cboFiltroGrado.Size = New System.Drawing.Size(121, 21)
         Me.cboFiltroGrado.TabIndex = 4
@@ -118,7 +119,7 @@ Partial Class frmCargaAcademica
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(387, 66)
+        Me.Label4.Location = New System.Drawing.Point(424, 66)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 13)
         Me.Label4.TabIndex = 5
@@ -127,7 +128,7 @@ Partial Class frmCargaAcademica
         'cboFiltroSeccion
         '
         Me.cboFiltroSeccion.FormattingEnabled = True
-        Me.cboFiltroSeccion.Location = New System.Drawing.Point(399, 82)
+        Me.cboFiltroSeccion.Location = New System.Drawing.Point(436, 82)
         Me.cboFiltroSeccion.Name = "cboFiltroSeccion"
         Me.cboFiltroSeccion.Size = New System.Drawing.Size(121, 21)
         Me.cboFiltroSeccion.TabIndex = 6
@@ -135,7 +136,7 @@ Partial Class frmCargaAcademica
         'cboFiltroEspecialidad
         '
         Me.cboFiltroEspecialidad.FormattingEnabled = True
-        Me.cboFiltroEspecialidad.Location = New System.Drawing.Point(585, 82)
+        Me.cboFiltroEspecialidad.Location = New System.Drawing.Point(622, 82)
         Me.cboFiltroEspecialidad.Name = "cboFiltroEspecialidad"
         Me.cboFiltroEspecialidad.Size = New System.Drawing.Size(155, 21)
         Me.cboFiltroEspecialidad.TabIndex = 8
@@ -143,7 +144,7 @@ Partial Class frmCargaAcademica
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(573, 66)
+        Me.Label5.Location = New System.Drawing.Point(610, 66)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(70, 13)
         Me.Label5.TabIndex = 7
@@ -152,7 +153,7 @@ Partial Class frmCargaAcademica
         'cboFiltroDocente
         '
         Me.cboFiltroDocente.FormattingEnabled = True
-        Me.cboFiltroDocente.Location = New System.Drawing.Point(795, 82)
+        Me.cboFiltroDocente.Location = New System.Drawing.Point(832, 82)
         Me.cboFiltroDocente.Name = "cboFiltroDocente"
         Me.cboFiltroDocente.Size = New System.Drawing.Size(221, 21)
         Me.cboFiltroDocente.TabIndex = 10
@@ -160,7 +161,7 @@ Partial Class frmCargaAcademica
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(779, 66)
+        Me.Label6.Location = New System.Drawing.Point(816, 66)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(51, 13)
         Me.Label6.TabIndex = 9
@@ -168,7 +169,7 @@ Partial Class frmCargaAcademica
         '
         'btnNuevaAsignacion
         '
-        Me.btnNuevaAsignacion.Location = New System.Drawing.Point(857, 119)
+        Me.btnNuevaAsignacion.Location = New System.Drawing.Point(894, 119)
         Me.btnNuevaAsignacion.Name = "btnNuevaAsignacion"
         Me.btnNuevaAsignacion.Size = New System.Drawing.Size(159, 30)
         Me.btnNuevaAsignacion.TabIndex = 11
@@ -177,7 +178,7 @@ Partial Class frmCargaAcademica
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(692, 119)
+        Me.btnActualizar.Location = New System.Drawing.Point(729, 119)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(159, 30)
         Me.btnActualizar.TabIndex = 12
@@ -187,14 +188,15 @@ Partial Class frmCargaAcademica
         'dgvCargaAcademica
         '
         Me.dgvCargaAcademica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCargaAcademica.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.colEditar, Me.colEliminar})
+        Me.dgvCargaAcademica.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column10, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.colEditar, Me.colEliminar})
         Me.dgvCargaAcademica.Location = New System.Drawing.Point(26, 155)
         Me.dgvCargaAcademica.Name = "dgvCargaAcademica"
-        Me.dgvCargaAcademica.Size = New System.Drawing.Size(990, 283)
+        Me.dgvCargaAcademica.Size = New System.Drawing.Size(1066, 283)
         Me.dgvCargaAcademica.TabIndex = 13
         '
         'Column1
         '
+        Me.Column1.DataPropertyName = "Docente"
         Me.Column1.Frozen = True
         Me.Column1.HeaderText = "Docente"
         Me.Column1.Name = "Column1"
@@ -202,6 +204,7 @@ Partial Class frmCargaAcademica
         '
         'Column2
         '
+        Me.Column2.DataPropertyName = "Especialidad"
         Me.Column2.Frozen = True
         Me.Column2.HeaderText = "Especialidad"
         Me.Column2.Name = "Column2"
@@ -209,13 +212,24 @@ Partial Class frmCargaAcademica
         '
         'Column3
         '
+        Me.Column3.DataPropertyName = "Curso"
         Me.Column3.Frozen = True
         Me.Column3.HeaderText = "Curso"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
+        'Column10
+        '
+        Me.Column10.DataPropertyName = "Nivel"
+        Me.Column10.Frozen = True
+        Me.Column10.HeaderText = "Nivel"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Width = 75
+        '
         'Column4
         '
+        Me.Column4.DataPropertyName = "Grado"
         Me.Column4.Frozen = True
         Me.Column4.HeaderText = "Grado"
         Me.Column4.Name = "Column4"
@@ -223,6 +237,7 @@ Partial Class frmCargaAcademica
         '
         'Column5
         '
+        Me.Column5.DataPropertyName = "Seccion"
         Me.Column5.Frozen = True
         Me.Column5.HeaderText = "Sección"
         Me.Column5.Name = "Column5"
@@ -231,6 +246,7 @@ Partial Class frmCargaAcademica
         '
         'Column6
         '
+        Me.Column6.DataPropertyName = "Dia"
         Me.Column6.Frozen = True
         Me.Column6.HeaderText = "Día"
         Me.Column6.Name = "Column6"
@@ -238,6 +254,7 @@ Partial Class frmCargaAcademica
         '
         'Column7
         '
+        Me.Column7.DataPropertyName = "Hora_Inicio"
         Me.Column7.Frozen = True
         Me.Column7.HeaderText = "Hora de inicio"
         Me.Column7.Name = "Column7"
@@ -246,6 +263,7 @@ Partial Class frmCargaAcademica
         '
         'Column8
         '
+        Me.Column8.DataPropertyName = "Hora_Fin"
         Me.Column8.Frozen = True
         Me.Column8.HeaderText = "Hora de fin"
         Me.Column8.Name = "Column8"
@@ -254,6 +272,7 @@ Partial Class frmCargaAcademica
         '
         'Column9
         '
+        Me.Column9.DataPropertyName = "Estado"
         Me.Column9.Frozen = True
         Me.Column9.HeaderText = "Estado"
         Me.Column9.Name = "Column9"
@@ -276,7 +295,7 @@ Partial Class frmCargaAcademica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1028, 450)
+        Me.ClientSize = New System.Drawing.Size(1101, 450)
         Me.Controls.Add(Me.dgvCargaAcademica)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnNuevaAsignacion)
@@ -320,6 +339,7 @@ Partial Class frmCargaAcademica
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn

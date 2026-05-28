@@ -176,10 +176,18 @@ Public Class frmCargaAcademica
 
     Private Sub AplicarFiltros()
         Try
+            Dim idNivel As Integer = 0
+            Dim idGrado As Integer = 0
             Dim idSeccion As Integer = 0
             Dim idEsp As Integer = 0
             Dim idDoc As Integer = 0
 
+            If cboFiltroNivel.SelectedValue IsNot Nothing Then
+                idNivel = Convert.ToInt32(cboFiltroNivel.SelectedValue)
+            End If
+            If cboFiltroGrado.Enabled AndAlso cboFiltroGrado.SelectedValue IsNot Nothing Then
+                idGrado = Convert.ToInt32(cboFiltroGrado.SelectedValue)
+            End If
             If cboFiltroSeccion.Enabled AndAlso cboFiltroSeccion.SelectedValue IsNot Nothing Then
                 idSeccion = Convert.ToInt32(cboFiltroSeccion.SelectedValue)
             End If
@@ -191,11 +199,12 @@ Public Class frmCargaAcademica
             End If
 
             dgvCargaAcademica.DataSource = objLogica.MostrarCargaFiltrada(
-                ModuloSesion.idAnoAcademicoActivo, idSeccion, idEsp, idDoc)
+            ModuloSesion.idAnoAcademicoActivo, idNivel, idGrado, idSeccion, idEsp, idDoc)
         Catch ex As Exception
             MessageBox.Show("Error al filtrar: " & ex.Message)
         End Try
     End Sub
+
 
     '--- BOTONES ---
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
@@ -215,28 +224,27 @@ Public Class frmCargaAcademica
     '--- CLICK EN EL DGV (EDITAR / ELIMINAR) ---
     Private Sub dgvCargaAcademica_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCargaAcademica.CellClick
         If e.RowIndex < 0 Then Return
-
-        ' Verificar que la celda ID tenga valor
         If dgvCargaAcademica.Rows(e.RowIndex).Cells("ID").Value Is Nothing Then Return
+
         Dim idCarga As Integer = Convert.ToInt32(dgvCargaAcademica.Rows(e.RowIndex).Cells("ID").Value)
 
-        ' Columna EDITAR
-        If e.ColumnIndex = dgvCargaAcademica.Columns("Editar").Index Then
+        ' EDITAR — usa el Name exacto de tu columna botón
+        If e.ColumnIndex = dgvCargaAcademica.Columns("colEditar").Index Then
             Dim modal As New frmNuevaAsignacion(idCarga)
             modal.ShowDialog(Me)
             CargarListado()
         End If
 
-        ' Columna ELIMINAR
-        If e.ColumnIndex = dgvCargaAcademica.Columns("Eliminar").Index Then
+        ' ELIMINAR — usa el Name exacto de tu columna botón
+        If e.ColumnIndex = dgvCargaAcademica.Columns("colEliminar").Index Then
             Dim resp As DialogResult = MessageBox.Show(
-                "¿Eliminar esta asignación?", "Confirmar",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            "¿Eliminar esta asignación?", "Confirmar",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If resp = DialogResult.Yes Then
                 Try
                     objLogica.EliminarCarga(idCarga)
                     MessageBox.Show("Asignación eliminada.", "Éxito",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBoxButtons.OK, MessageBoxIcon.Information)
                     CargarListado()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
