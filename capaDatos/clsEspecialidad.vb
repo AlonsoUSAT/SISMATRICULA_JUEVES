@@ -118,4 +118,29 @@ Public Class clsEspecialidad
             objConexion.desconectar()
         End Try
     End Sub
+
+    Public Function MostrarDocentesPorEspecialidad(id_especialidad As Integer) As DataTable
+        Dim tabla As New DataTable()
+        Try
+            objConexion.conectar()
+            Dim query As String =
+                "SELECT P.apePaterno + ' ' + P.nombre AS Docente, " &
+                "COUNT(CA.id_carga) AS Cargas, " &
+                "CASE WHEN D.estado = 1 THEN 'Activo' ELSE 'Inactivo' END AS Estado " &
+                "FROM DOCENTE D " &
+                "INNER JOIN PERSONA P ON D.id_persona = P.id_persona " &
+                "LEFT JOIN CARGA_ACADEMICA CA ON D.id_docente = CA.id_docente " &
+                "WHERE D.id_especialidad = @idEsp " &
+                "GROUP BY P.apePaterno, P.nombre, D.estado"
+            Dim cmd As New SqlCommand(query, objConexion.miConexion)
+            cmd.Parameters.AddWithValue("@idEsp", id_especialidad)
+            Dim adapter As New SqlDataAdapter(cmd)
+            adapter.Fill(tabla)
+        Catch ex As Exception
+            Throw New Exception("Error al cargar docentes: " & ex.Message)
+        Finally
+            objConexion.desconectar()
+        End Try
+        Return tabla
+    End Function
 End Class

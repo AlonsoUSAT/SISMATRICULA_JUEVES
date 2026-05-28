@@ -57,4 +57,12 @@ Public Class clEspecialidad
             Throw New Exception(ex.Message)
         End Try
     End Sub
+
+    Public Function MostrarDocentesPorEspecialidad(id_especialidad As Integer) As DataTable
+        Try
+            Return objCapaDatos.MostrarDocentesPorEspecialidad(id_especialidad)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
 End Class

@@ -11,32 +11,29 @@ Public Class frmConsultaEspecialidad
     End Sub
 
     Private Sub EstilizarTarjetas()
-        ' Panel contenedor de las 3 tarjetas
-        pnlTotal.BackColor = Color.White
-        pnlVigentes.BackColor = Color.White
-        pnlBajas.BackColor = Color.White
+        ' Barra izquierda roja - Total
+        Dim b1 As New Label()
+        b1.Size = New Size(4, pnlTotal.Height)
+        b1.BackColor = Color.FromArgb(139, 0, 0)
+        b1.Location = New Point(0, 0)
+        pnlTotal.Controls.Add(b1)
+        b1.BringToFront()
 
-        ' Borde izquierdo de color como acento visual
-        ' Total — azul oscuro
-        Dim lblLineaTotal As New Label()
-        lblLineaTotal.Size = New Size(4, pnlTotal.Height)
-        lblLineaTotal.BackColor = Color.FromArgb(139, 0, 0)
-        lblLineaTotal.Location = New Point(0, 0)
-        pnlTotal.Controls.Add(lblLineaTotal)
+        ' Barra izquierda verde - Vigentes
+        Dim b2 As New Label()
+        b2.Size = New Size(4, pnlVigentes.Height)
+        b2.BackColor = Color.FromArgb(26, 122, 74)
+        b2.Location = New Point(0, 0)
+        pnlVigentes.Controls.Add(b2)
+        b2.BringToFront()
 
-        ' Vigentes — verde
-        Dim lblLineaVig As New Label()
-        lblLineaVig.Size = New Size(4, pnlVigentes.Height)
-        lblLineaVig.BackColor = Color.FromArgb(26, 122, 74)
-        lblLineaVig.Location = New Point(0, 0)
-        pnlVigentes.Controls.Add(lblLineaVig)
-
-        ' Bajas — rojo
-        Dim lblLineaBaja As New Label()
-        lblLineaBaja.Size = New Size(4, pnlBajas.Height)
-        lblLineaBaja.BackColor = Color.FromArgb(153, 27, 27)
-        lblLineaBaja.Location = New Point(0, 0)
-        pnlBajas.Controls.Add(lblLineaBaja)
+        ' Barra izquierda roja oscuro - Bajas
+        Dim b3 As New Label()
+        b3.Size = New Size(4, pnlBajas.Height)
+        b3.BackColor = Color.FromArgb(153, 27, 27)
+        b3.Location = New Point(0, 0)
+        pnlBajas.Controls.Add(b3)
+        b3.BringToFront()
     End Sub
 
     Private Sub CargarFiltro()
@@ -49,12 +46,11 @@ Public Class frmConsultaEspecialidad
 
     Private Sub CargarResumen()
         Try
-            Dim total As Integer = objLogica.ContarPorEstado(1) + objLogica.ContarPorEstado(0)
             Dim vigentes As Integer = objLogica.ContarPorEstado(1)
             Dim bajas As Integer = objLogica.ContarPorEstado(0)
-            lblTotal.Text = total.ToString()
-            lblVigentes.Text = vigentes.ToString()
-            lblBajas.Text = bajas.ToString()
+            lblTotall.Text = (vigentes + bajas).ToString()
+            lblVigente.Text = vigentes.ToString()
+            lblBaja.Text = bajas.ToString()
         Catch ex As Exception
             MessageBox.Show("Error al cargar resumen: " & ex.Message)
         End Try
@@ -64,7 +60,11 @@ Public Class frmConsultaEspecialidad
         Try
             Dim dt As DataTable = objLogica.MostrarEspecialidades()
             dgvEspecialidades.DataSource = dt
-            lblContador.Text = "Mostrando " & dt.Rows.Count.ToString() & " especialidad(es)"
+            lblContar.Text = "Mostrando " & dt.Rows.Count.ToString() & " especialidad(es)"
+            ' Limpiar detalle al recargar
+            dgvDocentes.DataSource = Nothing
+            lblEspSeleccionada.Text = "— Selecciona una especialidad —"
+            lblContadorDocentes.Text = ""
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
@@ -84,9 +84,34 @@ Public Class frmConsultaEspecialidad
                     dt = objLogica.MostrarEspecialidades()
             End Select
             dgvEspecialidades.DataSource = dt
-            lblContador.Text = "Mostrando " & dt.Rows.Count.ToString() & " especialidad(es)"
+            lblContar.Text = "Mostrando " & dt.Rows.Count.ToString() & " especialidad(es)"
+            dgvDocentes.DataSource = Nothing
+            lblEspSeleccionada.Text = "— Selecciona una especialidad —"
+            lblContadorDocentes.Text = ""
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
+    End Sub
+
+    Private Sub dgvEspecialidades_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEspecialidades.CellClick
+        If e.RowIndex < 0 Then Return
+
+        Dim fila As DataGridViewRow = dgvEspecialidades.Rows(e.RowIndex)
+        Dim idEsp As Integer = Convert.ToInt32(fila.Cells("ID").Value)
+        Dim nombreEsp As String = fila.Cells("Nombre").Value.ToString()
+
+        lblEspSeleccionada.Text = "Especialidad: " & nombreEsp
+
+        Try
+            Dim dt As DataTable = objLogica.MostrarDocentesPorEspecialidad(idEsp)
+            dgvDocentes.DataSource = dt
+            lblContadorDocentes.Text = dt.Rows.Count.ToString() & " docente(s)"
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar docentes: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
     End Sub
 End Class
