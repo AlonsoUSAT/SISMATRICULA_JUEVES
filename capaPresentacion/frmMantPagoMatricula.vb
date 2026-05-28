@@ -93,9 +93,9 @@ Public Class frmMantPagoMatricula
             Dim fila As DataGridViewRow = dgvAnos.Rows(e.RowIndex)
 
             txtCodigo.Text = fila.Cells("id_pagoMatricula").Value.ToString()
-            dtpFechaInicio.Value = Convert.ToDateTime(fila.Cells("fechaPago").Value)
+            dtpFechaInicio.Value = Convert.ToDateTime(fila.Cells("fechaEmision").Value)
             txtCodigoOperativo.Text = fila.Cells("codigoOperativo").Value.ToString()
-            txtMonto.Text = fila.Cells("monto").Value.ToString()
+            txtMonto.Text = fila.Cells("montoTotal").Value.ToString()
             txtNumeroReferencia.Text = fila.Cells("numeroReferencia").Value.ToString()
             chkEstado.Checked = Convert.ToBoolean(fila.Cells("estado").Value)
         End If

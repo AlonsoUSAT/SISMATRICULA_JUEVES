@@ -8,7 +8,7 @@ Public Class clsDatPagoMatricula
         Dim dt As New DataTable()
         Try
             objConexion.conectar()
-            Dim query As String = "SELECT id_pagoMatricula, fechaPago, codigoOperativo, monto, numeroReferencia, estado FROM PAGO_MATRICULA WHERE estado = 1"
+            Dim query As String = "SELECT id_pagoMatricula, fechaEmision, codigoOperativo, montoTotal, numeroReferencia, estado FROM PAGO_MATRICULA WHERE estado = 1"
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.CommandType = CommandType.Text
             Dim da As New SqlDataAdapter(cmd)
@@ -25,7 +25,7 @@ Public Class clsDatPagoMatricula
     Public Function InsertarPago(fechaPago As Date, codOperativo As String, monto As Integer, numReferencia As Integer) As Boolean
         Try
             objConexion.conectar()
-            Dim query As String = "INSERT INTO PAGO_MATRICULA (fechaPago, codigoOperativo, monto, numeroReferencia, estado) VALUES (@fechaPago, @codOperativo, @monto, @numReferencia, 1)"
+            Dim query As String = "INSERT INTO PAGO_MATRICULA (fechaEmision, codigoOperativo, montoTotal, numeroReferencia, estado) VALUES (@fechaPago, @codOperativo, @monto, @numReferencia, 1)"
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.CommandType = CommandType.Text
             cmd.Parameters.AddWithValue("@fechaPago", fechaPago)
@@ -46,7 +46,7 @@ Public Class clsDatPagoMatricula
     Public Function ActualizarPago(id As Integer, fechaPago As Date, codOperativo As String, monto As Integer, numReferencia As Integer, estado As Boolean) As Boolean
         Try
             objConexion.conectar()
-            Dim query As String = "UPDATE PAGO_MATRICULA SET fechaPago = @fechaPago, codigoOperativo = @codOperativo, monto = @monto, numeroReferencia = @numReferencia, estado = @estado WHERE id_pagoMatricula = @id"
+            Dim query As String = "UPDATE PAGO_MATRICULA SET fechaEmision=@fechaPago, codigoOperativo=@codOperativo, montoTotal=@monto, numeroReferencia=@numReferencia, estado=@estado WHERE id_pagoMatricula = @id"
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.CommandType = CommandType.Text
             cmd.Parameters.AddWithValue("@id", id)
