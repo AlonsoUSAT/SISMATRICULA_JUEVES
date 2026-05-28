@@ -82,15 +82,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="clsApertura.vb" />
     <Compile Include="clsCargaAcademica.vb" />
     <Compile Include="clsConectaBD.vb" />
     <Compile Include="clsConsultaDocente.vb" />
     <Compile Include="clsConsultaEstudiante.vb" />
     <Compile Include="clsCurso.vb" />
+    <Compile Include="clsCursoGrado.vb" />
     <Compile Include="clsDatAnoAcademico.vb" />
+    <Compile Include="clsDatBecas.vb" />
+    <Compile Include="clsDatConsultaMatriculas.vb" />
+    <Compile Include="clsDatGenerarOrdenPago.vb" />
+    <Compile Include="clsDatHistorial.vb" />
+    <Compile Include="clsDatMantMatricula.vb" />
     <Compile Include="clsDatMatricula.vb" />
     <Compile Include="clsDatPagoMatricula.vb" />
     <Compile Include="clsDatPlanEstudio.vb" />
+    <Compile Include="clsDatProcesarMatricula.vb" />
+    <Compile Include="clsDatReportes.vb" />
+    <Compile Include="clsDatTipoBeca.vb" />
     <Compile Include="clsDatUsuario.vb" />
     <Compile Include="clsEspecialidad.vb" />
     <Compile Include="clsMantenimiento.vb" />

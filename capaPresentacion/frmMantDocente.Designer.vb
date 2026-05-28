@@ -48,8 +48,8 @@ Partial Class frmMantDocente
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtEspecialidad = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cboEspecialidad = New System.Windows.Forms.ComboBox()
         CType(Me.dgvDocente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -60,21 +60,19 @@ Partial Class frmMantDocente
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(16, 464)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(12, 377)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(157, 20)
+        Me.Label7.Size = New System.Drawing.Size(128, 16)
         Me.Label7.TabIndex = 51
         Me.Label7.Text = "Listado Docentes"
         '
         'dgvDocente
         '
         Me.dgvDocente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDocente.Location = New System.Drawing.Point(15, 488)
-        Me.dgvDocente.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvDocente.Location = New System.Drawing.Point(11, 396)
         Me.dgvDocente.Name = "dgvDocente"
         Me.dgvDocente.RowHeadersWidth = 51
-        Me.dgvDocente.Size = New System.Drawing.Size(851, 212)
+        Me.dgvDocente.Size = New System.Drawing.Size(638, 172)
         Me.dgvDocente.TabIndex = 50
         '
         'Panel2
@@ -85,10 +83,9 @@ Partial Class frmMantDocente
         Me.Panel2.Controls.Add(Me.btnModificar)
         Me.Panel2.Controls.Add(Me.btnEliminar)
         Me.Panel2.Controls.Add(Me.btnNuevo)
-        Me.Panel2.Location = New System.Drawing.Point(556, 74)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Location = New System.Drawing.Point(417, 60)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(310, 405)
+        Me.Panel2.Size = New System.Drawing.Size(232, 329)
         Me.Panel2.TabIndex = 35
         '
         'btnGuardar
@@ -96,10 +93,9 @@ Partial Class frmMantDocente
         Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.Image = Global.capaPresentacion.My.Resources.Resources.guardar_usuario
-        Me.btnGuardar.Location = New System.Drawing.Point(49, 90)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGuardar.Location = New System.Drawing.Point(37, 73)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(214, 59)
+        Me.btnGuardar.Size = New System.Drawing.Size(160, 48)
         Me.btnGuardar.TabIndex = 4
         Me.btnGuardar.Text = "GUARDAR"
         Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -110,10 +106,9 @@ Partial Class frmMantDocente
         Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDarBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDarBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
-        Me.btnDarBaja.Location = New System.Drawing.Point(49, 247)
-        Me.btnDarBaja.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnDarBaja.Location = New System.Drawing.Point(37, 201)
         Me.btnDarBaja.Name = "btnDarBaja"
-        Me.btnDarBaja.Size = New System.Drawing.Size(214, 59)
+        Me.btnDarBaja.Size = New System.Drawing.Size(160, 48)
         Me.btnDarBaja.TabIndex = 3
         Me.btnDarBaja.Text = "DAR DE BAJA"
         Me.btnDarBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -124,10 +119,9 @@ Partial Class frmMantDocente
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificar.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
-        Me.btnModificar.Location = New System.Drawing.Point(49, 173)
-        Me.btnModificar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnModificar.Location = New System.Drawing.Point(37, 141)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(214, 59)
+        Me.btnModificar.Size = New System.Drawing.Size(160, 48)
         Me.btnModificar.TabIndex = 2
         Me.btnModificar.Text = "ACTUALIZAR"
         Me.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -138,10 +132,9 @@ Partial Class frmMantDocente
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
-        Me.btnEliminar.Location = New System.Drawing.Point(49, 317)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEliminar.Location = New System.Drawing.Point(37, 258)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(214, 59)
+        Me.btnEliminar.Size = New System.Drawing.Size(160, 48)
         Me.btnEliminar.TabIndex = 1
         Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -153,10 +146,9 @@ Partial Class frmMantDocente
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnNuevo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
-        Me.btnNuevo.Location = New System.Drawing.Point(49, 13)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnNuevo.Location = New System.Drawing.Point(37, 11)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(214, 59)
+        Me.btnNuevo.Size = New System.Drawing.Size(160, 48)
         Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "NUEVO"
         Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -166,10 +158,9 @@ Partial Class frmMantDocente
         '
         Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtCorreo.Location = New System.Drawing.Point(194, 315)
-        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCorreo.Location = New System.Drawing.Point(146, 256)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(264, 30)
+        Me.txtCorreo.Size = New System.Drawing.Size(199, 26)
         Me.txtCorreo.TabIndex = 49
         '
         'Label6
@@ -178,10 +169,9 @@ Partial Class frmMantDocente
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(11, 317)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(8, 258)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(155, 23)
+        Me.Label6.Size = New System.Drawing.Size(124, 19)
         Me.Label6.TabIndex = 48
         Me.Label6.Text = "Correo electrónico:"
         '
@@ -189,10 +179,9 @@ Partial Class frmMantDocente
         '
         Me.txtNumDoc.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumDoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtNumDoc.Location = New System.Drawing.Point(194, 30)
-        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNumDoc.Location = New System.Drawing.Point(146, 24)
         Me.txtNumDoc.Name = "txtNumDoc"
-        Me.txtNumDoc.Size = New System.Drawing.Size(264, 30)
+        Me.txtNumDoc.Size = New System.Drawing.Size(199, 26)
         Me.txtNumDoc.TabIndex = 47
         '
         'Label8
@@ -201,10 +190,9 @@ Partial Class frmMantDocente
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label8.Location = New System.Drawing.Point(11, 31)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(8, 25)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(170, 23)
+        Me.Label8.Size = New System.Drawing.Size(136, 19)
         Me.Label8.TabIndex = 46
         Me.Label8.Text = "Numero documento:"
         '
@@ -214,10 +202,9 @@ Partial Class frmMantDocente
         Me.cboSexo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.cboSexo.FormattingEnabled = True
         Me.cboSexo.Items.AddRange(New Object() {"MASCULINO", "FEMENINO"})
-        Me.cboSexo.Location = New System.Drawing.Point(194, 216)
-        Me.cboSexo.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboSexo.Location = New System.Drawing.Point(146, 176)
         Me.cboSexo.Name = "cboSexo"
-        Me.cboSexo.Size = New System.Drawing.Size(264, 31)
+        Me.cboSexo.Size = New System.Drawing.Size(199, 27)
         Me.cboSexo.TabIndex = 45
         '
         'Label9
@@ -226,10 +213,9 @@ Partial Class frmMantDocente
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(11, 217)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(8, 176)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(50, 23)
+        Me.Label9.Size = New System.Drawing.Size(40, 19)
         Me.Label9.TabIndex = 44
         Me.Label9.Text = "Sexo:"
         '
@@ -237,10 +223,9 @@ Partial Class frmMantDocente
         '
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelefono.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtTelefono.Location = New System.Drawing.Point(194, 264)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTelefono.Location = New System.Drawing.Point(146, 214)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(264, 30)
+        Me.txtTelefono.Size = New System.Drawing.Size(199, 26)
         Me.txtTelefono.TabIndex = 43
         '
         'Label5
@@ -249,10 +234,9 @@ Partial Class frmMantDocente
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(11, 264)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(8, 214)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(114, 23)
+        Me.Label5.Size = New System.Drawing.Size(91, 19)
         Me.Label5.TabIndex = 42
         Me.Label5.Text = "N° Telefónico:"
         '
@@ -260,20 +244,18 @@ Partial Class frmMantDocente
         '
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtNombre.Location = New System.Drawing.Point(192, 78)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.Location = New System.Drawing.Point(144, 63)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(264, 30)
+        Me.txtNombre.Size = New System.Drawing.Size(199, 26)
         Me.txtNombre.TabIndex = 41
         '
         'txtMaterno
         '
         Me.txtMaterno.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMaterno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtMaterno.Location = New System.Drawing.Point(192, 168)
-        Me.txtMaterno.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMaterno.Location = New System.Drawing.Point(144, 136)
         Me.txtMaterno.Name = "txtMaterno"
-        Me.txtMaterno.Size = New System.Drawing.Size(264, 30)
+        Me.txtMaterno.Size = New System.Drawing.Size(199, 26)
         Me.txtMaterno.TabIndex = 40
         '
         'Label4
@@ -282,10 +264,9 @@ Partial Class frmMantDocente
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(11, 76)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(8, 62)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 23)
+        Me.Label4.Size = New System.Drawing.Size(68, 19)
         Me.Label4.TabIndex = 39
         Me.Label4.Text = "Nombres:"
         '
@@ -295,10 +276,9 @@ Partial Class frmMantDocente
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(7, 168)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(5, 136)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(146, 23)
+        Me.Label3.Size = New System.Drawing.Size(117, 19)
         Me.Label3.TabIndex = 38
         Me.Label3.Text = "Apellido materno:"
         '
@@ -308,10 +288,9 @@ Partial Class frmMantDocente
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(7, 122)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(5, 99)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(141, 23)
+        Me.Label2.Size = New System.Drawing.Size(113, 19)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "Apellido paterno:"
         '
@@ -319,20 +298,18 @@ Partial Class frmMantDocente
         '
         Me.txtPaterno.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPaterno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtPaterno.Location = New System.Drawing.Point(190, 123)
-        Me.txtPaterno.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPaterno.Location = New System.Drawing.Point(142, 100)
         Me.txtPaterno.Name = "txtPaterno"
-        Me.txtPaterno.Size = New System.Drawing.Size(264, 30)
+        Me.txtPaterno.Size = New System.Drawing.Size(199, 26)
         Me.txtPaterno.TabIndex = 36
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(-7, -1)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(-5, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1067, 68)
+        Me.Panel1.Size = New System.Drawing.Size(800, 55)
         Me.Panel1.TabIndex = 34
         '
         'Label1
@@ -340,10 +317,9 @@ Partial Class frmMantDocente
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(16, 14)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(251, 31)
+        Me.Label1.Size = New System.Drawing.Size(202, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Registrar Docente"
         '
@@ -353,26 +329,15 @@ Partial Class frmMantDocente
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(11, 358)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(8, 291)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(107, 23)
+        Me.Label10.Size = New System.Drawing.Size(85, 19)
         Me.Label10.TabIndex = 52
         Me.Label10.Text = "Especialidad:"
         '
-        'txtEspecialidad
-        '
-        Me.txtEspecialidad.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspecialidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtEspecialidad.Location = New System.Drawing.Point(194, 358)
-        Me.txtEspecialidad.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtEspecialidad.Name = "txtEspecialidad"
-        Me.txtEspecialidad.Size = New System.Drawing.Size(264, 30)
-        Me.txtEspecialidad.TabIndex = 53
-        '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtEspecialidad)
+        Me.GroupBox1.Controls.Add(Me.cboEspecialidad)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtCorreo)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -390,26 +355,35 @@ Partial Class frmMantDocente
         Me.GroupBox1.Controls.Add(Me.txtPaterno)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 74)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 60)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(504, 406)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(378, 330)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Docente"
         '
+        'cboEspecialidad
+        '
+        Me.cboEspecialidad.FormattingEnabled = True
+        Me.cboEspecialidad.Location = New System.Drawing.Point(146, 291)
+        Me.cboEspecialidad.Name = "cboEspecialidad"
+        Me.cboEspecialidad.Size = New System.Drawing.Size(199, 28)
+        Me.cboEspecialidad.TabIndex = 53
+        '
         'frmMantDocente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(878, 713)
+        Me.ClientSize = New System.Drawing.Size(658, 579)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.dgvDocente)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMantDocente"
         Me.Text = "Mantenimiento Docente"
         CType(Me.dgvDocente, System.ComponentModel.ISupportInitialize).EndInit()
@@ -448,6 +422,6 @@ Partial Class frmMantDocente
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents txtEspecialidad As TextBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents cboEspecialidad As ComboBox
 End Class

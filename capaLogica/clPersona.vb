@@ -158,20 +158,28 @@ Public Class clPersona
         End Try
     End Function
 
-    ' 2. Insertar / Registrar Docente
-    Public Sub InsertarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, especialidad As String)
+    Public Function ListarEspecialidades() As DataTable
         Try
-            ' Aquí podrías validar reglas de negocio (ej. que el documento tenga 8 dígitos)
-            objCapaDatos.RegistrarDocente(apeMaterno, apePaterno, nombre, telefono, correo, sexo, num_doc, especialidad)
+            ' Asumiendo que tu objeto de datos se llama objCapaDatos
+            Return objCapaDatos.ListarEspecialidades()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    ' 2. Insertar / Registrar Docente
+    Public Sub InsertarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, id_especialidad As Integer)
+        Try
+            objCapaDatos.RegistrarDocente(apeMaterno, apePaterno, nombre, telefono, correo, sexo, num_doc, id_especialidad)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Sub
 
     ' 3. Editar Docente
-    Public Sub EditarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, especialidad As String)
+    Public Sub EditarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, id_especialidad As Integer)
         Try
-            objCapaDatos.EditarDocente(apeMaterno, apePaterno, nombre, telefono, correo, sexo, num_doc, especialidad)
+            objCapaDatos.EditarDocente(apeMaterno, apePaterno, nombre, telefono, correo, sexo, num_doc, id_especialidad)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

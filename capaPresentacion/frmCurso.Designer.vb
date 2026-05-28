@@ -48,6 +48,11 @@ Partial Class frmCurso
         Me.txtBuscarNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnSafe = New System.Windows.Forms.Button()
+        Me.btnBaja = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -149,7 +154,7 @@ Partial Class frmCurso
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(44, 210)
+        Me.Label9.Location = New System.Drawing.Point(26, 213)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(194, 20)
         Me.Label9.TabIndex = 44
@@ -161,7 +166,7 @@ Partial Class frmCurso
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(44, 249)
+        Me.Label5.Location = New System.Drawing.Point(27, 251)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(57, 20)
         Me.Label5.TabIndex = 42
@@ -193,7 +198,7 @@ Partial Class frmCurso
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(44, 98)
+        Me.Label2.Location = New System.Drawing.Point(27, 98)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(90, 20)
         Me.Label2.TabIndex = 37
@@ -215,7 +220,7 @@ Partial Class frmCurso
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(44, 63)
+        Me.Label4.Location = New System.Drawing.Point(27, 63)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(131, 20)
         Me.Label4.TabIndex = 39
@@ -224,6 +229,11 @@ Partial Class frmCurso
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.btnSafe)
+        Me.GroupBox1.Controls.Add(Me.btnBaja)
+        Me.GroupBox1.Controls.Add(Me.btnUpdate)
+        Me.GroupBox1.Controls.Add(Me.btnDelete)
+        Me.GroupBox1.Controls.Add(Me.btnNew)
         Me.GroupBox1.Controls.Add(Me.chkVigente)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txtDescripcion)
@@ -238,7 +248,7 @@ Partial Class frmCurso
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(10, 69)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(502, 381)
+        Me.GroupBox1.Size = New System.Drawing.Size(502, 453)
         Me.GroupBox1.TabIndex = 51
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del curso"
@@ -272,7 +282,7 @@ Partial Class frmCurso
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(44, 292)
+        Me.Label6.Location = New System.Drawing.Point(27, 294)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(27, 20)
         Me.Label6.TabIndex = 48
@@ -289,7 +299,7 @@ Partial Class frmCurso
         Me.GroupBox2.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox2.Location = New System.Drawing.Point(525, 69)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(588, 381)
+        Me.GroupBox2.Size = New System.Drawing.Size(588, 453)
         Me.GroupBox2.TabIndex = 52
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Listado de cursos existentes"
@@ -300,7 +310,7 @@ Partial Class frmCurso
         Me.dgvCursos.Location = New System.Drawing.Point(21, 93)
         Me.dgvCursos.Name = "dgvCursos"
         Me.dgvCursos.RowHeadersWidth = 51
-        Me.dgvCursos.Size = New System.Drawing.Size(550, 270)
+        Me.dgvCursos.Size = New System.Drawing.Size(550, 343)
         Me.dgvCursos.TabIndex = 44
         '
         'btnFiltrar
@@ -342,16 +352,82 @@ Partial Class frmCurso
         '
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.White
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(-4, 49)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1135, 437)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1135, 486)
         Me.FlowLayoutPanel1.TabIndex = 53
+        '
+        'btnSafe
+        '
+        Me.btnSafe.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnSafe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSafe.Image = Global.capaPresentacion.My.Resources.Resources.guardar_usuario
+        Me.btnSafe.Location = New System.Drawing.Point(174, 344)
+        Me.btnSafe.Name = "btnSafe"
+        Me.btnSafe.Size = New System.Drawing.Size(131, 38)
+        Me.btnSafe.TabIndex = 55
+        Me.btnSafe.Text = "GUARDAR"
+        Me.btnSafe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnSafe.UseVisualStyleBackColor = False
+        '
+        'btnBaja
+        '
+        Me.btnBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
+        Me.btnBaja.Location = New System.Drawing.Point(76, 399)
+        Me.btnBaja.Name = "btnBaja"
+        Me.btnBaja.Size = New System.Drawing.Size(144, 37)
+        Me.btnBaja.TabIndex = 54
+        Me.btnBaja.Text = "DAR DE BAJA"
+        Me.btnBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnBaja.UseVisualStyleBackColor = False
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
+        Me.btnUpdate.Location = New System.Drawing.Point(323, 344)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(141, 38)
+        Me.btnUpdate.TabIndex = 53
+        Me.btnUpdate.Text = "ACTUALIZAR"
+        Me.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnUpdate.UseVisualStyleBackColor = False
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
+        Me.btnDelete.Location = New System.Drawing.Point(259, 399)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(141, 37)
+        Me.btnDelete.TabIndex = 52
+        Me.btnDelete.Text = "ELIMINAR"
+        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
+        'btnNew
+        '
+        Me.btnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNew.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
+        Me.btnNew.Location = New System.Drawing.Point(31, 344)
+        Me.btnNew.Name = "btnNew"
+        Me.btnNew.Size = New System.Drawing.Size(131, 38)
+        Me.btnNew.TabIndex = 51
+        Me.btnNew.Text = "NUEVO"
+        Me.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnNew.UseVisualStyleBackColor = False
         '
         'frmCurso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1132, 482)
+        Me.ClientSize = New System.Drawing.Size(1132, 534)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -396,4 +472,9 @@ Partial Class frmCurso
 	Friend WithEvents txtID As TextBox
 	Friend WithEvents Label6 As Label
 	Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents btnSafe As Button
+    Friend WithEvents btnBaja As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnNew As Button
 End Class

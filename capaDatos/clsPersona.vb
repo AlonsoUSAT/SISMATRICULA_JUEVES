@@ -254,10 +254,11 @@ Public Class clsPersona
             ' INNER JOIN para traer los datos de la persona junto con su especialidad y estado
             Dim query As String = "SELECT P.apePaterno + ' ' + P.apeMaterno as Apellidos, P.nombre as Nombres, " &
                                   "P.num_doc as Numero_Documento, P.telefono as Telefono, " &
-                                  "D.especialidad as Especialidad, P.correo as Correo, " &
+                                  "E.nombre as Especialidad, P.correo as Correo, " &
                                   "P.sexo as Sexo, D.estado as Estado " &
                                   "FROM PERSONA P " &
                                   "INNER JOIN DOCENTE D ON P.id_persona = D.id_persona " &
+                                  "INNER JOIN Especialidad E ON D.id_especialidad = E.id_especialidad " &
                                   "WHERE P.tipo = 'DOCENTE'"
             Dim adapter As New SqlClient.SqlDataAdapter(query, objConexion.miConexion)
             adapter.Fill(tabla)
@@ -269,17 +270,17 @@ Public Class clsPersona
         Return tabla
     End Function
 
-    Public Sub RegistrarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, especialidad As String)
+    Public Sub RegistrarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, id_especialidad As Integer)
         Try
             objConexion.conectar()
 
             ' El súper script: Inserta en PERSONA, captura el ID, y al instante lo inserta en DOCENTE
             Dim query As String = "DECLARE @id_nueva_persona INT; " &
-                                  "INSERT INTO persona (apeMaterno, apePaterno, nombre, telefono, correo, vigencia, tipo, id_tipoDocumento, sexo, num_doc) " &
-                                  "VALUES (@apeMaterno, @apePaterno, @nombre, @telefono, @correo, 1, 'DOCENTE', 1, @sexo, @num_doc); " &
-                                  "SET @id_nueva_persona = SCOPE_IDENTITY(); " &
-                                  "INSERT INTO DOCENTE (especialidad, estado, id_persona) " &
-                                  "VALUES (@especialidad, 1, @id_nueva_persona);"
+                              "INSERT INTO persona (apeMaterno, apePaterno, nombre, telefono, correo, vigencia, tipo, id_tipoDocumento, sexo, num_doc) " &
+                              "VALUES (@apeMaterno, @apePaterno, @nombre, @telefono, @correo, 1, 'DOCENTE', 1, @sexo, @num_doc); " &
+                              "SET @id_nueva_persona = SCOPE_IDENTITY(); " &
+                              "INSERT INTO DOCENTE (id_especialidad, estado, id_persona) " &
+                              "VALUES (@id_esp, 1, @id_nueva_persona);"
 
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@apeMaterno", apeMaterno)
@@ -289,8 +290,7 @@ Public Class clsPersona
             cmd.Parameters.AddWithValue("@correo", correo)
             cmd.Parameters.AddWithValue("@sexo", sexo)
             cmd.Parameters.AddWithValue("@num_doc", num_doc)
-            ' El parámetro propio del docente:
-            cmd.Parameters.AddWithValue("@especialidad", especialidad)
+            cmd.Parameters.AddWithValue("@id_esp", id_especialidad)
 
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -300,13 +300,13 @@ Public Class clsPersona
         End Try
     End Sub
 
-    Public Sub EditarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, especialidad As String)
+    Public Sub EditarDocente(apeMaterno As String, apePaterno As String, nombre As String, telefono As String, correo As String, sexo As String, num_doc As String, id_especialidad As Integer)
         Try
             objConexion.conectar()
 
             ' Súper script que actualiza PERSONA y también busca al DOCENTE para actualizarle su especialidad
             Dim query As String = "UPDATE PERSONA SET apeMaterno=@apeM, apePaterno=@apeP, nombre=@nom, telefono=@tel, correo=@cor, sexo=@sex WHERE num_doc=@doc; " &
-                                  "UPDATE D SET D.especialidad = @esp FROM DOCENTE D INNER JOIN PERSONA P ON D.id_persona = P.id_persona WHERE P.num_doc=@doc;"
+                                  "UPDATE D SET D.id_especialidad = @id_esp FROM DOCENTE D INNER JOIN PERSONA P ON D.id_persona = P.id_persona WHERE P.num_doc=@doc;"
 
             Dim cmd As New System.Data.SqlClient.SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@apeM", apeMaterno)
@@ -316,9 +316,8 @@ Public Class clsPersona
             cmd.Parameters.AddWithValue("@cor", correo)
             cmd.Parameters.AddWithValue("@sex", sexo)
             cmd.Parameters.AddWithValue("@doc", num_doc)
+            cmd.Parameters.AddWithValue("@id_esp", id_especialidad)
 
-            ' El parámetro propio del docente
-            cmd.Parameters.AddWithValue("@esp", especialidad)
 
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -356,6 +355,7 @@ Public Class clsPersona
             Dim query As String = "UPDATE D SET D.estado = 0 " &
                                   "FROM DOCENTE D INNER JOIN PERSONA P ON D.id_persona = P.id_persona " &
                                   "WHERE P.num_doc = @doc"
+
             Dim cmd As New System.Data.SqlClient.SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@doc", num_doc)
             cmd.ExecuteNonQuery()
@@ -387,16 +387,34 @@ Public Class clsPersona
         Dim tabla As New DataTable()
         Try
             objConexion.conectar()
+            ' Se agregó el INNER JOIN para obtener el nombre de la especialidad si se busca un DNI en específico
             Dim query As String = "SELECT D.id_docente, P.nombre, P.apePaterno, P.apeMaterno, " &
-                                  "P.telefono, P.correo, D.especialidad, D.estado " &
-                                  "FROM PERSONA P INNER JOIN DOCENTE D ON P.id_persona = D.id_persona " &
-                                  "WHERE P.num_doc = @doc AND P.tipo = 'DOCENTE'"
+                              "P.telefono, P.correo, E.nombre as Especialidad, D.estado " &
+                              "FROM PERSONA P INNER JOIN DOCENTE D ON P.id_persona = D.id_persona " &
+                              "INNER JOIN Especialidad E ON D.id_especialidad = E.id_especialidad " &
+                              "WHERE P.num_doc = @doc AND P.tipo = 'DOCENTE'"
             Dim cmd As New System.Data.SqlClient.SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@doc", num_doc)
             Dim adapter As New SqlClient.SqlDataAdapter(cmd)
             adapter.Fill(tabla)
         Catch ex As Exception
             Throw New Exception("Error al buscar docente: " & ex.Message)
+        Finally
+            objConexion.desconectar()
+        End Try
+        Return tabla
+    End Function
+
+    Public Function ListarEspecialidades() As DataTable
+        Dim tabla As New DataTable()
+        Try
+            objConexion.conectar()
+            ' Ajusta el nombre de la tabla si es necesario (ej: ESPECIALIDAD)
+            Dim query As String = "SELECT id_especialidad, nombre FROM Especialidad WHERE estado = 1"
+            Dim adapter As New SqlClient.SqlDataAdapter(query, objConexion.miConexion)
+            adapter.Fill(tabla)
+        Catch ex As Exception
+            Throw New Exception("Error en Datos al listar especialidades: " & ex.Message)
         Finally
             objConexion.desconectar()
         End Try

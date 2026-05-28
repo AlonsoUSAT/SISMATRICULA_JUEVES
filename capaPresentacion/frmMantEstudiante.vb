@@ -56,32 +56,31 @@ Public Class frmMantEstudiante
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        ' 1. Validar vacíos (cambiamos a cboTipoEstudiante)
+        ' 1. Validar vacíos
         If txtNombre.Text = "" Or txtPaterno.Text = "" Or txtMaterno.Text = "" Or txtNumDoc.Text = "" Or cboTipoEstudiante.Text = "" Then
             MessageBox.Show("Por favor, complete los campos obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
         Try
-            ' 2. Capturar datos
-            Dim nombres As String = txtNombre.Text.Trim()
-            Dim apePaterno As String = txtPaterno.Text.Trim()
-            Dim apeMaterno As String = txtMaterno.Text.Trim()
-            Dim numDoc As String = txtNumDoc.Text.Trim()
+            ' 2. Capturar datos y forzar la estandarización a MAYÚSCULAS 🌟
+            Dim nombres As String = txtNombre.Text.Trim().ToUpper()
+            Dim apePaterno As String = txtPaterno.Text.Trim().ToUpper()
+            Dim apeMaterno As String = txtMaterno.Text.Trim().ToUpper()
+            Dim numDoc As String = txtNumDoc.Text.Trim() ' Los números no llevan ToUpper
             Dim telefono As String = txtTelefono.Text.Trim()
-            Dim correo As String = txtCorreo.Text.Trim()
+            Dim correo As String = txtCorreo.Text.Trim().ToUpper() ' Correos estandarizados
 
             Dim sexo As String = ""
             If cboSexo.Text.ToUpper() = "MASCULINO" Then sexo = "M"
             If cboSexo.Text.ToUpper() = "FEMENINO" Then sexo = "F"
 
-            ' AHORA SÍ: Variable con el nombre correcto
             Dim tipoEstudiante As String = cboTipoEstudiante.Text.Trim().ToUpper() ' "REGULAR" o "BECADO"
 
-            ' El apoderado temporal para que no nos de error de SQL
+            ' El apoderado temporal para que no de error de SQL
             Dim idApoderadoTemporal As Integer = 1
 
-            ' 3. Enviar a la capa lógica usando el nombre correcto
+            ' 3. Enviar a la capa lógica (Viaja 100% en Mayúsculas a la BD)
             objLogicaPersona.InsertarEstudiante(apeMaterno, apePaterno, nombres, telefono, correo, sexo, numDoc, tipoEstudiante, idApoderadoTemporal)
 
             ' 4. Confirmación
@@ -103,8 +102,15 @@ Public Class frmMantEstudiante
 
                 Dim tipoEstudiante As String = cboTipoEstudiante.Text.Trim().ToUpper()
 
-                ' Llamamos al nuevo método exclusivo de estudiantes
-                objLogicaPersona.EditarEstudiante(txtMaterno.Text.Trim(), txtPaterno.Text.Trim(), txtNombre.Text.Trim(), txtTelefono.Text.Trim(), txtCorreo.Text.Trim(), sexo, txtNumDoc.Text.Trim(), tipoEstudiante)
+                ' 🌟 Forzamos .ToUpper() directo en los parámetros del método Editar
+                objLogicaPersona.EditarEstudiante(txtMaterno.Text.Trim().ToUpper(),
+                                                 txtPaterno.Text.Trim().ToUpper(),
+                                                 txtNombre.Text.Trim().ToUpper(),
+                                                 txtTelefono.Text.Trim(),
+                                                 txtCorreo.Text.Trim().ToUpper(),
+                                                 sexo,
+                                                 txtNumDoc.Text.Trim(),
+                                                 tipoEstudiante)
 
                 MessageBox.Show("Estudiante modificado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 CargarListado()
@@ -291,5 +297,12 @@ Public Class frmMantEstudiante
 
     Private Sub txtMaterno_TextChanged(sender As Object, e As EventArgs) Handles txtMaterno.TextChanged
 
+    End Sub
+
+    Private Sub btnAgregarEstudiante_Click(sender As Object, e As EventArgs) Handles btnEnlazarApoderado.Click
+        Dim hijoUsuarios As New frmMantApoderado()
+
+
+        hijoUsuarios.ShowDialog()
     End Sub
 End Class

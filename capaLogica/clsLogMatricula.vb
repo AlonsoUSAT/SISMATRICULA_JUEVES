@@ -1,5 +1,6 @@
-﻿Imports System.Net
-Imports System.Data
+﻿Imports System.Data
+Imports System.Net
+Imports capaDatos
 
 Public Class clsLogMatricula
 
@@ -62,5 +63,18 @@ Public Class clsLogMatricula
         Return objDatMatricula.ValidarVoucherDuplicado(codOperativo)
     End Function
 
+    Public Function MostrarAnosAcademicos() As DataTable
+        ' Instancias la clase de datos donde creaste el "ListarAnosAcademicos"
+        Dim objDatos As New clsDatPagoMatricula() ' 👈 Asegúrate de que apunte a tu clase de datos correcta
+        Return objDatos.ListarAnosAcademicos()
+    End Function
+    Public Function ListarHistoricoCarga(idAno As Integer) As DataTable
+        Dim objDatos As New ClsDatReportes() ' O el nombre de tu clase de datos
+        Return objDatos.ObtenerHistoricoCarga(idAno)
+    End Function
 
+    Public Function ListarCargaFiltrada(idDocente As Integer, idNivel As Integer, idGrado As Integer, idSeccion As Integer, idAno As Integer) As DataTable
+        Dim objDatos As New clsDatPagoMatricula()
+        Return objDatos.ObtenerCargaFiltrada(idDocente, idNivel, idGrado, idSeccion, idAno)
+    End Function
 End Class

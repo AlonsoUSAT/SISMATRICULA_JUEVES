@@ -44,6 +44,8 @@ Partial Class frmMantNGS
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cboAno = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvGrados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -56,10 +58,9 @@ Partial Class frmMantNGS
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(-4, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(-3, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1258, 68)
+        Me.Panel1.Size = New System.Drawing.Size(944, 55)
         Me.Panel1.TabIndex = 35
         '
         'Label2
@@ -67,10 +68,9 @@ Partial Class frmMantNGS
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Snow
-        Me.Label2.Location = New System.Drawing.Point(16, 16)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(12, 13)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(535, 31)
+        Me.Label2.Size = New System.Drawing.Size(437, 25)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Mantenimiento de grado, nivel y sección"
         '
@@ -80,10 +80,9 @@ Partial Class frmMantNGS
         Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Firebrick
-        Me.Label7.Location = New System.Drawing.Point(8, 86)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(6, 70)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(138, 20)
+        Me.Label7.Size = New System.Drawing.Size(113, 16)
         Me.Label7.TabIndex = 52
         Me.Label7.Text = "Listado Grados"
         '
@@ -92,10 +91,9 @@ Partial Class frmMantNGS
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label1.Location = New System.Drawing.Point(28, 46)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(15, 84)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 25)
+        Me.Label1.Size = New System.Drawing.Size(112, 20)
         Me.Label1.TabIndex = 53
         Me.Label1.Text = "Filtrar por nivel:"
         '
@@ -103,20 +101,18 @@ Partial Class frmMantNGS
         '
         Me.cboNivel.FormattingEnabled = True
         Me.cboNivel.Items.AddRange(New Object() {"Primaria", "Secundaria"})
-        Me.cboNivel.Location = New System.Drawing.Point(170, 50)
-        Me.cboNivel.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboNivel.Location = New System.Drawing.Point(144, 85)
         Me.cboNivel.Name = "cboNivel"
-        Me.cboNivel.Size = New System.Drawing.Size(173, 24)
+        Me.cboNivel.Size = New System.Drawing.Size(131, 21)
         Me.cboNivel.TabIndex = 54
         '
         'dgvGrados
         '
         Me.dgvGrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGrados.Location = New System.Drawing.Point(22, 97)
-        Me.dgvGrados.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvGrados.Location = New System.Drawing.Point(15, 141)
         Me.dgvGrados.Name = "dgvGrados"
         Me.dgvGrados.RowHeadersWidth = 51
-        Me.dgvGrados.Size = New System.Drawing.Size(359, 224)
+        Me.dgvGrados.Size = New System.Drawing.Size(269, 182)
         Me.dgvGrados.TabIndex = 55
         '
         'Panel2
@@ -129,10 +125,9 @@ Partial Class frmMantNGS
         Me.Panel2.Controls.Add(Me.dgvSecciones)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.btnModificar)
-        Me.Panel2.Location = New System.Drawing.Point(401, 80)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Location = New System.Drawing.Point(301, 65)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(842, 385)
+        Me.Panel2.Size = New System.Drawing.Size(632, 313)
         Me.Panel2.TabIndex = 56
         '
         'btnEliminar
@@ -140,10 +135,9 @@ Partial Class frmMantNGS
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnEliminar.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
-        Me.btnEliminar.Location = New System.Drawing.Point(607, 292)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEliminar.Location = New System.Drawing.Point(455, 237)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(214, 59)
+        Me.btnEliminar.Size = New System.Drawing.Size(160, 48)
         Me.btnEliminar.TabIndex = 59
         Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -154,10 +148,9 @@ Partial Class frmMantNGS
         Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnGuardar.Image = Global.capaPresentacion.My.Resources.Resources.guardar_usuario
-        Me.btnGuardar.Location = New System.Drawing.Point(607, 41)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGuardar.Location = New System.Drawing.Point(455, 33)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(214, 59)
+        Me.btnGuardar.Size = New System.Drawing.Size(160, 48)
         Me.btnGuardar.TabIndex = 56
         Me.btnGuardar.Text = "GUARDAR"
         Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -172,44 +165,39 @@ Partial Class frmMantNGS
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Location = New System.Drawing.Point(20, 233)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel3.Location = New System.Drawing.Point(15, 189)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(579, 123)
+        Me.Panel3.Size = New System.Drawing.Size(434, 100)
         Me.Panel3.TabIndex = 55
         '
         'txtTutor
         '
-        Me.txtTutor.Location = New System.Drawing.Point(201, 81)
-        Me.txtTutor.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTutor.Location = New System.Drawing.Point(151, 66)
         Me.txtTutor.Name = "txtTutor"
-        Me.txtTutor.Size = New System.Drawing.Size(227, 22)
+        Me.txtTutor.Size = New System.Drawing.Size(171, 20)
         Me.txtTutor.TabIndex = 59
         '
         'txtAforo
         '
-        Me.txtAforo.Location = New System.Drawing.Point(201, 47)
-        Me.txtAforo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtAforo.Location = New System.Drawing.Point(151, 38)
         Me.txtAforo.Name = "txtAforo"
-        Me.txtAforo.Size = New System.Drawing.Size(227, 22)
+        Me.txtAforo.Size = New System.Drawing.Size(171, 20)
         Me.txtAforo.TabIndex = 58
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(201, 12)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.Location = New System.Drawing.Point(151, 10)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(227, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(171, 20)
         Me.txtNombre.TabIndex = 57
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label6.Location = New System.Drawing.Point(94, 77)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(70, 63)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 25)
+        Me.Label6.Size = New System.Drawing.Size(47, 20)
         Me.Label6.TabIndex = 56
         Me.Label6.Text = "Tutor:"
         '
@@ -217,10 +205,9 @@ Partial Class frmMantNGS
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label5.Location = New System.Drawing.Point(94, 45)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(70, 37)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(62, 25)
+        Me.Label5.Size = New System.Drawing.Size(50, 20)
         Me.Label5.TabIndex = 55
         Me.Label5.Text = "Aforo:"
         '
@@ -228,10 +215,9 @@ Partial Class frmMantNGS
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.Label4.Location = New System.Drawing.Point(94, 12)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(70, 10)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(90, 25)
+        Me.Label4.Size = New System.Drawing.Size(73, 20)
         Me.Label4.TabIndex = 54
         Me.Label4.Text = "Nombres:"
         '
@@ -240,10 +226,9 @@ Partial Class frmMantNGS
         Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDarBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnDarBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
-        Me.btnDarBaja.Location = New System.Drawing.Point(607, 211)
-        Me.btnDarBaja.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnDarBaja.Location = New System.Drawing.Point(455, 171)
         Me.btnDarBaja.Name = "btnDarBaja"
-        Me.btnDarBaja.Size = New System.Drawing.Size(214, 59)
+        Me.btnDarBaja.Size = New System.Drawing.Size(160, 48)
         Me.btnDarBaja.TabIndex = 58
         Me.btnDarBaja.Text = "DAR BAJA"
         Me.btnDarBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -252,11 +237,10 @@ Partial Class frmMantNGS
         'dgvSecciones
         '
         Me.dgvSecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSecciones.Location = New System.Drawing.Point(20, 41)
-        Me.dgvSecciones.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvSecciones.Location = New System.Drawing.Point(15, 33)
         Me.dgvSecciones.Name = "dgvSecciones"
         Me.dgvSecciones.RowHeadersWidth = 51
-        Me.dgvSecciones.Size = New System.Drawing.Size(579, 185)
+        Me.dgvSecciones.Size = New System.Drawing.Size(434, 150)
         Me.dgvSecciones.TabIndex = 54
         '
         'Label3
@@ -264,10 +248,9 @@ Partial Class frmMantNGS
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Snow
-        Me.Label3.Location = New System.Drawing.Point(16, 17)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(12, 14)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(164, 20)
+        Me.Label3.Size = New System.Drawing.Size(135, 16)
         Me.Label3.TabIndex = 53
         Me.Label3.Text = "Listado Secciones"
         '
@@ -276,10 +259,9 @@ Partial Class frmMantNGS
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnModificar.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
-        Me.btnModificar.Location = New System.Drawing.Point(607, 126)
-        Me.btnModificar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnModificar.Location = New System.Drawing.Point(455, 102)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(214, 59)
+        Me.btnModificar.Size = New System.Drawing.Size(160, 48)
         Me.btnModificar.TabIndex = 57
         Me.btnModificar.Text = "MODIFICAR"
         Me.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -288,25 +270,46 @@ Partial Class frmMantNGS
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
+        Me.Panel4.Controls.Add(Me.cboAno)
+        Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.dgvGrados)
         Me.Panel4.Controls.Add(Me.cboNivel)
         Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Location = New System.Drawing.Point(-4, 69)
+        Me.Panel4.Location = New System.Drawing.Point(-3, 56)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1258, 416)
+        Me.Panel4.Size = New System.Drawing.Size(944, 338)
         Me.Panel4.TabIndex = 57
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.White
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.Label8.Location = New System.Drawing.Point(15, 42)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 20)
+        Me.Label8.TabIndex = 56
+        Me.Label8.Text = "Año:"
+        '
+        'cboAno
+        '
+        Me.cboAno.FormattingEnabled = True
+        Me.cboAno.Location = New System.Drawing.Point(144, 40)
+        Me.cboAno.Name = "cboAno"
+        Me.cboAno.Size = New System.Drawing.Size(131, 21)
+        Me.cboAno.TabIndex = 57
         '
         'frmMantNGS
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1255, 481)
+        Me.ClientSize = New System.Drawing.Size(941, 391)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMantNGS"
         Me.Text = "Mantenimiento Grado, Nivel y Seccion"
         Me.Panel1.ResumeLayout(False)
@@ -345,4 +348,6 @@ Partial Class frmMantNGS
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents cboAno As ComboBox
 End Class

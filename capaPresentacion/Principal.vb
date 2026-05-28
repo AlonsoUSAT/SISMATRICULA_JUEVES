@@ -145,4 +145,78 @@ Public Class Principal
         hijoConsultaEstudiante.MdiParent = Me
         hijoConsultaEstudiante.Show()
     End Sub
+
+    Private Sub OperacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OperacionesToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AsignarBecasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsignarBecasToolStripMenuItem.Click
+        Dim hijoAsigBecas As New frmAsigBecas()
+        hijoAsigBecas.MdiParent = Me
+        hijoAsigBecas.Show()
+    End Sub
+
+    Private Sub ConstanciaDeMatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConstanciaDeMatrículaToolStripMenuItem.Click
+        Dim hijoConstancia As New frmConstanciaMatricula()
+        hijoConstancia.MdiParent = Me
+        hijoConstancia.Show()
+    End Sub
+
+    Private Sub ConsultarTipoDeEstudianteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarTipoDeEstudianteToolStripMenuItem.Click
+        Dim hijoConsultaTipo As New frmConsultarEstudiantesTipo()
+        hijoConsultaTipo.MdiParent = Me
+        hijoConsultaTipo.Show()
+    End Sub
+
+    Private Sub ConsultarHistorialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarHistorialToolStripMenuItem.Click
+        Dim hijoHistorial As New frmConsultarHistorico()
+        hijoHistorial.MdiParent = Me
+        hijoHistorial.Show()
+    End Sub
+
+    Private Sub GenerarOrdenDelPagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerarOrdenDelPagoToolStripMenuItem.Click
+        Dim frm As New frmGenerarOrdenPago()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub ProcesarMatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProcesarMatrículaToolStripMenuItem.Click
+        Dim frm As New frmProcesarMatricula()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub ConsultarMatrículasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarMatrículasToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmConsultaMatriculas()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub MatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MatrículaToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantMatricula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub ConsultarHistorialAcadémicoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarHistorialAcadémicoToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmHistorialAcademico()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub BecasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BecasToolStripMenuItem.Click
+        Dim hijoAsigBecas As New frmAsigBecas()
+        hijoAsigBecas.MdiParent = Me
+        hijoAsigBecas.Show()
+    End Sub
+
+    Private Sub AsignaciónDeCursosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsignaciónDeCursosToolStripMenuItem.Click
+        Dim hijoAsigBecas As New frmCursoGrado()
+        hijoAsigBecas.MdiParent = Me
+        hijoAsigBecas.Show()
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Dim hijoAsigBecas As New frmApertura()
+        hijoAsigBecas.MdiParent = Me
+        hijoAsigBecas.Show()
+    End Sub
 End Class

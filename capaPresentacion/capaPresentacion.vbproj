@@ -79,6 +79,108 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCurso.Designer.vb">
+      <DependentUpon>frmCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantDocente.Designer.vb">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantDocente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantNGS.Designer.vb">
+      <DependentUpon>frmMantNGS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantNGS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmApertura.Designer.vb">
+      <DependentUpon>frmApertura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmApertura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCursoGrado.Designer.vb">
+      <DependentUpon>frmCursoGrado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCursoGrado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaMatriculas.Designer.vb">
+      <DependentUpon>frmConsultaMatriculas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaMatriculas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsigBecas.Designer.vb">
+      <DependentUpon>frmAsigBecas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsigBecas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorialAcademico.Designer.vb">
+      <DependentUpon>frmHistorialAcademico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistorialAcademico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantBecas.Designer.vb">
+      <DependentUpon>frmMantBecas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantBecas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConstanciaMatricula.Designer.vb">
+      <DependentUpon>frmConstanciaMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConstanciaMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarOrdenPago.Designer.vb">
+      <DependentUpon>frmGenerarOrdenPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerarOrdenPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantMatricula.Designer.vb">
+      <DependentUpon>frmMantMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdenPago.Designer.vb">
+      <DependentUpon>frmOrdenPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrdenPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProcesarMatricula.Designer.vb">
+      <DependentUpon>FrmProcesarMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProcesarMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarEstudiantesTipo.Designer.vb">
+      <DependentUpon>frmConsultarEstudiantesTipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarEstudiantesTipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarHistorico.Designer.vb">
+      <DependentUpon>frmConsultarHistorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarHistorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantEstudiante.Designer.vb">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmConsultaDocente.Designer.vb">
       <DependentUpon>frmConsultaDocente.vb</DependentUpon>
     </Compile>
@@ -107,18 +209,6 @@
       <DependentUpon>frmCargaAcademica.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCargaAcademica.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCurso.Designer.vb">
-      <DependentUpon>frmCurso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmCurso.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantDocente.Designer.vb">
-      <DependentUpon>frmMantDocente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantDocente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantEspecialidad.Designer.vb">
@@ -175,18 +265,6 @@
     <Compile Include="frmMantApoderado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMantEstudiante.Designer.vb">
-      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantEstudiante.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantNGS.Designer.vb">
-      <DependentUpon>frmMantNGS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMantNGS.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmMantTipoDocumento.Designer.vb">
       <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
     </Compile>
@@ -219,6 +297,57 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCurso.resx">
+      <DependentUpon>frmCurso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantDocente.resx">
+      <DependentUpon>frmMantDocente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantNGS.resx">
+      <DependentUpon>frmMantNGS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmApertura.resx">
+      <DependentUpon>frmApertura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCursoGrado.resx">
+      <DependentUpon>frmCursoGrado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaMatriculas.resx">
+      <DependentUpon>frmConsultaMatriculas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsigBecas.resx">
+      <DependentUpon>frmAsigBecas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistorialAcademico.resx">
+      <DependentUpon>frmHistorialAcademico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantBecas.resx">
+      <DependentUpon>frmMantBecas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConstanciaMatricula.resx">
+      <DependentUpon>frmConstanciaMatricula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerarOrdenPago.resx">
+      <DependentUpon>frmGenerarOrdenPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantMatricula.resx">
+      <DependentUpon>frmMantMatricula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdenPago.resx">
+      <DependentUpon>frmOrdenPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProcesarMatricula.resx">
+      <DependentUpon>FrmProcesarMatricula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarEstudiantesTipo.resx">
+      <DependentUpon>frmConsultarEstudiantesTipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarHistorico.resx">
+      <DependentUpon>frmConsultarHistorico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantEstudiante.resx">
+      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaDocente.resx">
       <DependentUpon>frmConsultaDocente.vb</DependentUpon>
     </EmbeddedResource>
@@ -233,9 +362,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCargaAcademica.resx">
       <DependentUpon>frmCargaAcademica.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantDocente.resx">
-      <DependentUpon>frmMantDocente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantEspecialidad.resx">
       <DependentUpon>frmMantEspecialidad.vb</DependentUpon>
@@ -255,20 +381,11 @@
     <EmbeddedResource Include="TranMatricula.resx">
       <DependentUpon>TranMatricula.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCurso.resx">
-      <DependentUpon>frmCurso.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMantAnoAcademico.resx">
       <DependentUpon>frmMantAnoAcademico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantApoderado.resx">
       <DependentUpon>frmMantApoderado.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantEstudiante.resx">
-      <DependentUpon>frmMantEstudiante.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMantNGS.resx">
-      <DependentUpon>frmMantNGS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantTipoDocumento.resx">
       <DependentUpon>frmMantTipoDocumento.vb</DependentUpon>
@@ -338,5 +455,6 @@
     <None Include="Resources\LOGO.jpg" />
     <None Include="Resources\agregar-usuario.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

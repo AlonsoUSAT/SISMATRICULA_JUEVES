@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmMantEstudiante
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmMantEstudiante
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMantEstudiante))
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -65,6 +65,7 @@ Partial Class frmMantEstudiante
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnEnlazarApoderado = New System.Windows.Forms.Button()
         Me.btnAsignar = New System.Windows.Forms.Button()
         Me.dgvEstudiantes = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
@@ -80,7 +81,7 @@ Partial Class frmMantEstudiante
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(0, -8)
+        Me.Panel1.Location = New System.Drawing.Point(0, -2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1168, 55)
         Me.Panel1.TabIndex = 34
@@ -267,7 +268,7 @@ Partial Class frmMantEstudiante
         '
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtTelefono.ForeColor = System.Drawing.Color.Black
-        Me.txtTelefono.Location = New System.Drawing.Point(151, 247)
+        Me.txtTelefono.Location = New System.Drawing.Point(151, 244)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(199, 27)
         Me.txtTelefono.TabIndex = 43
@@ -289,7 +290,7 @@ Partial Class frmMantEstudiante
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(14, 247)
+        Me.Label5.Location = New System.Drawing.Point(17, 247)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(102, 20)
         Me.Label5.TabIndex = 42
@@ -309,6 +310,7 @@ Partial Class frmMantEstudiante
         '
         'txtMaterno
         '
+        Me.txtMaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtMaterno.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtMaterno.ForeColor = System.Drawing.Color.Black
         Me.txtMaterno.Location = New System.Drawing.Point(151, 94)
@@ -334,7 +336,7 @@ Partial Class frmMantEstudiante
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(14, 290)
+        Me.Label6.Location = New System.Drawing.Point(13, 284)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(135, 20)
         Me.Label6.TabIndex = 48
@@ -356,7 +358,7 @@ Partial Class frmMantEstudiante
         '
         Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtCorreo.ForeColor = System.Drawing.Color.Black
-        Me.txtCorreo.Location = New System.Drawing.Point(151, 289)
+        Me.txtCorreo.Location = New System.Drawing.Point(154, 277)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(199, 27)
         Me.txtCorreo.TabIndex = 49
@@ -375,6 +377,7 @@ Partial Class frmMantEstudiante
         '
         'txtPaterno
         '
+        Me.txtPaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtPaterno.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtPaterno.ForeColor = System.Drawing.Color.Black
         Me.txtPaterno.Location = New System.Drawing.Point(151, 58)
@@ -384,6 +387,7 @@ Partial Class frmMantEstudiante
         '
         'txtNombre
         '
+        Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtNombre.ForeColor = System.Drawing.Color.Black
         Me.txtNombre.Location = New System.Drawing.Point(151, 23)
@@ -423,10 +427,10 @@ Partial Class frmMantEstudiante
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(9, 13)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(369, 323)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(369, 338)
         Me.GroupBox1.TabIndex = 52
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos estudiante"
@@ -434,7 +438,7 @@ Partial Class frmMantEstudiante
         'txtNumDoc
         '
         Me.txtNumDoc.Location = New System.Drawing.Point(151, 135)
-        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNumDoc.Name = "txtNumDoc"
         Me.txtNumDoc.Size = New System.Drawing.Size(199, 26)
         Me.txtNumDoc.TabIndex = 52
@@ -546,6 +550,7 @@ Partial Class frmMantEstudiante
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.btnEnlazarApoderado)
         Me.Panel5.Controls.Add(Me.btnAsignar)
         Me.Panel5.Controls.Add(Me.btnBuscar)
         Me.Panel5.Controls.Add(Me.Panel4)
@@ -556,6 +561,17 @@ Partial Class frmMantEstudiante
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(552, 553)
         Me.Panel5.TabIndex = 59
+        '
+        'btnEnlazarApoderado
+        '
+        Me.btnEnlazarApoderado.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnEnlazarApoderado.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
+        Me.btnEnlazarApoderado.Location = New System.Drawing.Point(243, 69)
+        Me.btnEnlazarApoderado.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEnlazarApoderado.Name = "btnEnlazarApoderado"
+        Me.btnEnlazarApoderado.Size = New System.Drawing.Size(47, 38)
+        Me.btnEnlazarApoderado.TabIndex = 59
+        Me.btnEnlazarApoderado.UseVisualStyleBackColor = False
         '
         'btnAsignar
         '
@@ -581,7 +597,7 @@ Partial Class frmMantEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1166, 638)
+        Me.ClientSize = New System.Drawing.Size(1008, 609)
         Me.Controls.Add(Me.dgvEstudiantes)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
@@ -646,4 +662,5 @@ Partial Class frmMantEstudiante
     Friend WithEvents Panel5 As Panel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtNumDoc As TextBox
+    Friend WithEvents btnEnlazarApoderado As Button
 End Class

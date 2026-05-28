@@ -7,6 +7,7 @@ Public Class frmCurso
     Private Sub frmCurso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarAreas()
         CargarListado()
+        dgvCursos.AllowUserToAddRows = False
     End Sub
 
     Private Sub CargarAreas()
@@ -39,11 +40,13 @@ Public Class frmCurso
         txtNombreCurso.Focus()
     End Sub
 
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+    ' EVENTO ACTUALIZADO: btnNew
+    Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
         LimpiarFormulario()
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    ' EVENTO ACTUALIZADO: btnSafe
+    Private Sub btnSafe_Click(sender As Object, e As EventArgs) Handles btnSafe.Click
         If txtNombreCurso.Text.Trim() = "" Or cboArea.SelectedIndex = -1 Then
             MessageBox.Show("Complete los campos obligatorios: Nombre y Área.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -65,7 +68,8 @@ Public Class frmCurso
         End Try
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    ' EVENTO ACTUALIZADO: btnUpdate
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If idCursoSeleccionado = 0 Then
             MessageBox.Show("Seleccione un curso del listado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -91,7 +95,8 @@ Public Class frmCurso
         End Try
     End Sub
 
-    Private Sub btnDarBaja_Click(sender As Object, e As EventArgs) Handles btnDarBaja.Click
+    ' EVENTO ACTUALIZADO: btnBaja
+    Private Sub btnBaja_Click(sender As Object, e As EventArgs) Handles btnBaja.Click
         If idCursoSeleccionado = 0 Then
             MessageBox.Show("Seleccione un curso del listado para dar de baja.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -107,7 +112,8 @@ Public Class frmCurso
         End Try
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    ' EVENTO ACTUALIZADO: btnDelete
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If idCursoSeleccionado = 0 Then
             MessageBox.Show("Seleccione un curso del listado para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -158,13 +164,5 @@ Public Class frmCurso
                 End If
             Next
         End If
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
-    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
-
     End Sub
 End Class
