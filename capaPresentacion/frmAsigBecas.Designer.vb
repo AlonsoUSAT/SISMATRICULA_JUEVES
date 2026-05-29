@@ -59,8 +59,8 @@ Partial Class frmAsigBecas
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlEncabezado = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lblAnoAcademico = New System.Windows.Forms.Label()
@@ -127,7 +127,7 @@ Partial Class frmAsigBecas
         Me.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlEncabezado.Location = New System.Drawing.Point(0, 0)
         Me.pnlEncabezado.Name = "pnlEncabezado"
-        Me.pnlEncabezado.Size = New System.Drawing.Size(1262, 64)
+        Me.pnlEncabezado.Size = New System.Drawing.Size(1084, 64)
         Me.pnlEncabezado.TabIndex = 1
         '
         'lblTitulo
@@ -137,7 +137,7 @@ Partial Class frmAsigBecas
         Me.lblTitulo.ForeColor = System.Drawing.Color.White
         Me.lblTitulo.Location = New System.Drawing.Point(12, 16)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(497, 37)
+        Me.lblTitulo.Size = New System.Drawing.Size(406, 30)
         Me.lblTitulo.TabIndex = 0
         Me.lblTitulo.Text = "  MODULO DE ASIGNACION DE BECAS"
         '
@@ -148,7 +148,7 @@ Partial Class frmAsigBecas
         Me.lblAnoAcademico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblAnoAcademico.Location = New System.Drawing.Point(700, 18)
         Me.lblAnoAcademico.Name = "lblAnoAcademico"
-        Me.lblAnoAcademico.Size = New System.Drawing.Size(132, 20)
+        Me.lblAnoAcademico.Size = New System.Drawing.Size(106, 15)
         Me.lblAnoAcademico.TabIndex = 1
         Me.lblAnoAcademico.Text = "Año academico: --"
         '
@@ -159,7 +159,7 @@ Partial Class frmAsigBecas
         Me.lblFechaActual.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblFechaActual.Location = New System.Drawing.Point(700, 40)
         Me.lblFechaActual.Name = "lblFechaActual"
-        Me.lblFechaActual.Size = New System.Drawing.Size(130, 20)
+        Me.lblFechaActual.Size = New System.Drawing.Size(102, 15)
         Me.lblFechaActual.TabIndex = 2
         Me.lblFechaActual.Text = "Fecha: 27/05/2026"
         '
@@ -172,7 +172,7 @@ Partial Class frmAsigBecas
         Me.tabControl1.Location = New System.Drawing.Point(0, 64)
         Me.tabControl1.Name = "tabControl1"
         Me.tabControl1.SelectedIndex = 0
-        Me.tabControl1.Size = New System.Drawing.Size(1262, 689)
+        Me.tabControl1.Size = New System.Drawing.Size(1084, 597)
         Me.tabControl1.TabIndex = 0
         '
         'tabAsignacion
@@ -182,9 +182,9 @@ Partial Class frmAsigBecas
         Me.tabAsignacion.Controls.Add(Me.pnlDatosEstudiante)
         Me.tabAsignacion.Controls.Add(Me.pnlHistorialBecas)
         Me.tabAsignacion.Controls.Add(Me.pnlAsignacion)
-        Me.tabAsignacion.Location = New System.Drawing.Point(4, 29)
+        Me.tabAsignacion.Location = New System.Drawing.Point(4, 24)
         Me.tabAsignacion.Name = "tabAsignacion"
-        Me.tabAsignacion.Size = New System.Drawing.Size(1254, 656)
+        Me.tabAsignacion.Size = New System.Drawing.Size(1076, 569)
         Me.tabAsignacion.TabIndex = 0
         Me.tabAsignacion.Text = "  Asignar / Gestionar Beca  "
         '
@@ -199,7 +199,7 @@ Partial Class frmAsigBecas
         Me.pnlBusqueda.ForeColor = System.Drawing.Color.Firebrick
         Me.pnlBusqueda.Location = New System.Drawing.Point(8, 8)
         Me.pnlBusqueda.Name = "pnlBusqueda"
-        Me.pnlBusqueda.Size = New System.Drawing.Size(1240, 70)
+        Me.pnlBusqueda.Size = New System.Drawing.Size(1035, 70)
         Me.pnlBusqueda.TabIndex = 0
         Me.pnlBusqueda.TabStop = False
         Me.pnlBusqueda.Text = " Busqueda de Estudiante "
@@ -211,7 +211,7 @@ Partial Class frmAsigBecas
         Me.lblDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblDNI.Location = New System.Drawing.Point(14, 30)
         Me.lblDNI.Name = "lblDNI"
-        Me.lblDNI.Size = New System.Drawing.Size(163, 25)
+        Me.lblDNI.Size = New System.Drawing.Size(136, 20)
         Me.lblDNI.TabIndex = 0
         Me.lblDNI.Text = "DNI del Estudiante:"
         '
@@ -221,7 +221,7 @@ Partial Class frmAsigBecas
         Me.txtDNI.Location = New System.Drawing.Point(196, 26)
         Me.txtDNI.MaxLength = 8
         Me.txtDNI.Name = "txtDNI"
-        Me.txtDNI.Size = New System.Drawing.Size(198, 32)
+        Me.txtDNI.Size = New System.Drawing.Size(198, 27)
         Me.txtDNI.TabIndex = 1
         '
         'btnBuscar
@@ -267,7 +267,7 @@ Partial Class frmAsigBecas
         Me.pnlDatosEstudiante.ForeColor = System.Drawing.Color.Firebrick
         Me.pnlDatosEstudiante.Location = New System.Drawing.Point(8, 84)
         Me.pnlDatosEstudiante.Name = "pnlDatosEstudiante"
-        Me.pnlDatosEstudiante.Size = New System.Drawing.Size(1240, 124)
+        Me.pnlDatosEstudiante.Size = New System.Drawing.Size(1035, 124)
         Me.pnlDatosEstudiante.TabIndex = 1
         Me.pnlDatosEstudiante.TabStop = False
         Me.pnlDatosEstudiante.Text = " Datos del Estudiante "
@@ -279,7 +279,7 @@ Partial Class frmAsigBecas
         Me.lblNomEst.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblNomEst.Location = New System.Drawing.Point(14, 28)
         Me.lblNomEst.Name = "lblNomEst"
-        Me.lblNomEst.Size = New System.Drawing.Size(163, 25)
+        Me.lblNomEst.Size = New System.Drawing.Size(135, 20)
         Me.lblNomEst.TabIndex = 0
         Me.lblNomEst.Text = "Nombre completo:"
         '
@@ -290,7 +290,7 @@ Partial Class frmAsigBecas
         Me.txtNombreEstudiante.Location = New System.Drawing.Point(191, 27)
         Me.txtNombreEstudiante.Name = "txtNombreEstudiante"
         Me.txtNombreEstudiante.ReadOnly = True
-        Me.txtNombreEstudiante.Size = New System.Drawing.Size(380, 30)
+        Me.txtNombreEstudiante.Size = New System.Drawing.Size(380, 25)
         Me.txtNombreEstudiante.TabIndex = 1
         '
         'lblNivelG
@@ -300,17 +300,17 @@ Partial Class frmAsigBecas
         Me.lblNivelG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblNivelG.Location = New System.Drawing.Point(589, 28)
         Me.lblNivelG.Name = "lblNivelG"
-        Me.lblNivelG.Size = New System.Drawing.Size(198, 25)
+        Me.lblNivelG.Size = New System.Drawing.Size(166, 20)
         Me.lblNivelG.TabIndex = 2
         Me.lblNivelG.Text = "Nivel / Grado / Seccion:"
         '
         'txtNivelGrado
         '
         Me.txtNivelGrado.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.txtNivelGrado.Location = New System.Drawing.Point(809, 27)
+        Me.txtNivelGrado.Location = New System.Drawing.Point(776, 28)
         Me.txtNivelGrado.Name = "txtNivelGrado"
         Me.txtNivelGrado.ReadOnly = True
-        Me.txtNivelGrado.Size = New System.Drawing.Size(220, 31)
+        Me.txtNivelGrado.Size = New System.Drawing.Size(220, 27)
         Me.txtNivelGrado.TabIndex = 3
         '
         'lblTipoEst
@@ -320,7 +320,7 @@ Partial Class frmAsigBecas
         Me.lblTipoEst.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTipoEst.Location = New System.Drawing.Point(35, 84)
         Me.lblTipoEst.Name = "lblTipoEst"
-        Me.lblTipoEst.Size = New System.Drawing.Size(138, 25)
+        Me.lblTipoEst.Size = New System.Drawing.Size(115, 20)
         Me.lblTipoEst.TabIndex = 4
         Me.lblTipoEst.Text = "Tipo estudiante:"
         '
@@ -331,7 +331,7 @@ Partial Class frmAsigBecas
         Me.txtTipoEstudiante.Location = New System.Drawing.Point(191, 84)
         Me.txtTipoEstudiante.Name = "txtTipoEstudiante"
         Me.txtTipoEstudiante.ReadOnly = True
-        Me.txtTipoEstudiante.Size = New System.Drawing.Size(203, 27)
+        Me.txtTipoEstudiante.Size = New System.Drawing.Size(203, 23)
         Me.txtTipoEstudiante.TabIndex = 5
         '
         'lblEstadoBecaActual
@@ -339,9 +339,9 @@ Partial Class frmAsigBecas
         Me.lblEstadoBecaActual.AutoSize = True
         Me.lblEstadoBecaActual.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEstadoBecaActual.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblEstadoBecaActual.Location = New System.Drawing.Point(654, 79)
+        Me.lblEstadoBecaActual.Location = New System.Drawing.Point(641, 79)
         Me.lblEstadoBecaActual.Name = "lblEstadoBecaActual"
-        Me.lblEstadoBecaActual.Size = New System.Drawing.Size(137, 25)
+        Me.lblEstadoBecaActual.Size = New System.Drawing.Size(114, 20)
         Me.lblEstadoBecaActual.TabIndex = 6
         Me.lblEstadoBecaActual.Text = "Estado de beca:"
         '
@@ -350,9 +350,9 @@ Partial Class frmAsigBecas
         Me.lblEstadoBeca.AutoSize = True
         Me.lblEstadoBeca.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblEstadoBeca.ForeColor = System.Drawing.Color.DimGray
-        Me.lblEstadoBeca.Location = New System.Drawing.Point(805, 84)
+        Me.lblEstadoBeca.Location = New System.Drawing.Point(773, 87)
         Me.lblEstadoBeca.Name = "lblEstadoBeca"
-        Me.lblEstadoBeca.Size = New System.Drawing.Size(239, 20)
+        Me.lblEstadoBeca.Size = New System.Drawing.Size(191, 15)
         Me.lblEstadoBeca.TabIndex = 7
         Me.lblEstadoBeca.Text = "-- Busque un estudiante por DNI --"
         '
@@ -362,9 +362,9 @@ Partial Class frmAsigBecas
         Me.pnlHistorialBecas.Controls.Add(Me.dgvHistorialBecas)
         Me.pnlHistorialBecas.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.pnlHistorialBecas.ForeColor = System.Drawing.Color.Firebrick
-        Me.pnlHistorialBecas.Location = New System.Drawing.Point(634, 238)
+        Me.pnlHistorialBecas.Location = New System.Drawing.Point(632, 214)
         Me.pnlHistorialBecas.Name = "pnlHistorialBecas"
-        Me.pnlHistorialBecas.Size = New System.Drawing.Size(610, 410)
+        Me.pnlHistorialBecas.Size = New System.Drawing.Size(411, 322)
         Me.pnlHistorialBecas.TabIndex = 3
         Me.pnlHistorialBecas.TabStop = False
         Me.pnlHistorialBecas.Text = " Historial de Becas del Estudiante "
@@ -375,24 +375,24 @@ Partial Class frmAsigBecas
         Me.dgvHistorialBecas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvHistorialBecas.BackgroundColor = System.Drawing.Color.White
         Me.dgvHistorialBecas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvHistorialBecas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvHistorialBecas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvHistorialBecas.ColumnHeadersHeight = 29
         Me.dgvHistorialBecas.EnableHeadersVisualStyles = False
         Me.dgvHistorialBecas.GridColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(220, Byte), Integer))
-        Me.dgvHistorialBecas.Location = New System.Drawing.Point(10, 24)
+        Me.dgvHistorialBecas.Location = New System.Drawing.Point(6, 22)
         Me.dgvHistorialBecas.Name = "dgvHistorialBecas"
         Me.dgvHistorialBecas.ReadOnly = True
         Me.dgvHistorialBecas.RowHeadersVisible = False
         Me.dgvHistorialBecas.RowHeadersWidth = 51
         Me.dgvHistorialBecas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvHistorialBecas.Size = New System.Drawing.Size(586, 344)
+        Me.dgvHistorialBecas.Size = New System.Drawing.Size(399, 294)
         Me.dgvHistorialBecas.TabIndex = 0
         '
         'pnlAsignacion
@@ -402,32 +402,32 @@ Partial Class frmAsigBecas
         Me.pnlAsignacion.Controls.Add(Me.Label1)
         Me.pnlAsignacion.Controls.Add(Me.txtDescuento)
         Me.pnlAsignacion.Controls.Add(Me.lblTipoBeca)
+        Me.pnlAsignacion.Controls.Add(Me.btnAsignar)
         Me.pnlAsignacion.Controls.Add(Me.cboTipoBeca)
+        Me.pnlAsignacion.Controls.Add(Me.btnSuspender)
         Me.pnlAsignacion.Controls.Add(Me.lblDescripcionBeca)
+        Me.pnlAsignacion.Controls.Add(Me.btnRevocar)
         Me.pnlAsignacion.Controls.Add(Me.lblDescripcionTexto)
         Me.pnlAsignacion.Controls.Add(Me.lblPromedioInfo)
         Me.pnlAsignacion.Controls.Add(Me.lblMotivo)
         Me.pnlAsignacion.Controls.Add(Me.txtMotivo)
         Me.pnlAsignacion.Controls.Add(Me.lblDescuentoCalc)
         Me.pnlAsignacion.Controls.Add(Me.lblMontoDescLabel)
-        Me.pnlAsignacion.Controls.Add(Me.btnAsignar)
-        Me.pnlAsignacion.Controls.Add(Me.btnSuspender)
-        Me.pnlAsignacion.Controls.Add(Me.btnRevocar)
         Me.pnlAsignacion.Enabled = False
         Me.pnlAsignacion.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlAsignacion.ForeColor = System.Drawing.Color.Firebrick
-        Me.pnlAsignacion.Location = New System.Drawing.Point(8, 238)
+        Me.pnlAsignacion.Location = New System.Drawing.Point(6, 214)
         Me.pnlAsignacion.Name = "pnlAsignacion"
-        Me.pnlAsignacion.Size = New System.Drawing.Size(620, 418)
+        Me.pnlAsignacion.Size = New System.Drawing.Size(620, 322)
         Me.pnlAsignacion.TabIndex = 2
         Me.pnlAsignacion.TabStop = False
         Me.pnlAsignacion.Text = " Asignacion / Gestion de Beca "
         '
         'txtDescuentoMes
         '
-        Me.txtDescuentoMes.Location = New System.Drawing.Point(213, 254)
+        Me.txtDescuentoMes.Location = New System.Drawing.Point(218, 210)
         Me.txtDescuentoMes.Name = "txtDescuentoMes"
-        Me.txtDescuentoMes.Size = New System.Drawing.Size(337, 31)
+        Me.txtDescuentoMes.Size = New System.Drawing.Size(337, 27)
         Me.txtDescuentoMes.TabIndex = 20
         '
         'Label1
@@ -435,17 +435,17 @@ Partial Class frmAsigBecas
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(12, 260)
+        Me.Label1.Location = New System.Drawing.Point(17, 216)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(197, 25)
+        Me.Label1.Size = New System.Drawing.Size(161, 20)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Monto Descuento Mes:"
         '
         'txtDescuento
         '
-        Me.txtDescuento.Location = New System.Drawing.Point(213, 209)
+        Me.txtDescuento.Location = New System.Drawing.Point(218, 165)
         Me.txtDescuento.Name = "txtDescuento"
-        Me.txtDescuento.Size = New System.Drawing.Size(337, 31)
+        Me.txtDescuento.Size = New System.Drawing.Size(337, 27)
         Me.txtDescuento.TabIndex = 18
         '
         'lblTipoBeca
@@ -455,7 +455,7 @@ Partial Class frmAsigBecas
         Me.lblTipoBeca.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTipoBeca.Location = New System.Drawing.Point(14, 30)
         Me.lblTipoBeca.Name = "lblTipoBeca"
-        Me.lblTipoBeca.Size = New System.Drawing.Size(117, 25)
+        Me.lblTipoBeca.Size = New System.Drawing.Size(99, 20)
         Me.lblTipoBeca.TabIndex = 0
         Me.lblTipoBeca.Text = "Tipo de Beca:"
         '
@@ -464,7 +464,7 @@ Partial Class frmAsigBecas
         Me.cboTipoBeca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoBeca.Location = New System.Drawing.Point(147, 26)
         Me.cboTipoBeca.Name = "cboTipoBeca"
-        Me.cboTipoBeca.Size = New System.Drawing.Size(443, 33)
+        Me.cboTipoBeca.Size = New System.Drawing.Size(443, 27)
         Me.cboTipoBeca.TabIndex = 1
         '
         'lblDescripcionBeca
@@ -474,7 +474,7 @@ Partial Class frmAsigBecas
         Me.lblDescripcionBeca.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblDescripcionBeca.Location = New System.Drawing.Point(14, 65)
         Me.lblDescripcionBeca.Name = "lblDescripcionBeca"
-        Me.lblDescripcionBeca.Size = New System.Drawing.Size(108, 25)
+        Me.lblDescripcionBeca.Size = New System.Drawing.Size(90, 20)
         Me.lblDescripcionBeca.TabIndex = 2
         Me.lblDescripcionBeca.Text = "Descripcion:"
         '
@@ -493,7 +493,7 @@ Partial Class frmAsigBecas
         Me.lblPromedioInfo.ForeColor = System.Drawing.Color.DarkOrange
         Me.lblPromedioInfo.Location = New System.Drawing.Point(225, 118)
         Me.lblPromedioInfo.Name = "lblPromedioInfo"
-        Me.lblPromedioInfo.Size = New System.Drawing.Size(0, 25)
+        Me.lblPromedioInfo.Size = New System.Drawing.Size(0, 20)
         Me.lblPromedioInfo.TabIndex = 6
         '
         'lblMotivo
@@ -501,20 +501,20 @@ Partial Class frmAsigBecas
         Me.lblMotivo.AutoSize = True
         Me.lblMotivo.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMotivo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblMotivo.Location = New System.Drawing.Point(12, 109)
+        Me.lblMotivo.Location = New System.Drawing.Point(14, 90)
         Me.lblMotivo.Name = "lblMotivo"
-        Me.lblMotivo.Size = New System.Drawing.Size(295, 25)
+        Me.lblMotivo.Size = New System.Drawing.Size(248, 20)
         Me.lblMotivo.TabIndex = 7
         Me.lblMotivo.Text = "Motivo / Justificacion (*obligatorio):"
         '
         'txtMotivo
         '
-        Me.txtMotivo.Location = New System.Drawing.Point(8, 137)
+        Me.txtMotivo.Location = New System.Drawing.Point(14, 118)
         Me.txtMotivo.MaxLength = 600
         Me.txtMotivo.Multiline = True
         Me.txtMotivo.Name = "txtMotivo"
         Me.txtMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtMotivo.Size = New System.Drawing.Size(576, 60)
+        Me.txtMotivo.Size = New System.Drawing.Size(576, 40)
         Me.txtMotivo.TabIndex = 8
         '
         'lblDescuentoCalc
@@ -522,9 +522,9 @@ Partial Class frmAsigBecas
         Me.lblDescuentoCalc.AutoSize = True
         Me.lblDescuentoCalc.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDescuentoCalc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblDescuentoCalc.Location = New System.Drawing.Point(12, 212)
+        Me.lblDescuentoCalc.Location = New System.Drawing.Point(17, 168)
         Me.lblDescuentoCalc.Name = "lblDescuentoCalc"
-        Me.lblDescuentoCalc.Size = New System.Drawing.Size(172, 25)
+        Me.lblDescuentoCalc.Size = New System.Drawing.Size(144, 20)
         Me.lblDescuentoCalc.TabIndex = 11
         Me.lblDescuentoCalc.Text = "Descuento aplicado:"
         '
@@ -533,7 +533,7 @@ Partial Class frmAsigBecas
         Me.lblMontoDescLabel.AutoSize = True
         Me.lblMontoDescLabel.Location = New System.Drawing.Point(14, 298)
         Me.lblMontoDescLabel.Name = "lblMontoDescLabel"
-        Me.lblMontoDescLabel.Size = New System.Drawing.Size(0, 25)
+        Me.lblMontoDescLabel.Size = New System.Drawing.Size(0, 20)
         Me.lblMontoDescLabel.TabIndex = 13
         '
         'btnAsignar
@@ -543,7 +543,7 @@ Partial Class frmAsigBecas
         Me.btnAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAsignar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnAsignar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAsignar.Location = New System.Drawing.Point(10, 351)
+        Me.btnAsignar.Location = New System.Drawing.Point(25, 258)
         Me.btnAsignar.Name = "btnAsignar"
         Me.btnAsignar.Size = New System.Drawing.Size(170, 38)
         Me.btnAsignar.TabIndex = 15
@@ -557,7 +557,7 @@ Partial Class frmAsigBecas
         Me.btnSuspender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSuspender.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnSuspender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnSuspender.Location = New System.Drawing.Point(196, 351)
+        Me.btnSuspender.Location = New System.Drawing.Point(226, 258)
         Me.btnSuspender.Name = "btnSuspender"
         Me.btnSuspender.Size = New System.Drawing.Size(170, 38)
         Me.btnSuspender.TabIndex = 16
@@ -571,7 +571,7 @@ Partial Class frmAsigBecas
         Me.btnRevocar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRevocar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnRevocar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnRevocar.Location = New System.Drawing.Point(382, 351)
+        Me.btnRevocar.Location = New System.Drawing.Point(420, 258)
         Me.btnRevocar.Name = "btnRevocar"
         Me.btnRevocar.Size = New System.Drawing.Size(170, 38)
         Me.btnRevocar.TabIndex = 17
@@ -582,9 +582,9 @@ Partial Class frmAsigBecas
         '
         Me.tabBecadosActivos.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.tabBecadosActivos.Controls.Add(Me.pnlBecadosActivos)
-        Me.tabBecadosActivos.Location = New System.Drawing.Point(4, 29)
+        Me.tabBecadosActivos.Location = New System.Drawing.Point(4, 24)
         Me.tabBecadosActivos.Name = "tabBecadosActivos"
-        Me.tabBecadosActivos.Size = New System.Drawing.Size(1254, 656)
+        Me.tabBecadosActivos.Size = New System.Drawing.Size(1076, 569)
         Me.tabBecadosActivos.TabIndex = 1
         Me.tabBecadosActivos.Text = "  Becados del Ano Actual  "
         '
@@ -596,11 +596,11 @@ Partial Class frmAsigBecas
         Me.pnlBecadosActivos.Controls.Add(Me.lblTotalBecados)
         Me.pnlBecadosActivos.Controls.Add(Me.dgvBecadosActivos)
         Me.pnlBecadosActivos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlBecadosActivos.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.pnlBecadosActivos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
+        Me.pnlBecadosActivos.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.pnlBecadosActivos.ForeColor = System.Drawing.Color.Firebrick
         Me.pnlBecadosActivos.Location = New System.Drawing.Point(0, 0)
         Me.pnlBecadosActivos.Name = "pnlBecadosActivos"
-        Me.pnlBecadosActivos.Size = New System.Drawing.Size(1254, 656)
+        Me.pnlBecadosActivos.Size = New System.Drawing.Size(1076, 569)
         Me.pnlBecadosActivos.TabIndex = 0
         Me.pnlBecadosActivos.TabStop = False
         Me.pnlBecadosActivos.Text = " Listado de Becados - Ano Academico Actual "
@@ -608,28 +608,30 @@ Partial Class frmAsigBecas
         'lblBuscarEn
         '
         Me.lblBuscarEn.AutoSize = True
+        Me.lblBuscarEn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.lblBuscarEn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblBuscarEn.Location = New System.Drawing.Point(14, 28)
         Me.lblBuscarEn.Name = "lblBuscarEn"
-        Me.lblBuscarEn.Size = New System.Drawing.Size(56, 20)
+        Me.lblBuscarEn.Size = New System.Drawing.Size(54, 21)
         Me.lblBuscarEn.TabIndex = 0
         Me.lblBuscarEn.Text = "Filtrar:"
         '
         'txtBuscarEnLista
         '
         Me.txtBuscarEnLista.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtBuscarEnLista.Location = New System.Drawing.Point(70, 24)
+        Me.txtBuscarEnLista.Location = New System.Drawing.Point(70, 28)
         Me.txtBuscarEnLista.Name = "txtBuscarEnLista"
-        Me.txtBuscarEnLista.Size = New System.Drawing.Size(300, 27)
+        Me.txtBuscarEnLista.Size = New System.Drawing.Size(300, 23)
         Me.txtBuscarEnLista.TabIndex = 1
         '
         'lblTotalBecados
         '
         Me.lblTotalBecados.AutoSize = True
-        Me.lblTotalBecados.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTotalBecados.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
+        Me.lblTotalBecados.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.lblTotalBecados.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTotalBecados.Location = New System.Drawing.Point(400, 28)
         Me.lblTotalBecados.Name = "lblTotalBecados"
-        Me.lblTotalBecados.Size = New System.Drawing.Size(64, 20)
+        Me.lblTotalBecados.Size = New System.Drawing.Size(61, 21)
         Me.lblTotalBecados.TabIndex = 2
         Me.lblTotalBecados.Text = "Total: --"
         '
@@ -639,30 +641,32 @@ Partial Class frmAsigBecas
         Me.dgvBecadosActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvBecadosActivos.BackgroundColor = System.Drawing.Color.White
         Me.dgvBecadosActivos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBecadosActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBecadosActivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvBecadosActivos.ColumnHeadersHeight = 29
         Me.dgvBecadosActivos.EnableHeadersVisualStyles = False
         Me.dgvBecadosActivos.GridColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(220, Byte), Integer))
-        Me.dgvBecadosActivos.Location = New System.Drawing.Point(10, 58)
+        Me.dgvBecadosActivos.Location = New System.Drawing.Point(3, 57)
         Me.dgvBecadosActivos.Name = "dgvBecadosActivos"
         Me.dgvBecadosActivos.ReadOnly = True
         Me.dgvBecadosActivos.RowHeadersVisible = False
         Me.dgvBecadosActivos.RowHeadersWidth = 51
         Me.dgvBecadosActivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvBecadosActivos.Size = New System.Drawing.Size(1220, 580)
+        Me.dgvBecadosActivos.Size = New System.Drawing.Size(1063, 505)
         Me.dgvBecadosActivos.TabIndex = 3
         '
         'frmAsigBecas
         '
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1262, 753)
+        Me.ClientSize = New System.Drawing.Size(1084, 661)
         Me.Controls.Add(Me.tabControl1)
         Me.Controls.Add(Me.pnlEncabezado)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)

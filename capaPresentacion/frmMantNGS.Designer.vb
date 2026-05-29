@@ -33,6 +33,7 @@ Partial Class frmMantNGS
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cboTutor = New System.Windows.Forms.ComboBox()
         Me.txtAforo = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -45,7 +46,6 @@ Partial Class frmMantNGS
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.cboAno = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.cboTutor = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvGrados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -170,6 +170,14 @@ Partial Class frmMantNGS
         Me.Panel3.Size = New System.Drawing.Size(434, 100)
         Me.Panel3.TabIndex = 55
         '
+        'cboTutor
+        '
+        Me.cboTutor.FormattingEnabled = True
+        Me.cboTutor.Location = New System.Drawing.Point(151, 65)
+        Me.cboTutor.Name = "cboTutor"
+        Me.cboTutor.Size = New System.Drawing.Size(171, 21)
+        Me.cboTutor.TabIndex = 59
+        '
         'txtAforo
         '
         Me.txtAforo.Location = New System.Drawing.Point(151, 38)
@@ -292,14 +300,6 @@ Partial Class frmMantNGS
         Me.Label8.Size = New System.Drawing.Size(39, 20)
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "Año:"
-        '
-        'cboTutor
-        '
-        Me.cboTutor.FormattingEnabled = True
-        Me.cboTutor.Location = New System.Drawing.Point(151, 65)
-        Me.cboTutor.Name = "cboTutor"
-        Me.cboTutor.Size = New System.Drawing.Size(171, 21)
-        Me.cboTutor.TabIndex = 59
         '
         'frmMantNGS
         '

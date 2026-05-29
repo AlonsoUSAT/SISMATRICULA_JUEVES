@@ -83,6 +83,7 @@
     <Compile Include="clsLogConsultaMatriculas.vb" />
     <Compile Include="clsLogGenerarOrdenPago.vb" />
     <Compile Include="clsLogHistorialAcademico.vb" />
+    <Compile Include="clsLogMantAreaAcademica.vb" />
     <Compile Include="clsLogMantMatricula.vb" />
     <Compile Include="clsLogMatricula.vb" />
     <Compile Include="clsLogPagoMatricula.vb" />

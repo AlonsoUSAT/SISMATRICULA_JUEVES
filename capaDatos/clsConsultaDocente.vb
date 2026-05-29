@@ -147,7 +147,6 @@ Public Class clsConsultaDocente
                 "    P.apePaterno                                        AS [_apePat], " &
                 "    P.apeMaterno                                        AS [_apeMat], " &
                 "    P.nombre                                            AS [_nombre], " &
-                "    D.especialidad                                      AS [Especialidad], " &
                 "    P.correo                                            AS [Correo], " &
                 "    P.telefono                                          AS [Teléfono], " &
                 "    N.nombre                                            AS [Nivel], " &

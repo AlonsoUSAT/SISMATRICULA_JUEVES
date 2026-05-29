@@ -58,9 +58,9 @@ Partial Class frmMantPlanEstudio
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(9, 48)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(321, 304)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -70,7 +70,7 @@ Partial Class frmMantPlanEstudio
         '
         Me.txtCodigo.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodigo.Location = New System.Drawing.Point(128, 43)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.ReadOnly = True
         Me.txtCodigo.Size = New System.Drawing.Size(75, 27)
@@ -83,7 +83,7 @@ Partial Class frmMantPlanEstudio
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
         Me.btnBuscar.Location = New System.Drawing.Point(206, 43)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(105, 33)
         Me.btnBuscar.TabIndex = 16
@@ -98,7 +98,7 @@ Partial Class frmMantPlanEstudio
         Me.chkEstado.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.chkEstado.Location = New System.Drawing.Point(128, 109)
-        Me.chkEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkEstado.Margin = New System.Windows.Forms.Padding(2)
         Me.chkEstado.Name = "chkEstado"
         Me.chkEstado.Size = New System.Drawing.Size(78, 20)
         Me.chkEstado.TabIndex = 15
@@ -111,7 +111,7 @@ Partial Class frmMantPlanEstudio
         Me.dtpFechaInicio.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaInicio.Location = New System.Drawing.Point(128, 181)
-        Me.dtpFechaInicio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpFechaInicio.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
         Me.dtpFechaInicio.Size = New System.Drawing.Size(140, 27)
         Me.dtpFechaInicio.TabIndex = 14
@@ -158,7 +158,7 @@ Partial Class frmMantPlanEstudio
         Me.Panel1.Controls.Add(Me.btnEliminar)
         Me.Panel1.Controls.Add(Me.btnDarBaja)
         Me.Panel1.Location = New System.Drawing.Point(348, 56)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(190, 306)
         Me.Panel1.TabIndex = 18
@@ -169,7 +169,7 @@ Partial Class frmMantPlanEstudio
         Me.btnActualizar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnActualizar.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
         Me.btnActualizar.Location = New System.Drawing.Point(13, 67)
-        Me.btnActualizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnActualizar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(160, 48)
         Me.btnActualizar.TabIndex = 8
@@ -183,7 +183,7 @@ Partial Class frmMantPlanEstudio
         Me.btnNuevo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnNuevo.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
         Me.btnNuevo.Location = New System.Drawing.Point(13, 10)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(160, 48)
         Me.btnNuevo.TabIndex = 7
@@ -197,7 +197,7 @@ Partial Class frmMantPlanEstudio
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
         Me.btnLimpiar.Location = New System.Drawing.Point(13, 242)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 14
@@ -211,7 +211,7 @@ Partial Class frmMantPlanEstudio
         Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnEliminar.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
         Me.btnEliminar.Location = New System.Drawing.Point(13, 124)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(160, 48)
         Me.btnEliminar.TabIndex = 9
@@ -225,7 +225,7 @@ Partial Class frmMantPlanEstudio
         Me.btnDarBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnDarBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
         Me.btnDarBaja.Location = New System.Drawing.Point(13, 183)
-        Me.btnDarBaja.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDarBaja.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDarBaja.Name = "btnDarBaja"
         Me.btnDarBaja.Size = New System.Drawing.Size(160, 48)
         Me.btnDarBaja.TabIndex = 10
@@ -238,7 +238,7 @@ Partial Class frmMantPlanEstudio
         Me.dgvAnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAnos.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.dgvAnos.Location = New System.Drawing.Point(0, 377)
-        Me.dgvAnos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvAnos.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvAnos.Name = "dgvAnos"
         Me.dgvAnos.ReadOnly = True
         Me.dgvAnos.RowHeadersWidth = 51
@@ -253,7 +253,7 @@ Partial Class frmMantPlanEstudio
         Me.FlowLayoutPanel1.Controls.Add(Me.Label4)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(568, 43)
         Me.FlowLayoutPanel1.TabIndex = 20
@@ -287,7 +287,7 @@ Partial Class frmMantPlanEstudio
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMantPlanEstudio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

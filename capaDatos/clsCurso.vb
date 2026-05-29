@@ -62,13 +62,12 @@ Public Class clsCurso
     Public Sub RegistrarCurso(nombreCurso As String, descripcion As String, id_area As Integer, id_grado As Integer)
         Try
             objConexion.conectar()
-            Dim query As String = "INSERT INTO CURSO (nombreCurso, descripcion, id_area, id_grado, estado) " &
-                                  "VALUES (@nombre, @descripcion, @idArea, @idGrado, 1)"
+            Dim query As String = "INSERT INTO CURSO (nombreCurso, descripcion, id_area, estado) " &
+                                  "VALUES (@nombre, @descripcion, @idArea, 1)"
             Dim cmd As New SqlCommand(query, objConexion.miConexion)
             cmd.Parameters.AddWithValue("@nombre", nombreCurso)
             cmd.Parameters.AddWithValue("@descripcion", descripcion)
             cmd.Parameters.AddWithValue("@idArea", id_area)
-            cmd.Parameters.AddWithValue("@idGrado", id_grado)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Error en Datos al registrar curso: " & ex.Message)

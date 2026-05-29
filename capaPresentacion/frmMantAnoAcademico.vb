@@ -94,7 +94,7 @@ Public Class frmMantAnoAcademico
             Dim fila As DataGridViewRow = dgvAnos.Rows(e.RowIndex)
 
             ' Pasamos los datos de la fila a los controles de la interfaz
-            txtCodigo.Text = fila.Cells("id_planEstudio").Value.ToString()
+            txtCodigo.Text = fila.Cells("id_anoAcademico").Value.ToString()
             dtpFechaInicio.Value = Convert.ToDateTime(fila.Cells("fechaInicio").Value)
             dtpFechaFin.Value = Convert.ToDateTime(fila.Cells("fechaFin").Value)
             chkEstado.Checked = Convert.ToBoolean(fila.Cells("estado").Value)

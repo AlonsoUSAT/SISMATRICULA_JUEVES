@@ -60,9 +60,9 @@ Partial Class frmConsultaMatriculas
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Location = New System.Drawing.Point(2, 25)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1005, 457)
+        Me.Panel1.Size = New System.Drawing.Size(1093, 457)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
@@ -70,9 +70,9 @@ Partial Class frmConsultaMatriculas
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel2.Controls.Add(Me.GroupBox2)
         Me.Panel2.Location = New System.Drawing.Point(298, 37)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(696, 392)
+        Me.Panel2.Size = New System.Drawing.Size(792, 392)
         Me.Panel2.TabIndex = 58
         '
         'GroupBox2
@@ -90,7 +90,7 @@ Partial Class frmConsultaMatriculas
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(10, 11)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(672, 367)
+        Me.GroupBox2.Size = New System.Drawing.Size(768, 367)
         Me.GroupBox2.TabIndex = 57
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tabla de filtros de consulta"
@@ -98,7 +98,7 @@ Partial Class frmConsultaMatriculas
         'txtNoBecados
         '
         Me.txtNoBecados.Location = New System.Drawing.Point(578, 47)
-        Me.txtNoBecados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNoBecados.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNoBecados.Name = "txtNoBecados"
         Me.txtNoBecados.Size = New System.Drawing.Size(66, 26)
         Me.txtNoBecados.TabIndex = 64
@@ -106,7 +106,7 @@ Partial Class frmConsultaMatriculas
         'txtBecados
         '
         Me.txtBecados.Location = New System.Drawing.Point(368, 49)
-        Me.txtBecados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBecados.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBecados.Name = "txtBecados"
         Me.txtBecados.Size = New System.Drawing.Size(66, 26)
         Me.txtBecados.TabIndex = 63
@@ -138,7 +138,7 @@ Partial Class frmConsultaMatriculas
         'txtTotal
         '
         Me.txtTotal.Location = New System.Drawing.Point(131, 49)
-        Me.txtTotal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtTotal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(132, 26)
         Me.txtTotal.TabIndex = 60
@@ -171,11 +171,11 @@ Partial Class frmConsultaMatriculas
         Me.dgvMatriculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMatriculas.Location = New System.Drawing.Point(5, 87)
-        Me.dgvMatriculas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvMatriculas.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvMatriculas.Name = "dgvMatriculas"
         Me.dgvMatriculas.RowHeadersWidth = 51
         Me.dgvMatriculas.RowTemplate.Height = 24
-        Me.dgvMatriculas.Size = New System.Drawing.Size(662, 267)
+        Me.dgvMatriculas.Size = New System.Drawing.Size(758, 267)
         Me.dgvMatriculas.TabIndex = 57
         '
         'GroupBox1
@@ -207,7 +207,7 @@ Partial Class frmConsultaMatriculas
         Me.btnLimpiar.ForeColor = System.Drawing.Color.Black
         Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
         Me.btnLimpiar.Location = New System.Drawing.Point(45, 288)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 57
@@ -218,7 +218,7 @@ Partial Class frmConsultaMatriculas
         'txtAno
         '
         Me.txtAno.Location = New System.Drawing.Point(92, 44)
-        Me.txtAno.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtAno.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAno.Name = "txtAno"
         Me.txtAno.Size = New System.Drawing.Size(156, 26)
         Me.txtAno.TabIndex = 56
@@ -242,7 +242,7 @@ Partial Class frmConsultaMatriculas
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
         Me.btnBuscar.Location = New System.Drawing.Point(75, 240)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(105, 33)
         Me.btnBuscar.TabIndex = 54
@@ -325,7 +325,7 @@ Partial Class frmConsultaMatriculas
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Location = New System.Drawing.Point(2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1005, 55)
+        Me.Panel3.Size = New System.Drawing.Size(1090, 55)
         Me.Panel3.TabIndex = 36
         '
         'Label13
@@ -343,10 +343,10 @@ Partial Class frmConsultaMatriculas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1004, 480)
+        Me.ClientSize = New System.Drawing.Size(1090, 480)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmConsultaMatriculas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

@@ -1,12 +1,14 @@
-﻿Imports capaLogica
+﻿Imports System.Data
+Imports capaLogica
+Imports capaLogica.capaLogica
 
 Public Class frmMantPlanEstudio
-    ' Instanciamos la clase lógica de Plan de Estudio
-    Dim objLogica As New clsLogPlanEstudio()
+    Private ReadOnly objLogica As New clsLogPlanEstudio()
 
     ' EVENTO: Cuando carga el formulario
     Private Sub frmMantPlanEstudio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListarGrilla()
+        LimpiarCampos()
         dgvAnos.AllowUserToAddRows = False
     End Sub
 
@@ -19,19 +21,22 @@ Public Class frmMantPlanEstudio
         End Try
     End Sub
 
-    ' MÉTODO AUXILIAR: Limpiar campos
     Private Sub LimpiarCampos()
-        txtCodigo.Clear()
-        ' Usamos el nombre original del DateTimePicker
+        Try
+            txtCodigo.Text = objLogica.ObtenerSiguienteId().ToString()
+            txtCodigo.ReadOnly = True
+        Catch ex As Exception
+            txtCodigo.Text = ""
+        End Try
+
         dtpFechaInicio.Value = Now
         chkEstado.Checked = True
     End Sub
 
-    ' BOTÓN: NUEVO
+    ' BOTÓN: NUEVO / GUARDAR
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
-            ' Pasamos solo la fecha del dtpFechaInicio, ya que representa nuestro "Año"
-            If objLogica.Guardar(dtpFechaInicio.Value.Date) Then
+            If objLogica.Guardar(dtpFechaInicio.Value.Date, chkEstado.Checked) Then
                 MsgBox("Plan de Estudio registrado correctamente.", MsgBoxStyle.Information, "Éxito")
                 ListarGrilla()
                 LimpiarCampos()
@@ -41,7 +46,6 @@ Public Class frmMantPlanEstudio
         End Try
     End Sub
 
-    ' BOTÓN: ACTUALIZAR
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Try
             If txtCodigo.Text = "" Then
@@ -60,7 +64,6 @@ Public Class frmMantPlanEstudio
         End Try
     End Sub
 
-    ' BOTÓN: DAR DE BAJA
     Private Sub btnDarBaja_Click(sender As Object, e As EventArgs) Handles btnDarBaja.Click
         Try
             If txtCodigo.Text = "" Then
@@ -86,17 +89,15 @@ Public Class frmMantPlanEstudio
         LimpiarCampos()
     End Sub
 
-    Private Sub dgvAnosAcademicos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAnos.CellClick
+    ' SELECCIONAR FILA DE LA GRILLA
+    Private Sub dgvAnos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAnos.CellClick
         If e.RowIndex >= 0 Then
             Dim fila As DataGridViewRow = dgvAnos.Rows(e.RowIndex)
-            ' Asignamos los datos a los controles heredados
+            ' Asignamos los datos a los controles
             txtCodigo.Text = fila.Cells("id_planEstudio").Value.ToString()
             dtpFechaInicio.Value = Convert.ToDateTime(fila.Cells("año").Value)
             chkEstado.Checked = Convert.ToBoolean(fila.Cells("estado").Value)
         End If
     End Sub
 
-    Private Sub dgvAnos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAnos.CellContentClick
-
-    End Sub
 End Class

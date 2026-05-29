@@ -102,6 +102,7 @@ Public Class frmConsultaMatriculas
 
             Dim dtMat As DataTable = objLogica.ConsultarMatriculas(idNivel, idGrado, idSeccion, ano)
             dgvMatriculas.DataSource = dtMat
+            dgvMatriculas.ClearSelection()
 
 
             MostrarResumen(idNivel, idGrado, idSeccion, ano)
@@ -111,6 +112,8 @@ Public Class frmConsultaMatriculas
                                 "Sin resultados", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information)
             End If
+
+
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -144,6 +147,10 @@ Public Class frmConsultaMatriculas
         dgvMatriculas.AllowUserToAddRows = False
         dgvMatriculas.ReadOnly = True
         dgvMatriculas.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+
+
+
+        dgvMatriculas.DefaultCellStyle.ForeColor = Color.Black
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click

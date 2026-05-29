@@ -154,6 +154,8 @@ Public Class frmProcesarMatricula
         dgvCronograma.RowHeadersVisible = False
         dgvCronograma.AllowUserToAddRows = False
         dgvCronograma.ReadOnly = True
+
+        dgvCronograma.DefaultCellStyle.ForeColor = Color.Black
     End Sub
 
 

@@ -11,6 +11,7 @@ Public Class frmMantNGS
         CargarTutores()
         dgvGrados.AllowUserToAddRows = False
         dgvSecciones.AllowUserToAddRows = False
+        txtAforo.MaxLength = 2
     End Sub
 
     Private Sub CargarTutores()
@@ -119,7 +120,7 @@ Public Class frmMantNGS
             CargarSecciones()
             LimpiarCampos()
         Catch ex As Exception
-            MessageBox.Show("Error al guardar: " & ex.Message)
+            MessageBox.Show("Error al insertar la sección.")
         End Try
     End Sub
 
@@ -190,4 +191,10 @@ Public Class frmMantNGS
         cboTutor.SelectedIndex = -1
         idSeccionSeleccionada = 0
     End Sub
+
+
+    Private Sub txtAforo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAforo.KeyPress
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.Handled = True
+    End Sub
+
 End Class
