@@ -38,13 +38,14 @@ Public Class clsDatMantAreaAcademica
         End Try
     End Sub
 
-    Public Sub Actualizar(idArea As Integer, nombre As String)
+    Public Sub Actualizar(idArea As Integer, nombre As String, activo As Boolean)
         Try
             objConexion.conectar()
             Dim cmd As New SqlCommand(
-                "UPDATE AREA_ACADEMICA SET nombre = @nombre WHERE id_area = @id",
-                objConexion.miConexion)
+            "UPDATE AREA_ACADEMICA SET nombre = @nombre, estado = @estado WHERE id_area = @id",
+            objConexion.miConexion)
             cmd.Parameters.AddWithValue("@nombre", nombre)
+            cmd.Parameters.AddWithValue("@estado", If(activo, 1, 0))
             cmd.Parameters.AddWithValue("@id", idArea)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -111,6 +112,21 @@ Public Class clsDatMantAreaAcademica
             Return Convert.ToInt32(cmd.ExecuteScalar())
         Catch ex As Exception
             Throw New Exception("Error al obtener ID: " & ex.Message)
+        Finally
+            objConexion.desconectar()
+        End Try
+    End Function
+
+    Public Function TieneCursosAsociados(idArea As Integer) As Boolean
+        Try
+            objConexion.conectar()
+            Dim cmd As New SqlCommand(
+                "SELECT COUNT(*) FROM CURSO WHERE id_area = @id",
+                objConexion.miConexion)
+            cmd.Parameters.AddWithValue("@id", idArea)
+            Return Convert.ToInt32(cmd.ExecuteScalar()) > 0
+        Catch ex As Exception
+            Throw New Exception("Error al verificar cursos: " & ex.Message)
         Finally
             objConexion.desconectar()
         End Try

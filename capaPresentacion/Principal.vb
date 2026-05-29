@@ -67,7 +67,7 @@ Public Class Principal
         hijoUsuarios.Show()
     End Sub
 
-    Private Sub PagoMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagoMatriculaToolStripMenuItem.Click
+    Private Sub PagoMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim hijoPagos As New frmMantPagoMatricula()
         hijoPagos.MdiParent = Me
         hijoPagos.Show()
@@ -80,7 +80,7 @@ Public Class Principal
 
     End Sub
 
-    Private Sub ProcesarMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProcesarMatriculaToolStripMenuItem.Click
+    Private Sub ProcesarMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim hijoUsuarios As New TranMatricula()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
@@ -190,7 +190,7 @@ Public Class Principal
         hijoUsuarios.Show()
     End Sub
 
-    Private Sub MatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MatrículaToolStripMenuItem.Click
+    Private Sub MatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim hijoUsuarios As New frmMantMatricula()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
@@ -218,5 +218,17 @@ Public Class Principal
         Dim hijoAsigBecas As New frmApertura()
         hijoAsigBecas.MdiParent = Me
         hijoAsigBecas.Show()
+    End Sub
+
+    Private Sub AreaAcadémicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AreaAcadémicaToolStripMenuItem.Click
+        Dim hijoAsigBecas As New frmMantAreaAcademica()
+        hijoAsigBecas.MdiParent = Me
+        hijoAsigBecas.Show()
+    End Sub
+
+    Private Sub CambiarSecciónMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarSecciónMatriculaToolStripMenuItem.Click
+        Dim hijoUsuarios As New frmMantMatricula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
     End Sub
 End Class

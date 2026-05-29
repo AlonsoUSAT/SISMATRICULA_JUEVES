@@ -27,7 +27,7 @@ Public Class clsLogMantAreaAcademica
         End Try
     End Sub
 
-    Public Sub Actualizar(idArea As Integer, nombre As String)
+    Public Sub Actualizar(idArea As Integer, nombre As String, activo As Boolean)
         If idArea <= 0 Then
             Throw New Exception("Seleccione un área de la tabla para modificar.")
         End If
@@ -38,7 +38,7 @@ Public Class clsLogMantAreaAcademica
             Throw New Exception("Ya existe otra área académica con ese nombre.")
         End If
         Try
-            objDatos.Actualizar(idArea, nombre.Trim().ToUpper())
+            objDatos.Actualizar(idArea, nombre.Trim().ToUpper(), activo)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
@@ -69,6 +69,14 @@ Public Class clsLogMantAreaAcademica
     Public Function ObtenerSiguienteId() As Integer
         Try
             Return objDatos.ObtenerSiguienteId()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    Public Function TieneCursosAsociados(idArea As Integer) As Boolean
+        Try
+            Return objDatos.TieneCursosAsociados(idArea)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

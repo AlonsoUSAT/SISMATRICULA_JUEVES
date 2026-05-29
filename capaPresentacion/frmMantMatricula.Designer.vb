@@ -61,7 +61,7 @@ Partial Class frmMantMatricula
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(720, 47)
         Me.Panel1.TabIndex = 1
@@ -74,9 +74,9 @@ Partial Class frmMantMatricula
         Me.Label1.Location = New System.Drawing.Point(9, 11)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(337, 25)
+        Me.Label1.Size = New System.Drawing.Size(422, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "MANTENIMIENTO MATRICULA"
+        Me.Label1.Text = "CAMBIAR SECCIÓN DEL ESTUDIANTE"
         '
         'GroupBox1
         '
@@ -105,9 +105,9 @@ Partial Class frmMantMatricula
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(14, 63)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(500, 525)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
@@ -130,7 +130,7 @@ Partial Class frmMantMatricula
         Me.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipo.FormattingEnabled = True
         Me.cboTipo.Location = New System.Drawing.Point(160, 33)
-        Me.cboTipo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboTipo.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTipo.Name = "cboTipo"
         Me.cboTipo.Size = New System.Drawing.Size(92, 28)
         Me.cboTipo.TabIndex = 24
@@ -138,7 +138,7 @@ Partial Class frmMantMatricula
         'txtVacantes
         '
         Me.txtVacantes.Location = New System.Drawing.Point(160, 396)
-        Me.txtVacantes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtVacantes.Margin = New System.Windows.Forms.Padding(2)
         Me.txtVacantes.Name = "txtVacantes"
         Me.txtVacantes.Size = New System.Drawing.Size(248, 26)
         Me.txtVacantes.TabIndex = 23
@@ -160,7 +160,7 @@ Partial Class frmMantMatricula
         Me.cboSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboSeccion.FormattingEnabled = True
         Me.cboSeccion.Location = New System.Drawing.Point(160, 347)
-        Me.cboSeccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboSeccion.Margin = New System.Windows.Forms.Padding(2)
         Me.cboSeccion.Name = "cboSeccion"
         Me.cboSeccion.Size = New System.Drawing.Size(137, 28)
         Me.cboSeccion.TabIndex = 21
@@ -180,7 +180,7 @@ Partial Class frmMantMatricula
         'txtGrado
         '
         Me.txtGrado.Location = New System.Drawing.Point(160, 305)
-        Me.txtGrado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtGrado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtGrado.Name = "txtGrado"
         Me.txtGrado.Size = New System.Drawing.Size(142, 26)
         Me.txtGrado.TabIndex = 19
@@ -200,7 +200,7 @@ Partial Class frmMantMatricula
         'txtObservacion
         '
         Me.txtObservacion.Location = New System.Drawing.Point(160, 438)
-        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(248, 52)
@@ -221,7 +221,7 @@ Partial Class frmMantMatricula
         'txtEstudiante
         '
         Me.txtEstudiante.Location = New System.Drawing.Point(158, 211)
-        Me.txtEstudiante.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstudiante.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEstudiante.Name = "txtEstudiante"
         Me.txtEstudiante.Size = New System.Drawing.Size(250, 26)
         Me.txtEstudiante.TabIndex = 15
@@ -229,7 +229,7 @@ Partial Class frmMantMatricula
         'txtNivel
         '
         Me.txtNivel.Location = New System.Drawing.Point(158, 259)
-        Me.txtNivel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNivel.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNivel.Name = "txtNivel"
         Me.txtNivel.Size = New System.Drawing.Size(142, 26)
         Me.txtNivel.TabIndex = 14
@@ -264,7 +264,7 @@ Partial Class frmMantMatricula
         Me.chkActivo.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.chkActivo.ForeColor = System.Drawing.Color.Black
         Me.chkActivo.Location = New System.Drawing.Point(160, 124)
-        Me.chkActivo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkActivo.Margin = New System.Windows.Forms.Padding(2)
         Me.chkActivo.Name = "chkActivo"
         Me.chkActivo.Size = New System.Drawing.Size(70, 24)
         Me.chkActivo.TabIndex = 11
@@ -276,7 +276,7 @@ Partial Class frmMantMatricula
         Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(160, 167)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(140, 27)
         Me.dtpFecha.TabIndex = 10
@@ -312,7 +312,7 @@ Partial Class frmMantMatricula
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
         Me.btnBuscar.Location = New System.Drawing.Point(324, 72)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(105, 33)
         Me.btnBuscar.TabIndex = 7
@@ -323,7 +323,7 @@ Partial Class frmMantMatricula
         'txtNro
         '
         Me.txtNro.Location = New System.Drawing.Point(160, 76)
-        Me.txtNro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNro.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNro.Name = "txtNro"
         Me.txtNro.Size = New System.Drawing.Size(139, 26)
         Me.txtNro.TabIndex = 1
@@ -346,7 +346,7 @@ Partial Class frmMantMatricula
         Me.Panel2.Controls.Add(Me.btnActualizar)
         Me.Panel2.Controls.Add(Me.btnLimpiar)
         Me.Panel2.Location = New System.Drawing.Point(518, 73)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(190, 182)
         Me.Panel2.TabIndex = 18
@@ -357,7 +357,7 @@ Partial Class frmMantMatricula
         Me.btnActualizar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnActualizar.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
         Me.btnActualizar.Location = New System.Drawing.Point(13, 21)
-        Me.btnActualizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnActualizar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(160, 48)
         Me.btnActualizar.TabIndex = 8
@@ -371,7 +371,7 @@ Partial Class frmMantMatricula
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
         Me.btnLimpiar.Location = New System.Drawing.Point(13, 91)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 14
@@ -383,7 +383,7 @@ Partial Class frmMantMatricula
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Location = New System.Drawing.Point(0, 52)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(720, 548)
         Me.Panel3.TabIndex = 19
@@ -397,7 +397,7 @@ Partial Class frmMantMatricula
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMantMatricula"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

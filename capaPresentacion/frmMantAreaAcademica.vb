@@ -95,13 +95,13 @@ Public Class frmMantAreaAcademica
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         Try
             Dim confirmar As DialogResult = MessageBox.Show(
-                "¿Confirma la modificación del área: " & txtNombre.Text & "?",
-                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            "¿Confirma la modificación del área: " & txtNombre.Text & "?",
+            "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If confirmar <> DialogResult.Yes Then Return
 
-            objLogica.Actualizar(_idAreaSeleccionada, txtNombre.Text)
+            objLogica.Actualizar(_idAreaSeleccionada, txtNombre.Text, chkActivo.Checked)
             MessageBox.Show("Área académica modificada correctamente.",
-                            "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
             CargarTabla()
             LimpiarCampos()
         Catch ex As Exception
@@ -113,17 +113,26 @@ Public Class frmMantAreaAcademica
         Try
             If Not chkActivo.Checked Then
                 MessageBox.Show("Esta área ya está dada de baja.",
-                                "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
+
+            ' Verificar si tiene cursos asociados
+            If objLogica.TieneCursosAsociados(_idAreaSeleccionada) Then
+                MessageBox.Show("No se puede dar de baja el área: " & txtNombre.Text & vbCrLf &
+                            "Tiene cursos asociados. Elimine o reasigne los cursos primero.",
+                            "Operación no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
             Dim confirmar As DialogResult = MessageBox.Show(
-                "¿Desea dar de baja el área: " & txtNombre.Text & "?",
-                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            "¿Desea dar de baja el área: " & txtNombre.Text & "?",
+            "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If confirmar <> DialogResult.Yes Then Return
 
             objLogica.DarBaja(_idAreaSeleccionada)
             MessageBox.Show("Área dada de baja correctamente.",
-                            "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
             CargarTabla()
             LimpiarCampos()
         Catch ex As Exception
