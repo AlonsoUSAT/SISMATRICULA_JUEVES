@@ -22,9 +22,10 @@ Partial Class frmProcesarMatricula
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProcesarMatricula))
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -78,9 +79,10 @@ Partial Class frmProcesarMatricula
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label13)
-        Me.Panel3.Location = New System.Drawing.Point(1, 11)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1151, 55)
+        Me.Panel3.Size = New System.Drawing.Size(1155, 55)
         Me.Panel3.TabIndex = 36
         '
         'Label13
@@ -102,7 +104,7 @@ Partial Class frmProcesarMatricula
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Location = New System.Drawing.Point(1, 72)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1151, 537)
         Me.Panel1.TabIndex = 37
@@ -116,7 +118,7 @@ Partial Class frmProcesarMatricula
         Me.Panel2.Controls.Add(Me.btnProcesarMatricula)
         Me.Panel2.Controls.Add(Me.GroupBox4)
         Me.Panel2.Location = New System.Drawing.Point(622, 2)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(524, 518)
         Me.Panel2.TabIndex = 38
@@ -127,7 +129,7 @@ Partial Class frmProcesarMatricula
         Me.btnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnImprimir.Image = Global.capaPresentacion.My.Resources.Resources.borrador
         Me.btnImprimir.Location = New System.Drawing.Point(379, 453)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(120, 48)
         Me.btnImprimir.TabIndex = 13
@@ -141,11 +143,11 @@ Partial Class frmProcesarMatricula
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
         Me.btnLimpiar.Location = New System.Drawing.Point(214, 453)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 12
-        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
+        Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -155,9 +157,9 @@ Partial Class frmProcesarMatricula
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox5.ForeColor = System.Drawing.Color.White
         Me.GroupBox5.Location = New System.Drawing.Point(14, 303)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Size = New System.Drawing.Size(496, 135)
         Me.GroupBox5.TabIndex = 1
         Me.GroupBox5.TabStop = False
@@ -166,7 +168,7 @@ Partial Class frmProcesarMatricula
         'txtObservaciones
         '
         Me.txtObservaciones.Location = New System.Drawing.Point(14, 23)
-        Me.txtObservaciones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtObservaciones.Margin = New System.Windows.Forms.Padding(2)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.Size = New System.Drawing.Size(472, 102)
@@ -177,7 +179,7 @@ Partial Class frmProcesarMatricula
         Me.btnProcesarMatricula.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnProcesarMatricula.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnProcesarMatricula.Location = New System.Drawing.Point(14, 453)
-        Me.btnProcesarMatricula.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnProcesarMatricula.Margin = New System.Windows.Forms.Padding(2)
         Me.btnProcesarMatricula.Name = "btnProcesarMatricula"
         Me.btnProcesarMatricula.Size = New System.Drawing.Size(195, 48)
         Me.btnProcesarMatricula.TabIndex = 11
@@ -190,9 +192,9 @@ Partial Class frmProcesarMatricula
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
         Me.GroupBox4.Location = New System.Drawing.Point(14, 12)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Size = New System.Drawing.Size(496, 288)
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
@@ -200,34 +202,34 @@ Partial Class frmProcesarMatricula
         '
         'dgvCronograma
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCronograma.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCronograma.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvCronograma.ColumnHeadersHeight = 29
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCronograma.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCronograma.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCronograma.Location = New System.Drawing.Point(14, 29)
-        Me.dgvCronograma.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvCronograma.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvCronograma.Name = "dgvCronograma"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCronograma.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCronograma.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvCronograma.RowHeadersWidth = 51
         Me.dgvCronograma.RowTemplate.Height = 24
         Me.dgvCronograma.Size = New System.Drawing.Size(471, 248)
@@ -245,9 +247,9 @@ Partial Class frmProcesarMatricula
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox3.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox3.Location = New System.Drawing.Point(15, 362)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Size = New System.Drawing.Size(541, 106)
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
@@ -256,7 +258,7 @@ Partial Class frmProcesarMatricula
         'txtDctoPensiones
         '
         Me.txtDctoPensiones.Location = New System.Drawing.Point(436, 30)
-        Me.txtDctoPensiones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDctoPensiones.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDctoPensiones.Name = "txtDctoPensiones"
         Me.txtDctoPensiones.Size = New System.Drawing.Size(87, 26)
         Me.txtDctoPensiones.TabIndex = 18
@@ -276,7 +278,7 @@ Partial Class frmProcesarMatricula
         'txtNivelGradoSeccion
         '
         Me.txtNivelGradoSeccion.Location = New System.Drawing.Point(173, 69)
-        Me.txtNivelGradoSeccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNivelGradoSeccion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNivelGradoSeccion.Name = "txtNivelGradoSeccion"
         Me.txtNivelGradoSeccion.Size = New System.Drawing.Size(350, 26)
         Me.txtNivelGradoSeccion.TabIndex = 16
@@ -284,7 +286,7 @@ Partial Class frmProcesarMatricula
         'txtBecaActiva
         '
         Me.txtBecaActiva.Location = New System.Drawing.Point(173, 32)
-        Me.txtBecaActiva.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBecaActiva.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBecaActiva.Name = "txtBecaActiva"
         Me.txtBecaActiva.Size = New System.Drawing.Size(143, 26)
         Me.txtBecaActiva.TabIndex = 15
@@ -331,9 +333,9 @@ Partial Class frmProcesarMatricula
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox2.Location = New System.Drawing.Point(15, 128)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(541, 236)
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
@@ -342,7 +344,7 @@ Partial Class frmProcesarMatricula
         'txtEstado
         '
         Me.txtEstado.Location = New System.Drawing.Point(173, 206)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(215, 26)
         Me.txtEstado.TabIndex = 16
@@ -362,7 +364,7 @@ Partial Class frmProcesarMatricula
         'txtMontoPagado
         '
         Me.txtMontoPagado.Location = New System.Drawing.Point(173, 169)
-        Me.txtMontoPagado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMontoPagado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMontoPagado.Name = "txtMontoPagado"
         Me.txtMontoPagado.Size = New System.Drawing.Size(215, 26)
         Me.txtMontoPagado.TabIndex = 14
@@ -382,7 +384,7 @@ Partial Class frmProcesarMatricula
         'txtCodOperativo
         '
         Me.txtCodOperativo.Location = New System.Drawing.Point(173, 125)
-        Me.txtCodOperativo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCodOperativo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCodOperativo.Name = "txtCodOperativo"
         Me.txtCodOperativo.Size = New System.Drawing.Size(215, 26)
         Me.txtCodOperativo.TabIndex = 12
@@ -402,7 +404,7 @@ Partial Class frmProcesarMatricula
         'txtFechaPago
         '
         Me.txtFechaPago.Location = New System.Drawing.Point(173, 91)
-        Me.txtFechaPago.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtFechaPago.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFechaPago.Name = "txtFechaPago"
         Me.txtFechaPago.Size = New System.Drawing.Size(215, 26)
         Me.txtFechaPago.TabIndex = 10
@@ -424,7 +426,7 @@ Partial Class frmProcesarMatricula
         Me.txtApoderado.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtApoderado.ForeColor = System.Drawing.Color.Black
         Me.txtApoderado.Location = New System.Drawing.Point(85, 54)
-        Me.txtApoderado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtApoderado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtApoderado.Name = "txtApoderado"
         Me.txtApoderado.Size = New System.Drawing.Size(438, 27)
         Me.txtApoderado.TabIndex = 8
@@ -434,7 +436,7 @@ Partial Class frmProcesarMatricula
         Me.txtEstudiante.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtEstudiante.ForeColor = System.Drawing.Color.Black
         Me.txtEstudiante.Location = New System.Drawing.Point(85, 24)
-        Me.txtEstudiante.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstudiante.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEstudiante.Name = "txtEstudiante"
         Me.txtEstudiante.Size = New System.Drawing.Size(438, 27)
         Me.txtEstudiante.TabIndex = 7
@@ -474,9 +476,9 @@ Partial Class frmProcesarMatricula
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(15, 17)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(541, 106)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
@@ -486,8 +488,8 @@ Partial Class frmProcesarMatricula
         '
         Me.txtNro.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtNro.ForeColor = System.Drawing.Color.Black
-        Me.txtNro.Location = New System.Drawing.Point(134, 67)
-        Me.txtNro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNro.Location = New System.Drawing.Point(144, 75)
+        Me.txtNro.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNro.Name = "txtNro"
         Me.txtNro.Size = New System.Drawing.Size(138, 27)
         Me.txtNro.TabIndex = 3
@@ -511,7 +513,7 @@ Partial Class frmProcesarMatricula
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
         Me.btnBuscar.Location = New System.Drawing.Point(297, 27)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(111, 35)
         Me.btnBuscar.TabIndex = 4
@@ -525,8 +527,8 @@ Partial Class frmProcesarMatricula
         Me.cmbTipoBusqueda.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.cmbTipoBusqueda.ForeColor = System.Drawing.Color.Black
         Me.cmbTipoBusqueda.FormattingEnabled = True
-        Me.cmbTipoBusqueda.Location = New System.Drawing.Point(134, 30)
-        Me.cmbTipoBusqueda.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbTipoBusqueda.Location = New System.Drawing.Point(144, 32)
+        Me.cmbTipoBusqueda.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTipoBusqueda.Name = "cmbTipoBusqueda"
         Me.cmbTipoBusqueda.Size = New System.Drawing.Size(138, 27)
         Me.cmbTipoBusqueda.TabIndex = 1
@@ -550,7 +552,8 @@ Partial Class frmProcesarMatricula
         Me.ClientSize = New System.Drawing.Size(1155, 602)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmProcesarMatricula"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

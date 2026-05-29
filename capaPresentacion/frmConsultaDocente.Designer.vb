@@ -22,6 +22,7 @@ Partial Class frmConsultaDocente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultaDocente))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tblBusqueda = New System.Windows.Forms.DataGridView()
@@ -56,13 +57,13 @@ Partial Class frmConsultaDocente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(41, 19)
+        Me.Label1.Location = New System.Drawing.Point(15, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(493, 25)
+        Me.Label1.Size = New System.Drawing.Size(552, 30)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Consultar Docente por nivel, sección y grado "
+        Me.Label1.Text = "CONSULTAR DOCENTE POR NIVEL, SECCION Y GRADO"
         '
         'tblBusqueda
         '
@@ -88,6 +89,7 @@ Partial Class frmConsultaDocente
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.Panel2.Location = New System.Drawing.Point(-3, 81)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(347, 441)
@@ -98,7 +100,7 @@ Partial Class frmConsultaDocente
         Me.cboAno.FormattingEnabled = True
         Me.cboAno.Location = New System.Drawing.Point(140, 273)
         Me.cboAno.Name = "cboAno"
-        Me.cboAno.Size = New System.Drawing.Size(194, 21)
+        Me.cboAno.Size = New System.Drawing.Size(194, 29)
         Me.cboAno.TabIndex = 62
         '
         'cboSeccion
@@ -106,7 +108,7 @@ Partial Class frmConsultaDocente
         Me.cboSeccion.FormattingEnabled = True
         Me.cboSeccion.Location = New System.Drawing.Point(140, 207)
         Me.cboSeccion.Name = "cboSeccion"
-        Me.cboSeccion.Size = New System.Drawing.Size(194, 21)
+        Me.cboSeccion.Size = New System.Drawing.Size(194, 29)
         Me.cboSeccion.TabIndex = 61
         '
         'cboGrado
@@ -114,7 +116,7 @@ Partial Class frmConsultaDocente
         Me.cboGrado.FormattingEnabled = True
         Me.cboGrado.Location = New System.Drawing.Point(140, 147)
         Me.cboGrado.Name = "cboGrado"
-        Me.cboGrado.Size = New System.Drawing.Size(194, 21)
+        Me.cboGrado.Size = New System.Drawing.Size(194, 29)
         Me.cboGrado.TabIndex = 60
         '
         'cboNivel
@@ -122,7 +124,7 @@ Partial Class frmConsultaDocente
         Me.cboNivel.FormattingEnabled = True
         Me.cboNivel.Location = New System.Drawing.Point(140, 75)
         Me.cboNivel.Name = "cboNivel"
-        Me.cboNivel.Size = New System.Drawing.Size(194, 21)
+        Me.cboNivel.Size = New System.Drawing.Size(194, 29)
         Me.cboNivel.TabIndex = 59
         '
         'btnBuscar
@@ -134,7 +136,7 @@ Partial Class frmConsultaDocente
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(160, 48)
         Me.btnBuscar.TabIndex = 58
-        Me.btnBuscar.Text = "CONSULTAR"
+        Me.btnBuscar.Text = "BUSCAR"
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
@@ -142,69 +144,69 @@ Partial Class frmConsultaDocente
         '
         Me.txtDniDocente.Location = New System.Drawing.Point(140, 23)
         Me.txtDniDocente.Name = "txtDniDocente"
-        Me.txtDniDocente.Size = New System.Drawing.Size(194, 20)
+        Me.txtDniDocente.Size = New System.Drawing.Size(194, 29)
         Me.txtDniDocente.TabIndex = 7
         '
         'lblCantidad
         '
         Me.lblCantidad.AutoSize = True
-        Me.lblCantidad.Location = New System.Drawing.Point(137, 348)
+        Me.lblCantidad.Location = New System.Drawing.Point(136, 348)
         Me.lblCantidad.Name = "lblCantidad"
-        Me.lblCantidad.Size = New System.Drawing.Size(25, 13)
+        Me.lblCantidad.Size = New System.Drawing.Size(31, 21)
         Me.lblCantidad.TabIndex = 6
         Me.lblCantidad.Text = "???"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(30, 348)
+        Me.Label7.Location = New System.Drawing.Point(50, 348)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(49, 13)
+        Me.Label7.Size = New System.Drawing.Size(72, 21)
         Me.Label7.TabIndex = 5
         Me.Label7.Text = "Cantidad"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(30, 276)
+        Me.Label6.Location = New System.Drawing.Point(84, 281)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.Size = New System.Drawing.Size(38, 21)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Año"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(30, 207)
+        Me.Label5.Location = New System.Drawing.Point(59, 207)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 13)
+        Me.Label5.Size = New System.Drawing.Size(63, 21)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Sección"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(30, 147)
+        Me.Label4.Location = New System.Drawing.Point(69, 147)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 13)
+        Me.Label4.Size = New System.Drawing.Size(53, 21)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Grado"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(30, 83)
+        Me.Label3.Location = New System.Drawing.Point(76, 83)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
+        Me.Label3.Size = New System.Drawing.Size(46, 21)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Nivel"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(30, 23)
+        Me.Label2.Location = New System.Drawing.Point(3, 23)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 13)
+        Me.Label2.Size = New System.Drawing.Size(123, 21)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "DNI del Docente"
         '
@@ -216,6 +218,7 @@ Partial Class frmConsultaDocente
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.tblBusqueda)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmConsultaDocente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

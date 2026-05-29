@@ -22,6 +22,7 @@ Partial Class frmConsultarEstudiantesTipo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultarEstudiantesTipo))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -63,7 +64,7 @@ Partial Class frmConsultarEstudiantesTipo
         Me.GroupBox1.Controls.Add(Me.btnLimpiar)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.cboTipo)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(0, 37)
         Me.GroupBox1.Name = "GroupBox1"
@@ -76,13 +77,14 @@ Partial Class frmConsultarEstudiantesTipo
         '
         Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(212, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
         Me.btnLimpiar.Location = New System.Drawing.Point(514, 18)
         Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(128, 46)
         Me.btnLimpiar.TabIndex = 23
-        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
+        Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -103,7 +105,7 @@ Partial Class frmConsultarEstudiantesTipo
         Me.cboTipo.FormattingEnabled = True
         Me.cboTipo.Location = New System.Drawing.Point(225, 29)
         Me.cboTipo.Name = "cboTipo"
-        Me.cboTipo.Size = New System.Drawing.Size(229, 28)
+        Me.cboTipo.Size = New System.Drawing.Size(229, 29)
         Me.cboTipo.TabIndex = 0
         '
         'dgvEstudiantesTipo
@@ -123,6 +125,7 @@ Partial Class frmConsultarEstudiantesTipo
         Me.Controls.Add(Me.dgvEstudiantesTipo)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmConsultarEstudiantesTipo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema Matricula I.E.P Amancio Varona"

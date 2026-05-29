@@ -144,9 +144,9 @@ Partial Class frmCurso
         Me.Label1.ForeColor = System.Drawing.Color.Snow
         Me.Label1.Location = New System.Drawing.Point(12, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(359, 25)
+        Me.Label1.Size = New System.Drawing.Size(450, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Gestiòn de estructura académica"
+        Me.Label1.Text = "GESTIÓN DE ESTRUCTURA ACADEMICA"
         '
         'Label9
         '
@@ -244,7 +244,7 @@ Partial Class frmCurso
         Me.GroupBox1.Controls.Add(Me.cboArea)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(10, 69)
         Me.GroupBox1.Name = "GroupBox1"
@@ -257,10 +257,11 @@ Partial Class frmCurso
         '
         Me.btnSafe.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnSafe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSafe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSafe.Image = Global.capaPresentacion.My.Resources.Resources.guardar_usuario
-        Me.btnSafe.Location = New System.Drawing.Point(174, 344)
+        Me.btnSafe.Location = New System.Drawing.Point(172, 336)
         Me.btnSafe.Name = "btnSafe"
-        Me.btnSafe.Size = New System.Drawing.Size(131, 38)
+        Me.btnSafe.Size = New System.Drawing.Size(160, 48)
         Me.btnSafe.TabIndex = 55
         Me.btnSafe.Text = "GUARDAR"
         Me.btnSafe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -270,10 +271,11 @@ Partial Class frmCurso
         '
         Me.btnBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBaja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
-        Me.btnBaja.Location = New System.Drawing.Point(76, 399)
+        Me.btnBaja.Location = New System.Drawing.Point(70, 390)
         Me.btnBaja.Name = "btnBaja"
-        Me.btnBaja.Size = New System.Drawing.Size(144, 37)
+        Me.btnBaja.Size = New System.Drawing.Size(160, 48)
         Me.btnBaja.TabIndex = 54
         Me.btnBaja.Text = "DAR DE BAJA"
         Me.btnBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -283,10 +285,11 @@ Partial Class frmCurso
         '
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnUpdate.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
-        Me.btnUpdate.Location = New System.Drawing.Point(323, 344)
+        Me.btnUpdate.Location = New System.Drawing.Point(331, 336)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(141, 38)
+        Me.btnUpdate.Size = New System.Drawing.Size(160, 48)
         Me.btnUpdate.TabIndex = 53
         Me.btnUpdate.Text = "ACTUALIZAR"
         Me.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -296,10 +299,11 @@ Partial Class frmCurso
         '
         Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnDelete.Image = Global.capaPresentacion.My.Resources.Resources.eliminar_amigo
-        Me.btnDelete.Location = New System.Drawing.Point(259, 399)
+        Me.btnDelete.Location = New System.Drawing.Point(247, 390)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(141, 37)
+        Me.btnDelete.Size = New System.Drawing.Size(160, 48)
         Me.btnDelete.TabIndex = 52
         Me.btnDelete.Text = "ELIMINAR"
         Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -310,10 +314,11 @@ Partial Class frmCurso
         '
         Me.btnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNew.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnNew.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
-        Me.btnNew.Location = New System.Drawing.Point(31, 344)
+        Me.btnNew.Location = New System.Drawing.Point(6, 336)
         Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(131, 38)
+        Me.btnNew.Size = New System.Drawing.Size(160, 48)
         Me.btnNew.TabIndex = 51
         Me.btnNew.Text = "NUEVO"
         Me.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -361,7 +366,7 @@ Partial Class frmCurso
         Me.GroupBox2.Controls.Add(Me.btnFiltrar)
         Me.GroupBox2.Controls.Add(Me.txtBuscarNombre)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox2.Location = New System.Drawing.Point(525, 69)
         Me.GroupBox2.Name = "GroupBox2"
@@ -385,9 +390,9 @@ Partial Class frmCurso
         Me.btnFiltrar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnFiltrar.ForeColor = System.Drawing.Color.Black
         Me.btnFiltrar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
-        Me.btnFiltrar.Location = New System.Drawing.Point(410, 31)
+        Me.btnFiltrar.Location = New System.Drawing.Point(426, 34)
         Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.Size = New System.Drawing.Size(160, 48)
+        Me.btnFiltrar.Size = New System.Drawing.Size(111, 35)
         Me.btnFiltrar.TabIndex = 43
         Me.btnFiltrar.Text = "BUSCAR"
         Me.btnFiltrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -397,7 +402,7 @@ Partial Class frmCurso
         '
         Me.txtBuscarNombre.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtBuscarNombre.ForeColor = System.Drawing.Color.Black
-        Me.txtBuscarNombre.Location = New System.Drawing.Point(140, 43)
+        Me.txtBuscarNombre.Location = New System.Drawing.Point(154, 40)
         Me.txtBuscarNombre.Name = "txtBuscarNombre"
         Me.txtBuscarNombre.Size = New System.Drawing.Size(266, 27)
         Me.txtBuscarNombre.TabIndex = 42

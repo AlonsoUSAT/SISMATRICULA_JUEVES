@@ -22,6 +22,7 @@ Partial Class frmCursoGrado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCursoGrado))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -49,9 +50,10 @@ Partial Class frmCursoGrado
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(1, 0)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(802, 67)
+        Me.Panel1.Size = New System.Drawing.Size(714, 67)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -61,9 +63,9 @@ Partial Class frmCursoGrado
         Me.Label1.ForeColor = System.Drawing.SystemColors.Window
         Me.Label1.Location = New System.Drawing.Point(25, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(324, 25)
+        Me.Label1.Size = New System.Drawing.Size(404, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Asignacion de Cursos por Grado"
+        Me.Label1.Text = "ASIGNACION DE CURSOS POR GRADO"
         '
         'GroupBox1
         '
@@ -254,6 +256,7 @@ Partial Class frmCursoGrado
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCursoGrado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

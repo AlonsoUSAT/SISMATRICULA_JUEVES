@@ -66,13 +66,13 @@ Partial Class frmTransaccionTutorAula
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(13, 19)
+        Me.Label1.Location = New System.Drawing.Point(13, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(265, 25)
+        Me.Label1.Size = New System.Drawing.Size(297, 30)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Asignar Tutor a Sección"
+        Me.Label1.Text = "ASIGNAR TUTOR A SECCION"
         '
         'Panel2
         '
@@ -97,7 +97,7 @@ Partial Class frmTransaccionTutorAula
         Me.GroupBox1.Controls.Add(Me.cboSeccion)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.cboDocente)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(10, 6)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
@@ -112,9 +112,10 @@ Partial Class frmTransaccionTutorAula
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnBuscar.ForeColor = System.Drawing.Color.Black
         Me.btnBuscar.Location = New System.Drawing.Point(251, 48)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(87, 36)
+        Me.btnBuscar.Size = New System.Drawing.Size(112, 35)
         Me.btnBuscar.TabIndex = 5
         Me.btnBuscar.Text = "BUSCAR"
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -125,7 +126,7 @@ Partial Class frmTransaccionTutorAula
         Me.cboGrado.FormattingEnabled = True
         Me.cboGrado.Location = New System.Drawing.Point(92, 170)
         Me.cboGrado.Name = "cboGrado"
-        Me.cboGrado.Size = New System.Drawing.Size(226, 28)
+        Me.cboGrado.Size = New System.Drawing.Size(226, 29)
         Me.cboGrado.TabIndex = 53
         '
         'cboNivel
@@ -133,7 +134,7 @@ Partial Class frmTransaccionTutorAula
         Me.cboNivel.FormattingEnabled = True
         Me.cboNivel.Location = New System.Drawing.Point(92, 108)
         Me.cboNivel.Name = "cboNivel"
-        Me.cboNivel.Size = New System.Drawing.Size(226, 28)
+        Me.cboNivel.Size = New System.Drawing.Size(226, 29)
         Me.cboNivel.TabIndex = 52
         '
         'Label7
@@ -164,9 +165,9 @@ Partial Class frmTransaccionTutorAula
         '
         Me.btnAgregarDocente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnAgregarDocente.Image = Global.capaPresentacion.My.Resources.Resources.mas
-        Me.btnAgregarDocente.Location = New System.Drawing.Point(348, 48)
+        Me.btnAgregarDocente.Location = New System.Drawing.Point(361, 48)
         Me.btnAgregarDocente.Name = "btnAgregarDocente"
-        Me.btnAgregarDocente.Size = New System.Drawing.Size(77, 35)
+        Me.btnAgregarDocente.Size = New System.Drawing.Size(64, 35)
         Me.btnAgregarDocente.TabIndex = 49
         Me.btnAgregarDocente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnAgregarDocente.UseVisualStyleBackColor = False
@@ -212,7 +213,7 @@ Partial Class frmTransaccionTutorAula
         Me.cboSeccion.FormattingEnabled = True
         Me.cboSeccion.Location = New System.Drawing.Point(92, 231)
         Me.cboSeccion.Name = "cboSeccion"
-        Me.cboSeccion.Size = New System.Drawing.Size(226, 28)
+        Me.cboSeccion.Size = New System.Drawing.Size(226, 29)
         Me.cboSeccion.TabIndex = 46
         '
         'Label5
@@ -232,7 +233,7 @@ Partial Class frmTransaccionTutorAula
         Me.cboDocente.FormattingEnabled = True
         Me.cboDocente.Location = New System.Drawing.Point(92, 52)
         Me.cboDocente.Name = "cboDocente"
-        Me.cboDocente.Size = New System.Drawing.Size(149, 28)
+        Me.cboDocente.Size = New System.Drawing.Size(149, 29)
         Me.cboDocente.TabIndex = 45
         '
         'Panel3
@@ -258,7 +259,7 @@ Partial Class frmTransaccionTutorAula
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 4
-        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
+        Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -267,7 +268,7 @@ Partial Class frmTransaccionTutorAula
         Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnDarBaja.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnDarBaja.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
-        Me.btnDarBaja.Location = New System.Drawing.Point(20, 187)
+        Me.btnDarBaja.Location = New System.Drawing.Point(20, 193)
         Me.btnDarBaja.Name = "btnDarBaja"
         Me.btnDarBaja.Size = New System.Drawing.Size(160, 48)
         Me.btnDarBaja.TabIndex = 3
@@ -293,7 +294,7 @@ Partial Class frmTransaccionTutorAula
         Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnActualizar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnActualizar.Image = Global.capaPresentacion.My.Resources.Resources.actualizar
-        Me.btnActualizar.Location = New System.Drawing.Point(20, 65)
+        Me.btnActualizar.Location = New System.Drawing.Point(20, 72)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(160, 48)
         Me.btnActualizar.TabIndex = 1

@@ -142,7 +142,7 @@ Partial Class frmMantUsuarios
         '
         Me.txtApellidoPaterno.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApellidoPaterno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtApellidoPaterno.Location = New System.Drawing.Point(130, 123)
+        Me.txtApellidoPaterno.Location = New System.Drawing.Point(138, 123)
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(207, 23)
         Me.txtApellidoPaterno.TabIndex = 16
@@ -292,15 +292,15 @@ Partial Class frmMantUsuarios
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(4, Byte), True)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Transparent
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(260, 24)
+        Me.Label1.Size = New System.Drawing.Size(262, 25)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Mantenimiento de Usuario:"
+        Me.Label1.Text = "MANTENIMIENTO USUARIO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'tablaUsuarios
@@ -317,10 +317,11 @@ Partial Class frmMantUsuarios
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.DarkRed
         Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.FlowLayoutPanel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(889, 43)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(901, 43)
         Me.FlowLayoutPanel1.TabIndex = 3
         '
         'GroupBox1
@@ -347,12 +348,12 @@ Partial Class frmMantUsuarios
         Me.GroupBox1.Controls.Add(Me.txtCodigo)
         Me.GroupBox1.Controls.Add(Me.txtNombres)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(18, 48)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(670, 328)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
@@ -381,7 +382,7 @@ Partial Class frmMantUsuarios
         Me.Panel1.Controls.Add(Me.btnActualizar)
         Me.Panel1.Controls.Add(Me.btnNuevo)
         Me.Panel1.Location = New System.Drawing.Point(692, 48)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(190, 328)
         Me.Panel1.TabIndex = 5
@@ -395,7 +396,7 @@ Partial Class frmMantUsuarios
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 4
-        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
+        Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -458,7 +459,7 @@ Partial Class frmMantUsuarios
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(889, 601)
+        Me.ClientSize = New System.Drawing.Size(901, 601)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.tablaUsuarios)

@@ -22,6 +22,7 @@ Partial Class frmConsultaMatriculas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultaMatriculas))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -211,7 +212,7 @@ Partial Class frmConsultaMatriculas
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 57
-        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
+        Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -241,10 +242,10 @@ Partial Class frmConsultaMatriculas
         Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
-        Me.btnBuscar.Location = New System.Drawing.Point(75, 240)
+        Me.btnBuscar.Location = New System.Drawing.Point(60, 240)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(105, 33)
+        Me.btnBuscar.Size = New System.Drawing.Size(117, 44)
         Me.btnBuscar.TabIndex = 54
         Me.btnBuscar.Text = "BUSCAR"
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -346,6 +347,7 @@ Partial Class frmConsultaMatriculas
         Me.ClientSize = New System.Drawing.Size(1090, 480)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmConsultaMatriculas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

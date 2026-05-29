@@ -22,6 +22,7 @@ Partial Class frmConsultaEspecialidad
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultaEspecialidad))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -80,9 +81,9 @@ Partial Class frmConsultaEspecialidad
         Me.Label1.ForeColor = System.Drawing.Color.Snow
         Me.Label1.Location = New System.Drawing.Point(12, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(278, 25)
+        Me.Label1.Size = New System.Drawing.Size(350, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Consultar especialidades"
+        Me.Label1.Text = "CONSULTAR ESPECIALIDADES"
         '
         'Panel2
         '
@@ -119,7 +120,7 @@ Partial Class frmConsultaEspecialidad
         '
         Me.lblBaja.AutoSize = True
         Me.lblBaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBaja.Location = New System.Drawing.Point(32, 11)
+        Me.lblBaja.Location = New System.Drawing.Point(9, 12)
         Me.lblBaja.Name = "lblBaja"
         Me.lblBaja.Size = New System.Drawing.Size(201, 31)
         Me.lblBaja.TabIndex = 3
@@ -384,6 +385,7 @@ Partial Class frmConsultaEspecialidad
         Me.Controls.Add(Me.lblContador)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmConsultaEspecialidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

@@ -61,6 +61,7 @@ Partial Class frmAsigBecas
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAsigBecas))
         Me.pnlEncabezado = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lblAnoAcademico = New System.Windows.Forms.Label()
@@ -88,17 +89,17 @@ Partial Class frmAsigBecas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDescuento = New System.Windows.Forms.TextBox()
         Me.lblTipoBeca = New System.Windows.Forms.Label()
+        Me.btnAsignar = New System.Windows.Forms.Button()
         Me.cboTipoBeca = New System.Windows.Forms.ComboBox()
+        Me.btnSuspender = New System.Windows.Forms.Button()
         Me.lblDescripcionBeca = New System.Windows.Forms.Label()
+        Me.btnRevocar = New System.Windows.Forms.Button()
         Me.lblDescripcionTexto = New System.Windows.Forms.Label()
         Me.lblPromedioInfo = New System.Windows.Forms.Label()
         Me.lblMotivo = New System.Windows.Forms.Label()
         Me.txtMotivo = New System.Windows.Forms.TextBox()
         Me.lblDescuentoCalc = New System.Windows.Forms.Label()
         Me.lblMontoDescLabel = New System.Windows.Forms.Label()
-        Me.btnAsignar = New System.Windows.Forms.Button()
-        Me.btnSuspender = New System.Windows.Forms.Button()
-        Me.btnRevocar = New System.Windows.Forms.Button()
         Me.tabBecadosActivos = New System.Windows.Forms.TabPage()
         Me.pnlBecadosActivos = New System.Windows.Forms.GroupBox()
         Me.lblBuscarEn = New System.Windows.Forms.Label()
@@ -230,6 +231,8 @@ Partial Class frmAsigBecas
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBuscar.Location = New System.Drawing.Point(404, 21)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(131, 40)
@@ -244,6 +247,8 @@ Partial Class frmAsigBecas
         Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
+        Me.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLimpiar.Location = New System.Drawing.Point(543, 21)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(143, 40)
@@ -360,7 +365,7 @@ Partial Class frmAsigBecas
         '
         Me.pnlHistorialBecas.BackColor = System.Drawing.Color.White
         Me.pnlHistorialBecas.Controls.Add(Me.dgvHistorialBecas)
-        Me.pnlHistorialBecas.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.pnlHistorialBecas.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.pnlHistorialBecas.ForeColor = System.Drawing.Color.Firebrick
         Me.pnlHistorialBecas.Location = New System.Drawing.Point(632, 214)
         Me.pnlHistorialBecas.Name = "pnlHistorialBecas"
@@ -377,7 +382,7 @@ Partial Class frmAsigBecas
         Me.dgvHistorialBecas.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -459,6 +464,22 @@ Partial Class frmAsigBecas
         Me.lblTipoBeca.TabIndex = 0
         Me.lblTipoBeca.Text = "Tipo de Beca:"
         '
+        'btnAsignar
+        '
+        Me.btnAsignar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnAsignar.Enabled = False
+        Me.btnAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAsignar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnAsignar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnAsignar.Image = Global.capaPresentacion.My.Resources.Resources.beca
+        Me.btnAsignar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAsignar.Location = New System.Drawing.Point(25, 258)
+        Me.btnAsignar.Name = "btnAsignar"
+        Me.btnAsignar.Size = New System.Drawing.Size(195, 38)
+        Me.btnAsignar.TabIndex = 15
+        Me.btnAsignar.Text = "ASIGNAR BECA"
+        Me.btnAsignar.UseVisualStyleBackColor = False
+        '
         'cboTipoBeca
         '
         Me.cboTipoBeca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -466,6 +487,22 @@ Partial Class frmAsigBecas
         Me.cboTipoBeca.Name = "cboTipoBeca"
         Me.cboTipoBeca.Size = New System.Drawing.Size(443, 27)
         Me.cboTipoBeca.TabIndex = 1
+        '
+        'btnSuspender
+        '
+        Me.btnSuspender.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.btnSuspender.Enabled = False
+        Me.btnSuspender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSuspender.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSuspender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnSuspender.Image = Global.capaPresentacion.My.Resources.Resources.borrar_usuario
+        Me.btnSuspender.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSuspender.Location = New System.Drawing.Point(226, 258)
+        Me.btnSuspender.Name = "btnSuspender"
+        Me.btnSuspender.Size = New System.Drawing.Size(170, 38)
+        Me.btnSuspender.TabIndex = 16
+        Me.btnSuspender.Text = "SUSPENDER"
+        Me.btnSuspender.UseVisualStyleBackColor = False
         '
         'lblDescripcionBeca
         '
@@ -477,6 +514,20 @@ Partial Class frmAsigBecas
         Me.lblDescripcionBeca.Size = New System.Drawing.Size(90, 20)
         Me.lblDescripcionBeca.TabIndex = 2
         Me.lblDescripcionBeca.Text = "Descripcion:"
+        '
+        'btnRevocar
+        '
+        Me.btnRevocar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.btnRevocar.Enabled = False
+        Me.btnRevocar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRevocar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRevocar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnRevocar.Location = New System.Drawing.Point(420, 258)
+        Me.btnRevocar.Name = "btnRevocar"
+        Me.btnRevocar.Size = New System.Drawing.Size(170, 38)
+        Me.btnRevocar.TabIndex = 17
+        Me.btnRevocar.Text = "REVOCAR"
+        Me.btnRevocar.UseVisualStyleBackColor = False
         '
         'lblDescripcionTexto
         '
@@ -535,48 +586,6 @@ Partial Class frmAsigBecas
         Me.lblMontoDescLabel.Name = "lblMontoDescLabel"
         Me.lblMontoDescLabel.Size = New System.Drawing.Size(0, 20)
         Me.lblMontoDescLabel.TabIndex = 13
-        '
-        'btnAsignar
-        '
-        Me.btnAsignar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnAsignar.Enabled = False
-        Me.btnAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAsignar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnAsignar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAsignar.Location = New System.Drawing.Point(25, 258)
-        Me.btnAsignar.Name = "btnAsignar"
-        Me.btnAsignar.Size = New System.Drawing.Size(170, 38)
-        Me.btnAsignar.TabIndex = 15
-        Me.btnAsignar.Text = "ASIGNAR BECA"
-        Me.btnAsignar.UseVisualStyleBackColor = False
-        '
-        'btnSuspender
-        '
-        Me.btnSuspender.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.btnSuspender.Enabled = False
-        Me.btnSuspender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSuspender.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnSuspender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnSuspender.Location = New System.Drawing.Point(226, 258)
-        Me.btnSuspender.Name = "btnSuspender"
-        Me.btnSuspender.Size = New System.Drawing.Size(170, 38)
-        Me.btnSuspender.TabIndex = 16
-        Me.btnSuspender.Text = "SUSPENDER"
-        Me.btnSuspender.UseVisualStyleBackColor = False
-        '
-        'btnRevocar
-        '
-        Me.btnRevocar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.btnRevocar.Enabled = False
-        Me.btnRevocar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRevocar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnRevocar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnRevocar.Location = New System.Drawing.Point(420, 258)
-        Me.btnRevocar.Name = "btnRevocar"
-        Me.btnRevocar.Size = New System.Drawing.Size(170, 38)
-        Me.btnRevocar.TabIndex = 17
-        Me.btnRevocar.Text = "REVOCAR"
-        Me.btnRevocar.UseVisualStyleBackColor = False
         '
         'tabBecadosActivos
         '
@@ -670,6 +679,7 @@ Partial Class frmAsigBecas
         Me.Controls.Add(Me.tabControl1)
         Me.Controls.Add(Me.pnlEncabezado)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(1100, 700)
         Me.Name = "frmAsigBecas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

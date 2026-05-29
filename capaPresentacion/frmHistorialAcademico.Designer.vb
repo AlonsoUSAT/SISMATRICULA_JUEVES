@@ -72,6 +72,7 @@ Partial Class frmHistorialAcademico
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHistorialAcademico))
         Me.pnlEncabezado = New System.Windows.Forms.Panel()
         Me.lblTituloForm = New System.Windows.Forms.Label()
         Me.lblNombreHeader = New System.Windows.Forms.Label()
@@ -145,7 +146,7 @@ Partial Class frmHistorialAcademico
         Me.lblTituloForm.ForeColor = System.Drawing.Color.White
         Me.lblTituloForm.Location = New System.Drawing.Point(12, 16)
         Me.lblTituloForm.Name = "lblTituloForm"
-        Me.lblTituloForm.Size = New System.Drawing.Size(473, 37)
+        Me.lblTituloForm.Size = New System.Drawing.Size(382, 30)
         Me.lblTituloForm.TabIndex = 0
         Me.lblTituloForm.Text = "FICHA HISTÓRICA DEL ESTUDIANTE"
         '
@@ -156,7 +157,7 @@ Partial Class frmHistorialAcademico
         Me.lblNombreHeader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.lblNombreHeader.Location = New System.Drawing.Point(700, 22)
         Me.lblNombreHeader.Name = "lblNombreHeader"
-        Me.lblNombreHeader.Size = New System.Drawing.Size(168, 23)
+        Me.lblNombreHeader.Size = New System.Drawing.Size(135, 19)
         Me.lblNombreHeader.TabIndex = 1
         Me.lblNombreHeader.Text = "Ficha del Estudiante"
         '
@@ -183,7 +184,7 @@ Partial Class frmHistorialAcademico
         Me.lblDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblDNI.Location = New System.Drawing.Point(14, 30)
         Me.lblDNI.Name = "lblDNI"
-        Me.lblDNI.Size = New System.Drawing.Size(163, 25)
+        Me.lblDNI.Size = New System.Drawing.Size(136, 20)
         Me.lblDNI.TabIndex = 0
         Me.lblDNI.Text = "DNI del Estudiante:"
         '
@@ -193,7 +194,7 @@ Partial Class frmHistorialAcademico
         Me.txtDNI.Location = New System.Drawing.Point(203, 25)
         Me.txtDNI.MaxLength = 8
         Me.txtDNI.Name = "txtDNI"
-        Me.txtDNI.Size = New System.Drawing.Size(195, 32)
+        Me.txtDNI.Size = New System.Drawing.Size(195, 27)
         Me.txtDNI.TabIndex = 1
         '
         'btnBuscar
@@ -238,7 +239,7 @@ Partial Class frmHistorialAcademico
         Me.lblResumenLabel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.lblResumenLabel.Location = New System.Drawing.Point(8, 8)
         Me.lblResumenLabel.Name = "lblResumenLabel"
-        Me.lblResumenLabel.Size = New System.Drawing.Size(78, 20)
+        Me.lblResumenLabel.Size = New System.Drawing.Size(62, 15)
         Me.lblResumenLabel.TabIndex = 0
         Me.lblResumenLabel.Text = "Resumen:"
         '
@@ -249,7 +250,7 @@ Partial Class frmHistorialAcademico
         Me.lblResumen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.lblResumen.Location = New System.Drawing.Point(80, 8)
         Me.lblResumen.Name = "lblResumen"
-        Me.lblResumen.Size = New System.Drawing.Size(253, 20)
+        Me.lblResumen.Size = New System.Drawing.Size(201, 15)
         Me.lblResumen.TabIndex = 1
         Me.lblResumen.Text = "—  Busque un estudiante por DNI  —"
         '
@@ -292,7 +293,7 @@ Partial Class frmHistorialAcademico
         Me.lblNomCom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblNomCom.Location = New System.Drawing.Point(387, 32)
         Me.lblNomCom.Name = "lblNomCom"
-        Me.lblNomCom.Size = New System.Drawing.Size(82, 25)
+        Me.lblNomCom.Size = New System.Drawing.Size(67, 20)
         Me.lblNomCom.TabIndex = 0
         Me.lblNomCom.Text = "Nombre:"
         '
@@ -303,7 +304,7 @@ Partial Class frmHistorialAcademico
         Me.lblDNIDisp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblDNIDisp.Location = New System.Drawing.Point(53, 30)
         Me.lblDNIDisp.Name = "lblDNIDisp"
-        Me.lblDNIDisp.Size = New System.Drawing.Size(47, 25)
+        Me.lblDNIDisp.Size = New System.Drawing.Size(38, 20)
         Me.lblDNIDisp.TabIndex = 1
         Me.lblDNIDisp.Text = "DNI:"
         '
@@ -314,7 +315,7 @@ Partial Class frmHistorialAcademico
         Me.lblSexo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblSexo.Location = New System.Drawing.Point(954, 32)
         Me.lblSexo.Name = "lblSexo"
-        Me.lblSexo.Size = New System.Drawing.Size(54, 25)
+        Me.lblSexo.Size = New System.Drawing.Size(44, 20)
         Me.lblSexo.TabIndex = 2
         Me.lblSexo.Text = "Sexo:"
         '
@@ -325,7 +326,7 @@ Partial Class frmHistorialAcademico
         Me.lblTipoEst.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTipoEst.Location = New System.Drawing.Point(331, 82)
         Me.lblTipoEst.Name = "lblTipoEst"
-        Me.lblTipoEst.Size = New System.Drawing.Size(138, 25)
+        Me.lblTipoEst.Size = New System.Drawing.Size(115, 20)
         Me.lblTipoEst.TabIndex = 3
         Me.lblTipoEst.Text = "Tipo estudiante:"
         '
@@ -336,7 +337,7 @@ Partial Class frmHistorialAcademico
         Me.lblTelf.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTelf.Location = New System.Drawing.Point(960, 84)
         Me.lblTelf.Name = "lblTelf"
-        Me.lblTelf.Size = New System.Drawing.Size(46, 25)
+        Me.lblTelf.Size = New System.Drawing.Size(39, 20)
         Me.lblTelf.TabIndex = 4
         Me.lblTelf.Text = "Telf.:"
         '
@@ -347,7 +348,7 @@ Partial Class frmHistorialAcademico
         Me.lblCorreo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblCorreo.Location = New System.Drawing.Point(30, 80)
         Me.lblCorreo.Name = "lblCorreo"
-        Me.lblCorreo.Size = New System.Drawing.Size(70, 25)
+        Me.lblCorreo.Size = New System.Drawing.Size(57, 20)
         Me.lblCorreo.TabIndex = 5
         Me.lblCorreo.Text = "Correo:"
         '
@@ -358,7 +359,7 @@ Partial Class frmHistorialAcademico
         Me.txtNombreCompleto.Location = New System.Drawing.Point(479, 31)
         Me.txtNombreCompleto.Name = "txtNombreCompleto"
         Me.txtNombreCompleto.ReadOnly = True
-        Me.txtNombreCompleto.Size = New System.Drawing.Size(443, 27)
+        Me.txtNombreCompleto.Size = New System.Drawing.Size(443, 23)
         Me.txtNombreCompleto.TabIndex = 6
         '
         'txtDNIDisplay
@@ -367,7 +368,7 @@ Partial Class frmHistorialAcademico
         Me.txtDNIDisplay.Location = New System.Drawing.Point(111, 32)
         Me.txtDNIDisplay.Name = "txtDNIDisplay"
         Me.txtDNIDisplay.ReadOnly = True
-        Me.txtDNIDisplay.Size = New System.Drawing.Size(190, 31)
+        Me.txtDNIDisplay.Size = New System.Drawing.Size(190, 27)
         Me.txtDNIDisplay.TabIndex = 7
         '
         'txtSexo
@@ -376,7 +377,7 @@ Partial Class frmHistorialAcademico
         Me.txtSexo.Location = New System.Drawing.Point(1018, 24)
         Me.txtSexo.Name = "txtSexo"
         Me.txtSexo.ReadOnly = True
-        Me.txtSexo.Size = New System.Drawing.Size(202, 31)
+        Me.txtSexo.Size = New System.Drawing.Size(202, 27)
         Me.txtSexo.TabIndex = 8
         '
         'txtTipoEstudiante
@@ -386,7 +387,7 @@ Partial Class frmHistorialAcademico
         Me.txtTipoEstudiante.Location = New System.Drawing.Point(479, 80)
         Me.txtTipoEstudiante.Name = "txtTipoEstudiante"
         Me.txtTipoEstudiante.ReadOnly = True
-        Me.txtTipoEstudiante.Size = New System.Drawing.Size(307, 27)
+        Me.txtTipoEstudiante.Size = New System.Drawing.Size(307, 23)
         Me.txtTipoEstudiante.TabIndex = 9
         '
         'txtTelefono
@@ -395,7 +396,7 @@ Partial Class frmHistorialAcademico
         Me.txtTelefono.Location = New System.Drawing.Point(1018, 80)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.ReadOnly = True
-        Me.txtTelefono.Size = New System.Drawing.Size(202, 31)
+        Me.txtTelefono.Size = New System.Drawing.Size(202, 27)
         Me.txtTelefono.TabIndex = 10
         '
         'txtCorreo
@@ -404,7 +405,7 @@ Partial Class frmHistorialAcademico
         Me.txtCorreo.Location = New System.Drawing.Point(111, 77)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.ReadOnly = True
-        Me.txtCorreo.Size = New System.Drawing.Size(190, 31)
+        Me.txtCorreo.Size = New System.Drawing.Size(190, 27)
         Me.txtCorreo.TabIndex = 11
         '
         'lblSepApoderado
@@ -414,7 +415,7 @@ Partial Class frmHistorialAcademico
         Me.lblSepApoderado.ForeColor = System.Drawing.Color.Gray
         Me.lblSepApoderado.Location = New System.Drawing.Point(1, 119)
         Me.lblSepApoderado.Name = "lblSepApoderado"
-        Me.lblSepApoderado.Size = New System.Drawing.Size(128, 19)
+        Me.lblSepApoderado.Size = New System.Drawing.Size(105, 13)
         Me.lblSepApoderado.TabIndex = 12
         Me.lblSepApoderado.Text = "──  Apoderado  ──"
         '
@@ -425,7 +426,7 @@ Partial Class frmHistorialAcademico
         Me.lblNomApo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblNomApo.Location = New System.Drawing.Point(387, 155)
         Me.lblNomApo.Name = "lblNomApo"
-        Me.lblNomApo.Size = New System.Drawing.Size(82, 25)
+        Me.lblNomApo.Size = New System.Drawing.Size(67, 20)
         Me.lblNomApo.TabIndex = 13
         Me.lblNomApo.Text = "Nombre:"
         '
@@ -435,7 +436,7 @@ Partial Class frmHistorialAcademico
         Me.txtNombreApoderado.Location = New System.Drawing.Point(479, 152)
         Me.txtNombreApoderado.Name = "txtNombreApoderado"
         Me.txtNombreApoderado.ReadOnly = True
-        Me.txtNombreApoderado.Size = New System.Drawing.Size(443, 31)
+        Me.txtNombreApoderado.Size = New System.Drawing.Size(443, 27)
         Me.txtNombreApoderado.TabIndex = 14
         '
         'lblTelfApo
@@ -445,7 +446,7 @@ Partial Class frmHistorialAcademico
         Me.lblTelfApo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblTelfApo.Location = New System.Drawing.Point(965, 155)
         Me.lblTelfApo.Name = "lblTelfApo"
-        Me.lblTelfApo.Size = New System.Drawing.Size(46, 25)
+        Me.lblTelfApo.Size = New System.Drawing.Size(39, 20)
         Me.lblTelfApo.TabIndex = 15
         Me.lblTelfApo.Text = "Telf.:"
         '
@@ -455,7 +456,7 @@ Partial Class frmHistorialAcademico
         Me.txtTelefonoApoderado.Location = New System.Drawing.Point(1019, 149)
         Me.txtTelefonoApoderado.Name = "txtTelefonoApoderado"
         Me.txtTelefonoApoderado.ReadOnly = True
-        Me.txtTelefonoApoderado.Size = New System.Drawing.Size(202, 31)
+        Me.txtTelefonoApoderado.Size = New System.Drawing.Size(202, 27)
         Me.txtTelefonoApoderado.TabIndex = 16
         '
         'lblDNIApo
@@ -465,7 +466,7 @@ Partial Class frmHistorialAcademico
         Me.lblDNIApo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblDNIApo.Location = New System.Drawing.Point(10, 152)
         Me.lblDNIApo.Name = "lblDNIApo"
-        Me.lblDNIApo.Size = New System.Drawing.Size(90, 25)
+        Me.lblDNIApo.Size = New System.Drawing.Size(73, 20)
         Me.lblDNIApo.TabIndex = 17
         Me.lblDNIApo.Text = "DNI Apo.:"
         '
@@ -475,7 +476,7 @@ Partial Class frmHistorialAcademico
         Me.txtDniApoderado.Location = New System.Drawing.Point(111, 152)
         Me.txtDniApoderado.Name = "txtDniApoderado"
         Me.txtDniApoderado.ReadOnly = True
-        Me.txtDniApoderado.Size = New System.Drawing.Size(199, 31)
+        Me.txtDniApoderado.Size = New System.Drawing.Size(199, 27)
         Me.txtDniApoderado.TabIndex = 18
         '
         'tabControlFicha
@@ -499,9 +500,9 @@ Partial Class frmHistorialAcademico
         Me.tabMatriculas.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.tabMatriculas.Controls.Add(Me.lblTotalMatriculas)
         Me.tabMatriculas.Controls.Add(Me.dgvMatriculas)
-        Me.tabMatriculas.Location = New System.Drawing.Point(4, 29)
+        Me.tabMatriculas.Location = New System.Drawing.Point(4, 24)
         Me.tabMatriculas.Name = "tabMatriculas"
-        Me.tabMatriculas.Size = New System.Drawing.Size(1232, 310)
+        Me.tabMatriculas.Size = New System.Drawing.Size(1232, 315)
         Me.tabMatriculas.TabIndex = 0
         Me.tabMatriculas.Text = "  📅  Historial de Matrículas  "
         '
@@ -512,7 +513,7 @@ Partial Class frmHistorialAcademico
         Me.lblTotalMatriculas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.lblTotalMatriculas.Location = New System.Drawing.Point(10, 8)
         Me.lblTotalMatriculas.Name = "lblTotalMatriculas"
-        Me.lblTotalMatriculas.Size = New System.Drawing.Size(0, 20)
+        Me.lblTotalMatriculas.Size = New System.Drawing.Size(0, 15)
         Me.lblTotalMatriculas.TabIndex = 0
         '
         'dgvMatriculas
@@ -541,7 +542,7 @@ Partial Class frmHistorialAcademico
         Me.dgvMatriculas.RowHeadersVisible = False
         Me.dgvMatriculas.RowHeadersWidth = 51
         Me.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvMatriculas.Size = New System.Drawing.Size(2232, 660)
+        Me.dgvMatriculas.Size = New System.Drawing.Size(2232, 665)
         Me.dgvMatriculas.TabIndex = 1
         '
         'tabCursos
@@ -550,9 +551,9 @@ Partial Class frmHistorialAcademico
         Me.tabCursos.Controls.Add(Me.lblAnoSeleccionado)
         Me.tabCursos.Controls.Add(Me.btnCargarCursos)
         Me.tabCursos.Controls.Add(Me.dgvCursos)
-        Me.tabCursos.Location = New System.Drawing.Point(4, 29)
+        Me.tabCursos.Location = New System.Drawing.Point(4, 24)
         Me.tabCursos.Name = "tabCursos"
-        Me.tabCursos.Size = New System.Drawing.Size(1232, 310)
+        Me.tabCursos.Size = New System.Drawing.Size(1232, 315)
         Me.tabCursos.TabIndex = 1
         Me.tabCursos.Text = "  📚  Cursos y Horarios  "
         '
@@ -563,7 +564,7 @@ Partial Class frmHistorialAcademico
         Me.lblAnoSeleccionado.ForeColor = System.Drawing.Color.DimGray
         Me.lblAnoSeleccionado.Location = New System.Drawing.Point(10, 8)
         Me.lblAnoSeleccionado.Name = "lblAnoSeleccionado"
-        Me.lblAnoSeleccionado.Size = New System.Drawing.Size(417, 20)
+        Me.lblAnoSeleccionado.Size = New System.Drawing.Size(327, 15)
         Me.lblAnoSeleccionado.TabIndex = 0
         Me.lblAnoSeleccionado.Text = "Seleccione un año en 'Historial de Matrículas' (doble clic)"
         '
@@ -606,7 +607,7 @@ Partial Class frmHistorialAcademico
         Me.dgvCursos.RowHeadersVisible = False
         Me.dgvCursos.RowHeadersWidth = 51
         Me.dgvCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCursos.Size = New System.Drawing.Size(2232, 650)
+        Me.dgvCursos.Size = New System.Drawing.Size(2232, 655)
         Me.dgvCursos.TabIndex = 2
         '
         'tabBecas
@@ -614,9 +615,9 @@ Partial Class frmHistorialAcademico
         Me.tabBecas.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.tabBecas.Controls.Add(Me.lblTotalBecas)
         Me.tabBecas.Controls.Add(Me.dgvBecas)
-        Me.tabBecas.Location = New System.Drawing.Point(4, 29)
+        Me.tabBecas.Location = New System.Drawing.Point(4, 24)
         Me.tabBecas.Name = "tabBecas"
-        Me.tabBecas.Size = New System.Drawing.Size(1232, 310)
+        Me.tabBecas.Size = New System.Drawing.Size(1232, 315)
         Me.tabBecas.TabIndex = 2
         Me.tabBecas.Text = "  🎓  Historial de Becas  "
         '
@@ -627,7 +628,7 @@ Partial Class frmHistorialAcademico
         Me.lblTotalBecas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.lblTotalBecas.Location = New System.Drawing.Point(10, 8)
         Me.lblTotalBecas.Name = "lblTotalBecas"
-        Me.lblTotalBecas.Size = New System.Drawing.Size(0, 20)
+        Me.lblTotalBecas.Size = New System.Drawing.Size(0, 15)
         Me.lblTotalBecas.TabIndex = 0
         '
         'dgvBecas
@@ -656,20 +657,21 @@ Partial Class frmHistorialAcademico
         Me.dgvBecas.RowHeadersVisible = False
         Me.dgvBecas.RowHeadersWidth = 51
         Me.dgvBecas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvBecas.Size = New System.Drawing.Size(2232, 660)
+        Me.dgvBecas.Size = New System.Drawing.Size(2232, 665)
         Me.dgvBecas.TabIndex = 1
         '
         'frmHistorialAcademico
         '
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1262, 813)
+        Me.ClientSize = New System.Drawing.Size(1262, 749)
         Me.Controls.Add(Me.tabControlFicha)
         Me.Controls.Add(Me.pnlDatosPersonales)
         Me.Controls.Add(Me.pnlResumen)
         Me.Controls.Add(Me.pnlBusqueda)
         Me.Controls.Add(Me.pnlEncabezado)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.MinimumSize = New System.Drawing.Size(1100, 720)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(1100, 718)
         Me.Name = "frmHistorialAcademico"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema Matricula - Amancio Varona "

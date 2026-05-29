@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76623686-5AC7-498C-A7F4-6B07BF2BF67B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>capaPresentacion.Principal</StartupObject>
+    <StartupObject>capaPresentacion.InicioSesion</StartupObject>
     <RootNamespace>capaPresentacion</RootNamespace>
     <AssemblyName>capaPresentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -437,6 +437,19 @@
   <ItemGroup>
     <Content Include="imagenes\logo_colegio.png" />
     <Content Include="imagenes\nueva-cuenta %281%29.png" />
+    <None Include="Resources\tipo_Estudiante.png" />
+    <None Include="Resources\plan-de-estudios1.png" />
+    <None Include="Resources\ordendepago.png" />
+    <None Include="Resources\tesis1.png" />
+    <None Include="Resources\tesis.png" />
+    <None Include="Resources\estudiante.png" />
+    <None Include="Resources\maestro.png" />
+    <None Include="Resources\beca.png" />
+    <None Include="Resources\carga-academica1.png" />
+    <None Include="Resources\asignacion_curso.png" />
+    <None Include="Resources\cambio_seccion.png" />
+    <None Include="Resources\asignacion_curso1.png" />
+    <None Include="Resources\cambio_seccion1.png" />
     <Content Include="Resources\especialidad.png" />
     <None Include="Resources\cerrar-sesion.png" />
     <None Include="Resources\error.png" />

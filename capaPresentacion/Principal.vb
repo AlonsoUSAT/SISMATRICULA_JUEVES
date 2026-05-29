@@ -102,7 +102,7 @@ Public Class Principal
     End Sub
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles DirectProcesarMatricula.Click
-        Dim hijoUsuarios As New TranMatricula()
+        Dim hijoUsuarios As New frmProcesarMatricula()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub
@@ -156,7 +156,7 @@ Public Class Principal
         hijoAsigBecas.Show()
     End Sub
 
-    Private Sub ConstanciaDeMatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConstanciaDeMatrículaToolStripMenuItem.Click
+    Private Sub ConstanciaDeMatrículaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim hijoConstancia As New frmConstanciaMatricula()
         hijoConstancia.MdiParent = Me
         hijoConstancia.Show()
@@ -228,6 +228,19 @@ Public Class Principal
 
     Private Sub CambiarSecciónMatriculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarSecciónMatriculaToolStripMenuItem.Click
         Dim hijoUsuarios As New frmMantMatricula()
+        hijoUsuarios.MdiParent = Me
+        hijoUsuarios.Show()
+    End Sub
+
+    Private Sub ToolStripButton1_Click_1(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Dim frm As New frmGenerarOrdenPago()
+        frm.ShowDialog()
+
+
+    End Sub
+
+    Private Sub ToolStripButton2_Click_1(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        Dim hijoUsuarios As New frmHistorialAcademico()
         hijoUsuarios.MdiParent = Me
         hijoUsuarios.Show()
     End Sub

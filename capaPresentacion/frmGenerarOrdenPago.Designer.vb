@@ -83,7 +83,7 @@ Partial Class frmGenerarOrdenPago
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.ForeColor = System.Drawing.Color.Black
         Me.Panel1.Location = New System.Drawing.Point(-1, 58)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(998, 555)
         Me.Panel1.TabIndex = 0
@@ -99,9 +99,9 @@ Partial Class frmGenerarOrdenPago
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox3.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox3.Location = New System.Drawing.Point(10, 166)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Size = New System.Drawing.Size(514, 173)
         Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
@@ -110,7 +110,7 @@ Partial Class frmGenerarOrdenPago
         'txtTipoBeca
         '
         Me.txtTipoBeca.Location = New System.Drawing.Point(155, 81)
-        Me.txtTipoBeca.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtTipoBeca.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTipoBeca.Name = "txtTipoBeca"
         Me.txtTipoBeca.Size = New System.Drawing.Size(350, 26)
         Me.txtTipoBeca.TabIndex = 11
@@ -118,7 +118,7 @@ Partial Class frmGenerarOrdenPago
         'txtDescuentoAplicable
         '
         Me.txtDescuentoAplicable.Location = New System.Drawing.Point(155, 118)
-        Me.txtDescuentoAplicable.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDescuentoAplicable.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDescuentoAplicable.Name = "txtDescuentoAplicable"
         Me.txtDescuentoAplicable.Size = New System.Drawing.Size(350, 26)
         Me.txtDescuentoAplicable.TabIndex = 9
@@ -129,7 +129,7 @@ Partial Class frmGenerarOrdenPago
         Me.chkEstadoBeca.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.chkEstadoBeca.ForeColor = System.Drawing.Color.Black
         Me.chkEstadoBeca.Location = New System.Drawing.Point(155, 41)
-        Me.chkEstadoBeca.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkEstadoBeca.Margin = New System.Windows.Forms.Padding(2)
         Me.chkEstadoBeca.Name = "chkEstadoBeca"
         Me.chkEstadoBeca.Size = New System.Drawing.Size(69, 24)
         Me.chkEstadoBeca.TabIndex = 8
@@ -187,9 +187,9 @@ Partial Class frmGenerarOrdenPago
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox2.Location = New System.Drawing.Point(10, 344)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(514, 173)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
@@ -198,7 +198,7 @@ Partial Class frmGenerarOrdenPago
         'txtAnoAcademico
         '
         Me.txtAnoAcademico.Location = New System.Drawing.Point(353, 41)
-        Me.txtAnoAcademico.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtAnoAcademico.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAnoAcademico.Name = "txtAnoAcademico"
         Me.txtAnoAcademico.Size = New System.Drawing.Size(152, 26)
         Me.txtAnoAcademico.TabIndex = 9
@@ -220,7 +220,7 @@ Partial Class frmGenerarOrdenPago
         Me.txtEstadoVacantes.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtEstadoVacantes.ForeColor = System.Drawing.Color.Black
         Me.txtEstadoVacantes.Location = New System.Drawing.Point(248, 118)
-        Me.txtEstadoVacantes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstadoVacantes.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEstadoVacantes.Name = "txtEstadoVacantes"
         Me.txtEstadoVacantes.Size = New System.Drawing.Size(257, 27)
         Me.txtEstadoVacantes.TabIndex = 7
@@ -244,7 +244,7 @@ Partial Class frmGenerarOrdenPago
         Me.cboSeccion.ForeColor = System.Drawing.Color.Black
         Me.cboSeccion.FormattingEnabled = True
         Me.cboSeccion.Location = New System.Drawing.Point(94, 118)
-        Me.cboSeccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboSeccion.Margin = New System.Windows.Forms.Padding(2)
         Me.cboSeccion.Name = "cboSeccion"
         Me.cboSeccion.Size = New System.Drawing.Size(134, 27)
         Me.cboSeccion.TabIndex = 5
@@ -256,7 +256,7 @@ Partial Class frmGenerarOrdenPago
         Me.cboGrado.ForeColor = System.Drawing.Color.Black
         Me.cboGrado.FormattingEnabled = True
         Me.cboGrado.Location = New System.Drawing.Point(94, 77)
-        Me.cboGrado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboGrado.Margin = New System.Windows.Forms.Padding(2)
         Me.cboGrado.Name = "cboGrado"
         Me.cboGrado.Size = New System.Drawing.Size(134, 27)
         Me.cboGrado.TabIndex = 4
@@ -268,7 +268,7 @@ Partial Class frmGenerarOrdenPago
         Me.cboNivel.ForeColor = System.Drawing.Color.Black
         Me.cboNivel.FormattingEnabled = True
         Me.cboNivel.Location = New System.Drawing.Point(94, 41)
-        Me.cboNivel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboNivel.Margin = New System.Windows.Forms.Padding(2)
         Me.cboNivel.Name = "cboNivel"
         Me.cboNivel.Size = New System.Drawing.Size(134, 27)
         Me.cboNivel.TabIndex = 3
@@ -325,9 +325,9 @@ Partial Class frmGenerarOrdenPago
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(10, 25)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(514, 132)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -338,7 +338,7 @@ Partial Class frmGenerarOrdenPago
         Me.btnAgregarEstudiante.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnAgregarEstudiante.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
         Me.btnAgregarEstudiante.Location = New System.Drawing.Point(457, 21)
-        Me.btnAgregarEstudiante.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAgregarEstudiante.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAgregarEstudiante.Name = "btnAgregarEstudiante"
         Me.btnAgregarEstudiante.Size = New System.Drawing.Size(47, 38)
         Me.btnAgregarEstudiante.TabIndex = 9
@@ -349,7 +349,7 @@ Partial Class frmGenerarOrdenPago
         Me.txtApoderado.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtApoderado.ForeColor = System.Drawing.Color.Black
         Me.txtApoderado.Location = New System.Drawing.Point(94, 93)
-        Me.txtApoderado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtApoderado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtApoderado.Name = "txtApoderado"
         Me.txtApoderado.Size = New System.Drawing.Size(411, 27)
         Me.txtApoderado.TabIndex = 8
@@ -359,7 +359,7 @@ Partial Class frmGenerarOrdenPago
         Me.txtEstudiante.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtEstudiante.ForeColor = System.Drawing.Color.Black
         Me.txtEstudiante.Location = New System.Drawing.Point(94, 63)
-        Me.txtEstudiante.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstudiante.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEstudiante.Name = "txtEstudiante"
         Me.txtEstudiante.Size = New System.Drawing.Size(411, 27)
         Me.txtEstudiante.TabIndex = 7
@@ -395,7 +395,7 @@ Partial Class frmGenerarOrdenPago
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.lupa
         Me.btnBuscar.Location = New System.Drawing.Point(343, 24)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(111, 35)
         Me.btnBuscar.TabIndex = 4
@@ -408,7 +408,7 @@ Partial Class frmGenerarOrdenPago
         Me.txtNumDoc.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.txtNumDoc.ForeColor = System.Drawing.Color.Black
         Me.txtNumDoc.Location = New System.Drawing.Point(228, 28)
-        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNumDoc.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNumDoc.Name = "txtNumDoc"
         Me.txtNumDoc.Size = New System.Drawing.Size(104, 27)
         Me.txtNumDoc.TabIndex = 3
@@ -432,7 +432,7 @@ Partial Class frmGenerarOrdenPago
         Me.cboTipo.ForeColor = System.Drawing.Color.Black
         Me.cboTipo.FormattingEnabled = True
         Me.cboTipo.Location = New System.Drawing.Point(94, 28)
-        Me.cboTipo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboTipo.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTipo.Name = "cboTipo"
         Me.cboTipo.Size = New System.Drawing.Size(95, 27)
         Me.cboTipo.TabIndex = 1
@@ -456,7 +456,7 @@ Partial Class frmGenerarOrdenPago
         Me.Panel2.Controls.Add(Me.btnGenerarOrden)
         Me.Panel2.Controls.Add(Me.GroupBox4)
         Me.Panel2.Location = New System.Drawing.Point(551, 65)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(446, 539)
         Me.Panel2.TabIndex = 2
@@ -467,11 +467,11 @@ Partial Class frmGenerarOrdenPago
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnLimpiar.Image = Global.capaPresentacion.My.Resources.Resources.borrador
         Me.btnLimpiar.Location = New System.Drawing.Point(265, 240)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(160, 48)
         Me.btnLimpiar.TabIndex = 4
-        Me.btnLimpiar.Text = "LIMPIAR CAMPOS"
+        Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -480,7 +480,7 @@ Partial Class frmGenerarOrdenPago
         Me.btnGenerarOrden.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnGenerarOrden.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.btnGenerarOrden.Location = New System.Drawing.Point(16, 240)
-        Me.btnGenerarOrden.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnGenerarOrden.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGenerarOrden.Name = "btnGenerarOrden"
         Me.btnGenerarOrden.Size = New System.Drawing.Size(234, 48)
         Me.btnGenerarOrden.TabIndex = 2
@@ -499,9 +499,9 @@ Partial Class frmGenerarOrdenPago
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox4.Location = New System.Drawing.Point(9, 11)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Size = New System.Drawing.Size(430, 212)
         Me.GroupBox4.TabIndex = 1
         Me.GroupBox4.TabStop = False
@@ -510,7 +510,7 @@ Partial Class frmGenerarOrdenPago
         'txtTotalPagar
         '
         Me.txtTotalPagar.Location = New System.Drawing.Point(207, 154)
-        Me.txtTotalPagar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtTotalPagar.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTotalPagar.Name = "txtTotalPagar"
         Me.txtTotalPagar.Size = New System.Drawing.Size(200, 26)
         Me.txtTotalPagar.TabIndex = 5
@@ -518,7 +518,7 @@ Partial Class frmGenerarOrdenPago
         'txtMontoDescuento
         '
         Me.txtMontoDescuento.Location = New System.Drawing.Point(207, 99)
-        Me.txtMontoDescuento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMontoDescuento.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMontoDescuento.Name = "txtMontoDescuento"
         Me.txtMontoDescuento.Size = New System.Drawing.Size(200, 26)
         Me.txtMontoDescuento.TabIndex = 4
@@ -526,7 +526,7 @@ Partial Class frmGenerarOrdenPago
         'txtMontoRegular
         '
         Me.txtMontoRegular.Location = New System.Drawing.Point(207, 49)
-        Me.txtMontoRegular.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMontoRegular.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMontoRegular.Name = "txtMontoRegular"
         Me.txtMontoRegular.Size = New System.Drawing.Size(200, 26)
         Me.txtMontoRegular.TabIndex = 3
@@ -565,9 +565,10 @@ Partial Class frmGenerarOrdenPago
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(1, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label13)
-        Me.Panel3.Location = New System.Drawing.Point(-1, 6)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(998, 55)
+        Me.Panel3.Size = New System.Drawing.Size(1006, 55)
         Me.Panel3.TabIndex = 35
         '
         'Label13
@@ -590,7 +591,7 @@ Partial Class frmGenerarOrdenPago
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmGenerarOrdenPago"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"

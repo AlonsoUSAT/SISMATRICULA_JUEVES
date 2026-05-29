@@ -373,11 +373,11 @@ Partial Class frmNuevaAsignacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(480, 447)
+        Me.ClientSize = New System.Drawing.Size(481, 447)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmNuevaAsignacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Nueva asignación académica"
+        Me.Text = "Sistema de Matricula I.E.P Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()

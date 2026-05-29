@@ -265,15 +265,15 @@ Partial Class frmMantPlanEstudio
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(4, Byte), True)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Transparent
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.TopRight
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label4.Location = New System.Drawing.Point(3, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(270, 24)
+        Me.Label4.Size = New System.Drawing.Size(342, 25)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Mantenimiento Plan Estudio"
+        Me.Label4.Text = "MANTENIMIENTO PLAN DE ESTUDIO"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmMantPlanEstudio

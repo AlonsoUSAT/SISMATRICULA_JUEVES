@@ -66,13 +66,13 @@ Partial Class frmMantNGS
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Snow
         Me.Label2.Location = New System.Drawing.Point(12, 13)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(437, 25)
+        Me.Label2.Size = New System.Drawing.Size(486, 30)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Mantenimiento de nivel, grado y sección"
+        Me.Label2.Text = "MANTENIMIENTO DE NIVEL GRADO Y SECCION"
         '
         'Label7
         '
@@ -125,6 +125,7 @@ Partial Class frmMantNGS
         Me.Panel2.Controls.Add(Me.dgvSecciones)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.btnModificar)
+        Me.Panel2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(301, 65)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(632, 313)
@@ -175,21 +176,21 @@ Partial Class frmMantNGS
         Me.cboTutor.FormattingEnabled = True
         Me.cboTutor.Location = New System.Drawing.Point(151, 65)
         Me.cboTutor.Name = "cboTutor"
-        Me.cboTutor.Size = New System.Drawing.Size(171, 21)
+        Me.cboTutor.Size = New System.Drawing.Size(171, 25)
         Me.cboTutor.TabIndex = 59
         '
         'txtAforo
         '
         Me.txtAforo.Location = New System.Drawing.Point(151, 38)
         Me.txtAforo.Name = "txtAforo"
-        Me.txtAforo.Size = New System.Drawing.Size(171, 20)
+        Me.txtAforo.Size = New System.Drawing.Size(171, 25)
         Me.txtAforo.TabIndex = 58
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(151, 10)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(171, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(171, 25)
         Me.txtNombre.TabIndex = 57
         '
         'Label6
@@ -276,6 +277,7 @@ Partial Class frmMantNGS
         Me.Panel4.Controls.Add(Me.dgvGrados)
         Me.Panel4.Controls.Add(Me.cboNivel)
         Me.Panel4.Controls.Add(Me.Label1)
+        Me.Panel4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel4.Location = New System.Drawing.Point(-3, 56)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"

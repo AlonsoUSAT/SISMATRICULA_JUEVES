@@ -22,6 +22,7 @@ Partial Class frmConsultaEstudiantes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultaEstudiantes))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -65,13 +66,13 @@ Partial Class frmConsultaEstudiantes
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(26, 19)
+        Me.Label1.Location = New System.Drawing.Point(11, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(518, 25)
+        Me.Label1.Size = New System.Drawing.Size(584, 30)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Consultar Estudiante por nivel, sección y grado "
+        Me.Label1.Text = "CONSULTAR ESTUDIANTE POR NIVEL, SECCION Y GRADO"
         '
         'Panel2
         '
@@ -144,7 +145,7 @@ Partial Class frmConsultaEstudiantes
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(160, 48)
         Me.btnBuscar.TabIndex = 57
-        Me.btnBuscar.Text = "CONSULTAR"
+        Me.btnBuscar.Text = "BUSCAR"
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
@@ -243,12 +244,13 @@ Partial Class frmConsultaEstudiantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(836, 569)
+        Me.ClientSize = New System.Drawing.Size(834, 569)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmConsultaEstudiantes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Consultar Estudiantes por nivel, grado y sección"
+        Me.Text = "Sistema de Matricula I.E.P Amancio Varona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

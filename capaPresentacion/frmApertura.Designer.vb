@@ -22,6 +22,7 @@ Partial Class frmApertura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmApertura))
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -59,7 +60,7 @@ Partial Class frmApertura
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Red
+        Me.Panel2.BackColor = System.Drawing.Color.DarkRed
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Location = New System.Drawing.Point(4, 1)
         Me.Panel2.Name = "Panel2"
@@ -69,13 +70,13 @@ Partial Class frmApertura
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.Snow
         Me.Label4.Location = New System.Drawing.Point(18, 18)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(363, 25)
+        Me.Label4.Size = New System.Drawing.Size(331, 21)
         Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Apertura Año Academico y Vacantes"
+        Me.Label4.Text = "APERTURA AÑO ACADÉMICO Y VACANTES"
         '
         'GroupBox1
         '
@@ -90,7 +91,7 @@ Partial Class frmApertura
         Me.GroupBox1.Controls.Add(Me.cboAño)
         Me.GroupBox1.Controls.Add(Me.cboNivel)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Firebrick
         Me.GroupBox1.Location = New System.Drawing.Point(27, 81)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
@@ -105,6 +106,7 @@ Partial Class frmApertura
         '
         Me.btnGenerar.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(212, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnGenerar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnGenerar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnGenerar.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
         Me.btnGenerar.Location = New System.Drawing.Point(89, 375)
         Me.btnGenerar.Margin = New System.Windows.Forms.Padding(2)
@@ -119,7 +121,7 @@ Partial Class frmApertura
         '
         Me.txtAforo.Location = New System.Drawing.Point(155, 307)
         Me.txtAforo.Name = "txtAforo"
-        Me.txtAforo.Size = New System.Drawing.Size(166, 26)
+        Me.txtAforo.Size = New System.Drawing.Size(166, 29)
         Me.txtAforo.TabIndex = 58
         '
         'Label7
@@ -139,7 +141,7 @@ Partial Class frmApertura
         Me.cboSeccion.FormattingEnabled = True
         Me.cboSeccion.Location = New System.Drawing.Point(155, 258)
         Me.cboSeccion.Name = "cboSeccion"
-        Me.cboSeccion.Size = New System.Drawing.Size(166, 28)
+        Me.cboSeccion.Size = New System.Drawing.Size(166, 29)
         Me.cboSeccion.TabIndex = 56
         '
         'Label6
@@ -191,7 +193,7 @@ Partial Class frmApertura
         Me.cboAño.FormattingEnabled = True
         Me.cboAño.Location = New System.Drawing.Point(155, 66)
         Me.cboAño.Name = "cboAño"
-        Me.cboAño.Size = New System.Drawing.Size(166, 28)
+        Me.cboAño.Size = New System.Drawing.Size(166, 29)
         Me.cboAño.TabIndex = 51
         '
         'cboNivel
@@ -199,7 +201,7 @@ Partial Class frmApertura
         Me.cboNivel.FormattingEnabled = True
         Me.cboNivel.Location = New System.Drawing.Point(155, 100)
         Me.cboNivel.Name = "cboNivel"
-        Me.cboNivel.Size = New System.Drawing.Size(166, 28)
+        Me.cboNivel.Size = New System.Drawing.Size(166, 29)
         Me.cboNivel.TabIndex = 49
         '
         'Label8
@@ -237,6 +239,7 @@ Partial Class frmApertura
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(212, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBuscar.Image = Global.capaPresentacion.My.Resources.Resources.agregar_usuario
         Me.btnBuscar.Location = New System.Drawing.Point(491, 37)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
@@ -295,6 +298,7 @@ Partial Class frmApertura
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmApertura"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Matrícula I.EP Amancio Varona"
